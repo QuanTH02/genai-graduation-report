@@ -3,6 +3,7 @@
 
 cd "$(dirname "$0")"
 
+LATEX_DIR="latex"
 MAIN_FILE="DoAn.tex"
 PDF_FILE="${MAIN_FILE%.tex}.pdf"
 
@@ -28,7 +29,7 @@ fi
 # Theo dõi thay đổi và tự động compile
 inotifywait -m -r -e modify,create,delete --format '%w%f' \
     --include '\.(tex|bib|cls|sty)$' \
-    . 2>/dev/null | while read FILE; do
+    "$LATEX_DIR" . 2>/dev/null | while read FILE; do
     echo "Phát hiện thay đổi: $FILE"
     echo "Đang compile lại..."
     ./compile.sh

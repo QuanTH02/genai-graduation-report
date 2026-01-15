@@ -1,0 +1,63 @@
+\documentclass[../DoAn.tex]{subfiles}
+\begin{document}
+\section{Công nghệ sử dụng phía frontend}
+Trong chương này, em sẽ giới thiệu các công nghệ và nền tảng đã sử dụng trong quá trình phát triển hệ thống giới thiệu phim ảnh. Những công nghệ này đóng vai trò quan trọng trong việc xây dựng, triển khai và tối ưu hóa hệ thống, đảm bảo tính khả thi và hiệu quả của giải pháp.
+
+\label{section:4.1}
+\subsection{Bootstrap}
+Bootstrap là một framework CSS phổ biến, giúp thiết kế giao diện người dùng một cách nhanh chóng và dễ dàng. Với Bootstrap, em có thể tạo ra các giao diện web đáp ứng, đẹp mắt và tương thích với nhiều thiết bị khác nhau, từ máy tính bàn đến điện thoại di động. Việc sử dụng Bootstrap giúp tiết kiệm thời gian thiết kế và đảm bảo tính nhất quán trong giao diện người dùng của hệ thống.
+
+Bootstrap cung cấp một hệ thống lưới linh hoạt và nhiều thành phần UI có sẵn như nút, biểu mẫu, bảng, và modal, giúp xây dựng giao diện nhanh chóng và hiệu quả. Ngoài ra, Bootstrap còn hỗ trợ nhiều tiện ích JavaScript giúp tăng cường tính tương tác của trang web.
+
+\subsection{JQuery}
+JQuery là một thư viện JavaScript nhỏ gọn nhưng mạnh mẽ, hỗ trợ thao tác DOM, xử lý sự kiện và Ajax. Với JQuery, em có thể dễ dàng thêm các tính năng động và tương tác cho trang web, cải thiện trải nghiệm người dùng. Việc kết hợp Bootstrap và JQuery giúp giao diện người dùng trở nên linh hoạt, trực quan và thân thiện hơn.
+
+JQuery giúp đơn giản hóa các tác vụ phức tạp trong JavaScript, như thao tác DOM và xử lý sự kiện, bằng cách cung cấp một API dễ sử dụng. JQuery cũng hỗ trợ Ajax, giúp trang web có thể tải dữ liệu động mà không cần tải lại trang, cải thiện hiệu suất và trải nghiệm người dùng.
+
+\section{Công nghệ sử dụng phía backend}
+\label{section:4.2}
+\subsection{Django}
+Django là một framework web phát triển bằng Python, nổi tiếng với khả năng giúp xây dựng các ứng dụng web một cách nhanh chóng và hiệu quả. Lý do chọn Django cho hệ thống gợi ý phim là vì nó cung cấp một kiến trúc MVT (Model-View-Template) rõ ràng, giúp tổ chức mã nguồn một cách khoa học và dễ dàng bảo trì. Django cũng hỗ trợ tích hợp với nhiều cơ sở dữ liệu khác nhau, trong đó MySQL được chọn làm hệ quản trị cơ sở dữ liệu cho hệ thống.
+
+Django cung cấp nhiều tính năng mạnh mẽ như ORM (Object-Relational Mapping), giúp dễ dàng thao tác với cơ sở dữ liệu mà không cần viết SQL thủ công. Ngoài ra, Django còn hỗ trợ nhiều tính năng bảo mật tích hợp sẵn như chống tấn công CSRF, XSS, và SQL Injection, giúp đảm bảo an toàn cho hệ thống.
+
+\subsection{MySQL}
+MySQL là một hệ quản trị cơ sở dữ liệu mã nguồn mở, được sử dụng rộng rãi trong các ứng dụng web vì tính ổn định và hiệu suất cao. MySQL hỗ trợ các tính năng mạnh mẽ như quản lý dữ liệu phức tạp, thực hiện truy vấn nhanh chóng và bảo mật cao, phù hợp với yêu cầu lưu trữ và truy xuất dữ liệu phim ảnh của hệ thống.
+
+Sử dụng MySQL trong hệ thống giúp đảm bảo dữ liệu được tổ chức một cách có cấu trúc, dễ dàng truy xuất và quản lý. MySQL cũng hỗ trợ tính năng sao lưu và phục hồi dữ liệu, giúp bảo vệ dữ liệu quan trọng của hệ thống.
+
+\section{Công nghệ sử dụng trong việc lưu trữ code}
+\label{section:4.3}
+\subsection{Git}
+Git là một hệ thống quản lý phiên bản phân tán, cho phép theo dõi sự thay đổi của mã nguồn trong quá trình phát triển. Việc sử dụng Git giúp em quản lý mã nguồn một cách hiệu quả, dễ dàng quay lại các phiên bản trước và phối hợp làm việc nhóm một cách mượt mà. Git cung cấp các tính năng mạnh mẽ như nhánh (branching), hợp nhất (merging) và theo dõi lịch sử (history), giúp quản lý quá trình phát triển và xử lý xung đột mã nguồn một cách hiệu quả.
+
+\subsection{Github}
+GitHub là một dịch vụ lưu trữ mã nguồn dựa trên Git, cung cấp nền tảng trực tuyến để chia sẻ, lưu trữ và quản lý mã nguồn. Sử dụng GitHub, em có thể dễ dàng chia sẻ mã nguồn với các thành viên khác trong nhóm, theo dõi các vấn đề, yêu cầu tính năng và phối hợp phát triển một cách hiệu quả. GitHub cũng cung cấp nhiều công cụ hỗ trợ như review mã, quản lý dự án và tích hợp liên tục (CI/CD), giúp quy trình phát triển trở nên chuyên nghiệp và hiệu quả hơn.
+
+GitHub cung cấp một giao diện web thân thiện, giúp dễ dàng quản lý các kho lưu trữ và theo dõi tiến độ dự án. Ngoài ra, GitHub cũng hỗ trợ tích hợp với nhiều dịch vụ và công cụ khác, giúp tự động hóa các quy trình phát triển và triển khai.
+
+\section{Công nghệ sử dụng trong việc crawl dữ liệu}
+Trong quá trình xây dựng hệ thống gợi ý phim, việc thu thập và cập nhật dữ liệu từ các nguồn uy tín là một phần quan trọng nhằm đảm bảo tính chính xác và cập nhật của thông tin phim ảnh. Để thực hiện việc này, em đã sử dụng các công cụ mạnh mẽ như Selenium và Requests, kết hợp với việc tự động hóa quy trình cập nhật dữ liệu bằng GitHub Actions.
+
+\label{section:4.4}
+\subsection{Selenium và Requests}
+Để có được dữ liệu phong phú và chính xác cho hệ thống gợi ý phim, em đã sử dụng kỹ thuật crawl dữ liệu từ các trang web uy tín như IMDb và BoxOfficeMojo. IMDb là một cơ sở dữ liệu trực tuyến về phim ảnh, chương trình truyền hình và người nổi tiếng, cung cấp thông tin chi tiết và đa dạng về các bộ phim. BoxOfficeMojo là một trang web chuyên về doanh thu phòng vé, cung cấp dữ liệu chính xác về doanh thu của các bộ phim.
+
+Selenium là một công cụ tự động hóa web mạnh mẽ, giúp em có thể điều khiển trình duyệt web và tương tác với các trang web động. Sử dụng Selenium, em có thể xử lý các trang web yêu cầu người dùng phải cuộn trang hoặc nhấn nút để tải thêm dữ liệu. Selenium giúp em tự động thu thập thông tin từ các trang web này một cách hiệu quả.
+
+Requests là một thư viện HTTP đơn giản nhưng mạnh mẽ trong Python, giúp gửi các yêu cầu HTTP/1.1 dễ dàng và truy xuất dữ liệu từ các trang web. Requests hỗ trợ nhiều tính năng hữu ích như duyệt qua các trang web, gửi dữ liệu dưới dạng biểu mẫu và xử lý cookies, giúp em có thể thu thập dữ liệu từ các trang web tĩnh một cách dễ dàng.
+
+\subsection{Công nghệ sử dụng để update dữ liệu}
+Việc duy trì và cập nhật dữ liệu phim ảnh một cách liên tục là điều cần thiết để hệ thống gợi ý phim luôn cung cấp thông tin mới nhất và chính xác. Để tự động hóa quy trình này, em đã sử dụng GitHub Actions. GitHub Actions là một công cụ CI/CD (Continuous Integration/Continuous Deployment) tích hợp sẵn trong GitHub, cho phép thiết lập các workflow tự động chạy khi có sự kiện cụ thể.
+
+Bằng cách sử dụng GitHub Actions, em đã thiết lập các workflow để tự động cập nhật dữ liệu phim từ IMDb hàng ngày. Các workflow này bao gồm việc chạy các script Selenium và Requests để thu thập dữ liệu mới, sau đó cập nhật vào cơ sở dữ liệu của hệ thống. Việc tự động hóa này giúp đảm bảo dữ liệu luôn được cập nhật một cách liên tục mà không cần sự can thiệp thủ công.
+
+Cụ thể, mỗi ngày GitHub Actions sẽ kích hoạt các script crawl dữ liệu để kiểm tra và cập nhật những thay đổi mới nhất trên IMDb. Điều này bao gồm các trường thông tin như doanh thu, trailer và hình ảnh. Workflow GitHub Actions sẽ thực hiện các bước sau:
+Sử dụng Requests để gửi các yêu cầu HTTP và lấy dữ liệu tĩnh từ các trang web liên quan.
+Xử lý và làm sạch dữ liệu thu thập được, đảm bảo dữ liệu đúng định dạng và cấu trúc.
+Cập nhật cơ sở dữ liệu MySQL với các thông tin mới nhất.
+Việc sử dụng GitHub Actions không chỉ giúp tự động hóa quy trình cập nhật dữ liệu mà còn đảm bảo tính nhất quán và chính xác của thông tin phim ảnh trong hệ thống. Điều này giúp hệ thống gợi ý phim luôn cung cấp các gợi ý và thông tin mới nhất, đáp ứng nhu cầu của người dùng một cách tốt nhất.
+
+Chương này đã trình bày các công nghệ và nền tảng mà em sử dụng trong quá trình phát triển hệ thống gợi ý phim. Việc lựa chọn Django và MySQL cho backend, Bootstrap và JQuery cho frontend, Git và GitHub cho việc lưu trữ mã nguồn, cùng với kỹ thuật crawl dữ liệu từ IMDb và BoxOfficeMojo đã giúp em xây dựng một hệ thống gợi ý phim hiệu quả, ổn định và thân thiện với người dùng. Những công nghệ này không chỉ đáp ứng yêu cầu của hệ thống mà còn tạo điều kiện thuận lợi cho việc mở rộng và nâng cấp trong tương lai.
+
+\end{document}

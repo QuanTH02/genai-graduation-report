@@ -3,6 +3,7 @@
 
 cd "$(dirname "$0")"
 
+LATEX_DIR="latex"
 MAIN_FILE="DoAn.tex"
 PDF_FILE="${MAIN_FILE%.tex}.pdf"
 

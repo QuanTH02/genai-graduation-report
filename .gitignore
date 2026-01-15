@@ -1,0 +1,29 @@
+# LaTeX output files
+*.aux
+*.log
+*.bbl
+*.blg
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.run.xml
+*.bcf
+*.blx.bib
+*.blx.bbl
+
+# PDF (uncomment nếu không muốn commit PDF)
+# *.pdf
+
+# Backup files
+*~
+*.bak
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,252 @@
+\documentclass[../DoAn.tex]{subfiles}
+\begin{document}
+Trong chương này, em sẽ tiến hành khảo sát và phân tích yêu cầu cho hệ thống giới thiệu phim. Chương này sẽ bắt đầu bằng việc khảo sát hiện trạng của các hệ thống giới thiệu phim hiện có, nhằm hiểu rõ những ưu điểm và hạn chế của chúng. Tiếp theo, em sẽ trình bày tổng quan các chức năng cần thiết cho hệ thống mới thông qua biểu đồ use case tổng quan, phân rã các chức năng và quy trình nghiệp vụ. Sau đó, các chức năng sẽ được đặc tả chi tiết để đảm bảo rằng tất cả các yêu cầu đều được xác định một cách rõ ràng và chính xác. Cuối cùng, em sẽ đề cập đến các yêu cầu phi chức năng, đặc biệt là chức năng gợi ý phim, để đảm bảo rằng hệ thống không chỉ đáp ứng được các yêu cầu cơ bản mà còn mang lại trải nghiệm người dùng tốt nhất.
+
+\section{Khảo sát hiện trạng}
+\label{section:2.1}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{Hinhve/Khao_sat_bieu_do.png}
+\caption{Khảo sát người dùng}
+\label{fig:Khao_sat}
+\end{figure} 
+
+Trong quá trình khảo sát hiện trạng và yêu cầu của hệ thống giới thiệu phim, em đã thu thập thông tin từ ba nguồn chính là người dùng/khách hàng, các hệ thống đã có và các ứng dụng tương tự. Từ những phản hồi và dữ liệu thu thập được, em đã thực hiện phân tích, so sánh và đánh giá chi tiết về ưu nhược điểm của các sản phẩm và nghiên cứu hiện có.
+
+Từ khảo sát người dùng/khách hàng, em nhận thấy rằng người dùng mong muốn một hệ thống có khả năng tìm kiếm phim nhanh chóng và chính xác, cùng với các tính năng gợi ý phim dựa trên sở thích cá nhân và hành vi xem phim trước đó. Các tính năng như đánh giá, nhận xét phim và xem trailer cũng được đánh giá cao. Đồng thời, hiệu năng hệ thống cần được cải thiện, và giao diện người dùng phải thân thiện và dễ sử dụng.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{Hinhve/Khao_sat_cac_web.png}
+\caption{Khảo sát các hệ thống đã có}
+\label{fig:Khao_sat_web}
+\end{figure} 
+
+% \begin{tabular}{|c|c|c|c|c|c|c|} 
+%  \hline
+%  Tính năng & IMDb & Meta Critic & Rotten Tomatoes & TMDb & Box Office Mojo & The Numbers \\
+%  \hline
+%  Thông tin phim & Đầy đủ & Đầy đủ & Đầy đủ & Đầy đủ nhưng phải lấy bằng API & Cơ bản & Thiếu một số \\ 
+%  \hline
+%  Gợi ý phim & Có & Không & Không & Không & Không & Không \\
+%  \hline
+%  Review & Có & Có & Có & Có & Không & Không \\
+%  \hline
+%  Trailer & Có & Có & Có & Có & Không & Không \\
+%  \hline
+%  Hiệu năng & Chậm & Vừa phải & Vừa phải & Ổn & Vừa phải & Ổn \\ 
+%  \hline
+% \end{tabular}
+
+Trong khi đó, thông qua khảo sát các hệ thống đã có như IMDb, Metacritic, Rotten Tomatoes, TMDb, Box Office Mojo và The Numbers, em đã so sánh và đánh giá các tính năng, hiệu năng và khả năng cung cấp thông tin của từng hệ thống. Từ đó, em nhận thấy mỗi hệ thống có điểm mạnh và điểm yếu riêng, và việc kết hợp các tính năng của chúng có thể tạo ra một hệ thống giới thiệu phim toàn diện.
+
+Cuối cùng, em cũng đã khảo sát một số ứng dụng giới thiệu phim trên nền tảng di động và web, từ đó nhận thấy một số điểm chung về giao diện thân thiện và tính năng gợi ý phim dựa trên hành vi người dùng như trong bảng \ref{fig:Khao_sat_web}. Tuy nhiên, nhiều ứng dụng vẫn cần cải thiện về mặt hiệu năng và tính năng phong phú.
+
+Dựa trên kết quả khảo sát từ các nguồn trên, em xác định rõ các tính năng cần thiết để phát triển một hệ thống giới thiệu phim toàn diện, đáp ứng tốt nhu cầu của người dùng.
+
+\section{Tổng quan chức năng}
+\label{section:2.2}
+\subsection{Biểu đồ use case tổng quát}
+\label{subsection:2.2.1}
+
+\textbf{Các tác nhân tham gia:}
+
+\begin{itemize}
+\item Guest (Khách hàng): Người dùng không có tài khoản trong hệ thống, truy cập vào hệ thống để tìm kiếm thông tin về phim.
+\item User (Người dùng): Người dùng đã đăng nhập vào hệ thống, có thể thực hiện các tác vụ như đánh giá phim, lưu phim vào danh sách yêu thích, thay đổi thông tin cá nhân, và tương tác với các tính năng khác của hệ thống.
+\item Admin (Quản trị viên): Người quản lý hệ thống, có quyền truy cập và quản lý tất cả các thông tin trong hệ thống.
+\end{itemize}
+
+\textbf{Vai Trò của Mỗi Tác Nhân:}
+
+\begin{itemize}
+\item Guest: Tác nhân này có vai trò chính là tìm kiếm thông tin về phim và xem các bộ phim mà không cần đăng nhập vào hệ thống.
+\item User: Tác nhân này có vai trò tương tự như Guest, nhưng cũng có thêm quyền đánh giá phim, thêm phim vào danh sách yêu thích, và quản lý thông tin cá nhân.
+\item Admin: Tác nhân này có vai trò quản lý hệ thống, bao gồm quản lý thông tin phim và quản lý thông tin người dùng.
+\end{itemize}
+
+\textbf{Các use case chính:}
+
+\begin{itemize}
+\item Xem thông tin các phim: Cả Guest và User đều có thể xem thông tin chi tiết về các bộ phim như nội dung, đạo diễn, diễn viên, phần thưởng, doanh thu, review, ...
+\item Tương tác với phim: User có thể đánh giá phim và lưu phim vào danh sách yêu thích.
+\item Gợi ý phim: Hệ thống đưa ra những gợi ý dựa vào thao tác của người dùng như khi người dùng vào xem một bộ phim nào đó hoặc đánh giá một bộ phim nào đó.
+\end{itemize}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\linewidth]{Hinhve/Usecase_tong_quan.png}
+\caption{Use case tổng quan}
+\label{fig:Usecase}
+\end{figure} 
+
+\subsection{Biểu đồ use case phân rã Quản lý thông tin người dùng}
+\label{subsection:2.2.2}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth]{Hinhve/Usecase_phan_ra_admin_quanlynguoidung.drawio.png}
+\caption{Phân rã use case Quản lý thông tin người dùng}
+\label{fig:Usecase}
+\end{figure} 
+Trong biểu đồ use case phân rã "Quản lý thông tin người dùng", các use case được phân rã và mô tả như sau:
+
+\begin{itemize}
+\item Thêm người dùng: Admin có quyền thêm người dùng mới vào hệ thống bằng cách cung cấp thông tin cần thiết như tên đăng nhập, email và mật khẩu.
+\item Sửa thông tin người dùng: Admin có thể chỉnh sửa thông tin cá nhân của người dùng, bao gồm cả tên đăng nhập, email, và mật khẩu.
+\item Xóa người dùng: Admin có khả năng xóa người dùng khỏi hệ thống.
+\end{itemize}
+
+
+\subsection{Biểu đồ use case phân rã Quản lý thông tin phim}
+\label{subsection:2.2.3}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth]{Hinhve/Usecase_phan_ra_admin_quanlyphim.drawio.png}
+\caption{Phân rã use case Quản lý thông tin phim}
+\label{fig:Usecase}
+\end{figure} 
+Trong biểu đồ use case phân rã "Quản lý thông tin phim", các use case được phân rã và mô tả như sau:
+
+\begin{itemize}
+\item Thêm phim: Admin có khả năng thêm phim mới vào hệ thống bằng cách cung cấp thông tin chi tiết về phim như tiêu đề, nội dung, thể loại, đạo diễn, diễn viên, năm sản xuất, hình ảnh, ...
+\item Sửa thông tin phim: Admin có thể chỉnh sửa thông tin chi tiết của một bộ phim đã tồn tại trong hệ thống, bao gồm cả các thông tin như thể loại, đạo diễn, diễn viên và nội dung.
+\item Xóa phim: Admin có khả năng xóa một bộ phim khỏi hệ thống.
+\end{itemize}
+
+
+\subsection{Biểu đồ use case phân rã Quản lý tài khoản}
+\label{subsection:2.2.4}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth]{Hinhve/Usecase_phan_ra_user_quanlytaikhoan.drawio.png}
+\caption{Phân rã use case Quản lý tài khoản}
+\label{fig:Usecase}
+\end{figure} 
+Trong biểu đồ use case phân rã "Quản lý tài khoản", các use case được phân rã và mô tả như sau:
+
+\begin{itemize}
+\item Quên mật khẩu: Người dùng có thể khôi phục mật khẩu bằng cách yêu cầu gửi liên kết đặt lại mật khẩu qua email.
+\item Đổi mật khẩu: Người dùng có thể thay đổi mật khẩu hiện tại bằng cách nhập mật khẩu cũ và mật khẩu mới.
+\item Chỉnh sửa thông tin cá nhân: Người dùng có thể chỉnh sửa thông tin cá nhân của mình như tên, địa chỉ email, ảnh đại diện, ...
+\end{itemize}
+
+
+\subsection{Biểu đồ use case phân rã Tương tác với phim}
+\label{subsection:2.2.5}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth]{Hinhve/Usecase_phan_ra_user_tuongtacphim.drawio.png}
+\caption{Phân rã use case Tương tác với phim}
+\label{fig:Usecase}
+\end{figure} 
+Trong biểu đồ use case phân rã "Tương tác với phim", các use case được phân rã và mô tả như sau:
+
+\begin{itemize}
+\item Đánh dấu phim yêu thích: Người dùng có khả năng đánh dấu các bộ phim yêu thích vào danh sách riêng của mình để dễ dàng theo dõi truy cập sau này và hệ thống có thể đưa ra gợi ý những bộ phim có khả năng mà người dùng thích.
+\item Xóa phim yêu thích: Người dùng có khả năng xóa đi những bộ phim đã từng thêm vào danh sách yêu thích.
+\end{itemize}
+Đánh dấu phim yêu thích: Người dùng có khả năng đánh dấu các bộ phim yêu thích vào danh sách riêng của mình để dễ dàng theo dõi truy cập sau này và hệ thống có thể đưa ra gợi ý những bộ phim có khả năng mà người dùng thích.
+
+Xóa phim yêu thích: Người dùng có khả năng xóa đi những bộ phim đã từng thêm vào danh sách yêu thích.
+
+\subsection{Biểu đồ use case phân rã Review, comment}
+\label{subsection:2.2.6}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth]{Hinhve/Usecase_phan_ra_user_review.drawio.png}
+\caption{Phân rã use case Review, comment}
+\label{fig:Usecase}
+\end{figure} 
+Trong biểu đồ use case phân rã "Review, comment", các use case được phân rã và mô tả như sau:
+
+\begin{itemize}
+\item Viết review phim: Người dùng có khả năng viết và đăng review về một bộ phim sau khi xem. Họ có thể nhập nội dung review vào và đăng lên hệ thống để chia sẻ ý kiến của mình với cộng đồng người dùng khác.
+\item Like review: Người dùng có thể thể hiện sự đồng tình hoặc ủng hộ bằng cách like các review mà họ thấy ý nghĩa hoặc hữu ích.
+\end{itemize}
+
+
+% \subsection{Quy trình nghiệp vụ}
+% \label{subsection:2.2.7}
+% Nếu sản phẩm/hệ thống cần xây dựng có quy trình nghiệp vụ quan trọng/đáng chú ý, sinh viên cần mô tả và vẽ biểu đồ hoạt động minh họa quy trình nghiệp vụ đó. Sinh viên lưu ý đây không phải là luồng sự kiện của từng use case, mà là luồng hoạt động kết hợp nhiều use case để thực hiện một nghiệp vụ nào đó.
+
+% Ví dụ, một hệ thống quản lý thư viện có quy trình nghiệp vụ mượn trả với mô tả sơ bộ như sau: Sinh viên làm thẻ mượn, sau đó sinh viên đăng ký mượn sách, thủ thư cho mượn, và cuối cùng sinh viên trả lại sách cho thư viện. Một hệ thống có thể có một vài quy trình nghiệp vụ quan trọng như vậy.
+\section{Đặc tả chức năng}
+\label{section:2.3}
+\subsection{Đặc tả use case Đăng nhập}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{Hinhve/Dac_ta_dangnhap.png}
+\caption{Đặc tả use case Đăng nhập}
+\label{fig:Usecase}
+\end{figure} 
+
+\subsection{Đặc tả use case Chỉnh sửa thông tin cá nhân}
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{Hinhve/Dac_ta_chinhsuathongtincanhan.png}
+\caption{Đặc tả use case Chỉnh sửa thông tin cá nhân}
+\label{fig:Usecase}
+\end{figure} 
+
+\subsection{Đặc tả use case Tìm kiếm phim}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{Hinhve/Dac_ta_timkiemphim.png}
+\caption{Đặc tả use case Tìm kiếm phim}
+\label{fig:Usecase}
+\end{figure} 
+
+\subsection{Đặc tả use case Đánh dấu phim mình thích}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{Hinhve/Dac_ta_themvaolistyeuthich.png}
+\caption{Đặc tả use case Đánh dấu phim mình thích}
+\label{fig:Usecase}
+\end{figure} 
+
+\subsection{Đặc tả use case Đánh giá phim}
+\FloatBarrier
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{Hinhve/Dac_ta_danhgiaphim.png}
+\caption{Đặc tả use case Đánh giá phim}
+\label{fig:Usecase}
+\end{figure} 
+\FloatBarrier
+
+\FloatBarrier
+\subsection{Đặc tả use case CRUD phim}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{Hinhve/Dac_ta_crudphim.png}
+\caption{Đặc tả use case CRUD phim}
+\label{fig:Usecase}
+\end{figure}
+\FloatBarrier
+
+\subsection{Đặc tả use case Gợi ý phim theo nội dung}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{Hinhve/Dac_ta_goiycontentbased.png}
+\caption{Đặc tả use case Gợi ý phim theo nội dung}
+\label{fig:Usecase}
+\end{figure} 
+
+\section{Yêu cầu phi chức năng}
+\label{section:2.4}
+Trong phần này, em xác định được các yêu cầu phi chức năng và kỹ thuật cho hệ thống như sau:
+
+Hiệu năng: Hệ thống cần đảm bảo hiệu suất cao và thời gian phản hồi nhanh chóng, đặc biệt khi xử lý các yêu cầu tìm kiếm, sắp xếp và gợi ý phim. Thời gian tải trang cần được giảm thiểu để tăng trải nghiệm người dùng.
+
+Độ tin cậy: Hệ thống phải ổn định và đáng tin cậy, đảm bảo rằng dữ liệu không bị mất mát, các chức năng hoạt động một cách mượt mà mọi lúc, đặc biệt là phải chính xác.
+
+Tính dễ dùng: Giao diện người dùng cần được thiết kế sao cho dễ sử dụng và trực quan, giúp người dùng dễ dàng tìm kiếm thông tin và tương tác với hệ thống một cách tự nhiên.
+
+Tính dễ bảo trì: Hệ thống cần có cấu trúc code rõ ràng và dễ bảo trì để cho phép việc nâng cấp, sửa lỗi và mở rộng dễ dàng trong tương lai.
+
+Cơ sở dữ liệu: Cần sử dụng cơ sở dữ liệu hiệu quả và linh hoạt để lưu trữ và quản lý thông tin phim và người dùng một cách hiệu quả. Hệ thống cần hỗ trợ các thao tác truy vấn nhanh chóng và bảo mật dữ liệu.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

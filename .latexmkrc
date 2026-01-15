@@ -1,7 +1,7 @@
 # Cấu hình latexmk cho project này
 
-# Output directory
-$out_dir = '.';
+# Output directory (ra ngoài thư mục latex)
+$out_dir = '..';
 
 # PDF mode
 $pdf_mode = 5;  # Sử dụng pdflatex
