@@ -1,0 +1,50 @@
+\documentclass[../DoAn.tex]{subfiles}
+\begin{document}
+\section{Đặt vấn đề}
+\label{section:1.1}
+Trong bối cảnh phát triển mạnh mẽ của ngành công nghiệp giải trí, số lượng phim sản xuất và phát hành ngày càng tăng, tạo ra một kho tàng nội dung khổng lồ và đa dạng. Điều này dẫn đến thách thức lớn cho người tiêu dùng khi lựa chọn những bộ phim phù hợp với sở thích cá nhân. Với hàng ngàn tựa phim mới xuất hiện hàng năm, việc tìm kiếm và chọn lọc phim không chỉ tốn thời gian mà còn gây khó khăn trong việc xác định đâu là những bộ phim đáng xem.
+
+Hệ thống giới thiệu phim hiện nay đã phần nào giúp người dùng tìm kiếm và khám phá nội dung mới. Tuy nhiên, những hệ thống này thường chỉ tập trung vào một khía cạnh nhất định. Như trang web boxofficemojo tổng hợp các thông tin cơ bản về phim nhưng thiếu hệ thống gợi ý và review từ người dùng, cũng như thông tin chi tiết về nơi sản xuất. Tương tự, the-numbers cung cấp thông tin cơ bản như thể loại phim nhưng hạn chế hơn so với boxofficemojo. IMDb có hầu như toàn bộ tính năng cần thiết như gợi ý phim, đánh giá và review từ người dùng, nhưng tốc độ tải trang chậm làm ảnh hưởng đến trải nghiệm người dùng. Metacritic và rottentomatoes tập trung chủ yếu vào tổng hợp đánh giá của các chuyên gia trước khi phim phát hành, thiếu thông tin phong phú từ cộng đồng người dùng. Themoviedb cung cấp thông tin phim dưới dạng API dành cho nhà phát triển, không phải là một trang web dành cho người dùng cuối để tìm kiếm và gợi ý phim. 
+
+Nhìn chung, các trang web hiện tại tuy có nhiều tính năng hữu ích nhưng đều có những hạn chế nhất định, như thiếu hệ thống gợi ý, thông tin không đầy đủ, hoặc tốc độ tải trang chậm. Sự phân tán thông tin này làm giảm hiệu quả và trải nghiệm người dùng, khi họ phải truy cập nhiều nguồn khác nhau để có cái nhìn toàn diện về một bộ phim. Điều này tạo ra nhu cầu cho một hệ thống giới thiệu phim toàn diện hơn, tích hợp đầy đủ các chức năng cần thiết và tối ưu hóa trải nghiệm người dùng.
+
+Nếu vấn đề này được giải quyết, người dùng sẽ tiết kiệm được thời gian và nâng cao trải nghiệm xem phim. Một hệ thống giới thiệu phim toàn diện không chỉ giúp người xem dễ dàng tìm thấy phim yêu thích mà còn cung cấp đầy đủ thông tin như đánh giá, trailer, và review từ cộng đồng, tạo ra một nền tảng thông tin phong phú và tiện lợi. Lợi ích này không chỉ dành cho người tiêu dùng cá nhân mà còn có thể mở rộng sang các lĩnh vực khác như nghiên cứu thị trường, marketing trong ngành giải trí, và phân tích xu hướng tiêu dùng.
+
+Việc xây dựng một hệ thống như vậy sẽ đáp ứng nhu cầu ngày càng cao của người dùng, đồng thời mở ra cơ hội ứng dụng rộng rãi trong lĩnh vực giải trí nói chung và mở rộng ứng dụng nói riêng, góp phần thúc đẩy sự phát triển của ngành công nghiệp giải trí và các ngành liên quan.
+
+\section{Mục tiêu và phạm vi đề tài}
+\label{section:1.2}
+Dựa vào phân tích các vấn đề nêu trên, ta có thể kết luận ra rằng, vì muốn đáp ứng những nhu cầu cụ thể nên các trang web nêu trên chỉ có các chức năng chuyên biệt dựa vào các dữ liệu cụ thể.
+
+Trên cơ sở đó, đề tài hướng tới việc phát triển một hệ thống giới thiệu phim toàn diện, khắc phục các hạn chế hiện tại bằng cách kết hợp các chức năng cũng như dữ liệu của những trang web trên vào một nền tảng duy nhất. Hệ thống này sẽ bao gồm xem chi tiết phim, gợi ý phim cá nhân hóa, đánh giá và review phim từ cộng đồng, xem trailer và hình ảnh phim. Mục tiêu là cung cấp một nền tảng thông tin phong phú, nhanh chóng và dễ dàng sử dụng, giúp người dùng tìm kiếm và khám phá phim phù hợp với sở thích cá nhân một cách hiệu quả nhất. 
+
+\section{Định hướng giải pháp}
+\label{section:1.3}
+Để giải quyết các hạn chế đã được xác định, em đề xuất định hướng giải pháp cho các vấn đề cụ thể như sau:
+
+\begin{itemize}
+\item \textbf{Dữ liệu không đầy đủ:} Thu thập và tổng hợp thông tin phim ảnh từ các nguồn uy tín để xây dựng cơ sở dữ liệu phong phú, đa dạng và chính xác.
+\item \textbf{Hiệu năng trang web kém:} Cải thiện hiệu năng của hệ thống bằng cách rút gọn mã nguồn, tối ưu hóa các thuật toán và sử dụng các kỹ thuật lập trình hiệu quả nhất.
+\item \textbf{Thiếu hệ thống gợi ý phim cho người dùng:} Sử dụng hai thuật toán riêng biệt cho hệ thống gợi ý phim: Content-Based Filtering và Collaborative Filtering. Content-Based Filtering sẽ được áp dụng khi người dùng xem thông tin về một bộ phim cụ thể, từ đó gợi ý các bộ phim có nội dung tương tự. Collaborative Filtering sẽ được sử dụng khi người dùng đánh giá một bộ phim, từ đó hệ thống sẽ gợi ý các bộ phim mà những người dùng có sở thích tương tự đã đánh giá cao.
+\item \textbf{Chức năng bị phân tán:} Phát triển một nền tảng web tích hợp các tính năng quan trọng như xem chi tiết phim, gợi ý phim cá nhân hóa, đánh giá và review từ cộng đồng, cùng với việc xem trailer và hình ảnh phim.
+\end{itemize}
+
+Đóng góp chính của đồ án là xây dựng một hệ thống giới thiệu phim toàn diện, không chỉ cung cấp thông tin phong phú và đa dạng về phim mà còn mang lại trải nghiệm người dùng tối ưu thông qua các gợi ý phim chính xác và cá nhân hóa. Kết quả đạt được sẽ là một nền tảng duy nhất, tích hợp tất cả các chức năng cần thiết, giúp người dùng dễ dàng tìm kiếm và khám phá những bộ phim phù hợp với sở thích cá nhân một cách nhanh chóng và hiệu quả.
+
+\section{Bố cục đồ án}
+\label{section:1.4}
+Phần còn lại của báo cáo đồ án tốt nghiệp này em sẽ tổ chức như sau:
+
+Chương 2 em sẽ trình bày về phần khảo sát và phân tích yêu cầu. Trong chương này, em sẽ khảo sát hiện trạng của các hệ thống giới thiệu phim hiện có, từ đó xây dựng tổng quan các chức năng cần thiết. Nội dung bao gồm biểu đồ use case tổng quan, phân rã các chức năng và quy trình nghiệp vụ. Đồng thời, em cũng sẽ đặc tả các chức năng chính và xác định các yêu cầu phi chức năng, đặc biệt là chức năng gợi ý phim.
+
+Chương 3 em sẽ giới thiệu về nền tảng lý thuyết cho gợi ý phim. Chương này tập trung vào việc trình bày các thuật toán và phương pháp được sử dụng trong hệ thống gợi ý phim, bao gồm lọc cộng tác (Collaborative Filtering) và lọc nội dung (Content-Based Filtering). Em sẽ giải thích cách các thuật toán này hoạt động và lý do chọn chúng cho hệ thống của mình.
+
+Chương 4 em sẽ đi sâu vào các công nghệ sử dụng trong quá trình phát triển hệ thống. Em sẽ giới thiệu các công nghệ, công cụ và thư viện đã được lựa chọn để xây dựng hệ thống, cũng như lý do lựa chọn các công nghệ này. Chương này cung cấp cái nhìn tổng quan về nền tảng kỹ thuật của hệ thống.
+
+Chương 5 em sẽ tập trung giới thiệu phần thiết kế, triển khai và đánh giá hệ thống. Nội dung bao gồm thiết kế kiến trúc hệ thống với việc lựa chọn kiến trúc phần mềm, thiết kế tổng quan và thiết kế chi tiết các gói. Em cũng sẽ trình bày thiết kế chi tiết về giao diện người dùng, lớp và cơ sở dữ liệu. Phần xây dựng ứng dụng sẽ minh họa các chức năng chính và kết quả đạt được sẽ bao gồm một phần đánh giá thực nghiệm của hệ thống gợi ý. Chương này cũng bao gồm các phần kiểm thử và triển khai hệ thống.
+
+Chương 6 em sẽ nêu ra những giải pháp và đóng góp nổi bật trong quá trình làm sản phẩm này. Đồng thời phân tích bài toán gợi ý phim một cách đầy đủ nhất.
+
+Chương 7 em sẽ kết luận và đề xuất hướng phát triển. Em sẽ tóm tắt lại những kết quả chính đã đạt được trong đồ án, đồng thời đề xuất các hướng phát triển tiềm năng cho hệ thống trong tương lai. Chương này cung cấp cái nhìn tổng quát về đóng góp của đồ án và các bước tiếp theo có thể thực hiện để nâng cao hệ thống.
+
+\end{document}
