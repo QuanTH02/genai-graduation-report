@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.1.15)  15 JAN 2026 11:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.1.15)  16 JAN 2026 22:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1473,12 +1473,15 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+Underfull \vbox (badness 2653) has occurred while \output is active []
+
+ [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./Chuong/0_2_Loi_cam_on.
-tex) [1]
-(./Chuong/0_3_Tom_tat_noi_dung.tex)pdfTeX warning (ext4): destination with the 
-same identifier (name{page.}) has been already used, duplicate ignored
+tex)
+[1] (./Chuong/0_3_Tom_tat_noi_dung.tex)pdfTeX warning (ext4): destination with 
+the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.186 \newpage
@@ -2634,7 +2637,7 @@ ype1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/urwv
 n/utmr8v.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/urwvn/utmri8v.pfb
 >
 Output written on /home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/
-DoAn.pdf (73 pages, 9468109 bytes).
+DoAn.pdf (73 pages, 9468266 bytes).
 PDF statistics:
  1188 PDF objects out of 1200 (max. 8388607)
  897 compressed objects within 9 object streams
