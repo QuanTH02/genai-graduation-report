@@ -1,0 +1,25 @@
+# EditorConfig là tiêu chuẩn để duy trì phong cách code nhất quán
+# https://editorconfig.org
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.tex]
+# Bật word wrap cho file LaTeX (tùy editor hỗ trợ)
+# Trong VS Code/Cursor: Settings -> Editor: Word Wrap -> "on"
+indent_style = space
+indent_size = 2
+max_line_length = 100
+
+[*.{sh,bat}]
+indent_style = space
+indent_size = 4
+
+[*.md]
+trim_trailing_whitespace = false
+max_line_length = off

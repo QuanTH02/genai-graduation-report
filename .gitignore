@@ -27,3 +27,7 @@
 # OS files
 .DS_Store
 Thumbs.db
+
+# Editor config (nên commit để team dùng chung)
+# .vscode/
+# .editorconfig

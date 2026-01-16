@@ -1,0 +1,28 @@
+{
+    // Bật word wrap cho tất cả file
+    "editor.wordWrap": "on",
+    
+    // Bật word wrap riêng cho file LaTeX
+    "[latex]": {
+        "editor.wordWrap": "on",
+        "editor.rulers": [80, 100],
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true
+    },
+    
+    // Cấu hình cho file .tex
+    "[plaintext]": {
+        "editor.wordWrap": "on"
+    },
+    
+    // Tự động format khi lưu (tùy chọn)
+    "editor.formatOnSave": false,
+    
+    // Hiển thị whitespace (tùy chọn, giúp thấy khoảng trắng)
+    "editor.renderWhitespace": "boundary",
+    
+    // Cấu hình cho LaTeX files
+    "files.associations": {
+        "*.tex": "latex"
+    }
+}
