@@ -1,21 +1,21 @@
 # Fdb version 3
-["bibtex /home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn"] 1768623198 "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.aux" "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.bbl" "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn" 1768623269
-  "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn-blx.bib" 1768623231 341 28773bfc082e5d048c745a489a86916a "pdflatex"
-  "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.aux" 1768623231 33412 63e6bdb24230dc4c140a75ab72179906 "pdflatex"
+["bibtex /home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn"] 1768623198 "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.aux" "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.bbl" "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn" 1768623613
+  "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn-blx.bib" 1768623275 341 28773bfc082e5d048c745a489a86916a "pdflatex"
+  "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.aux" 1768623275 33412 63e6bdb24230dc4c140a75ab72179906 "pdflatex"
   "/usr/share/texlive/texmf-dist/bibtex/bst/biblatex/biblatex.bst" 1643926307 65483 fc69f364ef63c07bf68a2ab4b323f197 ""
   "Danh_sach_tai_lieu_tham_khao.bib" 1768423102 2119 3ebcb3e956e23ff36d836f4dfbb72174 ""
   (generated)
   "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.bbl"
   "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.blg"
-["pdflatex"] 1768623269 "DoAn.tex" "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.pdf" "DoAn" 1768623269
+["pdflatex"] 1768623613 "DoAn.tex" "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.pdf" "DoAn" 1768623613
   "/etc/texmf/web2c/texmf.cnf" 1768451375 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.aux" 1768623231 33412 63e6bdb24230dc4c140a75ab72179906 "pdflatex"
+  "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.aux" 1768623275 33412 63e6bdb24230dc4c140a75ab72179906 "pdflatex"
   "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.bbl" 1768623199 4162 7c1b499ea247142619bd485cdd726323 "bibtex /home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn"
-  "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.lof" 1768623231 7446 7cc323c9e79742e446ffe204b8e52095 "pdflatex"
-  "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.lot" 1768623231 310 0c675850aa9f7d7f7520dfa557940304 "pdflatex"
-  "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.out" 1768623231 14052 ecee0ea7de9ee0623bcfcb0732b8094f "pdflatex"
-  "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.run.xml" 1768623231 2637 7cb28f27ccba49a5163ccc5d6e7abd94 "pdflatex"
-  "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.toc" 1768623231 7197 23e0a72214ae77fdcf5d540e872a3805 "pdflatex"
+  "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.lof" 1768623275 7446 7cc323c9e79742e446ffe204b8e52095 "pdflatex"
+  "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.lot" 1768623275 310 0c675850aa9f7d7f7520dfa557940304 "pdflatex"
+  "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.out" 1768623275 14052 ecee0ea7de9ee0623bcfcb0732b8094f "pdflatex"
+  "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.run.xml" 1768623275 2637 7cb28f27ccba49a5163ccc5d6e7abd94 "pdflatex"
+  "/home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/DoAn.toc" 1768623275 7197 23e0a72214ae77fdcf5d540e872a3805 "pdflatex"
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/vntex/t5.enc" 1136849721 7824 21ade6c3c7fd67cb4ace8dbc91c53118 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -235,7 +235,7 @@
   "Chuong/2_Khao_sat.tex" 1768621834 16208 bb8f707113d4182d05ea9c49c7a8da94 ""
   "Chuong/3_0_Co_so_ly_thuyet.tex" 1768622101 7158 744240c074d94d318d011ba00bfbb70f ""
   "Chuong/3_Cong_nghe.tex" 1768622614 10490 7529dae721c4638e5b59fc11c5a1763d ""
-  "Chuong/4_Ket_qua_thuc_nghiem.tex" 1768623161 23438 ae5ba42067dfd8ba7e731a0f90e6d771 ""
+  "Chuong/4_Ket_qua_thuc_nghiem.tex" 1768623613 23444 8644757b5de159b220efa56e5d0b7b08 ""
   "Chuong/5_Giai_phap_dong_gop.tex" 1768423102 16603 6d6410a60fa4560d372f5499d022e034 ""
   "Chuong/6_Ket_luan.tex" 1768423102 6315 5dd4cd99f409c83ff75ac5bef6e491a0 ""
   "DoAn.tex" 1768453201 10247 5fd094e048c95a2a51f13e76d74a15a3 ""
