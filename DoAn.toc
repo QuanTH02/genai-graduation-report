@@ -37,15 +37,15 @@
 \contentsline {subsection}{\numberline {3.1.4}Phương pháp nghiên cứu}{19}{subsection.3.1.4}%
 \contentsline {chapter}{\numberline {4}CÔNG NGHỆ SỬ DỤNG}{21}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Công nghệ sử dụng phía frontend}{21}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Bootstrap}{21}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}JQuery}{21}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.1}React}{21}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Tailwind CSS}{21}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}Công nghệ sử dụng phía backend}{21}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Django}{21}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}MySQL}{22}{subsection.4.2.2}%
 \contentsline {section}{\numberline {4.3}Công nghệ sử dụng trong việc lưu trữ code}{22}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Git}{22}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Github}{22}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Công nghệ sử dụng trong việc crawl dữ liệu}{22}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Công nghệ sử dụng trong việc crawl dữ liệu}{23}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Selenium và Requests}{23}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Công nghệ sử dụng để update dữ liệu}{23}{subsection.4.4.2}%
 \contentsline {chapter}{\numberline {5}THIẾT KẾ, TRIỂN KHAI VÀ ĐÁNH GIÁ HỆ THỐNG}{25}{chapter.5}%
