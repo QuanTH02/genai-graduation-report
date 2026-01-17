@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.1.15)  17 JAN 2026 10:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.1.15)  17 JAN 2026 11:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2040,16 +2040,16 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.83003pt}.
 
 [31 <./Hinhve/layerTemp.png>]
-<Hinhve/web_login.png, id=760, 1155.1155pt x 612.48825pt>
+<Hinhve/web_login.png, id=760, 1927.2pt x 1014.79124pt>
 File: Hinhve/web_login.png Graphic file (type png)
 <use Hinhve/web_login.png>
 Package pdftex.def Info: Hinhve/web_login.png  used on input line 178.
-(pdftex.def)             Requested size: 426.79135pt x 226.29935pt.
-<Hinhve/web_signup.png, id=761, 1155.1155pt x 612.48825pt>
+(pdftex.def)             Requested size: 426.79135pt x 224.72578pt.
+<Hinhve/web_signup.png, id=761, 1927.2pt x 1014.79124pt>
 File: Hinhve/web_signup.png Graphic file (type png)
 <use Hinhve/web_signup.png>
 Package pdftex.def Info: Hinhve/web_signup.png  used on input line 186.
-(pdftex.def)             Requested size: 426.79135pt x 226.29935pt.
+(pdftex.def)             Requested size: 426.79135pt x 224.72578pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2063,16 +2063,16 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.83003pt}.
 
 [32 <./Hinhve/web_login.png>]
-<Hinhve/web_profile.png, id=768, 1155.1155pt x 611.886pt>
+<Hinhve/web_profile.png, id=768, 1927.2pt x 1014.79124pt>
 File: Hinhve/web_profile.png Graphic file (type png)
 <use Hinhve/web_profile.png>
 Package pdftex.def Info: Hinhve/web_profile.png  used on input line 194.
-(pdftex.def)             Requested size: 426.79135pt x 226.07683pt.
-<Hinhve/web_home.png, id=769, 1155.1155pt x 612.48825pt>
+(pdftex.def)             Requested size: 426.79135pt x 224.72578pt.
+<Hinhve/web_home.png, id=769, 1927.2pt x 1014.79124pt>
 File: Hinhve/web_home.png Graphic file (type png)
 <use Hinhve/web_home.png>
 Package pdftex.def Info: Hinhve/web_home.png  used on input line 202.
-(pdftex.def)             Requested size: 426.79135pt x 226.29935pt.
+(pdftex.def)             Requested size: 426.79135pt x 224.72578pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2086,16 +2086,16 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.83003pt}.
 
 [33 <./Hinhve/web_signup.png> <./Hinhve/web_profile.png>]
-<Hinhve/web_recommend.png, id=776, 1155.1155pt x 612.48825pt>
+<Hinhve/web_recommend.png, id=776, 1927.2pt x 1014.79124pt>
 File: Hinhve/web_recommend.png Graphic file (type png)
 <use Hinhve/web_recommend.png>
 Package pdftex.def Info: Hinhve/web_recommend.png  used on input line 210.
-(pdftex.def)             Requested size: 426.79135pt x 226.29935pt.
-<Hinhve/web_detail.png, id=777, 1155.1155pt x 614.295pt>
+(pdftex.def)             Requested size: 426.79135pt x 224.72578pt.
+<Hinhve/web_detail.png, id=777, 1927.2pt x 1014.79124pt>
 File: Hinhve/web_detail.png Graphic file (type png)
 <use Hinhve/web_detail.png>
 Package pdftex.def Info: Hinhve/web_detail.png  used on input line 218.
-(pdftex.def)             Requested size: 426.79135pt x 226.96689pt.
+(pdftex.def)             Requested size: 426.79135pt x 224.72578pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2109,16 +2109,16 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.83003pt}.
 
 [34 <./Hinhve/web_home.png> <./Hinhve/web_recommend.png>]
-<Hinhve/web_detail1.png, id=784, 1155.1155pt x 612.48825pt>
+<Hinhve/web_detail1.png, id=784, 1927.2pt x 1014.79124pt>
 File: Hinhve/web_detail1.png Graphic file (type png)
 <use Hinhve/web_detail1.png>
 Package pdftex.def Info: Hinhve/web_detail1.png  used on input line 225.
-(pdftex.def)             Requested size: 426.79135pt x 226.29935pt.
-<Hinhve/web_cast_and_crew.png, id=785, 1155.1155pt x 612.48825pt>
+(pdftex.def)             Requested size: 426.79135pt x 224.72578pt.
+<Hinhve/web_cast_and_crew.png, id=785, 1927.2pt x 1014.79124pt>
 File: Hinhve/web_cast_and_crew.png Graphic file (type png)
 <use Hinhve/web_cast_and_crew.png>
 Package pdftex.def Info: Hinhve/web_cast_and_crew.png  used on input line 233.
-(pdftex.def)             Requested size: 426.79135pt x 226.29935pt.
+(pdftex.def)             Requested size: 426.79135pt x 224.72578pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2135,12 +2135,12 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 File: Hinhve/web_cast_and_crew.png Graphic file (type png)
 <use Hinhve/web_cast_and_crew.png>
 Package pdftex.def Info: Hinhve/web_cast_and_crew.png  used on input line 241.
-(pdftex.def)             Requested size: 426.79135pt x 226.29935pt.
-<Hinhve/web_user_review.png, id=792, 1155.1155pt x 612.48825pt>
+(pdftex.def)             Requested size: 426.79135pt x 224.72578pt.
+<Hinhve/web_user_review.png, id=792, 1927.2pt x 1014.79124pt>
 File: Hinhve/web_user_review.png Graphic file (type png)
 <use Hinhve/web_user_review.png>
 Package pdftex.def Info: Hinhve/web_user_review.png  used on input line 249.
-(pdftex.def)             Requested size: 426.79135pt x 226.29935pt.
+(pdftex.def)             Requested size: 426.79135pt x 224.72578pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2211,16 +2211,16 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.83003pt}.
 
 [39 <./Hinhve/tb_crawl.png>]
-<Hinhve/ketqua1.png, id=848, 1155.71774pt x 547.44525pt>
+<Hinhve/ketqua1.png, id=848, 1927.2pt x 1014.79124pt>
 File: Hinhve/ketqua1.png Graphic file (type png)
 <use Hinhve/ketqua1.png>
 Package pdftex.def Info: Hinhve/ketqua1.png  used on input line 367.
-(pdftex.def)             Requested size: 426.79135pt x 202.16731pt.
-<Hinhve/ketqua2.png, id=849, 1155.71774pt x 549.85425pt>
+(pdftex.def)             Requested size: 426.79135pt x 224.72578pt.
+<Hinhve/ketqua2.png, id=849, 1927.2pt x 1014.79124pt>
 File: Hinhve/ketqua2.png Graphic file (type png)
 <use Hinhve/ketqua2.png>
 Package pdftex.def Info: Hinhve/ketqua2.png  used on input line 377.
-(pdftex.def)             Requested size: 426.79135pt x 203.05693pt.
+(pdftex.def)             Requested size: 426.79135pt x 224.72578pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2234,11 +2234,11 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.83003pt}.
 
 [40 <./Hinhve/ketqua1.png>]
-<Hinhve/ketqua3.png, id=855, 1155.71774pt x 548.0475pt>
+<Hinhve/ketqua3.png, id=855, 1927.2pt x 1014.79124pt>
 File: Hinhve/ketqua3.png Graphic file (type png)
 <use Hinhve/ketqua3.png>
 Package pdftex.def Info: Hinhve/ketqua3.png  used on input line 387.
-(pdftex.def)             Requested size: 426.79135pt x 202.38972pt.
+(pdftex.def)             Requested size: 426.79135pt x 224.72578pt.
 <Hinhve/ketqua4.png, id=856, 1155.71774pt x 546.843pt>
 File: Hinhve/ketqua4.png Graphic file (type png)
 <use Hinhve/ketqua4.png>
@@ -2628,7 +2628,7 @@ Package logreq Info: Writing requests to 'DoAn.run.xml'.
 Here is how much of TeX's memory you used:
  30911 strings out of 478287
  541516 string characters out of 5849289
- 1295581 words of memory out of 5000000
+ 1295597 words of memory out of 5000000
  48257 multiletter control sequences out of 15000+600000
  514970 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2648,7 +2648,7 @@ ype1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/urwv
 n/utmr8v.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/urwvn/utmri8v.pfb
 >
 Output written on /home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/
-DoAn.pdf (73 pages, 9483058 bytes).
+DoAn.pdf (73 pages, 10750219 bytes).
 PDF statistics:
  1167 PDF objects out of 1200 (max. 8388607)
  878 compressed objects within 9 object streams
