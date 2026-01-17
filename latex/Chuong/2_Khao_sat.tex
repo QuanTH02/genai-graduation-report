@@ -1,19 +1,30 @@
 \documentclass[../DoAn.tex]{subfiles}
 \begin{document}
-Trong chương này, em sẽ tiến hành khảo sát và phân tích yêu cầu cho hệ thống giới thiệu phim. Chương này sẽ bắt đầu bằng việc khảo sát hiện trạng của các hệ thống giới thiệu phim hiện có, nhằm hiểu rõ những ưu điểm và hạn chế của chúng. Tiếp theo, em sẽ trình bày tổng quan các chức năng cần thiết cho hệ thống mới thông qua biểu đồ use case tổng quan, phân rã các chức năng và quy trình nghiệp vụ. Sau đó, các chức năng sẽ được đặc tả chi tiết để đảm bảo rằng tất cả các yêu cầu đều được xác định một cách rõ ràng và chính xác. Cuối cùng, em sẽ đề cập đến các yêu cầu phi chức năng, đặc biệt là chức năng gợi ý phim, để đảm bảo rằng hệ thống không chỉ đáp ứng được các yêu cầu cơ bản mà còn mang lại trải nghiệm người dùng tốt nhất.
+Trong chương này, em sẽ tiến hành khảo sát và phân tích yêu cầu cho ứng dụng gợi ý phim. Chương này sẽ bắt đầu bằng việc khảo sát hiện trạng của các hệ thống giới thiệu, gợi ý phim hiện có, nhằm hiểu rõ những ưu điểm và hạn chế của chúng. Tiếp theo, em sẽ trình bày tổng quan các chức năng cần thiết cho hệ thống mới thông qua biểu đồ use case tổng quan, phân rã các chức năng và quy trình nghiệp vụ. Sau đó, các chức năng sẽ được đặc tả chi tiết để đảm bảo rằng tất cả các yêu cầu đều được xác định một cách rõ ràng và chính xác. Cuối cùng, em sẽ đề cập đến các yêu cầu phi chức năng, đặc biệt là chức năng gợi ý phim, để đảm bảo rằng hệ thống không chỉ đáp ứng được các yêu cầu cơ bản mà còn mang lại trải nghiệm người dùng tốt nhất.
 
 \section{Khảo sát hiện trạng}
 \label{section:2.1}
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/Khao_sat_bieu_do.png}
-\caption{Khảo sát người dùng}
+\caption{Khảo sát người dùng về các ứng dụng}
 \label{fig:Khao_sat}
 \end{figure} 
 
-Trong quá trình khảo sát hiện trạng và yêu cầu của hệ thống giới thiệu phim, em đã thu thập thông tin từ ba nguồn chính là người dùng/khách hàng, các hệ thống đã có và các ứng dụng tương tự. Từ những phản hồi và dữ liệu thu thập được, em đã thực hiện phân tích, so sánh và đánh giá chi tiết về ưu nhược điểm của các sản phẩm và nghiên cứu hiện có.
+Trong quá trình khảo sát hiện trạng và yêu cầu của ứng dụng gợi ý phim, em đã thu thập thông tin từ ba nguồn chính là người dùng, khách hàng, các hệ thống đã có và các ứng dụng tương tự. Từ những phản hồi và dữ liệu thu thập được, em đã thực hiện phân tích, so sánh và đánh giá chi tiết về ưu nhược điểm của các sản phẩm và nghiên cứu hiện có.
 
 Từ khảo sát người dùng/khách hàng, em nhận thấy rằng người dùng mong muốn một hệ thống có khả năng tìm kiếm phim nhanh chóng và chính xác, cùng với các tính năng gợi ý phim dựa trên sở thích cá nhân và hành vi xem phim trước đó. Các tính năng như đánh giá, nhận xét phim và xem trailer cũng được đánh giá cao. Đồng thời, hiệu năng hệ thống cần được cải thiện, và giao diện người dùng phải thân thiện và dễ sử dụng.
+
+\section{Khảo sát về quyền theo dõi}
+\label{section:2.2}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{Hinhve/Khao_sat_policy.png}
+\caption{Khảo sát về quyền theo dõi}
+\label{fig:Khao_sat}
+\end{figure} 
+
+Theo kết quả của khảo sát về quyền theo dõi, em nhận thấy rằng người dùng mong muốn một ứng dụng gợi ý phim, nhưng phần lớn lại không mong muốn bị theo dõi hành vi trên ứng dụng. Vì vậy, em sẽ phát triển thêm chức năng theo dõi hành vi người dùng để gợi ý phim một cách phù hợp nhất với mong muốn người dùng.
 
 \begin{figure}[H]
 \centering
@@ -38,11 +49,11 @@ Từ khảo sát người dùng/khách hàng, em nhận thấy rằng người d
 %  \hline
 % \end{tabular}
 
-Trong khi đó, thông qua khảo sát các hệ thống đã có như IMDb, Metacritic, Rotten Tomatoes, TMDb, Box Office Mojo và The Numbers, em đã so sánh và đánh giá các tính năng, hiệu năng và khả năng cung cấp thông tin của từng hệ thống. Từ đó, em nhận thấy mỗi hệ thống có điểm mạnh và điểm yếu riêng, và việc kết hợp các tính năng của chúng có thể tạo ra một hệ thống giới thiệu phim toàn diện.
+Trong khi đó, thông qua khảo sát các hệ thống đã có như IMDb, Metacritic, Rotten Tomatoes, TMDb, Box Office Mojo và The Numbers, em đã so sánh và đánh giá các tính năng, hiệu năng và khả năng cung cấp thông tin của từng hệ thống. Từ đó, em nhận thấy mỗi hệ thống có điểm mạnh và điểm yếu riêng, và việc kết hợp các tính năng của chúng có thể tạo ra một ứng dụng gợi ý phim toàn diện.
 
 Cuối cùng, em cũng đã khảo sát một số ứng dụng giới thiệu phim trên nền tảng di động và web, từ đó nhận thấy một số điểm chung về giao diện thân thiện và tính năng gợi ý phim dựa trên hành vi người dùng như trong bảng \ref{fig:Khao_sat_web}. Tuy nhiên, nhiều ứng dụng vẫn cần cải thiện về mặt hiệu năng và tính năng phong phú.
 
-Dựa trên kết quả khảo sát từ các nguồn trên, em xác định rõ các tính năng cần thiết để phát triển một hệ thống giới thiệu phim toàn diện, đáp ứng tốt nhu cầu của người dùng.
+Dựa trên kết quả khảo sát từ các nguồn trên, em xác định rõ các tính năng cần thiết để phát triển một ứng dụng gợi ý phim toàn diện, đáp ứng tốt nhu cầu của người dùng.
 
 \section{Tổng quan chức năng}
 \label{section:2.2}

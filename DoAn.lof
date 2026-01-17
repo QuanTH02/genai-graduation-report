@@ -1,65 +1,66 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Khảo sát người dùng\relax }}{5}{figure.caption.7}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Khảo sát các hệ thống đã có\relax }}{6}{figure.caption.8}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Use case tổng quan\relax }}{8}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Phân rã use case Quản lý thông tin người dùng\relax }}{8}{figure.caption.10}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Phân rã use case Quản lý thông tin phim\relax }}{9}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Phân rã use case Quản lý tài khoản\relax }}{9}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Phân rã use case Tương tác với phim\relax }}{10}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Phân rã use case Review, comment\relax }}{10}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Đặc tả use case Đăng nhập\relax }}{11}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Đặc tả use case Chỉnh sửa thông tin cá nhân\relax }}{12}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Đặc tả use case Tìm kiếm phim\relax }}{13}{figure.caption.17}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Đặc tả use case Đánh dấu phim mình thích\relax }}{13}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Đặc tả use case Đánh giá phim\relax }}{14}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Đặc tả use case CRUD phim\relax }}{15}{figure.caption.20}%
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Đặc tả use case Gợi ý phim theo nội dung\relax }}{16}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Khảo sát người dùng về các ứng dụng\relax }}{5}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Khảo sát về quyền theo dõi\relax }}{6}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Khảo sát các hệ thống đã có\relax }}{7}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Use case tổng quan\relax }}{9}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Phân rã use case Quản lý thông tin người dùng\relax }}{9}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Phân rã use case Quản lý thông tin phim\relax }}{10}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Phân rã use case Quản lý tài khoản\relax }}{10}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Phân rã use case Tương tác với phim\relax }}{11}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Phân rã use case Review, comment\relax }}{11}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Đặc tả use case Đăng nhập\relax }}{12}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Đặc tả use case Chỉnh sửa thông tin cá nhân\relax }}{13}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Đặc tả use case Tìm kiếm phim\relax }}{14}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Đặc tả use case Đánh dấu phim mình thích\relax }}{14}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Đặc tả use case Đánh giá phim\relax }}{15}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Đặc tả use case CRUD phim\relax }}{16}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Đặc tả use case Gợi ý phim theo nội dung\relax }}{17}{figure.caption.22}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Biểu đồ phụ thuộc gói\relax }}{27}{figure.caption.22}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Thiết kế chi tiết gói ở tầng Model\relax }}{29}{figure.caption.23}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Thiết kế chi tiết gói ở tầng View\relax }}{30}{figure.caption.24}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Thiết kế chi tiết gói ở tầng Template\relax }}{32}{figure.caption.25}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Màn hình đăng nhập\relax }}{33}{figure.caption.26}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Màn hình đăng ký\relax }}{34}{figure.caption.27}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Màn hình profile\relax }}{34}{figure.caption.28}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Màn hình chính\relax }}{35}{figure.caption.29}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Màn hình gợi ý phim ở trang chủ\relax }}{35}{figure.caption.30}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Màn hình thông tin chi tiết 1\relax }}{36}{figure.caption.31}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Màn hình thông tin chi tiết 2\relax }}{36}{figure.caption.32}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Màn hình tổng hợp đạo diễn, diễn viên, ...\relax }}{37}{figure.caption.33}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Màn hình tổng hợp đạo diễn, diễn viên, ...\relax }}{37}{figure.caption.34}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Màn hình review phim\relax }}{38}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Sơ đồ ERD\relax }}{38}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Hình ảnh các table trong database\relax }}{39}{figure.caption.37}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Hình ảnh các table trong database\relax }}{39}{figure.caption.38}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Hình ảnh các table trong database\relax }}{39}{figure.caption.39}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Tổng hợp các thông tin cần lấy\relax }}{40}{figure.caption.40}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Chức năng gợi ý phim dựa vào sở thích người dùng\relax }}{41}{figure.caption.42}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Chức năng gợi ý phim dựa vào nội dung phim đang xem\relax }}{42}{figure.caption.43}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Chức năng thêm phim vào danh sách yêu thích\relax }}{42}{figure.caption.44}%
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Chức năng review phim\relax }}{43}{figure.caption.45}%
-\contentsline {figure}{\numberline {5.24}{\ignorespaces Chức năng xem toàn bộ ảnh của phim\relax }}{43}{figure.caption.46}%
-\contentsline {figure}{\numberline {5.25}{\ignorespaces Kiểm thử chức năng 1\relax }}{44}{figure.caption.47}%
-\contentsline {figure}{\numberline {5.26}{\ignorespaces Kiểm thử chức năng 2\relax }}{44}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Biểu đồ phụ thuộc gói\relax }}{28}{figure.caption.23}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Thiết kế chi tiết gói ở tầng Model\relax }}{30}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Thiết kế chi tiết gói ở tầng View\relax }}{31}{figure.caption.25}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Thiết kế chi tiết gói ở tầng Template\relax }}{33}{figure.caption.26}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Màn hình đăng nhập\relax }}{34}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Màn hình đăng ký\relax }}{35}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Màn hình profile\relax }}{35}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Màn hình chính\relax }}{36}{figure.caption.30}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Màn hình gợi ý phim ở trang chủ\relax }}{36}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Màn hình thông tin chi tiết 1\relax }}{37}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Màn hình thông tin chi tiết 2\relax }}{37}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Màn hình tổng hợp đạo diễn, diễn viên, ...\relax }}{38}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Màn hình tổng hợp đạo diễn, diễn viên, ...\relax }}{38}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Màn hình review phim\relax }}{39}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Sơ đồ ERD\relax }}{39}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Hình ảnh các table trong database\relax }}{40}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Hình ảnh các table trong database\relax }}{40}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Hình ảnh các table trong database\relax }}{40}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Tổng hợp các thông tin cần lấy\relax }}{41}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Chức năng gợi ý phim dựa vào sở thích người dùng\relax }}{42}{figure.caption.43}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Chức năng gợi ý phim dựa vào nội dung phim đang xem\relax }}{43}{figure.caption.44}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Chức năng thêm phim vào danh sách yêu thích\relax }}{43}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Chức năng review phim\relax }}{44}{figure.caption.46}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Chức năng xem toàn bộ ảnh của phim\relax }}{44}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Kiểm thử chức năng 1\relax }}{45}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Kiểm thử chức năng 2\relax }}{45}{figure.caption.49}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Tạo PAT Github\relax }}{48}{figure.caption.49}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Tạo Secrets Repository\relax }}{49}{figure.caption.50}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Hệ thống tự động crawl dữ liệu\relax }}{49}{figure.caption.51}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Cập nhật dữ liệu mới thành công\relax }}{50}{figure.caption.52}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Kiểm tra kết quả 1\relax }}{52}{figure.caption.53}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Kiểm tra kết quả 2\relax }}{53}{figure.caption.54}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Kiểm tra kết quả 3\relax }}{54}{figure.caption.55}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Tính giá trị trung bình rating của các user\relax }}{55}{figure.caption.56}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Tính lại rating theo giá trị trung bình\relax }}{56}{figure.caption.57}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Tính độ tương đồng giữa các user theo rating mới\relax }}{56}{figure.caption.58}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Dự đoán rating cho từng item\relax }}{57}{figure.caption.59}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Kết quả dự đoán rating cuối cùng của hệ thống\relax }}{57}{figure.caption.60}%
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Giá trị RMSE\relax }}{57}{figure.caption.61}%
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Kết quả gợi ý item cho user\relax }}{58}{figure.caption.62}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Tạo PAT Github\relax }}{49}{figure.caption.50}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Tạo Secrets Repository\relax }}{50}{figure.caption.51}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Hệ thống tự động crawl dữ liệu\relax }}{50}{figure.caption.52}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Cập nhật dữ liệu mới thành công\relax }}{51}{figure.caption.53}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Kiểm tra kết quả 1\relax }}{53}{figure.caption.54}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Kiểm tra kết quả 2\relax }}{54}{figure.caption.55}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Kiểm tra kết quả 3\relax }}{55}{figure.caption.56}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Tính giá trị trung bình rating của các user\relax }}{56}{figure.caption.57}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Tính lại rating theo giá trị trung bình\relax }}{57}{figure.caption.58}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Tính độ tương đồng giữa các user theo rating mới\relax }}{57}{figure.caption.59}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Dự đoán rating cho từng item\relax }}{58}{figure.caption.60}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Kết quả dự đoán rating cuối cùng của hệ thống\relax }}{58}{figure.caption.61}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Giá trị RMSE\relax }}{58}{figure.caption.62}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Kết quả gợi ý item cho user\relax }}{59}{figure.caption.63}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Kết quả so sánh so với các ứng dụng khác\relax }}{59}{figure.caption.63}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Kết quả so sánh so với các ứng dụng khác\relax }}{60}{figure.caption.64}%
 \contentsfinish 
 \contentsfinish 
