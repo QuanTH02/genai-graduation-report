@@ -1,6 +1,6 @@
 \documentclass[../DoAn.tex]{subfiles}
 \begin{document}
-Chương này trình bày nền tảng lý thuyết và các thuật toán được sử dụng để xây dựng hệ thống gợi ý phim, bao gồm hai phương pháp chính là Content-Based Filtering và Collaborative Filtering. Đây là các phương pháp phổ biến và hiệu quả trong việc đề xuất nội dung cho người dùng dựa trên dữ liệu hiện có. Nội dung chương sẽ đi sâu vào các kiến thức nền tảng, cơ sở lý thuyết, các thuật toán cụ thể, và phương pháp nghiên cứu của từng phương pháp gợi ý. Mỗi phần sẽ phân tích rõ cách thức áp dụng từng thuật toán để giải quyết các yêu cầu và vấn đề đã được xác định trong Chương 2. Qua đó, sẽ có cái nhìn tổng quan và chi tiết về cách thức hoạt động cũng như lợi ích của từng phương pháp gợi ý trong hệ thống.
+Chương này em sẽ trình bày nền tảng lý thuyết và thuật toán được sử dụng để xây dựng hệ thống gợi ý phim, đó là phương pháp Content-Based Filtering. Đây là phương pháp phổ biến và hiệu quả trong việc đề xuất nội dung cho người dùng dựa trên dữ liệu hiện có. Nội dung sẽ đi sâu vào các kiến thức nền tảng, cơ sở lý thuyết, các thuật toán cụ thể, và phương pháp nghiên cứu của phương pháp gợi ý. Mỗi phần sẽ phân tích rõ cách thức áp dụng thuật toán để giải quyết các yêu cầu và vấn đề đã được xác định trong Chương 2. Qua đó, sẽ có cái nhìn tổng quan và chi tiết về cách thức hoạt động cũng như lợi ích của phương pháp gợi ý trong hệ thống.
 \section{Content-Based Filtering}
 \label{section:3.1}
 \subsection{Kiến thức nền tảng}
@@ -35,49 +35,9 @@ Các thuật toán chính được sử dụng trong Content-Based Filtering bao
 
 Việc áp dụng Content-Based Filtering không chỉ giúp hệ thống gợi ý phim hoạt động hiệu quả mà còn đảm bảo rằng người dùng nhận được các đề xuất phù hợp với sở thích và nhu cầu cá nhân.
 
-\section{Collaborative Filtering}
-\label{section:3.2}
-\subsection{Kiến thức nền tảng}
-Collaborative Filtering (CF) là một kỹ thuật gợi ý dựa trên sự hợp tác giữa các người dùng trong hệ thống. Phương pháp này không chỉ dựa trên đặc trưng của các sản phẩm mà còn dựa trên hành vi và sở thích của người dùng. Cụ thể, CF sử dụng thông tin từ các người dùng khác có sở thích tương tự để đưa ra gợi ý. Đây là một trong những phương pháp gợi ý phổ biến nhất và được áp dụng rộng rãi trong các hệ thống khuyến nghị như Amazon, Netflix, và Spotify.
-
-\subsection{Cơ sở lý thuyết}
-Phương pháp Collaborative Filtering (CF) là một trong những phương pháp quan trọng trong lọc cộng tác trong lĩnh vực học máy và khai phá dữ liệu. Cơ sở lý thuyết của CF dựa trên hai giả định chính là User similarity và Item similarity. CF được triển khai thông qua hai phương pháp chính:
-
-User-Based Collaborative Filtering tìm kiếm những người dùng có sở thích tương tự với người dùng hiện tại và gợi ý những sản phẩm mà họ đã thích nhưng người dùng hiện tại chưa khám phá.
-
-Ngược lại, Item-Based Collaborative Filtering tìm kiếm các sản phẩm tương tự dựa trên các sản phẩm mà người dùng đã đánh giá cao và gợi ý các sản phẩm tương tự này cho người dùng.
-
-\subsection{Các thuật toán}
-Các thuật toán chính được sử dụng trong Collaborative Filtering bao gồm:
-
-\textbf{User-Based Collaborative Filtering (UBCF):} Thuật toán này tính toán độ tương tự giữa các người dùng bằng cách so sánh lịch sử đánh giá của họ. Một phương pháp phổ biến để đo độ tương tự là sử dụng Cosine Similarity hoặc Pearson Correlation. Sau khi tìm ra những người dùng có độ tương tự cao, hệ thống sẽ gợi ý các sản phẩm mà họ đã thích nhưng người dùng hiện tại chưa đánh giá.
-
-\textbf{Item-Based Collaborative Filtering (IBCF):} Thay vì so sánh giữa các người dùng, IBCF so sánh giữa các sản phẩm. Hệ thống sẽ tìm ra các sản phẩm tương tự dựa trên lịch sử đánh giá của tất cả người dùng. Các phương pháp như Cosine Similarity hoặc Jaccard Similarity có thể được sử dụng để đo độ tương tự giữa các sản phẩm.
-
-\textbf{Matrix Factorization:} Đây là một kỹ thuật học máy nâng cao được sử dụng rộng rãi trong CF. Matrix Factorization, như SVD (Singular Value Decomposition), phân rã ma trận đánh giá người dùng-sản phẩm thành các ma trận nhỏ hơn, từ đó phát hiện ra các yếu tố ẩn định nghĩa sự tương đồng giữa người dùng và sản phẩm.
-
-\textbf{k-Nearest Neighbors (k-NN):} Thuật toán k-NN có thể được áp dụng cả trong UBCF và IBCF. Trong UBCF, k-NN tìm ra k người dùng tương tự nhất, trong khi ở IBCF, nó tìm ra k sản phẩm tương tự nhất.
-
-\subsection{Phương pháp nghiên cứu}
-Để triển khai Collaborative Filtering, cần thực hiện các bước sau:
-
-\textbf{Thu thập dữ liệu:} Thu thập dữ liệu đánh giá từ người dùng về các sản phẩm. Dữ liệu này có thể bao gồm các đánh giá sao, bình luận, và lịch sử mua hàng.
-
-\textbf{Xây dựng ma trận người dùng-sản phẩm:} Tạo ra một ma trận mà mỗi hàng đại diện cho một người dùng và mỗi cột đại diện cho một sản phẩm. Các giá trị trong ma trận là các đánh giá mà người dùng đã cho sản phẩm đó.
-
-\textbf{Tính toán độ tương tự:} Sử dụng các phương pháp như Cosine Similarity hoặc Pearson Correlation để tính toán độ tương tự giữa các người dùng hoặc các sản phẩm.
-
-\textbf{Gợi ý sản phẩm:} Dựa trên độ tương tự đã tính toán, hệ thống gợi ý các sản phẩm mà người dùng tương tự đã đánh giá cao hoặc các sản phẩm tương tự với những gì người dùng đã thích.
-
-\textbf{Đánh giá và cải thiện:} Đánh giá hiệu quả của hệ thống gợi ý bằng các chỉ số như RMSE (Root Mean Squared Error), MAE (Mean Absolute Error), hoặc Precision and Recall. Điều chỉnh các tham số và mô hình dựa trên kết quả đánh giá để cải thiện độ chính xác của hệ thống.
-
-Collaborative Filtering là một phương pháp mạnh mẽ trong hệ thống gợi ý phim, giúp cá nhân hóa trải nghiệm người dùng dựa trên sự hợp tác và chia sẻ thông tin giữa các người dùng. Việc áp dụng đúng các kỹ thuật và thuật toán sẽ giúp cải thiện độ chính xác và hiệu quả của các đề xuất, từ đó tăng cường sự hài lòng của người dùng.
-
-Chương này đã cung cấp một cái nhìn tổng quan và chi tiết về hai phương pháp gợi ý phim chủ đạo: Content-Based Filtering và Collaborative Filtering. Qua các phần trình bày về kiến thức nền tảng, cơ sở lý thuyết, các thuật toán và phương pháp nghiên cứu, chúng ta đã hiểu rõ cách thức hoạt động, ưu điểm và hạn chế của từng phương pháp.
+Chương này đã cung cấp một cái nhìn tổng quan và chi tiết về phương pháp gợi ý phim: Content-Based Filtering. Qua các phần trình bày về kiến thức nền tảng, cơ sở lý thuyết, các thuật toán và phương pháp nghiên cứu, chúng ta đã hiểu rõ cách thức hoạt động, ưu điểm và hạn chế của phương pháp.
 
 Content-Based Filtering dựa vào phân tích các đặc trưng của nội dung phim để gợi ý các bộ phim tương tự mà người dùng có thể quan tâm. Phương pháp này giúp hệ thống đưa ra các gợi ý chính xác dựa trên thông tin cụ thể của phim và sở thích cá nhân của người dùng.
 
-Collaborative Filtering dựa trên sự hợp tác và chia sẻ thông tin giữa các người dùng để gợi ý phim. Bằng cách phân tích hành vi và sở thích của nhiều người dùng, phương pháp này có thể đưa ra các gợi ý cá nhân hóa và phù hợp hơn, đặc biệt khi người dùng có xu hướng thích các phim mà những người dùng tương tự đã đánh giá cao.
-
-Việc hiểu và áp dụng đúng các kỹ thuật của cả hai phương pháp này sẽ giúp hệ thống gợi ý phim hoạt động hiệu quả, mang lại trải nghiệm tốt hơn cho người dùng. Các kiến thức và phương pháp trình bày trong chương này sẽ là nền tảng vững chắc để phát triển và tối ưu hóa hệ thống gợi ý phim trong các chương tiếp theo.
+Việc hiểu và áp dụng đúng các kỹ thuật của phương pháp này sẽ giúp hệ thống gợi ý phim hoạt động hiệu quả, mang lại trải nghiệm tốt hơn cho người dùng. Các kiến thức và phương pháp trình bày trong chương này sẽ là nền tảng vững chắc để phát triển và tối ưu hóa hệ thống gợi ý phim trong các chương tiếp theo.
 \end{document}
