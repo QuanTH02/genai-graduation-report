@@ -38,29 +38,27 @@
 \contentsline {figure}{\numberline {5.17}{\ignorespaces Hình ảnh các table trong database\relax }}{38}{figure.caption.39}%
 \contentsline {figure}{\numberline {5.18}{\ignorespaces Hình ảnh các table trong database\relax }}{38}{figure.caption.40}%
 \contentsline {figure}{\numberline {5.19}{\ignorespaces Tổng hợp các thông tin cần lấy\relax }}{39}{figure.caption.41}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Chức năng gợi ý phim dựa vào lịch sử thao tác của người dùng\relax }}{40}{figure.caption.43}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Chức năng gợi ý phim dựa vào nội dung phim đang xem\relax }}{41}{figure.caption.44}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Chức năng thêm phim vào danh sách yêu thích\relax }}{41}{figure.caption.45}%
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Chức năng review phim\relax }}{42}{figure.caption.46}%
-\contentsline {figure}{\numberline {5.24}{\ignorespaces Chức năng xem toàn bộ ảnh của phim\relax }}{42}{figure.caption.47}%
-\contentsline {figure}{\numberline {5.25}{\ignorespaces Kiểm thử chức năng 1\relax }}{43}{figure.caption.48}%
-\contentsline {figure}{\numberline {5.26}{\ignorespaces Kiểm thử chức năng 2\relax }}{43}{figure.caption.49}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Chức năng tìm kiếm phim theo ngôn ngữ người dùng\relax }}{41}{figure.caption.43}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Review phim\relax }}{41}{figure.caption.44}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Gợi ý phim theo lịch sử review\relax }}{42}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Tìm kiếm phim\relax }}{42}{figure.caption.46}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Gợi ý phim theo lịch sử tìm kiếm\relax }}{43}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Chức năng gợi ý phim dựa vào lịch sử thao tác của người dùng\relax }}{43}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Chức năng gợi ý phim dựa vào nội dung phim đang xem\relax }}{44}{figure.caption.49}%
+\contentsline {figure}{\numberline {5.27}{\ignorespaces Chức năng thêm phim vào danh sách yêu thích\relax }}{44}{figure.caption.50}%
+\contentsline {figure}{\numberline {5.28}{\ignorespaces Chức năng review phim\relax }}{45}{figure.caption.51}%
+\contentsline {figure}{\numberline {5.29}{\ignorespaces Chức năng xem toàn bộ ảnh của phim\relax }}{45}{figure.caption.52}%
+\contentsline {figure}{\numberline {5.30}{\ignorespaces Kiểm thử chức năng 1\relax }}{46}{figure.caption.53}%
+\contentsline {figure}{\numberline {5.31}{\ignorespaces Kiểm thử chức năng 2\relax }}{46}{figure.caption.54}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Tạo PAT Github\relax }}{47}{figure.caption.50}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Tạo Secrets Repository\relax }}{48}{figure.caption.51}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Hệ thống tự động crawl dữ liệu\relax }}{48}{figure.caption.52}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Cập nhật dữ liệu mới thành công\relax }}{49}{figure.caption.53}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Kiểm tra kết quả 1\relax }}{51}{figure.caption.54}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Kiểm tra kết quả 2\relax }}{52}{figure.caption.55}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Kiểm tra kết quả 3\relax }}{53}{figure.caption.56}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Tính giá trị trung bình rating của các user\relax }}{54}{figure.caption.57}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Tính lại rating theo giá trị trung bình\relax }}{55}{figure.caption.58}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Tính độ tương đồng giữa các user theo rating mới\relax }}{55}{figure.caption.59}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Dự đoán rating cho từng item\relax }}{56}{figure.caption.60}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Kết quả dự đoán rating cuối cùng của hệ thống\relax }}{56}{figure.caption.61}%
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Giá trị RMSE\relax }}{56}{figure.caption.62}%
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Kết quả gợi ý item cho user\relax }}{57}{figure.caption.63}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Tạo PAT Github\relax }}{50}{figure.caption.55}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Tạo Secrets Repository\relax }}{51}{figure.caption.56}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Hệ thống tự động crawl dữ liệu\relax }}{51}{figure.caption.57}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Cập nhật dữ liệu mới thành công\relax }}{52}{figure.caption.58}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Kiểm tra kết quả 1\relax }}{54}{figure.caption.59}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Kiểm tra kết quả 2\relax }}{55}{figure.caption.60}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Kiểm tra kết quả 3\relax }}{56}{figure.caption.61}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Kết quả so sánh so với các ứng dụng khác\relax }}{58}{figure.caption.64}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Kết quả so sánh so với các ứng dụng khác\relax }}{57}{figure.caption.62}%
 \contentsfinish 
 \contentsfinish 

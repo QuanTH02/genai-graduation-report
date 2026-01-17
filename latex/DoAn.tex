@@ -111,12 +111,12 @@
     [] % after
 \titlespacing{\subsection}{30pt}{\parskip}{0.5\parskip}
 
-\renewcommand\thesubsubsection{\alph{subsubsection}}
+\renewcommand\thesubsubsection{\arabic{subsubsection}}
 \titleformat
     {\subsubsection} % command
     [hang] % shape
     {\bfseries} % format
-    {\alph{subsubsection}, \ } % label
+    {\thechapter.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}\ \ \ \ } % label
     {0pt} %sep
     {} % before
     [] % after

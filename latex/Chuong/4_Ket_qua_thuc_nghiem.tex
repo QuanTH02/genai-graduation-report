@@ -366,6 +366,65 @@ Dung lượng toàn bộ mã nguồn: Khoảng 300MB khi đã có hệ thống g
 
 Ứng dụng đã hoàn thành với cấu trúc rõ ràng, mã nguồn được tổ chức tốt trong các gói và lớp. Thống kê chi tiết về số dòng code, số lớp, và dung lượng mã nguồn giúp đánh giá và theo dõi tiến trình phát triển của dự án. Ứng dụng đáp ứng các yêu cầu đặt ra và sẵn sàng để triển khai và sử dụng.
 
+\textbf{Crawl dữ liệu từ trang web:}
+
+Nguồn dữ liệu: IMDb, BoxOfficeMojo
+
+Số bộ phim đã crawl: 5000 bộ phim
+
+Số ảnh đã crawl: 250000 ảnh
+
+Số video đã crawl: 5000 video
+
+\textbf{Tìm kiếm phim theo ngôn ngữ người dùng:}
+
+Ở chức năng này, người dùng có thể tìm kiếm phim theo ngôn ngữ của mình. Hệ thống sẽ nhận đầu vào, phân tích, embed text vào model để tìm kiếm phim theo ngôn ngữ của người dùng và đưa ra kết quả phù hợp.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{Hinhve/search_phim.png}
+\caption{Chức năng tìm kiếm phim theo ngôn ngữ người dùng}
+\label{fig:search_phim}
+\end{figure} 
+
+Dựa vào hình ảnh kết quả trên, có thể thấy hệ thống đã đưa ra kết quả phù hợp với yêu cầu của người dùng. Ở trên là các phim marvel hệ thống đã đưa ra kết quả.
+
+\textbf{Gợi ý phim theo lịch sử hoạt động của người dùng:}
+
+Ở chức năng này, hệ thống sẽ gợi ý phim dựa vào lịch sử hoạt động của người dùng. Hệ thống sẽ theo dõi lịch sử hoạt động của người dùng như review phim, tìm kiếm phim, xem chi tiết phim, ... và đưa ra gợi ý các bộ phim tương tự với lịch sử hoạt động của người dùng.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{Hinhve/review_phim.png}
+\caption{Review phim}
+\label{fig:review_phim}
+\end{figure} 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{Hinhve/goi_y_theo_review.png}
+\caption{Gợi ý phim theo lịch sử review}
+\label{fig:goi_y_theo_review}
+\end{figure} 
+
+Dựa vào lịch sử review của người dùng, hệ thống có thể tự học và đưa ra được kết quả mới nhất phù hợp với sở thích của người dùng. Ở phần trên, review phim người dùng bảo thích phim Iron Man, hệ thống đã đưa ra gợi ý phim tương tự là Iron man 1, 2, 3 và các bộ phim Marvel liên quan.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{Hinhve/search_phim.png}
+\caption{Tìm kiếm phim}
+\label{fig:search_phim}
+\end{figure} 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{Hinhve/goi_y_theo_search.png}
+\caption{Gợi ý phim theo lịch sử tìm kiếm}
+\label{fig:goi_y_theo_search}
+\end{figure} 
+
+Dựa vào lịch sử tìm kiếm của người dùng, hệ thống lưu lại lịch sử và đưa ra được kết quả mới nhất phù hợp với yêu cầu của người dùng. Ở phần trên, người dùng tìm kiếm phim Marvel, thì sau khi ra màn Home, hệ thống đã đưa ra gợi ý các phim Marvel liên quan.
+
 \subsection{Minh họa các chức năng chính}
 \textbf{Chức năng gợi ý phim dựa vào lịch sử thao tác của người dùng}
 \begin{figure}[H]

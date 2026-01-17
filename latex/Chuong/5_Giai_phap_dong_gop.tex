@@ -14,7 +14,7 @@ Khi thiết kế cơ sở dữ liệu, em gặp khó khăn khi phải xử lý m
 
 Một trong số các trang web mà em lấy dữ liệu đó là IMDb, ở trang web này, có rất nhiều trường thông tin, nhưng việc khó khăn để lấy dữ liệu nhất đối với em chính là lấy link ảnh và link trailer. Ở trang web này, cứ 1 ngày thì các link ảnh và trailer sẽ được làm mới 1 lần, cho nên qua ngày khác thì link cũ sẽ bị hỏng và không truy cập được nữa. Em đã nghĩ ra 2 phương án để giải quyết đó là: Tải toàn bộ ảnh và trailer xuống hoặc tìm cách để hệ thống tự update data.
 
-Ở cách giải quyết là tải toàn bộ ảnh và trailer xuống thì em đã loại bỏ ngay sau khi quyết định số bộ phim để demo hệ thống. Với 1000 bộ phim thì sẽ có tổng cộng hơn 50000 ảnh và 1000 video demo, nếu tải về thì rất nặng máy và không tối ưu. Vì thế, em đã nghiên cứu và tìm ra cách để hệ thống tự update data, đó chính là dùng github action.
+Ở cách giải quyết là tải toàn bộ ảnh và trailer xuống thì em đã loại bỏ ngay sau khi quyết định số bộ phim để demo hệ thống. Với 5000 bộ phim thì sẽ có tổng cộng hơn 250000 ảnh và 5000 video demo, nếu tải về thì rất nặng máy và không tối ưu. Vì thế, em đã nghiên cứu và tìm ra cách để hệ thống tự update data, đó chính là dùng github action.
 
 \subsection{Github Action}
 \textbf{Giới thiệu:}
@@ -140,106 +140,5 @@ Sau khi tính toán được độ tương đồng dựa vào công thức simil
 Ở hình ảnh \ref{fig:rcm_ct_kq_3} có thể thấy bộ phim được gợi ý gần nhất với bộ phim Meg 2: The Trench là bộ phim The Meg. Hai bộ phim này có movie name, describe, cast và director khá tương tự nhau.
 
 Dựa trên các kết quả cho ra ở trên cùng với kiểm tra bằng tính trực quan có thể thấy hệ thống gợi ý phim bằng độ tương đồng được thực hiện khá chính xác.
-
-\subsection{Collaborative}
-\textbf{Giới thiệu:}
-
-Ý tưởng cơ bản của Collaborative Filtering là xác định mức độ quan tâm của một user tới một item dựa trên các users khác gần giống với user này. Đối với những users dễ tính, họ có thể đánh giá phim yêu thích là 5 sao, và nếu không thích thì đánh giá có thể thấp hơn một chút, chẳng hạn như 3 sao. Ví dụ, A, B đều thích phim Cảnh sát hình sự, tức đều rate bộ phim này 5 sao. Ta đã biết A cũng thích Người phán xử, vậy nhiều khả năng B cũng thích bộ phim này.
-
-Vấn đề đặt ra là:
-\begin{itemize}
-    \item Làm thế nào xác định được sự giống nhau giữa hai users?
-    \item Khi đã xác định được các users gần giống nhau (similar users) rồi, làm thế nào dự đoán được mức độ quan tâm của một user lên một item?
-\end{itemize}
-
-\textbf{Phân tích, giải pháp:}
-
-Công việc quan trọng nhất phải làm trước tiên trong User-user Collaborative Filtering là phải xác định được sự giống nhau (similarity) giữa hai users.
-
-Giả sử chúng ta có các users từ u0 đến u6 và các items từ i0 đến i4 trong đó các ô vuông trong bảng là số rating mà user đã đánh giá cho item đó. Trong một hệ thống có số lượng người dùng và số lượng item rất lớn, rất khó để có dữ liệu người dùng đánh giá nhiều item, một số người dùng thậm chí còn không đánh giá hoặc chỉ đánh giá một số sản phẩm. Những điều này sẽ ảnh hưởng rất lớn để xác định được sự giống nhau giữa hai user. Trong hình \ref{fig:rcm_cl_tb1}, các giá trị bị trống là user chưa đánh giá, khi đó hệ thống sẽ phải đi tìm những giá trị đó.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{Hinhve/rcm_cl_tb1.png}
-    \caption{Tính giá trị trung bình rating của các user}
-    \label{fig:rcm_cl_tb1}
-\end{figure}
-
-Để điền giá trị vào các ô trống trên, có thể điền giá trị an toàn là 2.5, vì nó chính là giá trị trung bình của 0 và 5, mức thấp nhất và mức cao nhất. Tuy nhiên, giá trị này vẫn có hạn chế. Đối với những users dễ tính, họ có thể đánh giá phim yêu thích là 5 sao, và nếu không thích thì đánh giá có thể thấp hơn một chút, chẳng hạn như 3 sao. Khi đó việc chọn giá trị 2.5 hơi thấp đối với những user đó. Và tương tự, những user khó tính có thể đánh giá 3 sao cho những bộ phim họ thích và thấp hơn thế nếu họ không thích.
-
-Một giá trị có thể chấp nhận được là trung bình cộng của các ratings mà user tương ứng đã thực hiện Hình \ref{fig:rcm_cl_tb1}. Việc này sẽ tránh được tình trạng bị ảnh hưởng bởi những users quá khó tính hoặc dễ tính. Vì đối với mỗi user, họ lúc nào cũng có những items mà họ ưu tiên hơn những items khác, và được đánh giá cao hơn.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{Hinhve/rcm_cl_tb2.png}
-    \caption{Tính lại rating theo giá trị trung bình}
-    \label{fig:rcm_cl_tb2}
-\end{figure}
-
-Việc tính giá trị trung bình này có thể xác định được user đó là dễ tính hay khó tính và có thể xem được item cụ thể user đó thích hay ghét bằng cách lấy giá trị rating item đó trừ đi giá trị trung bình Hình \ref{fig:rcm_cl_tb2}. Khi đó có thể điền các giá trị trống bằng giá trị 0, biểu hiện cho không thích cũng không ghét.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{Hinhve/rcm_cl_tb3.png}
-    \caption{Tính độ tương đồng giữa các user theo rating mới}
-    \label{fig:rcm_cl_tb3}
-\end{figure}
-
-Sau đó, ta có thể tính được độ tương đồng giữa các user theo rating mới  Hình \ref{fig:rcm_cl_tb3}. Nhìn qua thì có thể thấy người có độ tương đồng cao nhất và u0 là u1.
-
-Dựa vào độ tương đồng này, ta có thể dự đoán được rating cho item mà user này trước đó chưa đánh giá. Theo công thức như sau:
-
-\begin{equation}
-\hat{y}_{i,u} = \frac{\sum_{u_j \in \mathcal{N}(u,i)} \overline{y}_{i,u_j} \text{sim}(u, u_j)}{\sum_{u_j \in \mathcal{N}(u,i)} |\text{sim}(u, u_j)|}
-\end{equation}
-
-Trong đó:
-\begin{itemize}
-  \item $\hat{y}_{i,u}$: Dự đoán giá trị đánh giá của người dùng $u$ cho item $i$.
-  \item $\mathcal{N}(u,i)$: Tập hợp các người dùng đã đánh giá item $i$ và có độ tương đồng với người dùng $u$.
-  \item $\overline{y}_{i,u_j}$: Giá trị đánh giá mà người dùng $u_j$ đưa ra cho item $i$.
-  \item $\text{sim}(u, u_j)$: Độ tương đồng giữa người dùng $u$ và người dùng $u_j$.
-\end{itemize}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{Hinhve/rcm_cl_tb4.png}
-    \caption{Dự đoán rating cho từng item}
-    \label{fig:rcm_cl_tb4}
-\end{figure}
-
-Sau khi dự đoán bằng công thức trên, ta có các kết quả dự đoán như Hình \ref{fig:rcm_cl_tb4}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{Hinhve/rcm_cl_tb5.png}
-    \caption{Kết quả dự đoán rating cuối cùng của hệ thống}
-    \label{fig:rcm_cl_tb5}
-\end{figure}
-
-Sau khi có kết quả dự đoán dựa trên kết quả rating trung bình, ta cộng giá trị dự đoán đó với rating trung bình của user và được kết quả cuối cùng như Hình \ref{fig:rcm_cl_tb5}.
-
-\textbf{Kiểm tra tính chính xác:}
-
-Sau khi chạy thuật toán, kiểm tra giá trị RMSE với bộ data 100000 lượt rate ta có được kết quả như sau:
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{Hinhve/rcm_cl_rmse.png}
-    \caption{Giá trị RMSE}
-    \label{fig:rcm_cl_rmse}
-\end{figure}
-
-Dưới đây là kết quả chạy Collaborative đối với dữ liệu trên:
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{Hinhve/rcm_cl_kq_i_to_u.png}
-    \caption{Kết quả gợi ý item cho user}
-    \label{fig:rcm_cl_kq_i_to_u}
-\end{figure}
-
-Có thể thấy kết quả chạy đúng như mong muốn như ở \ref{fig:rcm_cl_tb5}.
-
-Trong chương này, em đã trình bày những vấn đề mà em đã gặp phải và những giải pháp cụ thể mà em đã áp dụng để giải quyết chúng. Những kinh nghiệm này không chỉ giúp em vượt qua các thách thức trong quá trình làm đồ án tốt nghiệp mà còn giúp em phát triển kỹ năng phân tích, tự giải quyết vấn đề và lập luận logic.
 
 \end{document}
