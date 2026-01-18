@@ -1,43 +1,39 @@
 \documentclass[../DoAn.tex]{subfiles}
 \begin{document}
-Chương này tôi sẽ trình bày nền tảng lý thuyết và thuật toán được sử dụng để xây dựng hệ thống gợi ý phim, đó là phương pháp Content-Based Filtering. Đây là phương pháp phổ biến và hiệu quả trong việc đề xuất nội dung cho người dùng dựa trên dữ liệu hiện có. Nội dung sẽ đi sâu vào các kiến thức nền tảng, cơ sở lý thuyết, các thuật toán cụ thể, và phương pháp nghiên cứu của phương pháp gợi ý. Mỗi phần sẽ phân tích rõ cách thức áp dụng thuật toán để giải quyết các yêu cầu và vấn đề đã được xác định trong Chương 2. Qua đó, sẽ có cái nhìn tổng quan và chi tiết về cách thức hoạt động cũng như lợi ích của phương pháp gợi ý trong hệ thống.
+Chương này tôi sẽ trình bày nền tảng lý thuyết và thuật toán được sử dụng để xây dựng ứng dụng gợi ý phim, đó là phương pháp Content-Based Filtering. Đây là phương pháp phổ biến và hiệu quả trong đề xuất nội dung cho người dùng dựa trên dữ liệu hiện có. Nội dung sẽ đi sâu vào các kiến thức nền tảng, cơ sở lý thuyết, các thuật toán cụ thể, và phương pháp nghiên cứu của phương pháp gợi ý. Mỗi phần sẽ phân tích rõ cách thức áp dụng thuật toán này để giải quyết các yêu cầu và vấn đề đã được xác định trong Chương 2. Qua đó, sẽ có cái nhìn tổng quan và chi tiết về cách thức hoạt động cũng như lợi ích của phương pháp gợi ý trong ứng dụng.
 \section{Content-Based Filtering}
 \label{section:3.1}
 \subsection{Kiến thức nền tảng}
-Content-Based Filtering (CBF) là một kỹ thuật gợi ý trong hệ thống đề xuất, dựa trên các đặc trưng của các đối tượng cần đề xuất. Thay vì dựa vào hành vi và sở thích của người dùng khác, CBF sử dụng các thuộc tính và đặc điểm cụ thể của sản phẩm để đưa ra gợi ý. Điều này giúp hệ thống có thể gợi ý các sản phẩm tương tự dựa trên những sản phẩm mà người dùng đã quan tâm hoặc đánh giá cao. Ví dụ, nếu một người dùng thích một bộ phim có chủ đề khoa học viễn tưởng và có sự tham gia của một diễn viên cụ thể, hệ thống sẽ gợi ý các bộ phim khác có chủ đề tương tự và có sự tham gia của diễn viên đó.
+Content-Based Filtering là một kỹ thuật gợi ý trong hệ thống đề xuất, dựa trên các đặc trưng của các đối tượng cần đề xuất. Thay vì dựa vào sở thích và hành vi của người dùng khác, CBF sử dụng các thuộc tính và đặc điểm cụ thể của sản phẩm để đưa ra gợi ý. Điều này giúp hệ thống có thể gợi ý các sản phẩm tương tự dựa trên những sản phẩm mà người dùng đã quan tâm hoặc đánh giá cao. Ví dụ, nếu một người dùng thích một bộ phim có thể loại hành động và có sự tham gia của một diễn viên cụ thể, hệ thống sẽ gợi ý các bộ phim khác có chủ đề tương tự và có sự tham gia của diễn viên đó.
 
 \subsection{Cơ sở lý thuyết}
-Cơ sở lý thuyết của Content-Based Filtering dựa trên việc phân tích và mô tả các đặc trưng của sản phẩm. Mỗi sản phẩm được mô tả bằng một tập hợp các thuộc tính đặc trưng, ví dụ như thể loại, diễn viên, đạo diễn, hoặc từ khóa mô tả nội dung phim. Các đặc trưng này được sử dụng để tạo ra một hồ sơ (profile) cho mỗi sản phẩm. Hồ sơ của người dùng được xây dựng dựa trên các đặc trưng của những sản phẩm mà người dùng đã thích hoặc đánh giá cao. Hệ thống sử dụng các hồ sơ này để tìm kiếm và gợi ý các sản phẩm tương tự. Một số kỹ thuật thường được sử dụng trong CBF bao gồm vector hóa từ khóa (TF-IDF), phân tích tương quan Cosine, và các phương pháp học máy như K-Nearest Neighbors (KNN) để tính toán độ tương tự giữa các hồ sơ.
+Cơ sở lý thuyết của Content-Based Filtering dựa trên việc phân tích và mô tả các đặc trưng của sản phẩm. Mỗi sản phẩm được mô tả bằng một tập hợp các thuộc tính đặc trưng, ví dụ như thể loại, diễn viên, đạo diễn, mô tả hoặc từ khóa mô tả nội dung phim. Các đặc trưng này được sử dụng để tạo ra một hồ sơ cho mỗi sản phẩm. Hồ sơ của người dùng được xây dựng dựa trên các đặc trưng của những sản phẩm mà người dùng thích hoặc đánh giá cao. Hệ thống sử dụng các hồ sơ này để tìm kiếm và gợi ý các sản phẩm tương tự. Một số kỹ thuật thường được sử dụng trong CBF bao gồm vector hóa từ khóa (TF-IDF), phân tích tương quan Cosine.
 
 \subsection{Các thuật toán}
 Các thuật toán chính được sử dụng trong Content-Based Filtering bao gồm:
 
-\textbf{TF-IDF (Term Frequency-Inverse Document Frequency):} Thuật toán này được sử dụng để đánh giá tầm quan trọng của từ khóa trong văn bản. Tần suất xuất hiện của từ trong văn bản (Term Frequency) và mức độ phổ biến của từ trong toàn bộ tập văn bản (Inverse Document Frequency) được kết hợp để xác định trọng số của từ khóa.
+\textbf{TF-IDF (Term Frequency-Inverse Document Frequency):} Thuật toán này được sử dụng để đánh giá tầm quan trọng của từ khóa đó trong văn bản. Tần suất xuất hiện của từ trong văn bản (Term Frequency) và mức độ phổ biến của từ trong toàn bộ tập văn bản (Inverse Document Frequency) được kết hợp để xác định trọng số của từ khóa đó.
 
-\textbf{Cosine Similarity:} Đây là một phương pháp đo độ tương tự giữa hai vector trong không gian vector. Độ tương tự cosine này được xác định bằng cách tính giá trị cosin của góc giữa hai vector. Phương pháp này thường được sử dụng để đo độ tương tự giữa hồ sơ của người dùng và hồ sơ của sản phẩm.
-
-\textbf{K-Nearest Neighbors (KNN):} Đây là một thuật toán học máy dùng để phân loại và hồi quy. Trong CBF, KNN được sử dụng để tìm ra k sản phẩm tương tự nhất với sản phẩm mà người dùng đã đánh giá cao.
-
-\textbf{Naive Bayes:} Đây là một thuật toán phân loại dựa trên lý thuyết xác suất Bayes. Naive Bayes có thể được sử dụng để dự đoán xác suất một sản phẩm thuộc một loại cụ thể dựa trên các đặc trưng của nó.
+\textbf{Cosine Similarity:} Đây là một phương pháp đo độ tương tự giữa hai vector trong không gian vector. Độ tương tự cosine này được tính toán bằng cách tính giá trị cosin của góc giữa hai vector. Phương pháp này thường được sử dụng để đo độ tương tự giữa hồ sơ của người dùng và hồ sơ của các sản phẩm.
 
 \subsection{Phương pháp nghiên cứu}
 Để triển khai Content-Based Filtering, cần thực hiện các bước sau:
 
-\textbf{Thu thập dữ liệu:} Dữ liệu về các đặc trưng của sản phẩm cần được thu thập từ các nguồn uy tín như IMDb và BoxOfficeMojo. Dữ liệu này bao gồm các thuộc tính của phim như thể loại, diễn viên, đạo diễn, và các từ khóa mô tả nội dung.
+\textbf{Thu thập dữ liệu:} Dữ liệu về các đặc trưng của sản phẩm cần được thu thập từ các nguồn uy tín như IMDb, BoxOfficeMojo. Dữ liệu này bao gồm các thuộc tính của phim như thể loại, diễn viên, đạo diễn, mô tả và các từ khóa mô tả nội dung.
 
-\textbf{Xây dựng hồ sơ sản phẩm và người dùng:} Sử dụng các đặc trưng đã thu thập để xây dựng hồ sơ chi tiết cho mỗi sản phẩm. Đồng thời, xây dựng hồ sơ người dùng dựa trên các sản phẩm mà họ đã đánh giá cao hoặc yêu thích.
+\textbf{Xây dựng hồ sơ sản phẩm và người dùng:} Sử dụng các đặc trưng đã thu thập để xây dựng hồ sơ chi tiết cho sản phẩm. Đồng thời, xây dựng hồ sơ người dùng dựa trên các sản phẩm mà người dùng đã đánh giá cao hoặc yêu thích.
 
-\textbf{Tính toán độ tương tự:} Sử dụng các thuật toán như TF-IDF và Cosine Similarity để tính toán độ tương tự giữa hồ sơ của người dùng và hồ sơ của các sản phẩm.
+\textbf{Tính toán độ tương tự:} Sử dụng các thuật toán như TF-IDF hoặc Cosine Similarity để tính toán độ tương tự giữa hồ sơ của người dùng và hồ sơ của các sản phẩm.
 
-\textbf{Gợi ý sản phẩm:} Dựa trên độ tương tự đã tính toán, gợi ý các sản phẩm tương tự mà người dùng có thể quan tâm.
+\textbf{Gợi ý sản phẩm:} Dựa trên độ tương tự đã tính toán, gợi ý các sản phẩm tương tự mà người dùng có thể thích hoặc quan tâm.
 
-\textbf{Đánh giá và cải thiện:} Đánh giá hiệu quả của hệ thống gợi ý thông qua các chỉ số như độ chính xác, độ bao phủ, và độ tin cậy. Dựa trên kết quả đánh giá, điều chỉnh các tham số của thuật toán và cập nhật dữ liệu để cải thiện hệ thống.
+\textbf{Đánh giá và cải thiện:} Đánh giá hiệu quả của ứng dụng gợi ý thông qua các chỉ số như độ chính xác, độ bao phủ, và độ tin cậy. Dựa trên kết quả đánh giá, điều chỉnh các tham số của thuật toán và cập nhật dữ liệu để cải thiện ứng dụng.
 
-Việc áp dụng Content-Based Filtering không chỉ giúp hệ thống gợi ý phim hoạt động hiệu quả mà còn đảm bảo rằng người dùng nhận được các đề xuất phù hợp với sở thích và nhu cầu cá nhân.
+Việc áp dụng Content-Based Filtering không chỉ giúp ứng dụng gợi ý phim hoạt động hiệu quả mà còn đảm bảo rằng người dùng nhận được các đề xuất phù hợp với sở thích và nhu cầu cá nhân.
 
 Chương này đã cung cấp một cái nhìn tổng quan và chi tiết về phương pháp gợi ý phim: Content-Based Filtering. Qua các phần trình bày về kiến thức nền tảng, cơ sở lý thuyết, các thuật toán và phương pháp nghiên cứu, chúng ta đã hiểu rõ cách thức hoạt động, ưu điểm và hạn chế của phương pháp.
 
-Content-Based Filtering dựa vào phân tích các đặc trưng của nội dung phim để gợi ý các bộ phim tương tự mà người dùng có thể quan tâm. Phương pháp này giúp hệ thống đưa ra các gợi ý chính xác dựa trên thông tin cụ thể của phim và sở thích cá nhân của người dùng.
+Content-Based Filtering dựa vào phân tích các đặc trưng của nội dung phim để gợi ý các bộ phim tương tự mà người dùng đó có thể quan tâm. Phương pháp này giúp ứng dụng đưa ra các gợi ý chính xác dựa trên thông tin cụ thể của phim và sở thích cá nhân của người dùng.
 
-Việc hiểu và áp dụng đúng các kỹ thuật của phương pháp này sẽ giúp hệ thống gợi ý phim hoạt động hiệu quả, mang lại trải nghiệm tốt hơn cho người dùng. Các kiến thức và phương pháp trình bày trong chương này sẽ là nền tảng vững chắc để phát triển và tối ưu hóa hệ thống gợi ý phim trong các chương tiếp theo.
+Việc hiểu và áp dụng đúng các kỹ thuật của phương pháp này sẽ giúp ứng dụng gợi ý phim hoạt động hiệu quả, mang lại trải nghiệm tốt hơn cho người dùng. Các kiến thức và phương pháp trình bày trong chương này sẽ là nền tảng vững chắc để phát triển và tối ưu hóa ứng dụng gợi ý phim trong các chương tiếp theo.
 \end{document}

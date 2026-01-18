@@ -3,34 +3,34 @@
 
 Trong chương này, tôi sẽ trình bày các vấn đề mà tôi đã gặp phải và những giải pháp cụ thể mà tôi đã áp dụng để giải quyết chúng. Đồng thời, tôi cũng sẽ trình bày các đóng góp đáng chú ý mà tôi đánh giá cao trong quá trình thực hiện đồ án tốt nghiệp.
 
-\section{Thiếu dữ liệu phim ảnh}
-Vấn đề này phát sinh khi tôi cần một lượng lớn dữ liệu về các bộ phim để xây dựng hệ thống gợi ý. Để giải quyết vấn đề này, tôi đã tiến hành tìm kiếm và lựa chọn các trang web có uy tín để lấy dữ liệu. Việc này bao gồm việc phân tích cú pháp của các trang web, xác định cách truy cập và lấy dữ liệu một cách tự động.
+\section{Thiếu khá nhiều dữ liệu phim ảnh}
+Vấn đề này phát sinh khi tôi cần một lượng lớn dữ liệu về các bộ phim để xây dựng ứng dụng gợi ý. Để giải quyết vấn đề này, tôi đã tiến hành tìm kiếm, thu thập và lựa chọn các trang web có uy tín để lấy dữ liệu. Việc này bao gồm việc phân tích cú pháp của các trang web, xác định cách truy cập, nghiên cứu cấu trúc và lấy dữ liệu một cách tự động.
 
-\section{Thiết kế database khó khăn với quá nhiều trường}
+\section{Thiết kế database khá khó khăn với quá nhiều trường}
 
 Khi thiết kế cơ sở dữ liệu, tôi gặp khó khăn khi phải xử lý một lượng lớn các trường thông tin về phim và người dùng. Để giải quyết vấn đề này, tôi đã áp dụng nguyên tắc chuẩn hóa cơ sở dữ liệu và chia nhỏ các trường thông tin có liên quan thành các bảng dữ liệu con. Sau đó, tôi xác định mối liên hệ giữa các bảng và kết hợp chúng lại với nhau để tạo ra cấu trúc cơ sở dữ liệu hợp lý và hiệu quả.
 
-\section{Trang web có dữ liệu update liên tục theo ngày}
+\section{Trang web có dữ liệu update liên tục theo ngày khiến link ảnh và trailer bị hỏng}
 
-Một trong số các trang web mà tôi lấy dữ liệu đó là IMDb, ở trang web này, có rất nhiều trường thông tin, nhưng việc khó khăn để lấy dữ liệu nhất đối với tôi chính là lấy link ảnh và link trailer. Ở trang web này, cứ 1 ngày thì các link ảnh và trailer sẽ được làm mới 1 lần, cho nên qua ngày khác thì link cũ sẽ bị hỏng và không truy cập được nữa. Tôi đã nghĩ ra 2 phương án để giải quyết đó là: Tải toàn bộ ảnh và trailer xuống hoặc tìm cách để hệ thống tự update data.
+Một trong số các trang web mà tôi lấy dữ liệu đó là IMDb, ở trang web này, có rất nhiều trường thông tin, nhưng việc khó khăn để lấy dữ liệu nhất đối với tôi chính là lấy link ảnh và link trailer. Ở trang web này, cứ 1 ngày thì các link ảnh và trailer sẽ được làm mới 1 lần, cho nên qua ngày khác thì link cũ sẽ bị hỏng và không truy cập được. Tôi đã nghĩ ra 2 phương án để giải quyết đó là: Tải toàn bộ ảnh và trailer xuống hoặc tìm cách để ứng dụng tự update data.
 
-Ở cách giải quyết là tải toàn bộ ảnh và trailer xuống thì tôi đã loại bỏ ngay sau khi quyết định số bộ phim để demo hệ thống. Với 5000 bộ phim thì sẽ có tổng cộng hơn 250000 ảnh và 5000 video demo, nếu tải về thì rất nặng máy và không tối ưu. Vì thế, tôi đã nghiên cứu và tìm ra cách để hệ thống tự update data, đó chính là dùng github action.
+Ở cách giải quyết là tải toàn bộ ảnh và trailer xuống thì tôi đã loại bỏ ngay sau khi quyết định số bộ phim để demo ứng dụng. Với 5000 bộ phim thì sẽ có tổng cộng hơn 250000 ảnh và 5000 video demo, nếu tải về thì rất nặng máy và không tối ưu. Vì thế, tôi đã nghiên cứu và tìm ra cách để ứng dụng tự update data, đó chính là dùng github action.
 
 \subsection{Github Action}
 \textbf{Giới thiệu:}
 
-Github Actions là một dịch vụ được cung cấp bởi GitHub để tự động hóa các quy trình phát triển phần mềm trong các repository. Bằng cách sử dụng các "actions" (hành động), tôi có thể thiết lập các luồng làm việc tự động, từ việc kiểm tra mã nguồn, triển khai ứng dụng, đến tự động hóa các tác vụ như cập nhật dữ liệu trong hệ thống.
+Github Actions là một dịch vụ được cung cấp bởi GitHub để tự động hóa các quy trình phát triển phần mềm. Bằng cách sử dụng các action, tôi có thể thiết lập các luồng làm việc tự động, từ việc kiểm tra mã nguồn, triển khai ứng dụng, tự động hóa các tác vụ như cập nhật dữ liệu trong ứng dụng.
 
 \textbf{Triển khai:}
 
-Đầu tiên, tôi viết 1 file crawlJson.py, mục đích để crawl toàn bộ dữ liệu mới từ trang IMDb về và lưu vào file update.sql, khi có file update.sql rồi thì chỉ việc cập nhật vào local của mình là sẽ có dữ liệu mới.
+Đầu tiên, tôi viết 1 file crawlJson.py, mục đích để crawl toàn bộ dữ liệu mới từ trang IMDb về và lưu vào file update.sql, khi có file update.sql rồi thì chỉ cần cập nhật vào local của mình là sẽ có dữ liệu mới ngay lập tức.
 
-Để hệ thống có thể tự động update được, sẽ có những bước như sau:
+Để ứng dụng có thể tự động update được, sẽ có những bước như sau:
 
 \begin{enumerate}
     \item Tạo PAT (Personal Access Token) Github
 
-    Personal Access Token (PAT) trên GitHub được sử dụng để cung cấp quyền truy cập cho các ứng dụng hoặc dịch vụ bên thứ ba vào tài khoản GitHub, mà không cần phải sử dụng mật khẩu. Ở trong hệ thống này, dịch vụ bên thứ 3 chính là bot tự động.
+    Personal Access Token (PAT) trên GitHub được sử dụng để cung cấp quyền truy cập cho các ứng dụng hoặc dịch vụ bên thứ ba vào tài khoản GitHub, mà không cần phải sử dụng mật khẩu. Ở trong ứng dụng này, dịch vụ bên thứ 3 chính là bot tự động.
 
     \begin{figure}[H]
         \centering
@@ -41,7 +41,7 @@ Github Actions là một dịch vụ được cung cấp bởi GitHub để tự
     
     \item Tạo Secrets Repository
 
-    Mục đích của việc tạo Secrets trên GitHub là để bảo vệ và quản lý các thông tin nhạy cảm như mã token, mật khẩu, khóa API, và các thông tin quan trọng khác trong quá trình phát triển và triển khai phần mềm. Việc sử dụng Secrets giúp đảm bảo rằng các thông tin này không được lộ ra ngoài công cộng, chỉ có thể được truy cập và sử dụng bởi các công cụ tự động hóa như GitHub Actions hoặc các ứng dụng khác thông qua API được cho phép.
+    Mục đích của việc tạo Secrets trên GitHub là để bảo vệ và quản lý các thông tin nhạy cảm như mã token, mật khẩu, khóa API cũng như các thông tin quan trọng khác trong quá trình phát triển và triển khai ứng dụng. Việc sử dụng Secrets giúp đảm bảo rằng các thông tin này không được lộ ra ngoài công cộng, chỉ có thể được truy cập và sử dụng bởi các công cụ tự động hóa như GitHub Actions hoặc ứng dụng khác thông qua API được cho phép.
 
     \begin{figure}[H]
         \centering
@@ -52,12 +52,12 @@ Github Actions là một dịch vụ được cung cấp bởi GitHub để tự
     
     \item Viết file update.yml
 
-    Bước cuối cùng, tôi sẽ viết file update.yml để Github Action có thể chạy tự động
+    Bước cuối cùng, tôi sẽ viết file update.yml để Github Action có thể chạy tự động hàng ngày
 \end{enumerate}
 
 \textbf{Kết quả:}
 
-Cứ 00h00 hằng ngày, hệ thống sẽ tự động crawl dữ liệu mới, lưu vào file update.sql và push code lên github trong khoảng 1 tiếng.
+Cứ 00h00 hằng ngày, ứng dụng sẽ tự động crawl dữ liệu mới, lưu vào file update.sql và push code lên github trong khoảng 1 tiếng.
 
 \begin{figure}[H]
     \centering
@@ -66,7 +66,7 @@ Cứ 00h00 hằng ngày, hệ thống sẽ tự động crawl dữ liệu mới,
     \label{fig:gh_at_3}
 \end{figure}
 
-Sau khi hệ thống cho ra file update.sql rồi, chỉ cần pull code về máy chủ, chạy file Crawl/autoUpdate/update.py thì sẽ có dữ liệu mới ngay lập tức.
+Sau khi ứng dụng cho ra file update.sql rồi, chỉ cần pull code về máy chủ, chạy file Crawl/autoUpdate/update.py thì sẽ có dữ liệu mới ngay lập tức.
 
 \begin{figure}[H]
     \centering
@@ -77,7 +77,7 @@ Sau khi hệ thống cho ra file update.sql rồi, chỉ cần pull code về m�
 
 \section{Lựa chọn thuật toán gợi ý phù hợp}
 
-Việc lựa chọn thuật toán gợi ý phù hợp là một thách thức quan trọng trong quá trình phát triển hệ thống gợi ý phim. Tôi đã tham khảo các bài báo và tài liệu trên mạng, thực hiện thử nghiệm và đánh giá các thuật toán khác nhau để tìm ra thuật toán phù hợp nhất với yêu cầu của dự án. Cụ thể chính là 2 thuật toán Content-based và Collaborative.
+Việc lựa chọn thuật toán gợi ý phù hợp là một thách thức quan trọng trong quá trình phát triển ứng dụng gợi ý phim. Tôi đã tham khảo các bài báo và tài liệu trên mạng, thực hiện thử nghiệm và đánh giá các thuật toán khác nhau để tìm ra thuật toán phù hợp nhất với yêu cầu của dự án. Cụ thể chính là thuật toán Content-based.
 
 \subsection{Content-based}
 \textbf{Giới thiệu:}
@@ -118,7 +118,7 @@ Sau khi tính toán được độ tương đồng dựa vào công thức simil
     \label{fig:rcm_ct_kq_1}
 \end{figure}
 
-Ở hình ảnh \ref{fig:rcm_ct_kq_1} có thể thấy bộ phim được gợi ý gần nhất với bộ phim Guardians of the Galaxy là bộ phim Guardians of the Galaxy Vol. 3. Hai bộ phim này có movie name, describe, cast và director khá tương tự nhau.
+Ở hình ảnh \ref{fig:rcm_ct_kq_1} có thể thấy bộ phim được đề xuất gần nhất với bộ phim Guardians of the Galaxy chính là bộ phim Guardians of the Galaxy Vol. 3. Hai bộ phim này có movie name, describe, cast và director tương tự nhau.
 
 \begin{figure}[H]
     \centering
@@ -127,7 +127,7 @@ Sau khi tính toán được độ tương đồng dựa vào công thức simil
     \label{fig:rcm_ct_kq_2}
 \end{figure}
 
-Ở hình ảnh \ref{fig:rcm_ct_kq_2} có thể thấy bộ phim được gợi ý gần nhất với bộ phim The Hunger Games: Catching Fire là bộ phim The Hunger Games. Hai bộ phim này có movie name, describe, cast và director khá tương tự nhau.
+Ở hình ảnh \ref{fig:rcm_ct_kq_2} có thể thấy bộ phim được đề xuất gần nhất với bộ phim The Hunger Games: Catching Fire là bộ phim The Hunger Games. Hai bộ phim này có movie name, describe, cast và director khá tương tự nhau.
 
 
 \begin{figure}[H]
@@ -137,8 +137,8 @@ Sau khi tính toán được độ tương đồng dựa vào công thức simil
     \label{fig:rcm_ct_kq_3}
 \end{figure}
 
-Ở hình ảnh \ref{fig:rcm_ct_kq_3} có thể thấy bộ phim được gợi ý gần nhất với bộ phim Meg 2: The Trench là bộ phim The Meg. Hai bộ phim này có movie name, describe, cast và director khá tương tự nhau.
+Ở hình ảnh \ref{fig:rcm_ct_kq_3} có thể thấy bộ phim được đề xuất gần nhất với bộ phim Meg 2: The Trench là bộ phim The Meg. Hai bộ phim này có movie name, describe, cast và director khá tương tự nhau.
 
-Dựa trên các kết quả cho ra ở trên cùng với kiểm tra bằng tính trực quan có thể thấy hệ thống gợi ý phim bằng độ tương đồng được thực hiện khá chính xác.
+Dựa trên các kết quả cho ra ở trên cùng với kiểm tra bằng tính trực quan có thể thấy ứng dụng gợi ý phim bằng độ tương đồng được thực hiện khá chính xác.
 
 \end{document}

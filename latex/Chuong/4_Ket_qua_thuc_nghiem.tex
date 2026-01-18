@@ -51,33 +51,33 @@ Template sẽ nhận dữ liệu từ view và render ra các thành phần giao
 \begin{enumerate}
     \item Data Access Layer (Model)
 
-    \textbf{Mục đích:} Chứa các định nghĩa về dữ liệu và cấu trúc dữ liệu của ứng dụng.
+    \textbf{Mục đích:} Ở tầng này, chứa các định nghĩa về dữ liệu và cấu trúc dữ liệu của ứng dụng.
     
-    \textbf{Nhiệm vụ:} Mô hình hóa các thực thể trong hệ thống, bao gồm các bảng cơ sở dữ liệu và các mối quan hệ giữa chúng.
+    \textbf{Nhiệm vụ:} Mô hình hóa các thực thể trong ứng dụng, bao gồm các bảng cơ sở dữ liệu và các mối quan hệ giữa chúng.
     
-    \textbf{Các thành phần:} MovieInformation, Awards, Director, Cast, Genres, v.v.
+    \textbf{Các thành phần:} MovieInformation, Awards, Director, Cast, Genres.
     
-    \textbf{Phụ thuộc:} Không phụ thuộc vào bất kỳ gói nào khác. Đây là tầng thấp nhất trong kiến trúc, nơi dữ liệu được định nghĩa và quản lý.
+    \textbf{Phụ thuộc:} Không phụ thuộc vào bất kỳ một gói nào khác. Đây là tầng thấp nhất trong kiến trúc, nơi dữ liệu được định nghĩa và quản lý bởi các model.
 
     \item Business Logic Layer (View)
 
-    \textbf{Mục đích:} Xử lý logic nghiệp vụ và quản lý các yêu cầu từ người dùng.
+    \textbf{Mục đích:} Ở tầng này, xử lý logic nghiệp vụ và quản lý các yêu cầu từ người dùng.
     
-    \textbf{Nhiệm vụ:} Truy xuất dữ liệu từ các model, xử lý và chuẩn bị dữ liệu để hiển thị trong các template.
+    \textbf{Nhiệm vụ:} Truy xuất dữ liệu từ các model, xử lý và chuẩn bị dữ liệu để hiển thị trong template.
     
-    \textbf{Các thành phần:} FilmListView, DirectorListView, GenreListView, ReviewView, v.v.
+    \textbf{Các thành phần:} FilmListView, DirectorListView, GenreListView, ReviewView.
     
-    \textbf{Phụ thuộc:} Phụ thuộc vào gói Models. View sẽ truy xuất dữ liệu từ model và xử lý logic nghiệp vụ. Không phụ thuộc vào gói Templates trực tiếp. Dữ liệu được chuẩn bị trong view sẽ được truyền đến template để hiển thị.
+    \textbf{Phụ thuộc:} Tầng này phụ thuộc vào gói Models. View sẽ truy xuất dữ liệu từ model và xử lý logic nghiệp vụ ở dưới, không phụ thuộc vào gói Templates trực tiếp. Dữ liệu được chuẩn bị trong view sẽ được truyền đến template để hiển thị cho người dùng.
 
     \item Presentation Layer (Template)
 
-    \textbf{Mục đích:} Định nghĩa giao diện người dùng.
+    \textbf{Mục đích:} Ở tầng này, định nghĩa giao diện người dùng.
     
-    \textbf{Nhiệm vụ:} Hiển thị dữ liệu được truyền từ view dưới dạng HTML, CSS và JavaScript.
+    \textbf{Nhiệm vụ:} Hiển thị dữ liệu được truyền từ view dưới dạng HTML, CSS và JavaScript. Template sẽ nhận dữ liệu từ view và hiển thị nó.
     
-    \textbf{Các thành phần:} Các tệp HTML template cho các trang web khác nhau của ứng dụng.
+    \textbf{Các thành phần:} Các tệp HTML template cho các trang web khác nhau của ứng dụng, ví dụ như trang đăng nhập, đăng ký, trang chủ, trang chi tiết phim.
     
-    \textbf{Phụ thuộc:} Phụ thuộc vào gói Views. Templates nhận dữ liệu từ view và hiển thị nó. Không phụ thuộc vào gói Models trực tiếp. Mọi dữ liệu hiển thị trên giao diện đều được truyền từ view.
+    \textbf{Phụ thuộc:} Tầng này phụ thuộc vào gói Views. Templates nhận dữ liệu từ view và hiển thị nó, không phụ thuộc vào gói Models trực tiếp. Mọi dữ liệu hiển thị trên giao diện đều được truyền từ view.
 
 \end{enumerate}
 
@@ -156,21 +156,21 @@ Template sẽ nhận dữ liệu từ view và render ra các thành phần giao
 
 \textbf{Gói Template:}
 
-Gồm 2 class l là UserTemplate, AdminTemplate.
+Gồm 2 class là UserTemplate và AdminTemplate.
 
-Mô tả: Class UserTemplate: Lớp này chịu trách nhiệm quản lý các mẫu HTML dành cho giao diện người dùng. Các mẫu này bao gồm các trang đăng nhập, đăng ký, trang cá nhân, trang đánh giá phim, và các trang hiển thị danh sách phim, diễn viên, đạo diễn, v.v. Class AdminTemplate: Lớp này chịu trách nhiệm quản lý các mẫu HTML dành cho giao diện admin. Các mẫu này bao gồm các trang quản lý người dùng, quản lý phim, duyệt đánh giá, và các trang khác mà admin cần sử dụng để quản lý hệ thống.
+Mô tả: Class UserTemplate: Lớp này chịu trách nhiệm quản lý mẫu HTML dành cho giao diện người dùng. Các mẫu này bao gồm các trang đăng nhập, đăng ký, trang cá nhân, trang đánh giá phim, và các trang hiển thị danh sách phim, diễn viên, đạo diễn. Class AdminTemplate: Lớp này chịu trách nhiệm quản lý mẫu HTML dành cho giao diện admin. Các mẫu này bao gồm các trang quản lý người dùng, quản lý phim, duyệt đánh giá và các trang khác mà admin sử dụng để quản lý hệ thống.
     
-Phụ thuộc: 2 class này không có mối quan hệ phụ thuộc với nhau. Chúng độc lập và phục vụ các mục đích khác nhau: một bên là giao diện người dùng và một bên là giao diện admin.
+Phụ thuộc: 2 class này không có mối quan hệ nào phụ thuộc với nhau. Chúng độc lập và phục vụ các mục đích khác nhau: một bên là giao diện người dùng, một bên là giao diện admin.
 
 \section{Thiết kế chi tiết}
 \subsection{Thiết kế giao diện}
-Khi thiết kế giao diện cho ứng dụng, tôi đã chọn các thông số và tiêu chuẩn nhất định để đảm bảo tính nhất quán và tiện dụng. Các màn hình mục tiêu cho ứng dụng này có độ phân giải 1920x1080 pixels, phù hợp với các kích thước màn hình từ 13 inch trở lên. Ứng dụng sẽ hỗ trợ hiển thị 16 triệu màu để đảm bảo các yếu tố đồ họa và hình ảnh hiển thị sắc nét.
+Khi thiết kế giao diện cho ứng dụng, tôi đã chọn các thông số, tiêu chuẩn và template chuẩn để đảm bảo tính nhất quán và tiện dụng. Các màn hình mục tiêu cho ứng dụng này được thiết kế có độ phân giải 1920x1080 pixels, phù hợp với các kích thước màn hình từ 13 inch trở lên. Ứng dụng hỗ trợ hiển thị đến 16 triệu màu để đảm bảo các yếu tố đồ họa và hình ảnh hiển thị sắc nét.
 
-Trong quá trình thiết kế, tôi đã áp dụng các quy chuẩn cụ thể để tạo ra giao diện người dùng nhất quán. Các nút bấm được thiết kế với các kích thước chuẩn, dễ dàng nhận biết và sử dụng. Các điều khiển như dropdowns, checkboxes, và radio buttons được thiết kế để có giao diện đồng nhất và rõ ràng. Các thông điệp phản hồi cho người dùng sẽ được hiển thị ở vị trí dễ thấy, ở phía trên bên phải.
+Trong quá trình thiết kế, tôi đã áp dụng các quy chuẩn cụ thể để tạo ra giao diện người dùng nhất quán. Các nút bấm được thiết kế với các kích thước chuẩn chung, dễ dàng nhận biết và sử dụng. Các điều khiển như dropdowns, checkboxes, và radio buttons được thiết kế để có giao diện nhất quán, đồng nhất và rõ ràng. Các thông điệp phản hồi cho người dùng sẽ được hiển thị ở vị trí dễ thấy, ở phía trên bên phải của màn hình.
 
-Về phối màu, tôi đã chọn một bảng màu chính với các tông màu xanh dương và lá cây và đen, tạo cảm giác dễ chịu và chuyên nghiệp. Các màu phụ được sử dụng để nhấn mạnh các yếu tố quan trọng hoặc thông báo trạng thái khác nhau như thành công, cảnh báo, lỗi và hover.
+Về phối màu, tôi đã chọn một bảng màu chính với các tông màu đen và tím, tạo cảm giác dễ chịu và chuyên nghiệp. Các màu phụ được sử dụng để nhấn mạnh các yếu tố quan trọng hoặc thông báo trạng thái khác nhau như thành công, cảnh báo, lỗi và hover là đỏ, vàng và xanh lá cây.
 
-Dưới đây là một số hình ảnh minh họa cho thiết kế giao diện của các chức năng quan trọng trong ứng dụng:
+Dưới đây là một số hình ảnh minh họa cho thiết kế giao diện của các chức năng quan trọng trong ứng dụng của tôi:
 
 \textbf{Màn hình đăng nhập}
 \begin{figure}[H]
@@ -306,7 +306,7 @@ Dưới đây là một số hình ảnh minh họa cho thiết kế giao diện
 
 \section{Xây dựng ứng dụng}
 \subsection{Thư viện và công cụ sử dụng}
-Sau đây là các công cụ, ngôn ngữ lập trình, API, thư viện, IDE, công cụ kiểm thử, v.v. mà tôi sử dụng để phát triển ứng dụng.
+Sau đây là các công cụ, ngôn ngữ lập trình, API, thư viện, IDE, công cụ kiểm thử mà tôi sử dụng để phát triển ứng dụng này.
 
 \begin{table}[H]
 \centering{}
@@ -317,15 +317,13 @@ Sau đây là các công cụ, ngôn ngữ lập trình, API, thư viện, IDE, 
 Backend Framework & Django & \cite{Django} \\ \hline
 API Framework & Django Rest Framework & \cite{DRF} \\ \hline
 Frontend & HTML & \cite{HTML} \\ \hline
-Styling & CSS & \cite{CSS} \\ \hline
-Frontend Framework & Bootstrap & \cite{Bootstrap} \\ \hline
-JavaScript Library & jQuery & \cite{jQuery} \\ \hline
-Phiên bản kiểm soát & Git & \cite{Git} \\ \hline
-Kho lưu trữ mã nguồn & GitHub & \cite{GitHub} \\ \hline
+Style & Tailwind CSS & \cite{TailwindCSS} \\ \hline
+Frontend Framework & React & \cite{React} \\ \hline
+Backend Framework & Django & \cite{Django} \\ \hline
+Database & MySQL & \cite{MySQL} \\ \hline
 Công cụ crawl dữ liệu & Selenium & \cite{Selenium} \\ \hline
-HTTP Library & Requests & \cite{Requests} \\ \hline
+Thư viện HTTP & Requests & \cite{Requests} \\ \hline
 Công cụ CI/CD & GitHub Actions & \cite{GitHubActions} \\ \hline
-Cơ sở dữ liệu & MySQL & \cite{MySQL} \\ \hline
         \end{tabular}
     \caption{Danh sách thư viện và công cụ sử dụng}
     \label{fig:my_label}
@@ -342,29 +340,29 @@ Cơ sở dữ liệu & MySQL & \cite{MySQL} \\ \hline
 \textbf{Mô tả kết quả đạt được:}
 Sau quá trình phát triển, ứng dụng Django của tôi đã hoàn thành với các sản phẩm được đóng gói bao gồm:
 
-Gói Model: Chứa các mô hình dữ liệu (models) quản lý thông tin phim, người dùng, đánh giá, v.v.
+Gói Model: Chứa các mô hình dữ liệu quản lý thông tin phim, người dùng, đánh giá.
 
-Gói View: Chứa các lớp hiển thị và xử lý giao diện cho người dùng và admin.
+Gói View: Chứa các class hiển thị và xử lý giao diện cho người dùng và admin.
 
-Gói Template: Chứa các mẫu HTML dành cho giao diện người dùng và admin.
+Gói Template: Chứa các template HTML dành cho giao diện người dùng và admin.
 
-Các sản phẩm được đóng gói có ý nghĩa và vai trò cụ thể trong việc quản lý và hiển thị thông tin về phim, đạo diễn, diễn viên, đánh giá phim, và các thông tin liên quan khác. Ứng dụng này cung cấp nền tảng để người dùng có thể tìm kiếm và xem thông tin về các bộ phim, viết đánh giá, và tương tác với nội dung. Ngoài ra, ứng dụng còn có thể đưa ra những bộ phim phù hợp nhất với từng thao tác của người dùng.
+Các sản phẩm được đóng gói có ý nghĩa và vai trò cụ thể trong việc quản lý và hiển thị thông tin về phim, đạo diễn, diễn viên, đánh giá phim. Ứng dụng này cung cấp nền tảng để người dùng có thể tìm kiếm và xem thông tin về các bộ phim, viết đánh giá, tương tác với nội dung. Ngoài ra, ứng dụng còn có thể đưa ra những bộ phim phù hợp nhất với từng thao tác của người dùng theo gợi ý của hệ thống.
 
 \textbf{Thống kê các thông tin của ứng dụng:}
 
-Số dòng code crawl dữ liệu: 1500 dòng
+Số dòng code crawl dữ liệu: 2000 dòng
 
-Số dòng code phía backend: 3000 dòng
+Số dòng code phía backend: 4000 dòng
 
-Số dòng code phía fronend: 7500 dòng
+Số dòng code phía fronend: 8000 dòng
 
-Số lớp: 170 lớp
+Số lớp: 180 lớp
 
-Số gói: 7 gói
+Số gói: 8 gói
 
-Dung lượng toàn bộ mã nguồn: Khoảng 300MB khi đã có hệ thống gợi ý và dữ liệu, còn nếu mỗi phần code thì dung lượng khoảng 20MB
+Dung lượng toàn bộ mã nguồn: Khoảng 310MB khi đã có hệ thống gợi ý và dữ liệu, còn nếu mỗi phần code thì dung lượng khoảng 25MB
 
-Ứng dụng đã hoàn thành với cấu trúc rõ ràng, mã nguồn được tổ chức tốt trong các gói và lớp. Thống kê chi tiết về số dòng code, số lớp, và dung lượng mã nguồn giúp đánh giá và theo dõi tiến trình phát triển của dự án. Ứng dụng đáp ứng các yêu cầu đặt ra và sẵn sàng để triển khai và sử dụng.
+Ứng dụng đã hoàn thành với tổ chức cấu trúc rõ ràng, mã nguồn được tổ chức tốt trong các gói và lớp. Thống kê chi tiết về số dòng code, số lớp và dung lượng mã nguồn giúp đánh giá và theo dõi tiến trình phát triển của dự án. Ứng dụng đáp ứng các yêu cầu đặt ra và sẵn sàng để triển khai và sử dụng trong thực tế.
 
 \textbf{Crawl dữ liệu từ trang web:}
 
@@ -434,7 +432,7 @@ Dựa vào lịch sử tìm kiếm của người dùng, hệ thống lưu lại
 \label{fig:ketqua1}
 \end{figure} 
 
-Dựa vào lịch sử thêm vào danh sách yêu thích của người dùng, hệ thống có thể tự học và đưa ra được kết quả mới nhất phù hợp với sở thích của người dùng.
+Dựa vào lịch sử thêm vào danh sách yêu thích của người dùng, ứng dụng có thể tự học và đưa ra được kết quả mới nhất phù hợp với sở thích của người dùng.
 
 \textbf{Chức năng gợi ý phim dựa vào nội dung phim đang xem}
 \begin{figure}[H]
@@ -444,7 +442,7 @@ Dựa vào lịch sử thêm vào danh sách yêu thích của người dùng, h
 \label{fig:ketqua2}
 \end{figure} 
 
-Dựa vào bộ phim mà người dùng đang tìm hiểu, hệ thống có thể đưa ra các bộ phim tương tự với bộ phim đang xem.
+Dựa vào bộ phim mà người dùng đang tìm hiểu, ứng dụng có thể đưa ra các bộ phim tương tự với bộ phim đang xem.
 
 \textbf{Chức năng thêm phim vào danh sách yêu thích}
 \begin{figure}[H]
@@ -454,7 +452,7 @@ Dựa vào bộ phim mà người dùng đang tìm hiểu, hệ thống có th�
 \label{fig:ketqua3}
 \end{figure} 
 
-Khi người dùng có hứng thú với một bộ phim nào đó, họ có thể thêm phim đó vào danh sách yêu thích của mình.
+Khi người dùng có hứng thú với một bộ phim nào đó, họ có thể nhấn nút thêm vào danh sách yêu thích để thêm phim đó vào danh sách yêu thích của mình.
 
 \textbf{Chức năng review phim}
 \begin{figure}[H]
@@ -464,7 +462,7 @@ Khi người dùng có hứng thú với một bộ phim nào đó, họ có th�
 \label{fig:ketqua4}
 \end{figure} 
 
-Người dùng có thể đọc bình luận, đánh giá của một bộ phim và có thể tự mình đánh giá về bộ phim đó.
+Người dùng vào chi tiết phim để đọc bình luận, đánh giá của một bộ phim và có thể tự mình đánh giá về bộ phim đó.
 
 \textbf{Chức năng xem toàn bộ ảnh của phim}
 \begin{figure}[H]
@@ -474,7 +472,7 @@ Người dùng có thể đọc bình luận, đánh giá của một bộ phim 
 \label{fig:ketqua5}
 \end{figure} 
 
-Người dùng có thể xem danh sách ảnh có trong bộ phim đó, dữ liệu được tổng hợp từ các nguồn uy tín.
+Người dùng vào chi tiết phim để xem danh sách ảnh có trong bộ phim đó, dữ liệu được tổng hợp từ các nguồn uy tín.
 
 \section{Kiểm thử}
 
@@ -482,7 +480,7 @@ Người dùng có thể xem danh sách ảnh có trong bộ phim đó, dữ li�
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/test1.png}
-\caption{Kiểm thử chức năng 1}
+\caption{Kiểm thử chức năng}
 \label{fig:test1}
 \end{figure} 
 \FloatBarrier
@@ -491,62 +489,47 @@ Người dùng có thể xem danh sách ảnh có trong bộ phim đó, dữ li�
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/test2.png}
-\caption{Kiểm thử chức năng 2}
+\caption{Kiểm thử chức năng}
 \label{fig:test2}
 \end{figure} 
 \FloatBarrier
 
-Qua những bước kiểm thử trên, có thể thấy ứng dụng đã sẵn sàng đi vào hoạt động khi toàn bộ test case đều được thông qua.
+Qua những bước kiểm thử trên, có thể thấy ứng dụng đã sẵn sàng đi vào hoạt động khi toàn bộ test case đều được thông qua và hoạt động tốt.
 
 \section{Triển khai}
 \textbf{Mô hình triển khai}
-Ứng dụng được triển khai theo mô hình client-server với phần frontend (FE) chạy trên live server và phần backend (BE) được triển khai bằng Django trên máy tính cá nhân (local).
+Ứng dụng được triển khai theo mô hình client-server với phần frontend chạy trên live server và phần backend được triển khai bằng Django trên máy tính cá nhân.
 
 \textbf{Cấu hình triển khai}: Máy tính cá nhân với thông số:
 
-Hệ điều hành: Windows/Linux/MacOS
+Hệ điều hành: Windows, Linux, MacOS
 
-CPU: Intel i5 hoặc tương đương
+CPU: Intel i3 hoặc tương đương
 
-RAM: 8GB
+RAM: 4GB
 
-Ổ cứng: 256GB SSD
+Ổ cứng: 128GB SSD
 
-Kết nối mạng: Internet tốc độ cao
+Kết nối mạng: Internet tốc độ trung bình
 
-\textbf{Các bước triển khai}
-\begin{enumerate}
-    \item \textbf{Triển khai frontend (FE):}
+\textbf{Triển khai}
 
-    Sử dụng Live Server trong Visual Studio Code (VS Code) để chạy ứng dụng frontend.
-    
-    Live Server cung cấp một máy chủ phát triển đơn giản, tự động nạp lại trang khi có thay đổi trong mã nguồn.
+Clone repository từ GitHub về máy tính cá nhân.
 
-    \item \textbf{Triển khai backend (BE):}
+Cài đặt docker vào máy.
 
-    Cài đặt và cấu hình Django trên máy tính cá nhân.
-    
-    Cài đặt cơ sở dữ liệu MySQL.
-    
-    Chạy server Django bằng lệnh python manage.py runserver.
-
-    \item \textbf{Cơ sở dữ liệu:}
-
-    Sử dụng cơ sở dữ liệu MySQL cho môi trường phát triển.
-    
-    Tạo và áp dụng các migrations bằng lệnh python manage.py migrate.
-\end{enumerate}
+Cd vào thư mục project và chạy lệnh docker-compose up -d để chạy ứng dụng. Lúc này thì toàn bộ ứng dụng đã được chạy trên máy tính cá nhân. Vào cổng localhost:3000 để test ứng dụng.
 
 \textbf{Kết quả triển khai thử nghiệm}
 
-Mặc dù triển khai chỉ giới hạn trong môi trường local, nhưng một số kết quả thử nghiệm đã được ghi nhận:
+Mặc dù triển khai chỉ giới hạn trong môi trường local, nhưng một số kết quả thử nghiệm đã được thử nghiệm:
 
-Khả năng chịu tải: Với môi trường local, khả năng chịu tải chưa được kiểm thử kỹ lưỡng. Tuy nhiên, với số lượng truy cập thử nghiệm nhỏ, ứng dụng hoạt động mượt mà, không gặp vấn đề về hiệu suất.
+Khả năng chịu tải: Với môi trường local, khả năng chịu tải chưa được thử nghiệm kỹ lưỡng. Tuy nhiên, với số lượng truy cập thử nghiệm nhỏ, ứng dụng hoạt động mượt mà, không gặp vấn đề về hiệu suất.
 
-Thời gian phản hồi: Thời gian phản hồi trung bình dưới 2 giây cho các yêu cầu cơ bản (truy cập trang chủ, tìm kiếm phim, xem chi tiết phim).
+Thời gian phản hồi: Thời gian phản hồi trung bình dưới 2 giây cho các yêu cầu cơ bản, còn gợi ý phim thì trung bình dưới 5s, tìm kiếm phim thì dưới 10s. 
 
-Phản hồi người dùng: Người dùng thử nghiệm đánh giá cao về giao diện đơn giản, dễ sử dụng và tính năng tìm kiếm, đánh giá phim hoạt động tốt. Đặc biệt, hệ thống gợi ý cho ra kết quả rất đúng với mong muốn của người dùng.
+Phản hồi người dùng: Người dùng thử nghiệm đánh giá cao về giao diện đơn giản, dễ sử dụng và tính năng tìm kiếm, đánh giá ứng dụng hoạt động tốt. Đặc biệt, chức năng tìm kiếm phim và gợi ý cho ra kết quả rất đúng với mong muốn của người dùng.
 
-Triển khai ứng dụng trên môi trường local đã giúp xác minh các chức năng cơ bản và thu thập phản hồi từ người dùng thử nghiệm. Các kết quả thử nghiệm cho thấy ứng dụng hoạt động ổn định, phản hồi nhanh và giao diện thân thiện với người dùng. Để kiểm thử hiệu suất và khả năng chịu tải tốt hơn, cần triển khai trên server thực tế hoặc môi trường cloud.
+Triển khai ứng dụng trên môi trường local đã giúp xác minh các chức năng cơ bản và thu thập được phản hồi khá tốt từ người dùng thử nghiệm. Các kết quả thử nghiệm cho thấy ứng dụng hoạt động ổn định, phản hồi nhanh và giao diện khá thân thiện với người dùng. Để kiểm thử hiệu suất và khả năng chịu tải tốt hơn, cần triển khai trên server thực tế.
 
 \end{document}

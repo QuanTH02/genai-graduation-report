@@ -1,6 +1,6 @@
 \documentclass[../DoAn.tex]{subfiles}
 \begin{document}
-Chương này tôi sẽ giới thiệu về quá trình thực hiện và phát triển ứng dụng gợi ý phim bằng genAI. Tôi sẽ trình bày các bước và quy trình đã thực hiện để xây dựng sản phẩm từ các ý tưởng ban đầu đến việc triển khai và thử nghiệm trên môi trường local. Bên cạnh đó, chương cũng nhấn mạnh các mục tiêu và những thách thức trong quá trình này, cùng với những kết quả đạt được và học hỏi được từ dự án.
+Chương này tôi sẽ giới thiệu về quá trình thực hiện và phát triển ứng dụng gợi ý phim bằng genAI. Tôi sẽ trình bày các bước và quy trình đã thực hiện để xây dựng sản phẩm từ các ý tưởng ban đầu đến việc triển khai và thử nghiệm trên môi trường local. Bên cạnh đó, chương cũng nhấn mạnh các mục tiêu và những thách thức trong quá trình xây dựng sản phẩm này, cùng với những kết quả đạt được và học hỏi được từ dự án.
 
 \textbf{Kết quả so sánh}
 \begin{figure}[H]
@@ -10,33 +10,33 @@ Chương này tôi sẽ giới thiệu về quá trình thực hiện và phát 
 \label{fig:sosanh}
 \end{figure} 
 
-Nhìn vào hình \ref{fig:sosanh} có thể thấy ứng dụng hiện tại đã giải quyết được hết những vấn đề ban đầu đặt ra.
+Nhìn vào hình \ref{fig:sosanh} có thể thấy ứng dụng hiện tại đã giải quyết được những vấn đề ban đầu đặt ra.
 
 \textbf{Phân tích quá trình thực hiện}
 
 Trong suốt quá trình thực hiện ĐATN, tôi đã hoàn thành được những mục tiêu chính sau:
 \begin{enumerate}
-    \item Lấy được tất cả những dữ liệu cần thiết phục vụ cho việc xây dựng ứng dụng. Để làm được mục tiêu này, tôi đã tìm rất nhiều tài liệu riêng về chủ đề crawl để có thể nghiên cứu và áp dụng được hoàn toàn vào đồ án của bản thân.
-    \item Hoàn thành chức năng chính của ứng dụng. Tôi đã thêm được rất nhiều chức năng mà bản thân đã nghĩ khó có thể làm, nhờ đó tôi có thể biết được nhiều công nghệ, kiến thức hay ho hơn để áp dụng vào những dự án trong tương lai.
-    \item Triển khai và thử nghiệm ứng dụng trên môi trường local.
+    \item Lấy được tất cả những dữ liệu cần thiết để phục vụ cho việc xây dựng ứng dụng. Để làm được mục tiêu này, tôi đã tìm rất nhiều tài liệu riêng về chủ đề crawl để có thể nghiên cứu và áp dụng được hoàn toàn vào dự án của bản thân.
+    \item Đã hoàn thành chức năng chính của ứng dụng. Tôi đã thêm được rất nhiều chức năng mà bản thân đã nghĩ khó có thể làm, nhờ đó tôi có thể biết được nhiều công nghệ, kiến thức hay ho hơn để áp dụng vào những dự án trong tương lai.
+    \item Đã triển khai và thử nghiệm ứng dụng trên môi trường local.
 \end{enumerate}
 
 \textbf{Những điểm chưa làm được}
 \begin{enumerate}
-    \item Chưa triển khai trên server thực tế hoặc môi trường cloud. Hiện tại ứng dụng chỉ chạy trên môi trường local, chưa được kiểm thử với lượng người dùng lớn hoặc trong điều kiện tải cao. 
-    \item Ứng dụng đang còn đơn giản. Nhìn qua, ứng dụng chỉ có vài tính năng CRUD đơn giản, không quá phức tạp.
+    \item Chưa triển khai, deploy lên server thực tế. Hiện tại ứng dụng chỉ chạy trên môi trường local, chưa được kiểm thử với lượng người dùng lớn trong điều kiện tải cao. 
+    \item Tổng quan ứng dụng đang còn đơn giản. Nhìn qua, ứng dụng có giao diện, luồng thao tác còn đang đơn giản, hầu như chỉ view.
 \end{enumerate}
 
 \textbf{Đóng góp nổi bật}
 \begin{enumerate}
     \item Thiết kế và triển khai ứng dụng được thiết kế ngay từ đầu: Tôi đã hoàn thành các chức năng cơ bản và đảm bảo ứng dụng hoạt động ổn định lâu dài.
-    \item  Dữ liệu đảm bảo, nhất quán, đầy đủ. Tôi đã crawl được bộ dữ liệu hoàn chỉnh phục vụ cho mục đích xây dựng ứng dụng của bản thân.
-    \item Xây dựng được 2 hệ thống gợi ý riêng biệt áp dụng vào trang home và trang detail.
-    \item Cấu trúc mã nguồn của tôi cho phép mở rộng và có thể phát triển các tính năng nâng cao.
+    \item Dữ liệu đảm bảo chính xác, nhất quán, đầy đủ và cập nhật liên tục. Tôi đã crawl được bộ dữ liệu hoàn chỉnh phục vụ cho mục đích thử nghiệm, xây dựng ứng dụng của bản thân.
+    \item Xây dựng được chức năng gợi ý phim theo lịch sử hoạt động cũng như tìm kiếm phim bằng ngôn ngữ tự nhiên của người dùng.
+    \item Cấu trúc mã nguồn của tôi cho phép mở rộng và có thể phát triển các tính năng nâng cao, dễ dàng kế thừa và phát triển tiếp.
 \end{enumerate}
 
 \textbf{Bài học kinh nghiệm cho bản thân}
-Trong quá trình thực hiện đồ án, tôi đã rút ra được rất nhiều bài học như:
+Trong quá trình thực hiện dự án, tôi đã rút ra được rất nhiều bài học như:
 \begin{enumerate}
     \item Cách quản lý thời gian: Việc lập kế hoạch chi tiết và quản lý thời gian hiệu quả giúp hoàn thành các mục tiêu đúng tiến độ. Vì hiểu được điều này, các buổi báo cáo với cô giáo diễn ra rất suôn sẻ và không bị chậm trễ.
     \item Khả năng học hỏi và tự nghiên cứu: Khả năng tự học là rất quan trọng, bởi trên nhà trường, chỉ học lý thuyết và nhiệm vụ của chúng tôi là về nhà tìm tòi, mày mò thực hành thêm để ghi nhớ những kiến thức đó. Chỉ có tự ôn tập, nghiên cứu mới có thể khiến bản thân tiến bộ hơn.

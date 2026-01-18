@@ -1,6 +1,6 @@
 \documentclass[../DoAn.tex]{subfiles}
 \begin{document}
-Trong chương này, tôi sẽ tiến hành khảo sát và phân tích yêu cầu cho ứng dụng gợi ý phim. Chương này sẽ bắt đầu bằng việc khảo sát hiện trạng của các hệ thống giới thiệu, gợi ý phim hiện có, nhằm hiểu rõ những ưu điểm và hạn chế của chúng. Tiếp theo, tôi sẽ trình bày tổng quan các chức năng cần thiết cho hệ thống mới thông qua biểu đồ use case tổng quan, phân rã các chức năng và quy trình nghiệp vụ. Sau đó, các chức năng sẽ được đặc tả chi tiết để đảm bảo rằng tất cả các yêu cầu đều được xác định một cách rõ ràng và chính xác. Cuối cùng, tôi sẽ đề cập đến các yêu cầu phi chức năng, đặc biệt là chức năng gợi ý phim, để đảm bảo rằng hệ thống không chỉ đáp ứng được các yêu cầu cơ bản mà còn mang lại trải nghiệm người dùng tốt nhất.
+Trong chương này, tôi sẽ tiến hành khảo sát và phân tích yêu cầu cho ứng dụng gợi ý phim. Chương này sẽ bắt đầu bằng việc khảo sát hiện trạng của các hệ thống giới thiệu, gợi ý phim hiện có, để hiểu rõ những ưu điểm và hạn chế hiện tại của chúng. Tiếp theo, tôi sẽ trình bày tổng quan các chức năng cần thiết cho hệ thống mới qua biểu đồ use case tổng quan, phân rã các chức năng và quy trình nghiệp vụ. Sau đó, các chức năng sẽ được đặc tả chi tiết nhằm đảm bảo rằng tất cả các yêu cầu đều được xác định một cách rõ ràng và chính xác. Cuối cùng, tôi sẽ đề cập đến các yêu cầu phi chức năng, đặc biệt là chức năng gợi ý phim, để đảm bảo rằng ứng dụng không chỉ đáp ứng được các yêu cầu cơ bản mà còn mang lại trải nghiệm người dùng tốt nhất.
 
 \section{Khảo sát hiện trạng}
 \label{section:2.1}
@@ -13,7 +13,7 @@ Trong chương này, tôi sẽ tiến hành khảo sát và phân tích yêu c�
 
 Trong quá trình khảo sát hiện trạng và yêu cầu của ứng dụng gợi ý phim, tôi đã thu thập thông tin từ ba nguồn chính là người dùng, khách hàng, các hệ thống đã có và các ứng dụng tương tự. Từ những phản hồi và dữ liệu thu thập được, tôi đã thực hiện phân tích, so sánh và đánh giá chi tiết về ưu nhược điểm của các sản phẩm và nghiên cứu hiện có.
 
-Từ khảo sát người dùng/khách hàng, tôi nhận thấy rằng người dùng mong muốn một hệ thống có khả năng tìm kiếm phim nhanh chóng và chính xác, cùng với các tính năng gợi ý phim dựa trên sở thích cá nhân và hành vi xem phim trước đó. Các tính năng như đánh giá, nhận xét phim và xem trailer cũng được đánh giá cao. Đồng thời, hiệu năng hệ thống cần được cải thiện, và giao diện người dùng phải thân thiện và dễ sử dụng.
+Từ khảo sát người dùng, khách hàng, tôi nhận thấy rằng người dùng mong muốn một ứng dụng có khả năng tìm kiếm phim nhanh chóng và chính xác, cùng với các tính năng gợi ý phim dựa trên sở thích cá nhân và hành vi xem phim trước đó. Các tính năng như đánh giá, nhận xét phim và xem trailer cũng được đánh giá cao. Đồng thời, hiệu năng hệ thống cần được cải thiện, giao diện người dùng phải thân thiện và dễ dàng sử dụng.
 
 \section{Khảo sát về quyền theo dõi}
 \label{section:2.2}
@@ -246,17 +246,17 @@ Trong biểu đồ use case phân rã "Review, comment", các use case được 
 
 \section{Yêu cầu phi chức năng}
 \label{section:2.4}
-Trong phần này, tôi xác định được các yêu cầu phi chức năng và kỹ thuật cho hệ thống như sau:
+Trong phần này, tôi xác định được các yêu cầu phi chức năng và kỹ thuật cho ứng dụng như sau:
 
-Hiệu năng: Hệ thống cần đảm bảo hiệu suất cao và thời gian phản hồi nhanh chóng, đặc biệt khi xử lý các yêu cầu tìm kiếm, sắp xếp và gợi ý phim. Thời gian tải trang cần được giảm thiểu để tăng trải nghiệm người dùng.
+Hiệu năng: Ứng dụng cần đảm bảo hiệu suất cao và thời gian phản hồi nhanh chóng, đặc biệt khi xử lý các yêu cầu tìm kiếm, sắp xếp và gợi ý phim. Thời gian tải trang cần được giảm thiểu tối đa để tăng trải nghiệm người dùng.
 
-Độ tin cậy: Hệ thống phải ổn định và đáng tin cậy, đảm bảo rằng dữ liệu không bị mất mát, các chức năng hoạt động một cách mượt mà mọi lúc, đặc biệt là phải chính xác.
+Độ tin cậy: Ứng dụng phải ổn định và đáng tin cậy, đảm bảo rằng dữ liệu không bị mất mát, các chức năng hoạt động một cách mượt mà, đặc biệt là phải chính xác.
 
-Tính dễ dùng: Giao diện người dùng cần được thiết kế sao cho dễ sử dụng và trực quan, giúp người dùng dễ dàng tìm kiếm thông tin và tương tác với hệ thống một cách tự nhiên.
+Tính dễ dùng: Giao diện người dùng cần được thiết kế sao cho dễ sử dụng và trực quan, giúp người dùng dễ dàng tìm kiếm thông tin và tương tác với ứng dụng một cách tự nhiên.
 
-Tính dễ bảo trì: Hệ thống cần có cấu trúc code rõ ràng và dễ bảo trì để cho phép việc nâng cấp, sửa lỗi và mở rộng dễ dàng trong tương lai.
+Tính dễ bảo trì: Ứng dụng cần có cấu trúc code rõ ràng và dễ bảo trì để cho phép việc nâng cấp, sửa lỗi và dễ dàng mở rộng trong tương lai.
 
-Cơ sở dữ liệu: Cần sử dụng cơ sở dữ liệu hiệu quả và linh hoạt để lưu trữ và quản lý thông tin phim và người dùng một cách hiệu quả. Hệ thống cần hỗ trợ các thao tác truy vấn nhanh chóng và bảo mật dữ liệu.
+Cơ sở dữ liệu: Cần sử dụng cơ sở dữ liệu để lưu trữ và quản lý thông tin phim và người dùng một cách hiệu quả và linh hoạt. Ứng dụng cần hỗ trợ các thao tác truy vấn nhanh chóng.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
