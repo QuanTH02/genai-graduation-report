@@ -3,7 +3,7 @@
 
 \section{Thiết kế kiến trúc}
 \subsection{Lựa chọn kiến trúc phần mềm}
-Trong sản phẩm này, em lựa chọn kiến trúc phần mềm MVT trong Django.
+Trong sản phẩm này, tôi lựa chọn kiến trúc phần mềm MVT trong Django.
 
 \textbf{Giải thích sơ bộ về MVT:}
 
@@ -26,7 +26,7 @@ Mỗi model sẽ có các trường (fields) tương ứng và quan hệ (relati
     
     \item \textbf{View (V):} 
 
-Các view như FilmListView, DirectorListView, GenreListView, ReviewView, và các view khác trong danh sách của em sẽ đảm nhiệm xử lý các yêu cầu từ người dùng.
+Các view như FilmListView, DirectorListView, GenreListView, ReviewView, và các view khác trong danh sách của tôi sẽ đảm nhiệm xử lý các yêu cầu từ người dùng.
 
 View sẽ truy xuất dữ liệu từ model thông qua các queryset, xử lý logic nghiệp vụ và chuẩn bị dữ liệu để truyền cho template.
 
@@ -164,11 +164,11 @@ Phụ thuộc: 2 class này không có mối quan hệ phụ thuộc với nhau.
 
 \section{Thiết kế chi tiết}
 \subsection{Thiết kế giao diện}
-Khi thiết kế giao diện cho ứng dụng, em đã chọn các thông số và tiêu chuẩn nhất định để đảm bảo tính nhất quán và tiện dụng. Các màn hình mục tiêu cho ứng dụng này có độ phân giải 1920x1080 pixels, phù hợp với các kích thước màn hình từ 13 inch trở lên. Ứng dụng sẽ hỗ trợ hiển thị 16 triệu màu để đảm bảo các yếu tố đồ họa và hình ảnh hiển thị sắc nét.
+Khi thiết kế giao diện cho ứng dụng, tôi đã chọn các thông số và tiêu chuẩn nhất định để đảm bảo tính nhất quán và tiện dụng. Các màn hình mục tiêu cho ứng dụng này có độ phân giải 1920x1080 pixels, phù hợp với các kích thước màn hình từ 13 inch trở lên. Ứng dụng sẽ hỗ trợ hiển thị 16 triệu màu để đảm bảo các yếu tố đồ họa và hình ảnh hiển thị sắc nét.
 
-Trong quá trình thiết kế, em đã áp dụng các quy chuẩn cụ thể để tạo ra giao diện người dùng nhất quán. Các nút bấm được thiết kế với các kích thước chuẩn, dễ dàng nhận biết và sử dụng. Các điều khiển như dropdowns, checkboxes, và radio buttons được thiết kế để có giao diện đồng nhất và rõ ràng. Các thông điệp phản hồi cho người dùng sẽ được hiển thị ở vị trí dễ thấy, ở phía trên bên phải.
+Trong quá trình thiết kế, tôi đã áp dụng các quy chuẩn cụ thể để tạo ra giao diện người dùng nhất quán. Các nút bấm được thiết kế với các kích thước chuẩn, dễ dàng nhận biết và sử dụng. Các điều khiển như dropdowns, checkboxes, và radio buttons được thiết kế để có giao diện đồng nhất và rõ ràng. Các thông điệp phản hồi cho người dùng sẽ được hiển thị ở vị trí dễ thấy, ở phía trên bên phải.
 
-Về phối màu, em đã chọn một bảng màu chính với các tông màu xanh dương và lá cây và đen, tạo cảm giác dễ chịu và chuyên nghiệp. Các màu phụ được sử dụng để nhấn mạnh các yếu tố quan trọng hoặc thông báo trạng thái khác nhau như thành công, cảnh báo, lỗi và hover.
+Về phối màu, tôi đã chọn một bảng màu chính với các tông màu xanh dương và lá cây và đen, tạo cảm giác dễ chịu và chuyên nghiệp. Các màu phụ được sử dụng để nhấn mạnh các yếu tố quan trọng hoặc thông báo trạng thái khác nhau như thành công, cảnh báo, lỗi và hover.
 
 Dưới đây là một số hình ảnh minh họa cho thiết kế giao diện của các chức năng quan trọng trong ứng dụng:
 
@@ -281,7 +281,7 @@ Dưới đây là một số hình ảnh minh họa cho thiết kế giao diện
 \end{figure} 
 
 \subsection{Thiết kế hệ thống crawl dữ liệu}
-\textbf{IMDb:} Ở trang web này, em chia ra các thông tin để crawl như sau:
+\textbf{IMDb:} Ở trang web này, tôi chia ra các thông tin để crawl như sau:
 
 % \begin{tabular}{|c|c|} 
 %  \hline
@@ -302,11 +302,11 @@ Dưới đây là một số hình ảnh minh họa cho thiết kế giao diện
 \label{fig:tb_crawl}
 \end{figure} 
 
-\textbf{BoxofficeMojo:} Ở trang web này, em sẽ tìm các bộ phim có trong BoxofficeMojo bằng cách lấy khóa chính là movie name có trong IMDb, sau đó sẽ lấy các thông tin về doanh thu và update vào data.
+\textbf{BoxofficeMojo:} Ở trang web này, tôi sẽ tìm các bộ phim có trong BoxofficeMojo bằng cách lấy khóa chính là movie name có trong IMDb, sau đó sẽ lấy các thông tin về doanh thu và update vào data.
 
 \section{Xây dựng ứng dụng}
 \subsection{Thư viện và công cụ sử dụng}
-Sau đây là các công cụ, ngôn ngữ lập trình, API, thư viện, IDE, công cụ kiểm thử, v.v. mà em sử dụng để phát triển ứng dụng.
+Sau đây là các công cụ, ngôn ngữ lập trình, API, thư viện, IDE, công cụ kiểm thử, v.v. mà tôi sử dụng để phát triển ứng dụng.
 
 \begin{table}[H]
 \centering{}
@@ -340,7 +340,7 @@ Cơ sở dữ liệu & MySQL & \cite{MySQL} \\ \hline
 
 \subsection{Kết quả đạt được}
 \textbf{Mô tả kết quả đạt được:}
-Sau quá trình phát triển, ứng dụng Django của em đã hoàn thành với các sản phẩm được đóng gói bao gồm:
+Sau quá trình phát triển, ứng dụng Django của tôi đã hoàn thành với các sản phẩm được đóng gói bao gồm:
 
 Gói Model: Chứa các mô hình dữ liệu (models) quản lý thông tin phim, người dùng, đánh giá, v.v.
 

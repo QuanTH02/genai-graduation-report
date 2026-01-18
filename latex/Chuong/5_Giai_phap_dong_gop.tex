@@ -1,29 +1,29 @@
 \documentclass[../DoAn.tex]{subfiles}
 \begin{document}
 
-Trong chương này, em sẽ trình bày các vấn đề mà em đã gặp phải và những giải pháp cụ thể mà em đã áp dụng để giải quyết chúng. Đồng thời, em cũng sẽ trình bày các đóng góp đáng chú ý mà em đánh giá cao trong quá trình thực hiện đồ án tốt nghiệp.
+Trong chương này, tôi sẽ trình bày các vấn đề mà tôi đã gặp phải và những giải pháp cụ thể mà tôi đã áp dụng để giải quyết chúng. Đồng thời, tôi cũng sẽ trình bày các đóng góp đáng chú ý mà tôi đánh giá cao trong quá trình thực hiện đồ án tốt nghiệp.
 
 \section{Thiếu dữ liệu phim ảnh}
-Vấn đề này phát sinh khi em cần một lượng lớn dữ liệu về các bộ phim để xây dựng hệ thống gợi ý. Để giải quyết vấn đề này, em đã tiến hành tìm kiếm và lựa chọn các trang web có uy tín để lấy dữ liệu. Việc này bao gồm việc phân tích cú pháp của các trang web, xác định cách truy cập và lấy dữ liệu một cách tự động.
+Vấn đề này phát sinh khi tôi cần một lượng lớn dữ liệu về các bộ phim để xây dựng hệ thống gợi ý. Để giải quyết vấn đề này, tôi đã tiến hành tìm kiếm và lựa chọn các trang web có uy tín để lấy dữ liệu. Việc này bao gồm việc phân tích cú pháp của các trang web, xác định cách truy cập và lấy dữ liệu một cách tự động.
 
 \section{Thiết kế database khó khăn với quá nhiều trường}
 
-Khi thiết kế cơ sở dữ liệu, em gặp khó khăn khi phải xử lý một lượng lớn các trường thông tin về phim và người dùng. Để giải quyết vấn đề này, em đã áp dụng nguyên tắc chuẩn hóa cơ sở dữ liệu và chia nhỏ các trường thông tin có liên quan thành các bảng dữ liệu con. Sau đó, em xác định mối liên hệ giữa các bảng và kết hợp chúng lại với nhau để tạo ra cấu trúc cơ sở dữ liệu hợp lý và hiệu quả.
+Khi thiết kế cơ sở dữ liệu, tôi gặp khó khăn khi phải xử lý một lượng lớn các trường thông tin về phim và người dùng. Để giải quyết vấn đề này, tôi đã áp dụng nguyên tắc chuẩn hóa cơ sở dữ liệu và chia nhỏ các trường thông tin có liên quan thành các bảng dữ liệu con. Sau đó, tôi xác định mối liên hệ giữa các bảng và kết hợp chúng lại với nhau để tạo ra cấu trúc cơ sở dữ liệu hợp lý và hiệu quả.
 
 \section{Trang web có dữ liệu update liên tục theo ngày}
 
-Một trong số các trang web mà em lấy dữ liệu đó là IMDb, ở trang web này, có rất nhiều trường thông tin, nhưng việc khó khăn để lấy dữ liệu nhất đối với em chính là lấy link ảnh và link trailer. Ở trang web này, cứ 1 ngày thì các link ảnh và trailer sẽ được làm mới 1 lần, cho nên qua ngày khác thì link cũ sẽ bị hỏng và không truy cập được nữa. Em đã nghĩ ra 2 phương án để giải quyết đó là: Tải toàn bộ ảnh và trailer xuống hoặc tìm cách để hệ thống tự update data.
+Một trong số các trang web mà tôi lấy dữ liệu đó là IMDb, ở trang web này, có rất nhiều trường thông tin, nhưng việc khó khăn để lấy dữ liệu nhất đối với tôi chính là lấy link ảnh và link trailer. Ở trang web này, cứ 1 ngày thì các link ảnh và trailer sẽ được làm mới 1 lần, cho nên qua ngày khác thì link cũ sẽ bị hỏng và không truy cập được nữa. Tôi đã nghĩ ra 2 phương án để giải quyết đó là: Tải toàn bộ ảnh và trailer xuống hoặc tìm cách để hệ thống tự update data.
 
-Ở cách giải quyết là tải toàn bộ ảnh và trailer xuống thì em đã loại bỏ ngay sau khi quyết định số bộ phim để demo hệ thống. Với 5000 bộ phim thì sẽ có tổng cộng hơn 250000 ảnh và 5000 video demo, nếu tải về thì rất nặng máy và không tối ưu. Vì thế, em đã nghiên cứu và tìm ra cách để hệ thống tự update data, đó chính là dùng github action.
+Ở cách giải quyết là tải toàn bộ ảnh và trailer xuống thì tôi đã loại bỏ ngay sau khi quyết định số bộ phim để demo hệ thống. Với 5000 bộ phim thì sẽ có tổng cộng hơn 250000 ảnh và 5000 video demo, nếu tải về thì rất nặng máy và không tối ưu. Vì thế, tôi đã nghiên cứu và tìm ra cách để hệ thống tự update data, đó chính là dùng github action.
 
 \subsection{Github Action}
 \textbf{Giới thiệu:}
 
-Github Actions là một dịch vụ được cung cấp bởi GitHub để tự động hóa các quy trình phát triển phần mềm trong các repository. Bằng cách sử dụng các "actions" (hành động), em có thể thiết lập các luồng làm việc tự động, từ việc kiểm tra mã nguồn, triển khai ứng dụng, đến tự động hóa các tác vụ như cập nhật dữ liệu trong hệ thống.
+Github Actions là một dịch vụ được cung cấp bởi GitHub để tự động hóa các quy trình phát triển phần mềm trong các repository. Bằng cách sử dụng các "actions" (hành động), tôi có thể thiết lập các luồng làm việc tự động, từ việc kiểm tra mã nguồn, triển khai ứng dụng, đến tự động hóa các tác vụ như cập nhật dữ liệu trong hệ thống.
 
 \textbf{Triển khai:}
 
-Đầu tiên, em viết 1 file crawlJson.py, mục đích để crawl toàn bộ dữ liệu mới từ trang IMDb về và lưu vào file update.sql, khi có file update.sql rồi thì chỉ việc cập nhật vào local của mình là sẽ có dữ liệu mới.
+Đầu tiên, tôi viết 1 file crawlJson.py, mục đích để crawl toàn bộ dữ liệu mới từ trang IMDb về và lưu vào file update.sql, khi có file update.sql rồi thì chỉ việc cập nhật vào local của mình là sẽ có dữ liệu mới.
 
 Để hệ thống có thể tự động update được, sẽ có những bước như sau:
 
@@ -52,7 +52,7 @@ Github Actions là một dịch vụ được cung cấp bởi GitHub để tự
     
     \item Viết file update.yml
 
-    Bước cuối cùng, em sẽ viết file update.yml để Github Action có thể chạy tự động
+    Bước cuối cùng, tôi sẽ viết file update.yml để Github Action có thể chạy tự động
 \end{enumerate}
 
 \textbf{Kết quả:}
@@ -77,12 +77,12 @@ Sau khi hệ thống cho ra file update.sql rồi, chỉ cần pull code về m�
 
 \section{Lựa chọn thuật toán gợi ý phù hợp}
 
-Việc lựa chọn thuật toán gợi ý phù hợp là một thách thức quan trọng trong quá trình phát triển hệ thống gợi ý phim. Em đã tham khảo các bài báo và tài liệu trên mạng, thực hiện thử nghiệm và đánh giá các thuật toán khác nhau để tìm ra thuật toán phù hợp nhất với yêu cầu của dự án. Cụ thể chính là 2 thuật toán Content-based và Collaborative.
+Việc lựa chọn thuật toán gợi ý phù hợp là một thách thức quan trọng trong quá trình phát triển hệ thống gợi ý phim. Tôi đã tham khảo các bài báo và tài liệu trên mạng, thực hiện thử nghiệm và đánh giá các thuật toán khác nhau để tìm ra thuật toán phù hợp nhất với yêu cầu của dự án. Cụ thể chính là 2 thuật toán Content-based và Collaborative.
 
 \subsection{Content-based}
 \textbf{Giới thiệu:}
 
-Trong hệ thống content-based này, dựa trên nội dung của mỗi movie, em xây dựng một bộ hộ sơ cho mỗi movie. Hồ sơ này được biểu diễn dưới dạng toán học là một feature vector. Features của một bộ phim trong hệ thống gợi ý em xây dựng này là:
+Trong hệ thống content-based này, dựa trên nội dung của mỗi movie, tôi xây dựng một bộ hộ sơ cho mỗi movie. Hồ sơ này được biểu diễn dưới dạng toán học là một feature vector. Features của một bộ phim trong hệ thống gợi ý tôi xây dựng này là:
 
 \begin{itemize}
     \item Movie name: Tên của bộ phim đó
@@ -94,7 +94,7 @@ Trong hệ thống content-based này, dựa trên nội dung của mỗi movie,
 
 \textbf{Phân tích, giải pháp:}
 
-Content-based là thuật toán mà khi chọn một item, thì sẽ đưa ra các item tương tự có những đặc điểm cụ thể giống với item đã chọn. Vì thế trong bài toán này em đã chọn cách tính độ tương đồng giữa các bộ phim dựa trên các feature ở trên.
+Content-based là thuật toán mà khi chọn một item, thì sẽ đưa ra các item tương tự có những đặc điểm cụ thể giống với item đã chọn. Vì thế trong bài toán này tôi đã chọn cách tính độ tương đồng giữa các bộ phim dựa trên các feature ở trên.
 
 \[
 \text{similarity}(A, B) = \cos(\theta) = \frac{A \cdot B}{\|A\| \|B\|}
@@ -109,7 +109,7 @@ Trong đó:
 
 \textbf{Kiểm tra tính chính xác:}
 
-Sau khi tính toán được độ tương đồng dựa vào công thức similarity trên, em kiểm tra tính chính xác của thuật toán bằng cách: Tính toán độ tương đồng riêng lẻ của các đặc trưng như movie name, genres, cast, director, describe. Sau đó kiểm tra kết quả cuối cùng với các kết quả riêng biệt xem có chính xác không.
+Sau khi tính toán được độ tương đồng dựa vào công thức similarity trên, tôi kiểm tra tính chính xác của thuật toán bằng cách: Tính toán độ tương đồng riêng lẻ của các đặc trưng như movie name, genres, cast, director, describe. Sau đó kiểm tra kết quả cuối cùng với các kết quả riêng biệt xem có chính xác không.
 
 \begin{figure}[H]
     \centering
