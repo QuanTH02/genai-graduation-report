@@ -16,8 +16,7 @@ Một trong số các trang web mà tôi lấy dữ liệu đó là IMDb, ở tr
 
 Ở cách giải quyết là tải toàn bộ ảnh và trailer xuống thì tôi đã loại bỏ ngay sau khi quyết định số bộ phim để demo ứng dụng. Với 5000 bộ phim thì sẽ có tổng cộng hơn 250000 ảnh và 5000 video demo, nếu tải về thì rất nặng máy và không tối ưu. Vì thế, tôi đã nghiên cứu và tìm ra cách để ứng dụng tự update data, đó chính là dùng github action.
 
-\subsection{Github Action}
-\textbf{Giới thiệu:}
+\textbf{Giới thiệu Github Action:}
 
 Github Actions là một dịch vụ được cung cấp bởi GitHub để tự động hóa các quy trình phát triển phần mềm. Bằng cách sử dụng các action, tôi có thể thiết lập các luồng làm việc tự động, từ việc kiểm tra mã nguồn, triển khai ứng dụng, tự động hóa các tác vụ như cập nhật dữ liệu trong ứng dụng.
 
@@ -79,8 +78,7 @@ Sau khi ứng dụng cho ra file update.sql rồi, chỉ cần pull code về m�
 
 Việc lựa chọn thuật toán gợi ý phù hợp là một thách thức quan trọng trong quá trình phát triển ứng dụng gợi ý phim. Tôi đã tham khảo các bài báo và tài liệu trên mạng, thực hiện thử nghiệm và đánh giá các thuật toán khác nhau để tìm ra thuật toán phù hợp nhất với yêu cầu của dự án. Cụ thể chính là thuật toán Content-based.
 
-\subsection{Content-based}
-\textbf{Giới thiệu:}
+\textbf{Giới thiệu thuật toán Content-based:}
 
 Trong hệ thống content-based này, dựa trên nội dung của mỗi movie, tôi xây dựng một bộ hộ sơ cho mỗi movie. Hồ sơ này được biểu diễn dưới dạng toán học là một feature vector. Features của một bộ phim trong hệ thống gợi ý tôi xây dựng này là:
 

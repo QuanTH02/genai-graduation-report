@@ -67,9 +67,7 @@
 \contentsline {section}{\numberline {6.1}Thiếu khá nhiều dữ liệu phim ảnh}{49}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Thiết kế database khá khó khăn với quá nhiều trường}{49}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Trang web có dữ liệu update liên tục theo ngày khiến link ảnh và trailer bị hỏng}{49}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Github Action}{49}{subsection.6.3.1}%
 \contentsline {section}{\numberline {6.4}Lựa chọn thuật toán gợi ý phù hợp}{52}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Content-based}{52}{subsection.6.4.1}%
 \contentsline {chapter}{\numberline {7}KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}{56}{chapter.7}%
 \contentsline {chapter}{TÀI LIỆU THAM KHẢO}{59}{section*.64}%
 \contentsfinish 

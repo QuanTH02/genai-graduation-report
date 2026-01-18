@@ -23,16 +23,16 @@
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Thiết kế chi tiết gói ở tầng Model\relax }}{28}{figure.caption.24}%
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Thiết kế chi tiết gói ở tầng View\relax }}{29}{figure.caption.25}%
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Thiết kế chi tiết gói ở tầng Template\relax }}{31}{figure.caption.26}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Màn hình đăng nhập\relax }}{32}{figure.caption.27}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Màn hình đăng ký\relax }}{33}{figure.caption.28}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Màn hình profile\relax }}{33}{figure.caption.29}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Màn hình chính\relax }}{34}{figure.caption.30}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Màn hình gợi ý phim ở trang chủ\relax }}{34}{figure.caption.31}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Màn hình thông tin chi tiết 1\relax }}{35}{figure.caption.32}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Màn hình thông tin chi tiết 2\relax }}{35}{figure.caption.33}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Màn hình tổng hợp đạo diễn, diễn viên, ...\relax }}{36}{figure.caption.34}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Màn hình tổng hợp đạo diễn, diễn viên, ...\relax }}{36}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Màn hình review phim\relax }}{37}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Màn hình \textit {đăng nhập}}}{32}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Màn hình \textit {đăng ký}}}{33}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Màn hình \textit {profile}}}{33}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Màn hình \textit {chính}}}{34}{figure.caption.30}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Màn hình \textit {gợi ý phim ở trang chủ}}}{34}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Màn hình \textit {thông tin chi tiết 1}}}{35}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Màn hình \textit {thông tin chi tiết 2}}}{35}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Màn hình \textit {tổng hợp đạo diễn, diễn viên, ...}}}{36}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Màn hình \textit {tổng hợp đạo diễn, diễn viên, ...}}}{36}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Màn hình \textit {review phim}}}{37}{figure.caption.36}%
 \contentsline {figure}{\numberline {5.15}{\ignorespaces Sơ đồ ERD\relax }}{37}{figure.caption.37}%
 \contentsline {figure}{\numberline {5.16}{\ignorespaces Hình ảnh các table trong database\relax }}{38}{figure.caption.38}%
 \contentsline {figure}{\numberline {5.17}{\ignorespaces Hình ảnh các table trong database\relax }}{38}{figure.caption.39}%
@@ -52,7 +52,7 @@
 \contentsline {figure}{\numberline {5.31}{\ignorespaces Kiểm thử chức năng\relax }}{46}{figure.caption.54}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Tạo PAT Github\relax }}{50}{figure.caption.55}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Tạo Secrets Repository\relax }}{51}{figure.caption.56}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Tạo Secrets Repository\relax }}{50}{figure.caption.56}%
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Hệ thống tự động crawl dữ liệu\relax }}{51}{figure.caption.57}%
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Cập nhật dữ liệu mới thành công\relax }}{52}{figure.caption.58}%
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Kiểm tra kết quả 1\relax }}{53}{figure.caption.59}%

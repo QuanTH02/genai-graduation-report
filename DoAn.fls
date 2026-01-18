@@ -1835,6 +1835,7 @@ INPUT ./Hinhve/web_login.png
 INPUT Hinhve/web_login.png
 INPUT ./Hinhve/web_login.png
 INPUT ./Hinhve/web_login.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/vntex/urwvn/utmri8v.tfm
 INPUT ./Hinhve/web_signup.png
 INPUT ./Hinhve/web_signup.png
 INPUT Hinhve/web_signup.png
