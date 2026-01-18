@@ -5,47 +5,61 @@ Trong chương này, tôi sẽ giới thiệu các công nghệ và nền tảng
 
 \label{section:4.1}
 \subsection{React}
-React là một thư viện JavaScript mã nguồn mở được phát triển bởi Meta, được sử dụng để xây dựng giao diện người dùng dựa trên các thành phần. Với cơ chế Virtual DOM, React giúp tối ưu hóa việc cập nhật giao diện, đảm bảo ứng dụng hoạt động mượt mà ngay cả khi xử lý khối lượng dữ liệu phim ảnh lớn và các tương tác phức tạp từ người dùng.
+React là một thư viện JavaScript mã nguồn mở được phát triển bởi Meta, được sử dụng để xây dựng giao diện người dùng dựa trên các thành phần. React sử dụng cơ chế Virtual DOM để tối ưu hóa việc cập nhật giao diện, cho phép xây dựng các ứng dụng web động và tương tác cao.
 
-Việc sử dụng React cho phép tôi chia nhỏ giao diện thành các thành phần độc lập, giúp dễ dàng quản lý, bảo trì và tái sử dụng mã nguồn. Ngoài ra, cơ chế ràng buộc dữ liệu một chiều (one-way data binding) và hệ sinh thái phong phú của React giúp việc phát triển các tính năng như tìm kiếm, lọc phim và hiển thị danh sách phim trở nên linh hoạt và hiệu quả hơn.
+Tôi chọn sử dụng React vì nó cho phép chia nhỏ giao diện thành các thành phần độc lập, giúp dễ dàng quản lý, bảo trì và tái sử dụng mã nguồn. Ngoài ra, cơ chế ràng buộc dữ liệu một chiều (one-way data binding) và hệ sinh thái phong phú của React giúp việc phát triển các tính năng trở nên linh hoạt và hiệu quả hơn. Với cơ chế Virtual DOM, React đảm bảo ứng dụng hoạt động mượt mà ngay cả khi xử lý khối lượng dữ liệu phim ảnh lớn và các tương tác phức tạp từ người dùng.
+
+Trong ứng dụng này, React được sử dụng để xây dựng toàn bộ giao diện frontend, bao gồm các tính năng như tìm kiếm phim, lọc phim, hiển thị danh sách phim, trang chi tiết phim, và các chức năng tương tác khác. Các component React được tổ chức theo cấu trúc module, giúp mã nguồn dễ đọc và bảo trì.
 
 \subsection{Tailwind CSS}
-Tailwind CSS là một framework CSS theo hướng utility-first, cung cấp các lớp (classes) tiện ích cấp thấp để xây dựng giao diện trực tiếp trong mã nguồn mà không cần rời khỏi tệp HTML hoặc JSX. Khác với các framework truyền thống, Tailwind CSS không áp đặt các thành phần giao diện có sẵn, giúp tôi có toàn quyền kiểm soát thiết kế và tùy biến giao diện hệ thống một cách linh hoạt theo ý muốn.
+Tailwind CSS là một framework CSS theo hướng utility-first, cung cấp các lớp (classes) tiện ích cấp thấp để xây dựng giao diện trực tiếp trong mã nguồn mà không cần rời khỏi tệp HTML hoặc JSX. Khác với các framework truyền thống, Tailwind CSS không áp đặt các thành phần giao diện có sẵn, cho phép kiểm soát thiết kế một cách linh hoạt.
 
-Việc sử dụng Tailwind CSS giúp tối ưu hóa kích thước tệp CSS cuối cùng thông qua cơ chế loại bỏ mã không sử dụng, đồng thời hỗ trợ thiết kế đáp ứng (responsive design) một cách trực quan và nhanh chóng. Điều này đảm bảo hệ thống giới thiệu phim có giao diện hiện đại, tinh tế và tương thích tốt trên nhiều loại thiết bị, từ máy tính để bàn đến điện thoại di động.
+Tôi chọn sử dụng Tailwind CSS vì nó giúp tối ưu hóa kích thước tệp CSS cuối cùng thông qua cơ chế loại bỏ mã không sử dụng, đồng thời hỗ trợ thiết kế đáp ứng một cách trực quan và nhanh chóng. Framework này giúp tôi có toàn quyền kiểm soát thiết kế và tùy biến giao diện hệ thống mà không bị ràng buộc bởi các thành phần có sẵn.
+
+Trong ứng dụng này, Tailwind CSS được sử dụng để xây dựng toàn bộ giao diện styling, bao gồm các component như nút bấm, form input, card hiển thị phim, và layout responsive. Tailwind CSS đảm bảo giao diện hiện đại, tinh tế và tương thích tốt trên nhiều loại thiết bị, từ máy tính để bàn đến điện thoại di động.
 
 \section{Công nghệ sử dụng phía backend}
 \label{section:4.2}
 \subsection{Django}
-Django là một framework phát triển bằng Python, nổi tiếng với khả năng giúp xây dựng các ứng dụng web một cách rất nhanh chóng và hiệu quả. Lý do chọn Django cho hệ thống gợi ý phim là vì nó cung cấp một kiến trúc MVT (Model-View-Template) rõ ràng, giúp tổ chức mã nguồn một cách khoa học và dễ dàng bảo trì. Django cũng hỗ trợ tích hợp với nhiều cơ sở dữ liệu khác nhau, trong đó MySQL được chọn làm hệ quản trị cơ sở dữ liệu cho hệ thống.
+Django là một framework phát triển bằng Python, nổi tiếng với khả năng giúp xây dựng các ứng dụng web một cách nhanh chóng và hiệu quả. Django cung cấp một kiến trúc MVT (Model-View-Template) rõ ràng, giúp tổ chức mã nguồn một cách khoa học và logic. Framework này hỗ trợ tích hợp với nhiều cơ sở dữ liệu khác nhau và đi kèm với nhiều tính năng mạnh mẽ như ORM và hệ thống quản trị admin tự động.
 
-Django cung cấp nhiều tính năng mạnh mẽ như ORM (Object-Relational Mapping), giúp dễ dàng thao tác với cơ sở dữ liệu mà không cần viết SQL thủ công. Ngoài ra, Django còn hỗ trợ nhiều tính năng bảo mật tích hợp sẵn như chống tấn công CSRF, XSS hay SQL Injection, giúp đảm bảo an toàn cho hệ thống.
+Tôi chọn sử dụng Django vì nó giúp dễ dàng thao tác với cơ sở dữ liệu thông qua ORM mà không cần viết SQL thủ công, giảm thiểu thời gian phát triển và lỗi lập trình. Ngoài ra, Django còn hỗ trợ nhiều tính năng bảo mật tích hợp sẵn như chống tấn công CSRF, XSS hay SQL Injection, giúp đảm bảo an toàn cho hệ thống. Framework này cũng có cộng đồng lớn và tài liệu phong phú, giúp việc phát triển và khắc phục vấn đề trở nên dễ dàng hơn.
+
+Trong ứng dụng này, Django được sử dụng để xây dựng toàn bộ phần backend, bao gồm các API endpoints để xử lý yêu cầu từ frontend, quản lý dữ liệu phim và người dùng thông qua ORM, xử lý logic nghiệp vụ cho các chức năng như tìm kiếm, gợi ý phim, và quản lý đánh giá. Django REST Framework được sử dụng kết hợp để xây dựng RESTful API cho phép giao tiếp giữa frontend React và backend Django.
 
 \subsection{MySQL}
-MySQL là một hệ quản trị cơ sở dữ liệu mã nguồn mở, được sử dụng rộng rãi trong các ứng dụng vì tính ổn định và hiệu suất cao. MySQL hỗ trợ các tính năng mạnh mẽ như quản lý dữ liệu phức tạp, thực hiện truy vấn nhanh chóng, bảo mật cao, phù hợp với yêu cầu lưu trữ và truy xuất dữ liệu phim ảnh của ứng dụng.
+MySQL là một hệ quản trị cơ sở dữ liệu quan hệ mã nguồn mở, được sử dụng rộng rãi trong các ứng dụng web vì tính ổn định và hiệu suất cao. MySQL hỗ trợ các tính năng mạnh mẽ như quản lý dữ liệu phức tạp, thực hiện truy vấn nhanh chóng, bảo mật cao, và khả năng mở rộng tốt. Hệ quản trị này sử dụng ngôn ngữ SQL chuẩn và hỗ trợ nhiều kiểu dữ liệu khác nhau.
 
-Sử dụng MySQL trong ứng dụng giúp đảm bảo dữ liệu được tổ chức một cách có cấu trúc, dễ dàng truy xuất và quản lý. MySQL cũng hỗ trợ tính năng sao lưu và phục hồi dữ liệu, giúp bảo vệ được dữ liệu quan trọng của ứng dụng.
+Tôi chọn sử dụng MySQL vì nó phù hợp với yêu cầu lưu trữ và truy xuất dữ liệu phim ảnh của ứng dụng, đảm bảo dữ liệu được tổ chức một cách có cấu trúc và dễ dàng quản lý. MySQL có tính năng sao lưu và phục hồi dữ liệu tốt, giúp bảo vệ dữ liệu quan trọng của ứng dụng. Ngoài ra, MySQL tích hợp tốt với Django thông qua ORM, giúp việc phát triển trở nên thuận tiện hơn.
+
+Trong ứng dụng này, MySQL được sử dụng để lưu trữ toàn bộ dữ liệu của hệ thống, bao gồm thông tin về phim (tên phim, mô tả, thể loại, năm sản xuất), thông tin về đạo diễn, diễn viên, giải thưởng, dữ liệu người dùng, đánh giá phim, và lịch sử hoạt động của người dùng. Cơ sở dữ liệu này đảm bảo dữ liệu được lưu trữ an toàn và truy xuất hiệu quả cho các chức năng như tìm kiếm, gợi ý phim, và phân tích hành vi người dùng.
 
 \section{Công nghệ sử dụng trong việc lưu trữ code}
 \label{section:4.3}
 \subsection{Git}
-Git là một hệ thống quản lý phiên bản phân tán, cho phép theo dõi được sự thay đổi của mã nguồn trong quá trình phát triển. Việc sử dụng Git giúp quản lý mã nguồn một cách hiệu quả, dễ dàng quay lại các phiên bản trước và phối hợp làm việc nhóm một cách mượt mà. Git cung cấp các tính năng mạnh mẽ như nhánh, hợp nhất và theo dõi lịch sử, giúp quản lý quá trình phát triển và xử lý xung đột mã nguồn một cách hiệu quả.
+Git là một hệ thống quản lý phiên bản phân tán, cho phép theo dõi sự thay đổi của mã nguồn trong quá trình phát triển. Git lưu trữ lịch sử thay đổi của mã nguồn dưới dạng các snapshot, cho phép quay lại bất kỳ phiên bản nào trước đó. Hệ thống này hoạt động trên mô hình phân tán, mỗi bản sao repository đều chứa toàn bộ lịch sử dự án.
 
-\subsection{Github}
-GitHub là một dịch vụ lưu trữ mã nguồn dựa trên Git, cung cấp nền tảng trực tuyến để có thể chia sẻ, lưu trữ và quản lý mã nguồn. Sử dụng GitHub, có thể dễ dàng chia sẻ mã nguồn với các thành viên khác trong nhóm, theo dõi các vấn đề, yêu cầu tính năng và phối hợp phát triển sản phẩm một cách hiệu quả. GitHub cũng cung cấp nhiều công cụ hỗ trợ như review mã, quản lý dự án và tích hợp liên tục (CI/CD), giúp quy trình phát triển trở nên chuyên nghiệp, linh hoạt và hiệu quả hơn.
+Tôi chọn sử dụng Git vì nó giúp quản lý mã nguồn một cách hiệu quả, dễ dàng quay lại các phiên bản trước khi gặp lỗi hoặc cần so sánh thay đổi. Git cung cấp các tính năng mạnh mẽ như nhánh, hợp nhất và theo dõi lịch sử, giúp quản lý quá trình phát triển và xử lý xung đột mã nguồn một cách hiệu quả. Ngoài ra, Git cho phép phối hợp làm việc nhóm một cách mượt mà, mỗi thành viên có thể làm việc độc lập trên các nhánh khác nhau.
 
-GitHub cung cấp một giao diện thân thiện, giúp người dùng dễ dàng quản lý các kho lưu trữ và theo dõi tiến độ dự án. Ngoài ra, GitHub cũng hỗ trợ tích hợp với nhiều dịch vụ và công cụ khác, giúp tự động hóa các quy trình phát triển và triển khai sản phẩm.
+Trong ứng dụng này, Git được sử dụng để quản lý toàn bộ mã nguồn của dự án, bao gồm mã frontend React, backend Django, các script crawl dữ liệu, và các tệp cấu hình. Tôi sử dụng các nhánh khác nhau để phát triển các tính năng riêng biệt, sau đó hợp nhất vào nhánh chính sau khi hoàn thành và kiểm thử. Git giúp theo dõi mọi thay đổi trong quá trình phát triển và đảm bảo mã nguồn luôn được sao lưu an toàn.
+
+\subsection{GitHub}
+GitHub là một dịch vụ lưu trữ mã nguồn dựa trên Git, cung cấp nền tảng trực tuyến để chia sẻ, lưu trữ và quản lý mã nguồn. GitHub cung cấp giao diện web thân thiện để quản lý các kho lưu trữ, theo dõi các vấn đề, yêu cầu tính năng và xem lại mã nguồn. Nền tảng này cũng hỗ trợ nhiều công cụ hỗ trợ như quản lý dự án, wiki, và tích hợp liên tục CI/CD.
+
+Tôi chọn sử dụng GitHub vì nó giúp dễ dàng chia sẻ mã nguồn và phối hợp phát triển sản phẩm một cách hiệu quả, đặc biệt khi làm việc với nhóm hoặc cần backup mã nguồn trên đám mây. GitHub cung cấp các tính năng review mã và quản lý dự án, giúp quy trình phát triển trở nên chuyên nghiệp và linh hoạt hơn. Ngoài ra, GitHub hỗ trợ tích hợp với nhiều dịch vụ và công cụ khác, giúp tự động hóa các quy trình phát triển và triển khai sản phẩm thông qua GitHub Actions.
+
+Trong ứng dụng này, GitHub được sử dụng để lưu trữ toàn bộ mã nguồn của dự án trên đám mây, đảm bảo mã nguồn luôn được sao lưu và có thể truy cập từ bất kỳ đâu. Tôi sử dụng GitHub Issues để theo dõi các công việc cần thực hiện và các lỗi cần sửa. Ngoài ra, GitHub Actions được sử dụng để tự động hóa quy trình cập nhật dữ liệu phim hàng ngày, chạy các script crawl dữ liệu từ IMDb và BoxOfficeMojo.
 
 \section{Công nghệ sử dụng trong việc crawl dữ liệu}
 Trong quá trình xây dựng ứng dụng gợi ý phim, việc thu thập và cập nhật dữ liệu từ các nguồn uy tín là một phần quan trọng nhằm đảm bảo tính chính xác và cập nhật của thông tin phim ảnh. Để thực hiện việc này, tôi đã sử dụng các công cụ mạnh mẽ như Selenium và Requests, kết hợp với việc tự động hóa quy trình cập nhật dữ liệu bằng GitHub Actions.
 
 \label{section:4.4}
 \subsection{Selenium và Requests}
-Để có được dữ liệu phong phú và chính xác cho ứng dụng gợi ý phim, tôi đã sử dụng kỹ thuật crawl dữ liệu từ các trang web uy tín như IMDb và BoxOfficeMojo. IMDb là một cơ sở dữ liệu trực tuyến về phim ảnh, chương trình truyền hình và người nổi tiếng, cung cấp thông tin chi tiết, cụ thể, đầy đủ và đa dạng về các bộ phim. BoxOfficeMojo là một trang web chuyên tổng hợp doanh thu phòng vé, cung cấp dữ liệu chính xác về doanh thu của các bộ phim.
+Selenium là một công cụ tự động hóa web mạnh mẽ, cho phép điều khiển trình duyệt web và tương tác với các trang web động giống như người dùng thật. Selenium có thể thực hiện các hành động như click, nhập liệu, cuộn trang, và chờ đợi các phần tử động tải. Requests là một thư viện HTTP đơn giản nhưng mạnh mẽ trong Python, giúp gửi các yêu cầu HTTP và truy xuất dữ liệu từ các trang web. Requests hỗ trợ nhiều tính năng như duyệt qua các trang web, gửi dữ liệu dưới dạng biểu mẫu và xử lý cookies.
 
-Selenium là một công cụ tự động hóa web mạnh mẽ, giúp tôi có thể điều khiển được trình duyệt web và tương tác với các trang web động. Sử dụng Selenium, tôi có thể xử lý các trang web yêu cầu người dùng phải cuộn trang hoặc nhấn nút để tải thêm dữ liệu. Selenium giúp tôi tự động thu thập thông tin từ các trang web này một cách hiệu quả.
+Tôi chọn sử dụng Selenium và Requests vì chúng cho phép thu thập dữ liệu từ các trang web uy tín như IMDb và BoxOfficeMojo một cách tự động và hiệu quả. Selenium được sử dụng để xử lý các trang web động yêu cầu người dùng phải cuộn trang hoặc nhấn nút để tải thêm dữ liệu, trong khi Requests được sử dụng cho các trang web tĩnh để truy xuất dữ liệu nhanh chóng hơn. Sự kết hợp của hai công cụ này giúp tôi có thể thu thập được dữ liệu phong phú và chính xác về phim ảnh cho ứng dụng.
 
-Requests là một thư viện HTTP đơn giản nhưng mạnh mẽ trong Python, giúp gửi các yêu cầu dễ dàng và truy xuất dữ liệu từ các trang web. Requests hỗ trợ nhiều tính năng hữu ích như duyệt qua các trang web, gửi dữ liệu dưới dạng biểu mẫu và xử lý cookies, giúp tôi có thể thu thập dữ liệu từ các trang web tĩnh dễ dàng.
+Trong ứng dụng này, Selenium được sử dụng để crawl dữ liệu từ IMDb, bao gồm thông tin về phim (tên phim, mô tả, thể loại, năm sản xuất, đánh giá), thông tin về đạo diễn, diễn viên, giải thưởng, và hình ảnh. Requests được sử dụng để lấy dữ liệu tĩnh từ BoxOfficeMojo về doanh thu phòng vé của các bộ phim. Các script crawl này được chạy tự động hàng ngày thông qua GitHub Actions để đảm bảo dữ liệu luôn được cập nhật mới nhất.
 
 \subsection{Công nghệ sử dụng để update dữ liệu}
 Việc duy trì và cập nhật dữ liệu phim ảnh một cách liên tục là điều cần thiết để ứng dụng gợi ý phim luôn cung cấp thông tin mới nhất và chính xác. Để tự động hóa quy trình này, tôi đã sử dụng GitHub Actions. GitHub Actions là một công cụ CI/CD tích hợp sẵn trong GitHub, cho phép thiết lập các workflow tự động chạy khi có sự kiện cụ thể.
