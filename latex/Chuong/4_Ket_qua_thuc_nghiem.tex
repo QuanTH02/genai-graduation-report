@@ -158,7 +158,7 @@ Template sẽ nhận dữ liệu từ view và render ra các thành phần giao
 
 Gồm 2 class là UserTemplate và AdminTemplate.
 
-Mô tả: Class UserTemplate: Lớp này chịu trách nhiệm quản lý mẫu HTML dành cho giao diện người dùng. Các mẫu này bao gồm các trang đăng nhập, đăng ký, trang cá nhân, trang đánh giá phim, và các trang hiển thị danh sách phim, diễn viên, đạo diễn. Class AdminTemplate: Lớp này chịu trách nhiệm quản lý mẫu HTML dành cho giao diện admin. Các mẫu này bao gồm các trang quản lý người dùng, quản lý phim, duyệt đánh giá và các trang khác mà admin sử dụng để quản lý hệ thống.
+Mô tả: Class UserTemplate: Lớp này chịu trách nhiệm quản lý mẫu HTML dành cho giao diện người dùng. Các mẫu này bao gồm các trang đăng nhập, đăng ký, trang cá nhân, trang đánh giá phim, và các trang hiển thị danh sách phim, diễn viên, đạo diễn. Class AdminTemplate: Lớp này chịu trách nhiệm quản lý mẫu HTML dành cho giao diện admin. Các mẫu này bao gồm các trang quản lý người dùng, quản lý phim, duyệt đánh giá và các trang khác mà admin sử dụng để quản lý ứng dụng.
     
 Phụ thuộc: 2 class này không có mối quan hệ nào phụ thuộc với nhau. Chúng độc lập và phục vụ các mục đích khác nhau: một bên là giao diện người dùng, một bên là giao diện admin.
 
@@ -262,21 +262,21 @@ Dưới đây là một số hình ảnh minh họa cho thiết kế giao diện
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.3\linewidth]{Hinhve/data1.png}
-\caption{Hình ảnh các table trong database}
+\caption{Hình ảnh các table trong database 1}
 \label{fig:Database}
 \end{figure} 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.3\linewidth]{Hinhve/data2.png}
-\caption{Hình ảnh các table trong database}
+\caption{Hình ảnh các table trong database 2}
 \label{fig:Database}
 \end{figure} 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.3\linewidth]{Hinhve/data3.png}
-\caption{Hình ảnh các table trong database}
+\caption{Hình ảnh các table trong database 3}
 \label{fig:Database}
 \end{figure} 
 
@@ -295,14 +295,117 @@ Dưới đây là một số hình ảnh minh họa cho thiết kế giao diện
 %  Review & Các đánh giá phim của người dùng khác \\ \hline
 % \end{tabular}
 
-\begin{figure}[H]
+\begin{table}[H]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/tb_crawl.png}
 \caption{Tổng hợp các thông tin cần lấy}
-\label{fig:tb_crawl}
-\end{figure} 
+\label{tab:tb_crawl}
+\end{table} 
 
 \textbf{BoxofficeMojo:} Ở trang web này, tôi sẽ tìm các bộ phim có trong BoxofficeMojo bằng cách lấy khóa chính là movie name có trong IMDb, sau đó sẽ lấy các thông tin về doanh thu và update vào data.
+
+\subsection{Tìm kiếm phim bằng ngôn ngữ tự nhiên}
+ứng dụng hỗ trợ tìm kiếm phim bằng câu tự nhiên (natural language search), cho phép người dùng nhập yêu cầu tìm kiếm bằng ngôn ngữ thông thường thay vì phải sử dụng các từ khóa cụ thể. Tính năng này kết hợp hai phương pháp tìm kiếm: Vector Search (semantic search) và AI Filter (structured search) để đảm bảo độ chính xác và toàn diện trong kết quả tìm kiếm.
+
+\subsubsection{Tổng quan luồng xử lý}
+Khi người dùng nhập câu tìm kiếm, ứng dụng sẽ xử lý theo các bước sau:
+
+\begin{itemize}
+    \item \textbf{Frontend gửi yêu cầu:} Component React sẽ gửi câu tìm kiếm đến API endpoint.
+    \item \textbf{Backend xử lý song song:} Ứng dụng thực hiện đồng thời hai phương pháp tìm kiếm:
+    \begin{itemize}
+        \item Vector Search: Tìm kiếm theo ngữ nghĩa (semantic) dựa trên embedding
+        \item AI Filter: Tìm kiếm có cấu trúc (structured) dựa trên các thuộc tính cụ thể
+    \end{itemize}
+    \item \textbf{Kết hợp kết quả:} Ứng dụng hợp nhất và sắp xếp kết quả từ hai phương pháp theo độ ưu tiên
+    \item \textbf{Trả về kết quả:} Gửi danh sách phim kèm thông tin phân trang về frontend
+\end{itemize}
+
+\subsubsection{Các thành phần kỹ thuật}
+
+\textbf{Frontend:} Frontend nhận sự kiện click button tìm kiếm và gửi yêu cầu đến API endpoint.
+
+\textbf{Backend API Endpoint:} Backend kiểm tra tính hợp lệ của query, xử lý yêu cầu tìm kiếm. Xử lý phân trang và điều phối hai phương pháp tìm kiếm song song.
+
+\textbf{Vector Search (Semantic Search):}
+
+Thực hiện tìm kiếm theo ngữ nghĩa:
+
+\begin{itemize}
+    \item Tạo embedding vector từ câu query bằng mô hình Gemini.
+    \item Tải embeddings của các bộ phim đã được tính toán trước.
+    \item Tính cosine similarity giữa embedding của query và embedding của mỗi phim
+    \item Chọn top 200 kết quả có độ tương đồng cao nhất
+\end{itemize}
+
+Embedding của phim được tạo bởi kết hợp các thông tin: tên phim, năm sản xuất, mô tả, storyline, thể loại, đạo diễn, và diễn viên.
+
+\textbf{AI Filter (Structured Search):}
+
+Phân tích câu query bằng AI:
+
+\begin{itemize}
+    \item Gửi câu query đến mô hình Gemini.
+    \item AI trích xuất các thông tin có cấu trúc từ câu query thành định dạng JSON, bao gồm:
+    \begin{itemize}
+        \item movie\_name: Tên phim
+
+        \item year\_min/year\_max: Khoảng năm sản xuất
+        \item rating\_min/rating\_max: Khoảng đánh giá
+        \item genres: Danh sách thể loại
+        \item directors: Danh sách đạo diễn
+        \item cast: Danh sách diễn viên
+        \item countries: Danh sách quốc gia
+        \item languages: Danh sách ngôn ngữ
+        \item keywords: Các từ khóa khác
+    \end{itemize}
+    \item Cuối cùng là thực hiện lọc phim dựa trên các tiêu chí được AI trích xuất
+\end{itemize}
+
+\subsubsection{Chiến lược kết hợp kết quả}
+
+Ứng dụng hợp nhất kết quả từ hai phương pháp tìm kiếm theo ba mức độ ưu tiên:
+
+\begin{itemize}
+    \item Ưu tiên cao: Các phim xuất hiện trong cả Vector Search và AI Filter - được sắp xếp theo độ tương đồng (similarity) từ cao xuống thấp
+    \item Ưu tiên trung: Các phim chỉ xuất hiện trong Vector Search - tối đa 50 kết quả
+    \item Ưu tiên thấp: Các phim chỉ xuất hiện trong AI Filter - tối đa 50 kết quả
+\end{itemize}
+
+Chiến lược này đảm bảo kết quả vừa phù hợp về mặt ngữ nghĩa, vừa đáp ứng các tiêu chí cụ thể mà người dùng yêu cầu.
+
+\subsubsection{Xử lý sau tìm kiếm}
+
+Sau khi có danh sách phim kết quả, ứng dụng thực hiện các bước xử lý sau:
+
+\begin{itemize}
+    \item Serialize dữ liệu: Chuyển đổi đối tượng phim sang định dạng JSON để trả về cho frontend
+    \item Lưu lịch sử tìm kiếm: Nếu người dùng đã đăng nhập, thì hệ thống sẽ lưu lại lịch sử tìm kiếm với định dạng JSON để phục vụ cho ứng dụng gợi ý phim trong tương lai
+\end{itemize}
+
+\subsubsection{Kết quả trả về}
+
+API trả về response với cấu trúc:
+
+\begin{itemize}
+    \item data: Danh sách phim đã được sắp xếp và lọc
+    \item pagination: Thông tin phân trang (số trang hiện tại, tổng số trang, tổng số kết quả)
+    \item filter\_data: Thông tin các bộ lọc mà AI đã phân tích từ câu query, giúp người dùng hiểu rõ h
+\end{itemize}
+
+\subsubsection{Điểm mạnh của ứng dụng}
+
+Tính năng tìm kiếm bằng ngôn ngữ người dùng có các ưu điểm sau:
+
+\begin{itemize}
+    \item Kết hợp hai phương pháp: Sự kết hợp giữa semantic search và structured search giúp cải thiện đáng kể độ chính xác của kết quả tìm kiếm
+    \item Hỗ trợ đa ngôn ngữ: Thông qua mô hình Gemini, ứng dụng có thể xử lý câu tìm kiếm bằng nhiều ngôn ngữ khác nhau
+    \item Lưu lịch sử: Ứng dụng tự động lưu lịch sử tìm kiếm của người dùng đã đăng nhập, hỗ trợ cho các tính năng gợi ý và phân tích hành vi
+    \item Tối ưu hiệu suất: Embeddings được tính toán trước và lưu trong file pickle, giúp giảm thời gian xử lý khi tìm kiếm
+\end{itemize}
+
+
+\subsection{Gợi ý phim bằng genAI dựa vào lịch sử hoạt động của người dùng}
 
 \section{Xây dựng ứng dụng}
 \subsection{Thư viện và công cụ sử dụng}
@@ -314,7 +417,6 @@ Sau đây là các công cụ, ngôn ngữ lập trình, API, thư viện, IDE, 
         \hline
         \textbf{Mục đích} & \textbf{Công cụ} & \textbf{Tài liệu tham khảo}    \\ \hline
         IDE lập trình & Visual Studio Code (VSCode) & \cite{VSCode} \\ \hline
-Backend Framework & Django & \cite{Django} \\ \hline
 API Framework & Django Rest Framework & \cite{DRF} \\ \hline
 Frontend & HTML & \cite{HTML} \\ \hline
 Style & Tailwind CSS & \cite{TailwindCSS} \\ \hline
@@ -346,7 +448,7 @@ Gói View: Chứa các class hiển thị và xử lý giao diện cho người 
 
 Gói Template: Chứa các template HTML dành cho giao diện người dùng và admin.
 
-Các sản phẩm được đóng gói có ý nghĩa và vai trò cụ thể trong việc quản lý và hiển thị thông tin về phim, đạo diễn, diễn viên, đánh giá phim. Ứng dụng này cung cấp nền tảng để người dùng có thể tìm kiếm và xem thông tin về các bộ phim, viết đánh giá, tương tác với nội dung. Ngoài ra, ứng dụng còn có thể đưa ra những bộ phim phù hợp nhất với từng thao tác của người dùng theo gợi ý của hệ thống.
+Các sản phẩm được đóng gói có ý nghĩa và vai trò cụ thể trong việc quản lý và hiển thị thông tin về phim, đạo diễn, diễn viên, đánh giá phim. Ứng dụng này cung cấp nền tảng để người dùng có thể tìm kiếm và xem thông tin về các bộ phim, viết đánh giá, tương tác với nội dung. Ngoài ra, ứng dụng còn có thể đưa ra những bộ phim phù hợp nhất với từng thao tác của người dùng theo gợi ý của ứng dụng.
 
 \textbf{Thống kê các thông tin của ứng dụng:}
 
@@ -376,7 +478,7 @@ Số video đã crawl: 5000 video
 
 \textbf{Tìm kiếm phim theo ngôn ngữ người dùng:}
 
-Ở chức năng này, người dùng có thể tìm kiếm phim theo ngôn ngữ của mình. Hệ thống sẽ nhận đầu vào, phân tích, embed text vào model để tìm kiếm phim theo ngôn ngữ của người dùng và đưa ra kết quả phù hợp.
+Ở chức năng này, người dùng có thể tìm kiếm phim theo ngôn ngữ của mình. Ứng dụng sẽ nhận đầu vào, phân tích, embed text vào model để tìm kiếm phim theo ngôn ngữ của người dùng và đưa ra kết quả phù hợp.
 
 \begin{figure}[H]
 \centering
@@ -477,24 +579,24 @@ Người dùng vào chi tiết phim để xem danh sách ảnh có trong bộ ph
 \section{Kiểm thử}
 
 \FloatBarrier
-\begin{figure}[ht!]
+\begin{table}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/test1.png}
 \caption{Kiểm thử chức năng}
-\label{fig:test1}
-\end{figure} 
+\label{tab:test1}
+\end{table} 
 \FloatBarrier
 
 \FloatBarrier
-\begin{figure}[ht!]
+\begin{table}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/test2.png}
 \caption{Kiểm thử chức năng}
-\label{fig:test2}
-\end{figure} 
+\label{tab:test2}
+\end{table} 
 \FloatBarrier
 
-Qua những bước kiểm thử trên, có thể thấy ứng dụng đã sẵn sàng đi vào hoạt động khi toàn bộ test case đều được thông qua và hoạt động tốt.
+Qua những bước kiểm thử trên (\autoref{tab:test1} và \autoref{tab:test2}), có thể thấy ứng dụng đã sẵn sàng đi vào hoạt động khi toàn bộ test case đều được thông qua và hoạt động tốt.
 
 \section{Triển khai}
 \textbf{Mô hình triển khai}

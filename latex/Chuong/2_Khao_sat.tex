@@ -16,12 +16,12 @@ Trong quá trình khảo sát hiện trạng và yêu cầu của ứng dụng g
 Từ khảo sát người dùng, khách hàng, tôi nhận thấy rằng người dùng mong muốn một ứng dụng có khả năng tìm kiếm phim nhanh chóng và chính xác, cùng với các tính năng gợi ý phim dựa trên sở thích cá nhân và hành vi xem phim trước đó. Các tính năng như đánh giá, nhận xét phim và xem trailer cũng được đánh giá cao. Đồng thời, hiệu năng hệ thống cần được cải thiện, giao diện người dùng phải thân thiện và dễ dàng sử dụng.
 
 \section{Khảo sát về quyền theo dõi}
-\label{section:2.2}
+\label{section:2.2_policy}
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/Khao_sat_policy.png}
 \caption{Khảo sát về quyền theo dõi}
-\label{fig:Khao_sat}
+\label{fig:Khao_sat_policy}
 \end{figure} 
 
 Theo kết quả của khảo sát về quyền theo dõi, tôi nhận thấy rằng người dùng mong muốn một ứng dụng gợi ý phim, nhưng phần lớn lại không mong muốn bị theo dõi hành vi trên ứng dụng. Vì vậy, tôi sẽ phát triển thêm chức năng theo dõi hành vi người dùng để gợi ý phim một cách phù hợp nhất với mong muốn người dùng.
@@ -51,7 +51,7 @@ Theo kết quả của khảo sát về quyền theo dõi, tôi nhận thấy r�
 
 Trong khi đó, thông qua khảo sát các hệ thống đã có như IMDb, Metacritic, Rotten Tomatoes, TMDb, Box Office Mojo và The Numbers, tôi đã so sánh và đánh giá các tính năng, hiệu năng và khả năng cung cấp thông tin của từng hệ thống. Từ đó, tôi nhận thấy mỗi hệ thống có điểm mạnh và điểm yếu riêng, và việc kết hợp các tính năng của chúng có thể tạo ra một ứng dụng gợi ý phim toàn diện.
 
-Cuối cùng, tôi cũng đã khảo sát một số ứng dụng giới thiệu phim trên nền tảng di động và web, từ đó nhận thấy một số điểm chung về giao diện thân thiện và tính năng gợi ý phim dựa trên hành vi người dùng như trong bảng \ref{fig:Khao_sat_web}. Tuy nhiên, nhiều ứng dụng vẫn cần cải thiện về mặt hiệu năng và tính năng phong phú.
+Cuối cùng, tôi cũng đã khảo sát một số ứng dụng giới thiệu phim trên nền tảng di động và web, từ đó nhận thấy một số điểm chung về giao diện thân thiện và tính năng gợi ý phim dựa trên hành vi người dùng như trong \autoref{tab:Khao_sat_web}. Tuy nhiên, nhiều ứng dụng vẫn cần cải thiện về mặt hiệu năng và tính năng phong phú.
 
 Dựa trên kết quả khảo sát từ các nguồn trên, tôi xác định rõ các tính năng cần thiết để phát triển một ứng dụng gợi ý phim toàn diện, đáp ứng tốt nhu cầu của người dùng.
 
@@ -89,7 +89,7 @@ Dựa trên kết quả khảo sát từ các nguồn trên, tôi xác định r
 \centering
 \includegraphics[width=0.75\linewidth]{Hinhve/Usecase_tong_quan.png}
 \caption{Use case tổng quan}
-\label{fig:Usecase}
+\label{fig:Usecase_tong_quan}
 \end{figure} 
 
 \subsection{Biểu đồ use case phân rã Quản lý thông tin người dùng}
@@ -98,7 +98,7 @@ Dựa trên kết quả khảo sát từ các nguồn trên, tôi xác định r
 \centering
 \includegraphics[width=0.6\linewidth]{Hinhve/Usecase_phan_ra_admin_quanlynguoidung.drawio.png}
 \caption{Phân rã use case Quản lý thông tin người dùng}
-\label{fig:Usecase}
+\label{fig:Usecase_quanlynguoidung}
 \end{figure} 
 Trong biểu đồ use case phân rã "Quản lý thông tin người dùng", các use case được phân rã và mô tả như sau:
 
@@ -115,7 +115,7 @@ Trong biểu đồ use case phân rã "Quản lý thông tin người dùng", c�
 \centering
 \includegraphics[width=0.6\linewidth]{Hinhve/Usecase_phan_ra_admin_quanlyphim.drawio.png}
 \caption{Phân rã use case Quản lý thông tin phim}
-\label{fig:Usecase}
+\label{fig:Usecase_quanlyphim}
 \end{figure} 
 Trong biểu đồ use case phân rã "Quản lý thông tin phim", các use case được phân rã và mô tả như sau:
 
@@ -132,7 +132,7 @@ Trong biểu đồ use case phân rã "Quản lý thông tin phim", các use cas
 \centering
 \includegraphics[width=0.6\linewidth]{Hinhve/Usecase_phan_ra_user_quanlytaikhoan.drawio.png}
 \caption{Phân rã use case Quản lý tài khoản}
-\label{fig:Usecase}
+\label{fig:Usecase_quanlytaikhoan}
 \end{figure} 
 Trong biểu đồ use case phân rã "Quản lý tài khoản", các use case được phân rã và mô tả như sau:
 
@@ -149,7 +149,7 @@ Trong biểu đồ use case phân rã "Quản lý tài khoản", các use case �
 \centering
 \includegraphics[width=0.6\linewidth]{Hinhve/Usecase_phan_ra_user_tuongtacphim.drawio.png}
 \caption{Phân rã use case Tương tác với phim}
-\label{fig:Usecase}
+\label{fig:Usecase_tuongtacphim}
 \end{figure} 
 Trong biểu đồ use case phân rã "Tương tác với phim", các use case được phân rã và mô tả như sau:
 
@@ -167,7 +167,7 @@ Xóa phim yêu thích: Người dùng có khả năng xóa đi những bộ phim
 \centering
 \includegraphics[width=0.6\linewidth]{Hinhve/Usecase_phan_ra_user_review.drawio.png}
 \caption{Phân rã use case Review, comment}
-\label{fig:Usecase}
+\label{fig:Usecase_review}
 \end{figure} 
 Trong biểu đồ use case phân rã "Review, comment", các use case được phân rã và mô tả như sau:
 

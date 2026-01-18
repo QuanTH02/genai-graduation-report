@@ -19,50 +19,47 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: DoAn-blx.bib
 Database file #2: Danh_sach_tai_lieu_tham_khao.bib
-Warning--I didn't find a database entry for "TailwindCSS"
-Warning--I didn't find a database entry for "React"
 Biblatex version: 3.17
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 15 entries,
+You've used 17 entries,
             6399 wiz_defined-function locations,
-            1261 strings with 10141 characters,
-and the built_in function-call counts, 27057 in all, are:
-= -- 1037
+            1264 strings with 10207 characters,
+and the built_in function-call counts, 29837 in all, are:
+= -- 1105
 > -- 283
-< -- 146
-+ -- 216
+< -- 162
++ -- 218
 - -- 91
-* -- 1117
-:= -- 1468
+* -- 1201
+:= -- 1512
 add.period$ -- 0
-call.type$ -- 15
-change.case$ -- 40
+call.type$ -- 17
+change.case$ -- 44
 chr.to.int$ -- 42
-cite$ -- 28
-duplicate$ -- 3353
-empty$ -- 3844
+cite$ -- 32
+duplicate$ -- 3755
+empty$ -- 4324
 format.name$ -- 129
-if$ -- 6173
+if$ -- 6831
 int.to.chr$ -- 0
-int.to.str$ -- 17
+int.to.str$ -- 19
 missing$ -- 0
-newline$ -- 145
+newline$ -- 159
 num.names$ -- 114
-pop$ -- 4559
+pop$ -- 5201
 preamble$ -- 1
-purify$ -- 49
+purify$ -- 53
 quote$ -- 0
-skip$ -- 1208
+skip$ -- 1334
 stack$ -- 0
-substring$ -- 1087
-swap$ -- 926
-text.length$ -- 168
+substring$ -- 1099
+swap$ -- 1044
+text.length$ -- 184
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 498
+type$ -- 566
 warning$ -- 0
-while$ -- 171
+while$ -- 173
 width$ -- 0
-write$ -- 131
-(There were 2 warnings)
+write$ -- 143
