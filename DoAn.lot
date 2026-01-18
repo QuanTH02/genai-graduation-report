@@ -1,9 +1,17 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Khảo sát các hệ thống đã có\relax }}{7}{table.caption.9}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Đặc tả use case Đăng nhập\relax }}{12}{table.caption.16}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Đặc tả use case Chỉnh sửa thông tin cá nhân\relax }}{13}{table.caption.17}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Đặc tả use case Tìm kiếm phim\relax }}{14}{table.caption.18}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces Đặc tả use case Đánh dấu phim mình thích\relax }}{15}{table.caption.19}%
+\contentsline {table}{\numberline {2.6}{\ignorespaces Đặc tả use case Đánh giá phim\relax }}{16}{table.caption.20}%
+\contentsline {table}{\numberline {2.7}{\ignorespaces Đặc tả use case CRUD phim\relax }}{17}{table.caption.21}%
+\contentsline {table}{\numberline {2.8}{\ignorespaces Đặc tả use case Gợi ý phim theo nội dung\relax }}{18}{table.caption.22}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Danh sách thư viện và công cụ sử dụng\relax }}{39}{table.caption.42}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Danh sách thư viện và công cụ sử dụng\relax }}{40}{table.caption.42}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 

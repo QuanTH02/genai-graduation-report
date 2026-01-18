@@ -24,45 +24,45 @@ Warning--I didn't find a database entry for "React"
 Biblatex version: 3.17
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 9 entries,
+You've used 15 entries,
             6399 wiz_defined-function locations,
-            1242 strings with 9774 characters,
-and the built_in function-call counts, 18712 in all, are:
-= -- 833
+            1261 strings with 10141 characters,
+and the built_in function-call counts, 27057 in all, are:
+= -- 1037
 > -- 283
-< -- 97
-+ -- 210
+< -- 146
++ -- 216
 - -- 91
-* -- 864
-:= -- 1336
+* -- 1117
+:= -- 1468
 add.period$ -- 0
-call.type$ -- 9
-change.case$ -- 28
+call.type$ -- 15
+change.case$ -- 40
 chr.to.int$ -- 42
-cite$ -- 16
-duplicate$ -- 2146
-empty$ -- 2404
+cite$ -- 28
+duplicate$ -- 3353
+empty$ -- 3844
 format.name$ -- 129
-if$ -- 4199
+if$ -- 6173
 int.to.chr$ -- 0
-int.to.str$ -- 11
+int.to.str$ -- 17
 missing$ -- 0
-newline$ -- 103
+newline$ -- 145
 num.names$ -- 114
-pop$ -- 2633
+pop$ -- 4559
 preamble$ -- 1
-purify$ -- 37
+purify$ -- 49
 quote$ -- 0
-skip$ -- 830
+skip$ -- 1208
 stack$ -- 0
-substring$ -- 1051
-swap$ -- 571
-text.length$ -- 119
+substring$ -- 1087
+swap$ -- 926
+text.length$ -- 168
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 294
+type$ -- 498
 warning$ -- 0
-while$ -- 165
+while$ -- 171
 width$ -- 0
-write$ -- 95
+write$ -- 131
 (There were 2 warnings)

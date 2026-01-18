@@ -26,12 +26,12 @@ Từ khảo sát người dùng, khách hàng, tôi nhận thấy rằng ngườ
 
 Theo kết quả của khảo sát về quyền theo dõi, tôi nhận thấy rằng người dùng mong muốn một ứng dụng gợi ý phim, nhưng phần lớn lại không mong muốn bị theo dõi hành vi trên ứng dụng. Vì vậy, tôi sẽ phát triển thêm chức năng theo dõi hành vi người dùng để gợi ý phim một cách phù hợp nhất với mong muốn người dùng.
 
-\begin{figure}[H]
+\begin{table}[H]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/Khao_sat_cac_web.png}
 \caption{Khảo sát các hệ thống đã có}
-\label{fig:Khao_sat_web}
-\end{figure} 
+\label{tab:Khao_sat_web}
+\end{table} 
 
 % \begin{tabular}{|c|c|c|c|c|c|c|} 
 %  \hline
@@ -185,72 +185,86 @@ Trong biểu đồ use case phân rã "Review, comment", các use case được 
 \section{Đặc tả chức năng}
 \label{section:2.3}
 \subsection{Đặc tả use case Đăng nhập}
-\begin{figure}[H]
+\begin{table}[H]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/Dac_ta_dangnhap.png}
 \caption{Đặc tả use case Đăng nhập}
-\label{fig:Usecase}
-\end{figure} 
+\label{tab:Usecase_dangnhap}
+\end{table} 
+
+Bảng trên (\autoref{tab:Usecase_dangnhap}) là đặc tả use case Đăng nhập từ người dùng. Trong đó, người dùng có thể đăng nhập vào hệ thống bằng cách nhập tên đăng nhập và mật khẩu. Hệ thống sẽ kiểm tra tên đăng nhập và mật khẩu của người dùng và trả về kết quả đăng nhập. Sẽ validate tên đăng nhập và mật khẩu để tránh lỗi input không hợp lệ.
 
 \subsection{Đặc tả use case Chỉnh sửa thông tin cá nhân}
-\begin{figure}[h]
+\begin{table}[h]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/Dac_ta_chinhsuathongtincanhan.png}
 \caption{Đặc tả use case Chỉnh sửa thông tin cá nhân}
-\label{fig:Usecase}
-\end{figure} 
+\label{tab:Usecase_chinhsuathongtincanhan}
+\end{table} 
+
+Bảng trên (\autoref{tab:Usecase_chinhsuathongtincanhan}) là đặc tả use case Chỉnh sửa thông tin cá nhân từ người dùng. Trong đó, người dùng có thể chỉnh sửa thông tin cá nhân của mình như tên, địa chỉ email, ảnh đại diện, ... Hệ thống sẽ kiểm tra thông tin cá nhân của người dùng và trả về kết quả chỉnh sửa. Sẽ validate thông tin cá nhân để tránh lỗi input không hợp lệ.
 
 \subsection{Đặc tả use case Tìm kiếm phim}
-\begin{figure}[H]
+\begin{table}[H]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/Dac_ta_timkiemphim.png}
 \caption{Đặc tả use case Tìm kiếm phim}
-\label{fig:Usecase}
-\end{figure} 
+\label{tab:Usecase_timkiemphim}
+\end{table} 
+
+Bảng trên (\autoref{tab:Usecase_timkiemphim}) là đặc tả use case Tìm kiếm phim từ người dùng. Trong đó, người dùng có thể tìm kiếm phim bằng cách nhập tên phim, tên diễn viên, tên đạo diễn, ... Hệ thống sẽ kiểm tra tên phim, tên diễn viên, tên đạo diễn của người dùng và trả về kết quả tìm kiếm. Sẽ validate tên phim, tên diễn viên, tên đạo diễn để tránh lỗi input không hợp lệ.
+
+Ngoài ra còn có chức năng Tìm kiếm phim bằng ngôn ngữ người dùng, khi người dùng nhập vào ngôn ngữ người dùng, hệ thống sẽ phân tích nội dung người dùng nhập vào và trả về kết quả tìm kiếm.
 
 \subsection{Đặc tả use case Đánh dấu phim mình thích}
-\begin{figure}[H]
+\begin{table}[H]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/Dac_ta_themvaolistyeuthich.png}
 \caption{Đặc tả use case Đánh dấu phim mình thích}
-\label{fig:Usecase}
-\end{figure} 
+\label{tab:Usecase_danhdayphimyeuthich}
+\end{table} 
+
+Bảng trên (\autoref{tab:Usecase_danhdayphimyeuthich}) là đặc tả use case Đánh dấu phim mình thích từ người dùng. Trong đó, người dùng có thể đánh dấu phim mình thích vào danh sách riêng của mình để dễ dàng theo dõi truy cập sau này và hệ thống có thể đưa ra gợi ý những bộ phim có khả năng mà người dùng thích.
 
 \subsection{Đặc tả use case Đánh giá phim}
 \FloatBarrier
-\begin{figure}[h]
+\begin{table}[h]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/Dac_ta_danhgiaphim.png}
 \caption{Đặc tả use case Đánh giá phim}
-\label{fig:Usecase}
-\end{figure} 
+\label{tab:Usecase_danhgiaphim}
+\end{table} 
 \FloatBarrier
+
+Bảng trên (\autoref{tab:Usecase_danhgiaphim}) là đặc tả use case Đánh giá phim từ người dùng. Trong đó, người dùng có thể đánh giá sao, để lại bình luận sau khi xem. Hệ thống sẽ kiểm tra đánh giá của người dùng và trả về kết quả đánh giá. Sẽ validate đánh giá và bình luận để tránh lỗi input không hợp lệ.
 
 \FloatBarrier
 \subsection{Đặc tả use case CRUD phim}
-\begin{figure}[H]
+\begin{table}[H]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/Dac_ta_crudphim.png}
 \caption{Đặc tả use case CRUD phim}
-\label{fig:Usecase}
-\end{figure}
+\label{tab:Usecase_crudphim}
+\end{table}
 \FloatBarrier
 
+Bảng trên (\autoref{tab:Usecase_crudphim}) là đặc tả use case CRUD phim cho admin. Trong đó, admin có thể thêm, sửa, xóa phim vào danh sách phim của hệ thống. Hệ thống sẽ kiểm tra phim của admin và trả về kết quả CRUD.
+
 \subsection{Đặc tả use case Gợi ý phim theo nội dung}
-\begin{figure}[H]
+\begin{table}[H]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/Dac_ta_goiycontentbased.png}
 \caption{Đặc tả use case Gợi ý phim theo nội dung}
-\label{fig:Usecase}
-\end{figure} 
+\label{tab:Usecase_goiycontentbased}
+\end{table} 
+
+Bảng trên (\autoref{tab:Usecase_goiycontentbased}) là đặc tả use case Gợi ý phim theo nội dung từ người dùng. Trong đó, ứng dụng dựa vào tên phim, thể loại phim, diễn viên, đạo diễn, ... để gợi ý phim tương đồng với phim đang xem.
 
 \section{Yêu cầu phi chức năng}
 \label{section:2.4}
 Trong phần này, tôi xác định được các yêu cầu phi chức năng và kỹ thuật cho ứng dụng như sau:
 
-Hiệu năng: Ứng dụng cần đảm bảo hiệu suất cao và thời gian phản hồi nhanh chóng, đặc biệt khi xử lý các yêu cầu tìm kiếm, sắp xếp và gợi ý phim. Thời gian tải trang cần được giảm thiểu tối đa để tăng trải nghiệm người dùng.
-
-Độ tin cậy: Ứng dụng phải ổn định và đáng tin cậy, đảm bảo rằng dữ liệu không bị mất mát, các chức năng hoạt động một cách mượt mà, đặc biệt là phải chính xác.
+Hiệu năng: Ứng dụng cần đảm bảo hiệu suất cao và thời gian phản hồi nhanh chóng (với các CRUD thông thường thời gian phản hồi < 3s, còn với chức năng tìm kiếm và gợi ý phim bằng AI thì thời gian phản hồi < 10s). Thời gian tải trang cần được giảm thiểu tối đa để tăng trải nghiệm người dùng.
 
 Tính dễ dùng: Giao diện người dùng cần được thiết kế sao cho dễ sử dụng và trực quan, giúp người dùng dễ dàng tìm kiếm thông tin và tương tác với ứng dụng một cách tự nhiên.
 

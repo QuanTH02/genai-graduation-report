@@ -17,6 +17,48 @@
 \endgroup
 
 \datalist[entry]{none/global//global/global}
+  \entry{BoxofficeMojo}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{\url{https://www.boxofficemojo.com/}}
+    \field{note}{Truy cập lần cuối vào ngày 01/06/2024}
+    \field{title}{BoxofficeMojo}
+  \endentry
+
+  \entry{TheNumbers}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{\url{https://www.the-numbers.com/}}
+    \field{note}{Truy cập lần cuối vào ngày 01/06/2024}
+    \field{title}{TheNumbers}
+  \endentry
+
+  \entry{IMDb}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{\url{https://www.imdb.com/}}
+    \field{note}{Truy cập lần cuối vào ngày 01/06/2024}
+    \field{title}{IMDb}
+  \endentry
+
+  \entry{Metacritic}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{\url{https://www.metacritic.com/}}
+    \field{note}{Truy cập lần cuối vào ngày 01/06/2024}
+    \field{title}{Metacritic}
+  \endentry
+
+  \entry{Rottentomatoes}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{\url{https://www.rottentomatoes.com/}}
+    \field{note}{Truy cập lần cuối vào ngày 01/06/2024}
+    \field{title}{Rottentomatoes}
+  \endentry
+
+  \entry{Themoviedb}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{\url{https://www.themoviedb.org/}}
+    \field{note}{Truy cập lần cuối vào ngày 18/01/2026}
+    \field{title}{Themoviedb}
+  \endentry
+
   \entry{VSCode}{misc}{}
     \name{author}{1}{}{%
       {{hash=M}{%
