@@ -1,6 +1,6 @@
 \documentclass[../DoAn.tex]{subfiles}
 \begin{document}
-Chương này tôi sẽ giới thiệu về quá trình thực hiện và phát triển ứng dụng gợi ý phim bằng genAI. Tôi sẽ trình bày các bước và quy trình đã thực hiện để xây dựng sản phẩm từ các ý tưởng ban đầu đến việc triển khai và thử nghiệm trên môi trường local. Bên cạnh đó, chương cũng nhấn mạnh các mục tiêu và những thách thức trong quá trình xây dựng sản phẩm này, cùng với những kết quả đạt được và học hỏi được từ dự án.
+Chương này tập trung tổng kết về quá trình thực hiện và phát triển ứng dụng gợi ý phim tích hợp genAI. Chương sẽ trình bày các bước và quy trình đã được thực hiện để xây dựng sản phẩm từ những ý tưởng ban đầu cho đến việc triển khai và thử nghiệm trên môi trường local. Ngoài ra, chương cũng làm rõ các mục tiêu và những thách thức đã gặp phải trong quá trình xây dựng sản phẩm, cùng với các kết quả đạt được và những kinh nghiệm rút ra từ dự án.
 
 \textbf{Kết quả so sánh}
 \begin{table}[H]
@@ -10,51 +10,51 @@ Chương này tôi sẽ giới thiệu về quá trình thực hiện và phát 
 \label{tab:sosanh}
 \end{table} 
 
-Nhìn vào \autoref{tab:sosanh} có thể thấy ứng dụng hiện tại đã giải quyết được những vấn đề ban đầu đặt ra.
+Từ bảng \autoref{tab:sosanh}, có thể nhận thấy rằng hệ thống hiện tại đã giải quyết được các vấn đề ban đầu đã được đề ra.
 
 \textbf{Phân tích quá trình thực hiện}
 
-Trong suốt quá trình thực hiện ĐATN, tôi đã hoàn thành được những mục tiêu chính sau:
+Trong suốt quá trình thực hiện đồ án tốt nghiệp, tôi đã đạt được các mục tiêu chính như sau:
 \begin{enumerate}
-    \item Lấy được tất cả những dữ liệu cần thiết để phục vụ cho việc xây dựng ứng dụng. Để làm được mục tiêu này, tôi đã tìm rất nhiều tài liệu riêng về chủ đề crawl để có thể nghiên cứu và áp dụng được hoàn toàn vào dự án của bản thân.
-    \item Đã hoàn thành chức năng chính của ứng dụng. Tôi đã thêm được rất nhiều chức năng mà bản thân đã nghĩ khó có thể làm, nhờ đó tôi có thể biết được nhiều công nghệ, kiến thức hay ho hơn để áp dụng vào những dự án trong tương lai.
-    \item Đã triển khai và thử nghiệm ứng dụng trên môi trường local.
+    \item Thu thập được toàn bộ dữ liệu cần thiết để phục vụ việc xây dựng hệ thống. Để đạt được mục tiêu này, tôi đã tìm hiểu và nghiên cứu nhiều tài liệu chuyên sâu về chủ đề crawl dữ liệu để có thể áp dụng một cách hiệu quả vào dự án.
+    \item Hoàn thành các chức năng chính của hệ thống. Tôi đã phát triển được nhiều chức năng mà ban đầu tôi nghĩ sẽ khó thực hiện, nhờ đó tôi đã tích lũy được nhiều kiến thức và công nghệ mới để áp dụng vào các dự án tương lai.
+    \item Thực hiện triển khai và thử nghiệm hệ thống trên môi trường local.
 \end{enumerate}
 
-\textbf{Những điểm chưa làm được}
+\textbf{Những hạn chế còn tồn tại}
 \begin{enumerate}
-    \item Chưa triển khai, deploy lên server thực tế. Hiện tại ứng dụng chỉ chạy trên môi trường local, chưa được kiểm thử với lượng người dùng lớn trong điều kiện tải cao. 
-    \item Tổng quan ứng dụng đang còn đơn giản. Nhìn qua, ứng dụng có giao diện, luồng thao tác còn đang đơn giản, hầu như chỉ view.
+    \item Chưa thực hiện triển khai và deploy lên server thực tế. Hiện tại hệ thống chỉ được vận hành trên môi trường local, chưa được kiểm thử với số lượng người dùng lớn trong điều kiện tải cao. 
+    \item Giao diện và luồng thao tác của hệ thống còn đơn giản. Nhìn tổng quan, hệ thống có giao diện và các luồng thao tác còn khá đơn giản, chủ yếu tập trung vào các chức năng xem và hiển thị.
 \end{enumerate}
 
 \textbf{Đóng góp nổi bật}
 \begin{enumerate}
-    \item Thiết kế và triển khai ứng dụng được thiết kế ngay từ đầu: Tôi đã hoàn thành các chức năng cơ bản và đảm bảo ứng dụng hoạt động ổn định lâu dài.
-    \item Dữ liệu đảm bảo chính xác, nhất quán, đầy đủ và cập nhật liên tục. Tôi đã crawl được bộ dữ liệu hoàn chỉnh phục vụ cho mục đích thử nghiệm, xây dựng ứng dụng của bản thân.
-    \item Xây dựng được chức năng gợi ý phim theo lịch sử hoạt động cũng như tìm kiếm phim bằng ngôn ngữ tự nhiên của người dùng.
-    \item Cấu trúc mã nguồn của tôi cho phép mở rộng và có thể phát triển các tính năng nâng cao, dễ dàng kế thừa và phát triển tiếp.
+    \item Thiết kế và triển khai hệ thống từ giai đoạn đầu: Tôi đã hoàn thành các chức năng cơ bản và đảm bảo hệ thống vận hành ổn định trong thời gian dài.
+    \item Dữ liệu được đảm bảo về tính chính xác, tính nhất quán, tính đầy đủ và được cập nhật liên tục. Tôi đã thu thập được một bộ dữ liệu hoàn chỉnh phục vụ cho mục đích thử nghiệm và xây dựng hệ thống.
+    \item Phát triển được chức năng gợi ý phim dựa trên lịch sử hoạt động của người dùng cũng như chức năng tìm kiếm phim bằng ngôn ngữ tự nhiên.
+    \item Cấu trúc mã nguồn được thiết kế cho phép mở rộng và phát triển các tính năng nâng cao, tạo điều kiện thuận lợi cho việc kế thừa và phát triển tiếp trong tương lai.
 \end{enumerate}
 
-\textbf{Bài học kinh nghiệm cho bản thân}
-Trong quá trình thực hiện dự án, tôi đã rút ra được rất nhiều bài học như:
+\textbf{Bài học kinh nghiệm rút ra}
+Trong quá trình thực hiện dự án, tôi đã tích lũy được nhiều bài học quý giá như sau:
 \begin{enumerate}
-    \item Cách quản lý thời gian: Việc lập kế hoạch chi tiết và quản lý thời gian hiệu quả giúp hoàn thành các mục tiêu đúng tiến độ. Vì hiểu được điều này, các buổi báo cáo với cô giáo diễn ra rất suôn sẻ và không bị chậm trễ.
-    \item Khả năng học hỏi và tự nghiên cứu: Khả năng tự học là rất quan trọng, bởi trên nhà trường, chỉ học lý thuyết và nhiệm vụ của chúng tôi là về nhà tìm tòi, mày mò thực hành thêm để ghi nhớ những kiến thức đó. Chỉ có tự ôn tập, nghiên cứu mới có thể khiến bản thân tiến bộ hơn.
-    \item Thu thập thông tin: Tôi rút ra được bài học rằng, đây là bước rất quan trọng trước khi xây dựng một ứng dụng. Chúng ta phải biết người dùng muốn gì, chúng ta mới xây dựng được một ứng dụng thành công.
+    \item Kỹ năng quản lý thời gian: Việc xây dựng kế hoạch chi tiết và quản lý thời gian một cách hiệu quả góp phần hoàn thành các mục tiêu đúng theo tiến độ đã đề ra. Nhờ hiểu rõ điều này, các buổi báo cáo với giảng viên hướng dẫn đã diễn ra thuận lợi và không gặp phải sự chậm trễ.
+    \item Khả năng tự học và nghiên cứu: Kỹ năng tự học đóng vai trò rất quan trọng, bởi trong môi trường học tập, chúng ta chủ yếu tiếp thu lý thuyết và nhiệm vụ của sinh viên là về nhà tự tìm hiểu, thực hành thêm để củng cố và ghi nhớ kiến thức. Chỉ có việc tự ôn tập và nghiên cứu mới có thể giúp bản thân tiến bộ hơn.
+    \item Tầm quan trọng của việc thu thập thông tin: Tôi nhận ra rằng đây là một bước vô cùng quan trọng trước khi bắt đầu xây dựng một hệ thống. Chúng ta cần phải hiểu rõ nhu cầu của người dùng thì mới có thể xây dựng được một hệ thống thành công.
 \end{enumerate}
 
-Hiện tại, tôi nghĩ các công việc cần thiết để hoàn thiện sản phẩm của mình là:
+Hiện tại, các công việc cần thiết để hoàn thiện sản phẩm bao gồm:
 \begin{enumerate}
-    \item Đầu tiên là triển khai trên môi trường thực tế. Ứng dụng của tôi hiện tại đã phân chia ra đúng các gói, các lớp, các thành phần và đó là cơ sở để có thể dễ dàng deploy trong tương lai. Đây là một nhiệm vụ cần thiết để có thể phổ biến được ứng dụng của bản thân.
-    \item Tôi cần cải thiện về giao diện ứng dụng. Ứng dụng của tôi hiện tại đang có những tông màu rất đơn giản như đen, xanh, xanh lá cây. Để ứng dụng bắt mắt, được sự chú ý của người khác hơn thì tôi nghĩ nên cải thiện nhiều hơn về giao diện ứng dụng.
-    \item Tích hợp thêm tính năng phân tích và thống kê: Hiện tại ứng dụng chỉ có thống kê số lượng đánh giá. Mà người dùng thì lại rất quan tâm đến số liệu để xem phim theo số đông, nêm tôi nghĩ đây là bước cần thiết hiện tại.
+    \item Triển khai hệ thống trên môi trường thực tế. Hệ thống hiện tại đã được tổ chức thành các gói, các lớp, các thành phần một cách hợp lý và đó là nền tảng để có thể dễ dàng triển khai trong tương lai. Đây là một nhiệm vụ quan trọng để có thể phổ biến hệ thống đến với người dùng.
+    \item Cải thiện giao diện của hệ thống. Hệ thống hiện tại đang sử dụng các tông màu khá đơn giản như đen, xanh, xanh lá cây. Để hệ thống trở nên thu hút và gây được sự chú ý hơn, cần cải thiện đáng kể về mặt giao diện.
+    \item Tích hợp thêm các tính năng phân tích và thống kê: Hiện tại hệ thống chỉ có thống kê về số lượng đánh giá. Người dùng thường quan tâm đến các số liệu để quyết định xem phim theo xu hướng số đông, do đó đây là một bước cần thiết trong giai đoạn hiện tại.
 \end{enumerate}
 
-Trong tương lai, tôi muốn phát triển thêm vài chức năng khác như:
+Trong tương lai, các hướng phát triển tiếp theo bao gồm:
 \begin{enumerate}
-    \item Phát triển ứng dụng trên thiết bị di động. Điện thoại di động là thiết bị không thể thiếu đối với mọi người, vậy nên phát triển ứng dụng trên thiết bị di động trong tương lại là một việc rất quan trọng.
-    \item Tích hợp thêm hệ thống dự đoán doanh thu phim mới. Đây là một chức năng mà tôi đã định hướng từ trước, nhưng do dữ liệu tôi triển khai trên hệ thống là không đủ, nên tôi muốn trong tương lai, tôi có thể lấy nhiều dữ liệu hơn và phát triển tính năng này
+    \item Phát triển phiên bản ứng dụng trên thiết bị di động. Điện thoại di động là thiết bị không thể thiếu trong cuộc sống hiện đại, do đó việc phát triển ứng dụng trên nền tảng di động là một hướng đi quan trọng trong tương lai.
+    \item Tích hợp hệ thống dự đoán doanh thu phim mới. Đây là một chức năng đã được định hướng từ trước, tuy nhiên do lượng dữ liệu hiện tại trên hệ thống chưa đủ, nên trong tương lai cần thu thập thêm nhiều dữ liệu hơn để có thể phát triển tính năng này.
 \end{enumerate}
 
-Trên đây là kết luận và hướng phát triển trong tương lai của em. Tôi sẽ luôn cố gắng hết sức mình để hoàn thiện sản phẩm của mình một cách tốt nhất, tôi xin chân thành cảm ơn!
+Trên đây là phần kết luận và các hướng phát triển trong tương lai của đồ án. Tôi sẽ tiếp tục nỗ lực để hoàn thiện sản phẩm một cách tốt nhất có thể. Tôi xin chân thành cảm ơn!
 \end{document}

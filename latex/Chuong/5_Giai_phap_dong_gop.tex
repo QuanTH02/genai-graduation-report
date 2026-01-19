@@ -1,35 +1,35 @@
 \documentclass[../DoAn.tex]{subfiles}
 \begin{document}
 
-Trong chương này, tôi sẽ trình bày các vấn đề mà tôi đã gặp phải và những giải pháp cụ thể mà tôi đã áp dụng để giải quyết chúng. Đồng thời, tôi cũng sẽ trình bày các đóng góp đáng chú ý mà tôi đánh giá cao trong quá trình thực hiện đồ án tốt nghiệp.
+Chương này tập trung trình bày các vấn đề đã phát sinh trong quá trình thực hiện và các giải pháp cụ thể đã được áp dụng để giải quyết những vấn đề đó. Bên cạnh đó, chương cũng đề cập đến các đóng góp nổi bật được đánh giá cao trong suốt quá trình thực hiện đồ án tốt nghiệp.
 
 \section{Thiếu khá nhiều dữ liệu phim ảnh}
-Vấn đề này phát sinh khi tôi cần một lượng lớn dữ liệu về các bộ phim để xây dựng ứng dụng gợi ý. Để giải quyết vấn đề này, tôi đã tiến hành tìm kiếm, thu thập và lựa chọn các trang web có uy tín để lấy dữ liệu. Việc này bao gồm việc phân tích cú pháp của các trang web, xác định cách truy cập, nghiên cứu cấu trúc và lấy dữ liệu một cách tự động.
+Vấn đề này xuất hiện khi cần một khối lượng dữ liệu lớn về các bộ phim để phục vụ việc xây dựng ứng dụng gợi ý. Để khắc phục vấn đề này, tôi đã thực hiện tìm kiếm, thu thập và lựa chọn các trang web đáng tin cậy để thu thập dữ liệu. Quá trình này bao gồm việc phân tích cú pháp của các trang web, xác định phương thức truy cập, nghiên cứu cấu trúc và thực hiện thu thập dữ liệu một cách tự động.
 
 \section{Thiết kế database khá khó khăn với quá nhiều trường}
 
-Khi thiết kế cơ sở dữ liệu, tôi gặp khó khăn khi phải xử lý một lượng lớn các trường thông tin về phim và người dùng. Để giải quyết vấn đề này, tôi đã áp dụng nguyên tắc chuẩn hóa cơ sở dữ liệu và chia nhỏ các trường thông tin có liên quan thành các bảng dữ liệu con. Sau đó, tôi xác định mối liên hệ giữa các bảng và kết hợp chúng lại với nhau để tạo ra cấu trúc cơ sở dữ liệu hợp lý và hiệu quả.
+Trong quá trình thiết kế cơ sở dữ liệu, tôi gặp phải thách thức khi phải xử lý một khối lượng lớn các trường thông tin liên quan đến phim và người dùng. Để khắc phục vấn đề này, tôi đã vận dụng các nguyên tắc chuẩn hóa cơ sở dữ liệu và phân tách các trường thông tin có liên quan thành các bảng dữ liệu con. Tiếp theo, tôi xác định các mối quan hệ giữa các bảng và liên kết chúng lại với nhau nhằm tạo ra một cấu trúc cơ sở dữ liệu hợp lý và đạt hiệu quả cao.
 
 \section{Trang web có dữ liệu update liên tục theo ngày khiến link ảnh và trailer bị hỏng}
 
-Một trong số các trang web mà tôi lấy dữ liệu đó là IMDb, ở trang web này, có rất nhiều trường thông tin, nhưng việc khó khăn để lấy dữ liệu nhất đối với tôi chính là lấy link ảnh và link trailer. Ở trang web này, cứ 1 ngày thì các link ảnh và trailer sẽ được làm mới 1 lần, cho nên qua ngày khác thì link cũ sẽ bị hỏng và không truy cập được. Tôi đã nghĩ ra 2 phương án để giải quyết đó là: Tải toàn bộ ảnh và trailer xuống hoặc tìm cách để ứng dụng tự update data.
+Một trong các trang web được sử dụng để thu thập dữ liệu là IMDb, trang web này chứa rất nhiều trường thông tin, tuy nhiên việc khó khăn nhất trong quá trình thu thập dữ liệu đối với tôi chính là việc lấy các liên kết ảnh và liên kết trailer. Trên trang web này, cứ mỗi ngày các liên kết ảnh và trailer sẽ được làm mới một lần, do đó các liên kết cũ sẽ trở nên không hợp lệ và không thể truy cập được vào ngày hôm sau. Tôi đã đề xuất hai phương án để giải quyết vấn đề này: Tải toàn bộ ảnh và trailer về máy hoặc tìm cách để hệ thống tự động cập nhật dữ liệu.
 
-Ở cách giải quyết là tải toàn bộ ảnh và trailer xuống thì tôi đã loại bỏ ngay sau khi quyết định số bộ phim để demo ứng dụng. Với 5000 bộ phim thì sẽ có tổng cộng hơn 250000 ảnh và 5000 video demo, nếu tải về thì rất nặng máy và không tối ưu. Vì thế, tôi đã nghiên cứu và tìm ra cách để ứng dụng tự update data, đó chính là dùng github action.
+Đối với phương án tải toàn bộ ảnh và trailer xuống, tôi đã loại bỏ ngay sau khi xác định số lượng bộ phim để demo ứng dụng. Với 5000 bộ phim thì sẽ có tổng cộng hơn 250000 ảnh và 5000 video demo, việc tải về sẽ làm cho máy tính trở nên nặng và không tối ưu. Do đó, tôi đã nghiên cứu và tìm ra giải pháp để hệ thống tự động cập nhật dữ liệu, đó chính là sử dụng GitHub Actions.
 
 \textbf{Giới thiệu Github Action:}
 
-Github Actions là một dịch vụ được cung cấp bởi GitHub để tự động hóa các quy trình phát triển phần mềm. Bằng cách sử dụng các action, tôi có thể thiết lập các luồng làm việc tự động, từ việc kiểm tra mã nguồn, triển khai ứng dụng, tự động hóa các tác vụ như cập nhật dữ liệu trong ứng dụng.
+GitHub Actions là một dịch vụ được GitHub cung cấp nhằm tự động hóa các quy trình phát triển phần mềm. Thông qua việc sử dụng các action, tôi có thể thiết lập các workflow tự động, bao gồm việc kiểm tra mã nguồn, triển khai ứng dụng, và tự động hóa các tác vụ như cập nhật dữ liệu trong hệ thống.
 
 \textbf{Triển khai:}
 
-Đầu tiên, tôi viết 1 file crawlJson.py, mục đích để crawl toàn bộ dữ liệu mới từ trang IMDb về và lưu vào file update.sql, khi có file update.sql rồi thì chỉ cần cập nhật vào local của mình là sẽ có dữ liệu mới ngay lập tức.
+Bước đầu tiên, tôi tạo một file crawlJson.py với mục đích crawl toàn bộ dữ liệu mới từ trang IMDb và lưu vào file update.sql, sau khi có file update.sql thì chỉ cần cập nhật vào môi trường local là sẽ có dữ liệu mới ngay lập tức.
 
-Để ứng dụng có thể tự động update được, sẽ có những bước như sau:
+Để hệ thống có thể tự động cập nhật dữ liệu, các bước thực hiện như sau:
 
 \begin{enumerate}
     \item Tạo PAT (Personal Access Token) Github
 
-    Personal Access Token (PAT) trên GitHub được sử dụng để cung cấp quyền truy cập cho các ứng dụng hoặc dịch vụ bên thứ ba vào tài khoản GitHub, mà không cần phải sử dụng mật khẩu. Ở trong ứng dụng này, dịch vụ bên thứ 3 chính là bot tự động.
+    Personal Access Token (PAT) trên GitHub được sử dụng để cấp quyền truy cập cho các ứng dụng hoặc dịch vụ bên thứ ba vào tài khoản GitHub mà không cần sử dụng mật khẩu. Trong hệ thống này, dịch vụ bên thứ ba chính là bot tự động.
 
     \begin{figure}[H]
         \centering
@@ -40,7 +40,7 @@ Github Actions là một dịch vụ được cung cấp bởi GitHub để tự
     
     \item Tạo Secrets Repository
 
-    Mục đích của việc tạo Secrets trên GitHub là để bảo vệ và quản lý các thông tin nhạy cảm như mã token, mật khẩu, khóa API cũng như các thông tin quan trọng khác trong quá trình phát triển và triển khai ứng dụng. Việc sử dụng Secrets giúp đảm bảo rằng các thông tin này không được lộ ra ngoài công cộng, chỉ có thể được truy cập và sử dụng bởi các công cụ tự động hóa như GitHub Actions hoặc ứng dụng khác thông qua API được cho phép.
+    Mục đích của việc tạo Secrets trên GitHub là nhằm bảo vệ và quản lý các thông tin nhạy cảm như mã token, mật khẩu, khóa API cùng các thông tin quan trọng khác trong quá trình phát triển và triển khai hệ thống. Việc sử dụng Secrets góp phần đảm bảo rằng các thông tin này không bị lộ ra ngoài công cộng, chỉ có thể được truy cập và sử dụng bởi các công cụ tự động hóa như GitHub Actions hoặc các ứng dụng khác thông qua API được cấp phép.
 
     \begin{figure}[H]
         \centering
@@ -51,12 +51,12 @@ Github Actions là một dịch vụ được cung cấp bởi GitHub để tự
     
     \item Viết file update.yml
 
-    Bước cuối cùng, tôi sẽ viết file update.yml để Github Action có thể chạy tự động hàng ngày
+    Bước cuối cùng, tôi tạo file update.yml để GitHub Actions có thể thực thi tự động hàng ngày
 \end{enumerate}
 
 \textbf{Kết quả:}
 
-Cứ 00h00 hằng ngày, ứng dụng sẽ tự động crawl dữ liệu mới, lưu vào file update.sql và push code lên github trong khoảng 1 tiếng.
+Vào lúc 00h00 mỗi ngày, hệ thống sẽ tự động thực hiện crawl dữ liệu mới, lưu vào file update.sql và đẩy code lên GitHub trong khoảng thời gian 1 giờ.
 
 \begin{figure}[H]
     \centering
@@ -65,7 +65,7 @@ Cứ 00h00 hằng ngày, ứng dụng sẽ tự động crawl dữ liệu mới,
     \label{fig:gh_at_3}
 \end{figure}
 
-Sau khi ứng dụng cho ra file update.sql rồi, chỉ cần pull code về máy chủ, chạy file Crawl/autoUpdate/update.py thì sẽ có dữ liệu mới ngay lập tức.
+Sau khi hệ thống tạo ra file update.sql, chỉ cần pull code về máy chủ và thực thi file Crawl/autoUpdate/update.py thì sẽ có dữ liệu mới ngay lập tức.
 
 \begin{figure}[H]
     \centering
@@ -116,7 +116,7 @@ Sau khi tính toán được độ tương đồng dựa vào công thức simil
     \label{fig:rcm_ct_kq_1}
 \end{figure}
 
-Ở hình ảnh \ref{fig:rcm_ct_kq_1} có thể thấy bộ phim được đề xuất gần nhất với bộ phim Guardians of the Galaxy chính là bộ phim Guardians of the Galaxy Vol. 3. Hai bộ phim này có movie name, describe, cast và director tương tự nhau.
+Từ hình ảnh \ref{fig:rcm_ct_kq_1}, có thể nhận thấy rằng bộ phim được hệ thống đề xuất có mức độ tương đồng cao nhất với bộ phim Guardians of the Galaxy chính là bộ phim Guardians of the Galaxy Vol. 3. Hai bộ phim này có sự tương đồng về tên phim, mô tả, diễn viên và đạo diễn.
 
 \begin{figure}[H]
     \centering
@@ -125,7 +125,7 @@ Sau khi tính toán được độ tương đồng dựa vào công thức simil
     \label{fig:rcm_ct_kq_2}
 \end{figure}
 
-Ở hình ảnh \ref{fig:rcm_ct_kq_2} có thể thấy bộ phim được đề xuất gần nhất với bộ phim The Hunger Games: Catching Fire là bộ phim The Hunger Games. Hai bộ phim này có movie name, describe, cast và director khá tương tự nhau.
+Từ hình ảnh \ref{fig:rcm_ct_kq_2}, có thể quan sát thấy bộ phim được hệ thống đề xuất có mức độ tương đồng cao nhất với bộ phim The Hunger Games: Catching Fire là bộ phim The Hunger Games. Hai bộ phim này thể hiện sự tương đồng đáng kể về tên phim, mô tả, diễn viên và đạo diễn.
 
 
 \begin{figure}[H]
@@ -135,8 +135,8 @@ Sau khi tính toán được độ tương đồng dựa vào công thức simil
     \label{fig:rcm_ct_kq_3}
 \end{figure}
 
-Ở hình ảnh \ref{fig:rcm_ct_kq_3} có thể thấy bộ phim được đề xuất gần nhất với bộ phim Meg 2: The Trench là bộ phim The Meg. Hai bộ phim này có movie name, describe, cast và director khá tương tự nhau.
+Từ hình ảnh \ref{fig:rcm_ct_kq_3}, có thể nhận định rằng bộ phim được hệ thống đề xuất có mức độ tương đồng cao nhất với bộ phim Meg 2: The Trench là bộ phim The Meg. Hai bộ phim này thể hiện sự tương đồng đáng kể về tên phim, mô tả, diễn viên và đạo diễn.
 
-Dựa trên các kết quả cho ra ở trên cùng với kiểm tra bằng tính trực quan có thể thấy ứng dụng gợi ý phim bằng độ tương đồng được thực hiện khá chính xác.
+Dựa trên các kết quả đã được trình bày ở trên kết hợp với việc kiểm tra bằng phương pháp trực quan, có thể kết luận rằng hệ thống gợi ý phim dựa trên độ tương đồng đã được thực hiện với mức độ chính xác cao.
 
 \end{document}
