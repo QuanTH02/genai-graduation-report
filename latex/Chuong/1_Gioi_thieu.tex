@@ -18,6 +18,8 @@ Dựa vào phân tích các vấn đề nêu trên, ta có thể kết luận ra
 
 Trên cơ sở đó, đề tài hướng tới việc phát triển một ứng dụng gợi ý phim toàn diện, khắc phục các hạn chế hiện tại bằng cách kết hợp các chức năng cũng như dữ liệu của những trang web trên vào một nền tảng duy nhất, đồng thời phát triển thêm các chức năng gợi ý, truy vấn kèm theo. Hệ thống này sẽ bao gồm tìm kiếm, xem chi tiết phim, gợi ý phim cá nhân hóa, đánh giá và review phim từ cộng đồng, xem trailer và hình ảnh phim. Mục tiêu là cung cấp một nền tảng tìm kiếm phim bằng ngôn ngữ người dùng và gợi ý phim chính xác với mong muốn của người dùng, giúp người dùng tìm được phim phù hợp với sở thích cá nhân một cách nhanh nhất và chính xác nhất. Ngoài ra, các bộ phim được gợi ý phải có thông tin đầy đủ, đáng tin cậy và được xếp hạng bởi cộng đồng người dùng.
 
+Phạm vi là một ứng dụng gợi ý phim bằng genAI có số lượng phim khoảng 5000 bộ phim. Tập trung vào các bộ phim nổi bật nhất thời điểm hiện tại. Đối tượng sử dụng là người dùng thường xuyên quan tâm đến phim ảnh.
+
 \section{Định hướng giải pháp}
 \label{section:1.3}
 Để giải quyết các hạn chế đã được xác định, tôi đề xuất định hướng giải pháp cho các vấn đề cụ thể như sau:
@@ -26,9 +28,9 @@ Trên cơ sở đó, đề tài hướng tới việc phát triển một ứng 
 \item \textbf{Tìm kiếm phim bằng ngôn ngữ người dùng:} Sử dụng AI để phân tích truy vấn, kết hợp vector search dựa trên embeddings và lọc có cấu trúc để trả về kết quả chính xác.
 \item \textbf{Gợi ý phim cá nhân hóa:} Theo dõi hành động người dùng để gợi ý phim cá nhân hóa.
 \item \textbf{Dữ liệu đầy đủ:} Thu thập và tổng hợp thông tin phim ảnh từ các nguồn uy tín để xây dựng cơ sở dữ liệu phong phú, đa dạng và chính xác.
-\item \textbf{Hiệu năng trang web kém:} Cải thiện hiệu năng của hệ thống bằng cách rút gọn mã nguồn, thông tin, tối ưu hóa các thuật toán và sử dụng các kỹ thuật lập trình hiệu quả nhất.
-\item \textbf{Thiếu hệ thống gợi ý phim:} Sử dụng thuật toán cho hệ thống gợi ý phim: Content-Based Filtering. Content-Based Filtering sẽ được áp dụng khi người dùng xem thông tin về một bộ phim cụ thể, từ đó gợi ý các bộ phim có nội dung tương tự.
-\item \textbf{Chức năng bị phân tán:} Phát triển một nền tảng web tích hợp các tính năng quan trọng như xem chi tiết phim, gợi ý phim cá nhân hóa, đánh giá và review từ cộng đồng, cùng với việc xem trailer và hình ảnh phim.
+\item \textbf{Hiệu năng trang web tốt:} Cải thiện hiệu năng của hệ thống bằng cách rút gọn mã nguồn, thông tin, tối ưu hóa các thuật toán và sử dụng các kỹ thuật lập trình hiệu quả nhất, đảm bảo tốc độ tải trang nhanh và hiệu quả.
+\item \textbf{Có hệ thống gợi ý phim:} Sử dụng thuật toán cho hệ thống gợi ý phim: Content-Based Filtering. Content-Based Filtering sẽ được áp dụng khi người dùng xem thông tin về một bộ phim cụ thể, từ đó gợi ý các bộ phim có nội dung tương tự.
+\item \textbf{Tích hợp các chức năng quan trọng:} Phát triển một nền tảng web tích hợp các tính năng quan trọng như xem chi tiết phim, gợi ý phim cá nhân hóa, đánh giá và review từ cộng đồng, cùng với việc xem trailer và hình ảnh phim.
 \end{itemize}
 
 Đóng góp chính của đồ án là xây dựng một ứng dụng gợi ý phim toàn diện, không chỉ cung cấp thông tin phong phú và đa dạng về phim mà còn mang lại trải nghiệm người dùng tối ưu thông qua các gợi ý phim chính xác và cá nhân hóa. Kết quả đạt được sẽ là một nền tảng duy nhất, tích hợp tất cả các chức năng cần thiết, giúp người dùng dễ dàng tìm kiếm và khám phá những bộ phim phù hợp với sở thích cá nhân một cách nhanh chóng và hiệu quả.

@@ -59,24 +59,24 @@
 \contentsline {subsubsection}{\numberline {1}Tổng quan luồng xử lý}{42}{subsubsection.5.2.4.1}%
 \contentsline {subsubsection}{\numberline {2}Các thành phần kỹ thuật}{42}{subsubsection.5.2.4.2}%
 \contentsline {subsubsection}{\numberline {3}Chiến lược kết hợp kết quả}{43}{subsubsection.5.2.4.3}%
-\contentsline {subsubsection}{\numberline {4}Xử lý sau tìm kiếm}{43}{subsubsection.5.2.4.4}%
+\contentsline {subsubsection}{\numberline {4}Xử lý sau tìm kiếm}{44}{subsubsection.5.2.4.4}%
 \contentsline {subsubsection}{\numberline {5}Kết quả trả về}{44}{subsubsection.5.2.4.5}%
 \contentsline {subsubsection}{\numberline {6}Điểm mạnh của ứng dụng}{44}{subsubsection.5.2.4.6}%
 \contentsline {subsection}{\numberline {5.2.5}Gợi ý phim bằng genAI dựa vào lịch sử hoạt động của người dùng}{44}{subsection.5.2.5}%
-\contentsline {subsubsection}{\numberline {1}Tổng quan luồng xử lý}{44}{subsubsection.5.2.5.1}%
+\contentsline {subsubsection}{\numberline {1}Tổng quan luồng xử lý}{45}{subsubsection.5.2.5.1}%
 \contentsline {subsubsection}{\numberline {2}Các thành phần kỹ thuật}{45}{subsubsection.5.2.5.2}%
-\contentsline {subsubsection}{\numberline {3}Kết quả trả về}{46}{subsubsection.5.2.5.3}%
-\contentsline {section}{\numberline {5.3}Xây dựng ứng dụng}{46}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Thư viện và công cụ sử dụng}{46}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Kết quả đạt được}{46}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Minh họa các chức năng chính}{50}{subsection.5.3.3}%
-\contentsline {section}{\numberline {5.4}Kiểm thử}{52}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Triển khai}{55}{section.5.5}%
-\contentsline {chapter}{\numberline {6}CÁC GIẢI PHÁP VÀ ĐÓNG GÓP NỔI BẬT}{57}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Thiếu khá nhiều dữ liệu phim ảnh}{57}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Thiết kế database khá khó khăn với quá nhiều trường}{57}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Trang web có dữ liệu update liên tục theo ngày khiến link ảnh và trailer bị hỏng}{57}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Lựa chọn thuật toán gợi ý phù hợp}{60}{section.6.4}%
-\contentsline {chapter}{\numberline {7}KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}{64}{chapter.7}%
-\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{67}{section*.67}%
+\contentsline {subsubsection}{\numberline {3}Kết quả trả về}{47}{subsubsection.5.2.5.3}%
+\contentsline {section}{\numberline {5.3}Xây dựng ứng dụng}{47}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Thư viện và công cụ sử dụng}{47}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Kết quả đạt được}{47}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Minh họa các chức năng chính}{51}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}Kiểm thử}{53}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Triển khai}{56}{section.5.5}%
+\contentsline {chapter}{\numberline {6}CÁC GIẢI PHÁP VÀ ĐÓNG GÓP NỔI BẬT}{58}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Thiếu khá nhiều dữ liệu phim ảnh}{58}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Thiết kế database khá khó khăn với quá nhiều trường}{58}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Trang web có dữ liệu update liên tục theo ngày khiến link ảnh và trailer bị hỏng}{58}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Lựa chọn thuật toán gợi ý phù hợp}{61}{section.6.4}%
+\contentsline {chapter}{\numberline {7}KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}{65}{chapter.7}%
+\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{68}{section*.69}%
 \contentsfinish 

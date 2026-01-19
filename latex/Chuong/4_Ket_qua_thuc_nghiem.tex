@@ -307,6 +307,14 @@ Dưới đây là một số hình ảnh minh họa cho thiết kế giao diện
 Ứng dụng hỗ trợ tìm kiếm phim bằng câu tự nhiên (natural language search), cho phép người dùng nhập yêu cầu tìm kiếm bằng ngôn ngữ thông thường thay vì phải sử dụng các từ khóa cụ thể. Tính năng này kết hợp hai phương pháp tìm kiếm: Vector Search (semantic search) và AI Filter (structured search) để đảm bảo độ chính xác và toàn diện trong kết quả tìm kiếm.
 
 \subsubsection{Tổng quan luồng xử lý}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Hinhve/web_search.png}
+    \caption[Màn hình \textit{tìm kiếm phim}]{Màn hình \textit{tìm kiếm phim}}
+    \label{fig:web_search}
+\end{figure}
+
 Khi người dùng nhập câu tìm kiếm, ứng dụng sẽ xử lý theo các bước sau:
 
 \begin{itemize}
@@ -408,6 +416,14 @@ Tính năng tìm kiếm bằng ngôn ngữ người dùng có các ưu điểm s
 Ứng dụng sử dụng GenAI (Gemini hoặc OpenAI) để phân tích lịch sử hoạt động của người dùng và đưa ra gợi ý phim cá nhân hóa theo thời gian thực. Khác với các phương pháp gợi ý truyền thống yêu cầu training model, hệ thống này hoạt động real-time dựa trên dữ liệu lịch sử của từng người dùng, không cần retrain hay cập nhật model.
 
 \subsubsection{Tổng quan luồng xử lý}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Hinhve/web_recommend.png}
+    \caption[Màn hình \textit{gợi ý phim bằng genAI}]{Màn hình \textit{gợi ý phim bằng genAI}}
+    \label{fig:web_recommend}
+\end{figure}
+
 Khi người dùng yêu cầu gợi ý phim, ứng dụng sẽ xử lý theo các bước sau:
 
 \begin{itemize}
