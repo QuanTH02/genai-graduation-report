@@ -1,14 +1,13 @@
 \documentclass[../DoAn.tex]{subfiles}
 \begin{document}
 
-Chương này tập trung trình bày các vấn đề đã phát sinh trong quá trình thực hiện và các giải pháp cụ thể đã được áp dụng để giải quyết những vấn đề đó. Bên cạnh đó, chương cũng đề cập đến các đóng góp nổi bật được đánh giá cao trong suốt quá trình thực hiện đồ án tốt nghiệp.
+Chương này tập trung phân tích các thách thức nảy sinh trong giai đoạn triển khai và những biện pháp kỹ thuật tương ứng đã được áp dụng. Đồng thời, chương cũng tổng kết các kết quả đạt được và những đóng góp then chốt trong suốt quá trình hoàn thiện đồ án tốt nghiệp.
 
-\section{Thiếu khá nhiều dữ liệu phim ảnh}
-Vấn đề này xuất hiện khi cần một khối lượng dữ liệu lớn về các bộ phim để phục vụ việc xây dựng ứng dụng gợi ý. Để khắc phục vấn đề này, tôi đã thực hiện tìm kiếm, thu thập và lựa chọn các trang web đáng tin cậy để thu thập dữ liệu. Quá trình này bao gồm việc phân tích cú pháp của các trang web, xác định phương thức truy cập, nghiên cứu cấu trúc và thực hiện thu thập dữ liệu một cách tự động.
+\section{Sự thiếu hụt trầm trọng về dữ liệu điện ảnh} Khó khăn này phát sinh khi dự án yêu cầu một kho dữ liệu khổng lồ để vận hành thuật toán gợi ý một cách hiệu quả. Để giải quyết, tôi đã tiến hành khảo sát và lựa chọn các nền tảng trực tuyến uy tín làm nguồn tài nguyên chính. Quy trình xử lý bao gồm việc bóc tách cú pháp web, thiết lập giao thức truy cập, phân tích sơ đồ cấu trúc dữ liệu và triển khai các công cụ thu thập tự động để tối ưu hóa thời gian.
 
-\section{Thiết kế database khá khó khăn với quá nhiều trường}
+\section{Thách thức trong việc thiết kế cơ sở dữ liệu với hệ thống thuộc tính phức tạp}
 
-Trong quá trình thiết kế cơ sở dữ liệu, tôi gặp phải thách thức khi phải xử lý một khối lượng lớn các trường thông tin liên quan đến phim và người dùng. Để khắc phục vấn đề này, tôi đã vận dụng các nguyên tắc chuẩn hóa cơ sở dữ liệu và phân tách các trường thông tin có liên quan thành các bảng dữ liệu con. Tiếp theo, tôi xác định các mối quan hệ giữa các bảng và liên kết chúng lại với nhau nhằm tạo ra một cấu trúc cơ sở dữ liệu hợp lý và đạt hiệu quả cao.
+Việc quản lý một lượng lớn các trường thông tin liên quan đến tác phẩm và người dùng đã tạo ra áp lực lớn trong khâu thiết kế sơ đồ dữ liệu. Nhằm khắc phục tình trạng này, tôi đã áp dụng các quy chuẩn hóa dữ liệu và chia tách các thuộc tính thành các bảng phụ chuyên biệt. Sau đó, bằng cách xác lập các mối quan hệ và liên kết logic giữa các bảng, tôi đã xây dựng thành công một cấu trúc cơ sở dữ liệu khoa học, đảm bảo tính toàn vẹn và hiệu suất truy xuất cao.
 
 \section{Trang web có dữ liệu update liên tục theo ngày khiến link ảnh và trailer bị hỏng}
 
@@ -29,7 +28,7 @@ Nhằm cho phép hệ thống tự động cập nhật dữ liệu, quy trình 
 \begin{enumerate}
     \item Tạo PAT (Personal Access Token) Github
 
-    Personal Access Token (PAT) trên GitHub được sử dụng để cấp quyền truy cập cho các ứng dụng hoặc dịch vụ bên thứ ba vào tài khoản GitHub mà không cần sử dụng mật khẩu. Trong hệ thống này, dịch vụ bên thứ ba chính là bot tự động.
+    Personal Access Token (PAT) trên GitHub đóng vai trò như một phương thức xác thực, cho phép các ứng dụng hoặc dịch vụ trung gian truy cập vào tài khoản mà không cần tiết lộ mật khẩu chính. Trong kiến trúc này, đối tượng sử dụng mã PAT chính là các bot vận hành tự động.
 
     \begin{figure}[H]
         \centering
@@ -40,7 +39,7 @@ Nhằm cho phép hệ thống tự động cập nhật dữ liệu, quy trình 
     
     \item Tạo Secrets Repository
 
-    Mục đích của việc tạo Secrets trên GitHub là nhằm bảo vệ và quản lý các thông tin nhạy cảm như mã token, mật khẩu, khóa API cùng các thông tin quan trọng khác trong quá trình phát triển và triển khai hệ thống. Việc sử dụng Secrets góp phần đảm bảo rằng các thông tin này không bị lộ ra ngoài công cộng, chỉ có thể được truy cập và sử dụng bởi các công cụ tự động hóa như GitHub Actions hoặc các ứng dụng khác thông qua API được cấp phép.
+    Việc thiết lập GitHub Secrets nhằm mục tiêu bảo mật và quản trị tập trung các dữ liệu nhạy cảm như mã token, mật khẩu, hay khóa API trong suốt vòng đời phát triển dự án. Cơ chế này đảm bảo những thông tin quan trọng không bị công khai trên mã nguồn, đồng thời chỉ cho phép các quy trình tự động hóa như GitHub Actions hoặc các ứng dụng được ủy quyền truy xuất thông qua API an toàn.
 
     \begin{figure}[H]
         \centering
@@ -51,12 +50,12 @@ Nhằm cho phép hệ thống tự động cập nhật dữ liệu, quy trình 
     
     \item Viết file update.yml
 
-    Bước cuối cùng, tôi tạo file update.yml để GitHub Actions có thể thực thi tự động hàng ngày
+    Giai đoạn cuối cùng, tôi thiết lập tệp cấu hình update.yml nhằm kích hoạt cơ chế vận hành tự động định kỳ cho GitHub Actions.
 \end{enumerate}
 
 \textbf{Kết quả:}
 
-Vào lúc 00h00 mỗi ngày, hệ thống sẽ tự động thực hiện crawl dữ liệu mới, lưu vào file update.sql và đẩy code lên GitHub trong khoảng thời gian 1 giờ.
+Đúng 01:00 mỗi ngày, hệ thống sẽ tự động kích hoạt quy trình khai thác dữ liệu mới, kết xuất ra tệp update.sql và thực hiện cập nhật mã nguồn lên GitHub trong vòng một giờ đồng hồ.
 
 \begin{figure}[H]
     \centering
@@ -65,7 +64,7 @@ Vào lúc 00h00 mỗi ngày, hệ thống sẽ tự động thực hiện crawl 
     \label{fig:gh_at_3}
 \end{figure}
 
-Sau khi hệ thống tạo ra file update.sql, chỉ cần pull code về máy chủ và thực thi file Crawl/autoUpdate/update.py thì sẽ có dữ liệu mới ngay lập tức.
+Ngay sau khi tệp update.sql được khởi tạo thành công, người dùng chỉ cần thực hiện thao tác kéo mã nguồn về máy chủ và khởi chạy tập lệnh Crawl/autoUpdate/update.py để cập nhật dữ liệu mới vào hệ thống tức thì.
 
 \begin{figure}[H]
     \centering
@@ -135,7 +134,7 @@ Từ hình ảnh \ref{fig:rcm_ct_kq_2}, có thể quan sát thấy bộ phim đ�
     \label{fig:rcm_ct_kq_3}
 \end{figure}
 
-Quan sát hình ảnh \ref{fig:rcm_ct_kq_3}, có thể kết luận rằng bộ phim được hệ thống gợi ý có độ tương đồng lớn nhất với bộ phim Meg 2: The Trench chính là bộ phim The Meg. Hai bộ phim này có nhiều điểm tương đồng về tên gọi, nội dung mô tả, dàn diễn viên và đạo diễn.
+Dựa trên kết quả hiển thị tại hình \ref{fig:rcm_ct_kq_3}, có thể thấy The Meg là tác phẩm được hệ thống đánh giá có mức độ tương quan cao nhất đối với bộ phim Meg 2: The Trench. Sự tương đồng này được thể hiện rõ nét qua các yếu tố như tiêu đề, cốt truyện mô tả, cùng sự trùng khớp về đội ngũ diễn viên và đạo diễn.
 
 Dựa trên các kết quả đã được trình bày ở trên kết hợp với việc kiểm tra bằng phương pháp trực quan, có thể kết luận rằng hệ thống gợi ý phim dựa trên độ tương đồng đã được thực hiện với mức độ chính xác cao.
 

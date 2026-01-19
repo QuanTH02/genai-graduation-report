@@ -26,7 +26,7 @@
 \contentsline {subsection}{\numberline {2.4.3}Đặc tả use case Tìm kiếm phim}{15}{subsection.2.4.3}%
 \contentsline {subsection}{\numberline {2.4.4}Đặc tả use case Đánh dấu phim mình thích}{16}{subsection.2.4.4}%
 \contentsline {subsection}{\numberline {2.4.5}Đặc tả use case Đánh giá phim}{17}{subsection.2.4.5}%
-\contentsline {subsection}{\numberline {2.4.6}Đặc tả use case CRUD phim}{18}{subsection.2.4.6}%
+\contentsline {subsection}{\numberline {2.4.6}Đặc tả use case CRUD quản lý phim}{18}{subsection.2.4.6}%
 \contentsline {subsection}{\numberline {2.4.7}Đặc tả use case Gợi ý phim theo nội dung}{19}{subsection.2.4.7}%
 \contentsline {section}{\numberline {2.5}Yêu cầu phi chức năng}{19}{section.2.5}%
 \contentsline {chapter}{\numberline {3}CƠ SỞ LÝ THUYẾT CHO GỢI Ý PHIM}{21}{chapter.3}%
@@ -43,9 +43,9 @@
 \contentsline {section}{\numberline {4.3}Công nghệ sử dụng trong việc lưu trữ code}{25}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Git}{25}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}GitHub}{26}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Công nghệ sử dụng trong việc crawl dữ liệu}{26}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Công nghệ sử dụng trong việc crawl và update dữ liệu}{26}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Selenium và Requests}{26}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Công nghệ sử dụng để update dữ liệu}{27}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.2}Công nghệ sử dụng để cập nhật dữ liệu}{27}{subsection.4.4.2}%
 \contentsline {chapter}{\numberline {5}THIẾT KẾ, TRIỂN KHAI VÀ ĐÁNH GIÁ HỆ THỐNG}{29}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Thiết kế kiến trúc}{29}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Lựa chọn kiến trúc phần mềm}{29}{subsection.5.1.1}%
@@ -73,8 +73,8 @@
 \contentsline {section}{\numberline {5.4}Kiểm thử}{54}{section.5.4}%
 \contentsline {section}{\numberline {5.5}Triển khai}{58}{section.5.5}%
 \contentsline {chapter}{\numberline {6}CÁC GIẢI PHÁP VÀ ĐÓNG GÓP NỔI BẬT}{60}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Thiếu khá nhiều dữ liệu phim ảnh}{60}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Thiết kế database khá khó khăn với quá nhiều trường}{60}{section.6.2}%
+\contentsline {section}{\numberline {6.1}Sự thiếu hụt trầm trọng về dữ liệu điện ảnh}{60}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Thách thức trong việc thiết kế cơ sở dữ liệu với hệ thống thuộc tính phức tạp}{60}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Trang web có dữ liệu update liên tục theo ngày khiến link ảnh và trailer bị hỏng}{60}{section.6.3}%
 \contentsline {section}{\numberline {6.4}Lựa chọn thuật toán gợi ý phù hợp}{63}{section.6.4}%
 \contentsline {chapter}{\numberline {7}KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}{67}{chapter.7}%

@@ -163,11 +163,11 @@ Template sẽ nhận dữ liệu từ view và render ra các thành phần giao
 
 \textbf{Gói Template:}
 
-Gói này chứa hai lớp là UserTemplate và AdminTemplate.
+Gói này bao gồm hai thành phần chính là UserTemplate và AdminTemplate.
 
-Mô tả: Class UserTemplate: Lớp này chịu trách nhiệm quản lý các file template HTML dành cho phần giao diện của người dùng cuối. Những template này gồm có các trang đăng nhập, đăng ký tài khoản, trang profile cá nhân, trang để đánh giá phim, cùng với các trang liệt kê danh sách phim, danh sách diễn viên và danh sách đạo diễn. Class AdminTemplate: Lớp này chịu trách nhiệm quản lý các file template HTML dành cho phần giao diện của quản trị viên. Những template này gồm có các trang để quản lý tài khoản người dùng, quản lý thông tin phim, phê duyệt các đánh giá và những trang khác mà admin sử dụng để điều hành toàn bộ hệ thống.
-    
-Phụ thuộc: Hai lớp này không tồn tại mối quan hệ phụ thuộc với nhau. Mỗi lớp hoạt động một cách tự chủ và đáp ứng những nhu cầu khác nhau: một lớp phục vụ cho người dùng thông thường, lớp còn lại phục vụ cho bộ phận quản trị.
+Về chức năng, lớp UserTemplate đảm nhận việc quản lý hệ thống các tệp HTML giao diện dành riêng cho người dùng cuối, bao gồm các trang chức năng như đăng nhập, đăng ký, hồ sơ cá nhân, khu vực đánh giá phim, cùng các danh mục hiển thị về phim ảnh, diễn viên và đạo diễn. Trong khi đó, lớp AdminTemplate tập trung vào việc quản lý các giao diện dành cho nhà quản trị, hỗ trợ các nghiệp vụ điều hành hệ thống như kiểm soát tài khoản người dùng, cập nhật dữ liệu phim, kiểm duyệt bình luận và các công cụ quản lý tổng thể khác.
+
+Về tính liên kết, hai lớp này được thiết kế hoàn toàn độc lập và không có quan hệ phụ thuộc lẫn nhau. Mỗi lớp vận hành tự chủ nhằm đáp ứng các mục tiêu chuyên biệt: một bên tối ưu hóa trải nghiệm cho khách hàng và một bên cung cấp công cụ vận hành cho bộ phận quản trị.
 
 \section{Thiết kế chi tiết}
 \subsection{Thiết kế giao diện}
@@ -177,7 +177,7 @@ Trong giai đoạn thiết kế, tôi đã áp dụng các nguyên tắc thiết
 
 Đối với việc chọn lựa màu sắc, tôi đã chọn một bảng màu cơ bản với hai tông màu chủ đạo là đen và tím, mang lại cảm giác thoải mái và thể hiện tính chuyên nghiệp. Những màu bổ sung được dùng để nhấn mạnh các thành phần quan trọng hoặc để báo hiệu các trạng thái khác nhau như thành công, cảnh báo, lỗi và trạng thái khi di chuột qua với các màu đỏ, vàng và xanh lá.
 
-Dưới đây là các hình ảnh minh họa cho thiết kế giao diện của các chức năng quan trọng trong ứng dụng:
+Sau đây là các hình ảnh trực quan mô phỏng thiết kế giao diện cho những tính năng trọng tâm của ứng dụng:
 
 \textbf{Màn hình đăng nhập}
 \begin{figure}[H]
@@ -534,19 +534,19 @@ Các sản phẩm được đóng gói đóng vai trò và có ý nghĩa quan tr
 
 \textbf{Thống kê các thông tin của ứng dụng:}
 
-Số dòng code crawl dữ liệu: 2000 dòng
+Quy mô mã nguồn thu thập dữ liệu: 2000 dòng
 
-Số dòng code phía backend: 4000 dòng
+Quy mô mã nguồn phía backend: 4000 dòng
 
-Số dòng code phía fronend: 8000 dòng
+Quy mô mã nguồn phía frontend: 8000 dòng
 
-Số lớp: 180 lớp
+Số lượng lớp: 180 lớp
 
-Số gói: 8 gói
+Số lượng gói: 8 gói
 
-Dung lượng toàn bộ mã nguồn: Khoảng 310MB khi đã có hệ thống gợi ý và dữ liệu, còn nếu mỗi phần code thì dung lượng khoảng 25MB
+Kích thước toàn bộ mã nguồn: Đạt mức 310MB khi tích hợp đầy đủ dữ liệu và thuật toán gợi ý, trong khi phần mã nguồn thuần túy chiếm khoảng 25MB
 
-Hệ thống đã được hoàn thiện với một kiến trúc có tổ chức rõ ràng, nơi mã nguồn được phân bổ hợp lý giữa các gói và các lớp. Những con số thống kê cụ thể liên quan đến số lượng dòng mã, số lượng lớp và kích thước mã nguồn đóng vai trò hỗ trợ trong công tác đánh giá và giám sát tiến độ phát triển dự án. Hệ thống đã thỏa mãn toàn bộ các yêu cầu đã được đặt ra và đã sẵn sàng cho việc triển khai và vận hành trong môi trường thực tế.
+Nền tảng đã được kiện toàn với cấu trúc phân tầng rành mạch, đảm bảo sự khoa học trong việc phân chia giữa các gói và các lớp mã nguồn. Những số liệu thống kê về khối lượng mã và cấu trúc hệ thống là cơ sở quan trọng để đánh giá cũng như kiểm soát quá trình phát triển dự án. Hiện tại, hệ thống đã đáp ứng đầy đủ các tiêu chuẩn đề ra và hoàn toàn sẵn sàng cho việc vận hành trong môi trường thực tế.
 
 \textbf{Crawl dữ liệu từ trang web:}
 
@@ -616,7 +616,7 @@ Dựa vào lịch sử tìm kiếm của người dùng, hệ thống lưu lại
 \label{fig:ketqua1}
 \end{figure} 
 
-Thông qua việc phân tích lịch sử thêm phim vào danh sách yêu thích của người dùng, hệ thống có khả năng tự động học hỏi và đề xuất các kết quả mới nhất phù hợp với sở thích cá nhân của từng người dùng.
+Bằng cách nghiên cứu lịch sử lưu trữ phim của từng cá nhân, hệ thống có thể tự động cập nhật xu hướng và đưa ra những gợi ý mới nhất sát với gu thưởng thức riêng biệt của mỗi người dùng.
 
 \textbf{Chức năng gợi ý phim dựa vào nội dung phim đang xem}
 \begin{figure}[H]
@@ -626,7 +626,7 @@ Thông qua việc phân tích lịch sử thêm phim vào danh sách yêu thích
 \label{fig:ketqua2}
 \end{figure} 
 
-Dựa trên bộ phim mà người dùng đang quan tâm, hệ thống có khả năng đề xuất các bộ phim có tính chất tương đồng với bộ phim hiện tại.
+Hệ thống cho phép hiển thị các tác phẩm điện ảnh có đặc điểm tương đồng với bộ phim mà người dùng đang theo dõi hoặc tìm kiếm.
 
 \textbf{Chức năng thêm phim vào danh sách yêu thích}
 \begin{figure}[H]
@@ -636,7 +636,7 @@ Dựa trên bộ phim mà người dùng đang quan tâm, hệ thống có khả
 \label{fig:ketqua3}
 \end{figure} 
 
-Khi người dùng thể hiện sự quan tâm đối với một bộ phim cụ thể, họ có thể sử dụng nút thêm vào danh sách yêu thích để lưu phim đó vào danh sách cá nhân của mình.
+Người dùng có thể chủ động lưu lại những bộ phim yêu thích vào bộ sưu tập cá nhân thông qua tính năng thêm vào danh sách yêu thích khi tìm thấy nội dung phù hợp.
 
 \textbf{Chức năng review phim}
 \begin{figure}[H]
@@ -777,19 +777,19 @@ Thông qua các bước kiểm thử đã được trình bày ở trên (\autor
 
 \section{Triển khai}
 \textbf{Mô hình triển khai}
-Hệ thống được triển khai dựa trên mô hình client-server, trong đó phần frontend được chạy trên live server và phần backend được triển khai sử dụng Django trên máy tính cá nhân.
+Hệ thống được vận hành theo kiến trúc client-server, với giao diện người dùng (frontend) được khởi chạy trên live server và bộ phận xử lý trung tâm (backend) được thiết lập thông qua Django trên máy trạm cá nhân.
 
-\textbf{Cấu hình triển khai}: Máy tính cá nhân với thông số:
+\textbf{Thông số thiết lập}: Máy tính cá nhân đáp ứng các tiêu chuẩn sau:
 
-Hệ điều hành: Windows, Linux, MacOS
+Hệ điều hành: Tương thích Windows, Linux hoặc MacOS
 
-CPU: Intel i3 hoặc tương đương
+Bộ vi xử lý: Tối thiểu Intel i3 hoặc các dòng CPU có hiệu năng tương đương
 
-RAM: 4GB
+Bộ nhớ trong (RAM): 4GB
 
-Ổ cứng: 128GB SSD
+Lưu trữ: Ổ cứng SSD dung lượng 128GB
 
-Kết nối mạng: Internet tốc độ trung bình
+Yêu cầu đường truyền: Kết nối Internet ổn định ở mức băng thông trung bình
 
 \textbf{Triển khai}
 
@@ -799,16 +799,16 @@ Tiến hành cài đặt Docker vào máy tính.
 
 Di chuyển vào thư mục dự án và thực thi lệnh docker-compose up -d để khởi chạy hệ thống. Sau khi hoàn thành, toàn bộ hệ thống đã được vận hành trên máy tính cá nhân. Truy cập vào cổng localhost:3000 để kiểm thử hệ thống.
 
-\textbf{Kết quả triển khai thử nghiệm}
+\textbf{Đánh giá kết quả vận hành thực nghiệm}
 
-Mặc dù việc triển khai chỉ được thực hiện trong môi trường local, nhưng một số kết quả thử nghiệm đã được ghi nhận như sau:
+Dù quá trình thử nghiệm hiện mới chỉ dừng lại ở phạm vi môi trường nội bộ (local), các chỉ số ghi nhận được cho thấy những tín hiệu khả quan:
 
-Khả năng chịu tải: Trong môi trường local, khả năng chịu tải của hệ thống chưa được đánh giá một cách toàn diện. Tuy nhiên, với số lượng truy cập thử nghiệm ở mức nhỏ, hệ thống vận hành mượt mà và không gặp phải các vấn đề liên quan đến hiệu suất.
+Hiệu suất xử lý: Trong điều kiện vận hành nội bộ, dù chưa có dữ liệu đánh giá áp lực tải ở quy mô lớn, hệ thống vẫn duy trì được sự ổn định tuyệt vời với lưu lượng truy cập thử nghiệm thấp, không xảy ra hiện tượng nghẽn mạng hay suy giảm hiệu năng.
 
-Thời gian phản hồi: Thời gian phản hồi trung bình đạt dưới 2 giây đối với các yêu cầu cơ bản, trong khi đối với chức năng gợi ý phim thì thời gian trung bình dưới 5 giây, và đối với chức năng tìm kiếm phim thì dưới 10 giây. 
+Tốc độ phản hồi: Hệ thống ghi nhận độ trễ trung bình dưới 2 giây cho các thao tác thông thường. Riêng các tác vụ phức tạp hơn như thuật toán gợi ý phim đạt tốc độ dưới 5 giây và chức năng truy vấn tìm kiếm phim hoàn tất trong khoảng dưới 10 giây.
 
-Phản hồi người dùng: Các người dùng thử nghiệm đánh giá tích cực về giao diện đơn giản, dễ sử dụng và tính năng tìm kiếm, nhận định rằng hệ thống hoạt động hiệu quả. Đặc biệt, các chức năng tìm kiếm phim và gợi ý đưa ra các kết quả phù hợp với mong đợi của người dùng.
+Đánh giá từ người dùng: Nhóm tham gia thử nghiệm có những phản hồi rất tốt về tính tinh gọn, dễ tiếp cận của giao diện cũng như độ chính xác của công cụ tìm kiếm. Đáng chú ý, các kết quả từ hệ thống đề xuất và tìm kiếm đều bám sát và thỏa mãn đúng kỳ vọng của người trải nghiệm.
 
-Việc triển khai hệ thống trên môi trường local đã góp phần xác minh các chức năng cơ bản và thu thập được những phản hồi tích cực từ phía người dùng thử nghiệm. Các kết quả thử nghiệm cho thấy hệ thống vận hành ổn định, có thời gian phản hồi nhanh và giao diện thân thiện với người dùng. Để có thể đánh giá hiệu suất và khả năng chịu tải một cách chính xác hơn, cần thực hiện triển khai trên server thực tế.
+Việc chạy thử nghiệm trên môi trường local đã giúp xác thực thành công các tính năng nền tảng và nhận về những tương tác tích cực từ phía người dùng. Các số liệu cho thấy một hệ thống hoạt động tin cậy, tốc độ xử lý nhanh cùng giao diện tối ưu. Tuy nhiên, để có cái nhìn chuyên sâu hơn về ngưỡng chịu tải và hiệu năng thực tế, việc đưa hệ thống lên các máy chủ chuyên dụng là bước đi cần thiết tiếp theo.
 
 \end{document}

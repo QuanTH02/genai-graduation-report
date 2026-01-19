@@ -4,7 +4,7 @@ Chương này được dành để giới thiệu về các nền tảng lý thu
 \section{Content-Based Filtering}
 \label{section:3.1}
 \subsection{Khái niệm}
-Content-Based Filtering là một phương pháp gợi ý được triển khai trong các hệ thống đề xuất, hoạt động bằng cách khai thác và phân tích các đặc điểm cũng như các thuộc tính của các đối tượng cần được đề xuất. Điểm khác biệt so với các phương pháp gợi ý dựa trên sở thích và hành vi của cộng đồng người dùng, CBF chủ yếu dựa vào các thuộc tính bên trong và các đặc trưng độc đáo của mỗi sản phẩm để hình thành các gợi ý có tính phù hợp cao. Với phương pháp tiếp cận này, hệ thống có thể xác định và đề xuất các sản phẩm mang tính tương đồng cao dựa trên các sản phẩm mà người dùng đã bày tỏ sự quan tâm hoặc đưa ra đánh giá tốt. Ví dụ cụ thể, nếu một người dùng bày tỏ sự yêu thích đối với một bộ phim thuộc thể loại hành động và có sự tham gia của một diễn viên cụ thể, hệ thống sẽ tự động tìm kiếm và đề xuất các bộ phim khác có cùng thể loại và có sự góp mặt của diễn viên đó.
+Content-Based Filtering là một phương pháp gợi ý được triển khai trong các hệ thống đề xuất, hoạt động bằng cách khai thác và phân tích các đặc điểm cũng như các thuộc tính của các đối tượng cần được đề xuất. Điểm khác biệt so với các phương pháp gợi ý dựa trên sở thích và hành vi của cộng đồng người dùng, CBF chủ yếu dựa vào các thuộc tính bên trong và các đặc trưng độc đáo của mỗi sản phẩm để hình thành các gợi ý có tính phù hợp cao. Với phương pháp tiếp cận này, hệ thống có thể xác định và đề xuất các sản phẩm mang tính tương đồng cao dựa trên các sản phẩm mà người dùng đã bày tỏ sự quan tâm hoặc đưa ra đánh giá tốt. Ví dụ, nếu như một người dùng yêu thích một bộ phim thuộc thể loại hành động và có sự tham gia của một diễn viên cụ thể, khi đó hệ thống sẽ tự động tìm kiếm và đề xuất các bộ phim khác có cùng thể loại và có sự tham gia của diễn viên đó.
 
 \subsection{Các thuật toán}
 Các thuật toán chính được sử dụng trong Content-Based Filtering bao gồm:
@@ -13,11 +13,11 @@ Các thuật toán chính được sử dụng trong Content-Based Filtering bao
 
 \textbf{Cosine Similarity:} Đây là một phương pháp được sử dụng để đo lường mức độ tương đồng giữa hai vector trong không gian vector. Việc tính toán độ tương tự cosine được thực hiện thông qua việc xác định giá trị cosin của góc được tạo bởi hai vector đó. Kỹ thuật này thường được vận dụng để đánh giá mức độ tương đồng giữa hồ sơ người dùng và hồ sơ của các sản phẩm trong hệ thống.
 
-Việc áp dụng Content-Based Filtering không chỉ giúp tối ưu hóa hiệu suất làm việc của hệ thống gợi ý phim mà còn đảm bảo rằng mỗi người dùng đều nhận được các đề xuất được cá nhân hóa phù hợp với sở thích và nhu cầu riêng của từng cá nhân.
+Việc áp dụng Content-Based Filtering vào hệ thống giúp tối ưu hóa hiệu suất làm việc cũng như đảm bảo rằng mỗi người dùng đều nhận được các đề xuất phim phù hợp với sở thích và nhu cầu riêng của từng cá nhân.
 
 Chương này đã trình bày một cách toàn diện và chi tiết về phương pháp gợi ý phim Content-Based Filtering. Thông qua việc trình bày các kiến thức cơ bản, nền tảng lý thuyết, các thuật toán cụ thể và các phương pháp nghiên cứu liên quan, chúng ta đã có được sự hiểu biết sâu sắc về nguyên lý hoạt động, những ưu điểm cũng như những hạn chế của phương pháp này.
 
 Content-Based Filtering hoạt động dựa trên cơ sở phân tích các đặc trưng và thuộc tính của nội dung phim để từ đó đề xuất các bộ phim có tính chất tương đồng mà người dùng có khả năng quan tâm. Phương pháp này cho phép ứng dụng tạo ra các gợi ý có độ chính xác cao dựa trên các thông tin cụ thể về phim và các sở thích mang tính cá nhân của từng người dùng.
 
-Việc hiểu rõ và áp dụng một cách chính xác các kỹ thuật của phương pháp này sẽ tạo điều kiện để cải thiện đáng kể hiệu suất vận hành của hệ thống gợi ý phim, qua đó tạo ra những trải nghiệm người dùng tốt hơn. Những kiến thức và phương pháp đã được trình bày trong chương này sẽ là cơ sở nền tảng để có thể tiếp tục phát triển và cải thiện hệ thống gợi ý phim trong các chương tiếp theo của báo cáo.
+Việc hiểu rõ và áp dụng một cách chính xác các kỹ thuật của phương pháp này sẽ tạo điều kiện để cải thiện đáng kể hiệu suất vận hành của hệ thống gợi ý phim, qua đó tạo ra những trải nghiệm người dùng tốt hơn. Những kiến thức và phương pháp được trình bày trong chương này là cơ sở nền tảng để tôi có thể tiếp tục phát triển hệ thống gợi ý phim trong các chương tiếp theo.
 \end{document}
