@@ -3,7 +3,7 @@
 
 \section{Thiết kế kiến trúc}
 \subsection{Lựa chọn kiến trúc phần mềm}
-Trong sản phẩm này, tôi lựa chọn kiến trúc phần mềm MVT trong Django.
+Trong sản phẩm này, tôi lựa chọn kiến trúc phần mềm MVT trong Django \cite{DjangoMVT}.
 
 \textbf{Giải thích sơ bộ về MVT:}
 
@@ -51,33 +51,39 @@ Template sẽ nhận dữ liệu từ view và render ra các thành phần giao
 \begin{enumerate}
     \item Data Access Layer (Model)
 
-    \textbf{Mục đích:} Ở tầng này, chứa các định nghĩa về dữ liệu và cấu trúc dữ liệu của ứng dụng.
+    \begin{itemize}
+        \item Mục đích: Ở tầng này, chứa các định nghĩa về dữ liệu và cấu trúc dữ liệu của ứng dụng.
     
-    \textbf{Nhiệm vụ:} Mô hình hóa các thực thể trong ứng dụng, bao gồm các bảng cơ sở dữ liệu và các mối quan hệ giữa chúng.
-    
-    \textbf{Các thành phần:} MovieInformation, Awards, Director, Cast, Genres.
-    
-    \textbf{Phụ thuộc:} Không phụ thuộc vào bất kỳ một gói nào khác. Đây là tầng thấp nhất trong kiến trúc, nơi dữ liệu được định nghĩa và quản lý bởi các model.
+        \item Nhiệm vụ: Mô hình hóa các thực thể trong ứng dụng, bao gồm các bảng cơ sở dữ liệu và các mối quan hệ giữa chúng.
+        
+        \item Các thành phần: MovieInformation, Awards, Director, Cast, Genres.
+        
+        \item Phụ thuộc: Không phụ thuộc vào bất kỳ một gói nào khác. Đây là tầng thấp nhất trong kiến trúc, nơi dữ liệu được định nghĩa và quản lý bởi các model.
+    \end{itemize}
 
     \item Business Logic Layer (View)
 
-    \textbf{Mục đích:} Ở tầng này, xử lý logic nghiệp vụ và quản lý các yêu cầu từ người dùng.
-    
-    \textbf{Nhiệm vụ:} Truy xuất dữ liệu từ các model, xử lý và chuẩn bị dữ liệu để hiển thị trong template.
-    
-    \textbf{Các thành phần:} FilmListView, DirectorListView, GenreListView, ReviewView.
-    
-    \textbf{Phụ thuộc:} Tầng này phụ thuộc vào gói Models. View sẽ truy xuất dữ liệu từ model và xử lý logic nghiệp vụ ở dưới, không phụ thuộc vào gói Templates trực tiếp. Dữ liệu được chuẩn bị trong view sẽ được truyền đến template để hiển thị cho người dùng.
+    \begin{itemize}
+        \item Mục đích: Ở tầng này, xử lý logic nghiệp vụ và quản lý các yêu cầu từ người dùng.
+        
+        \item Nhiệm vụ: Truy xuất dữ liệu từ các model, xử lý và chuẩn bị dữ liệu để hiển thị trong template.
+        
+        \item Các thành phần: FilmListView, DirectorListView, GenreListView, ReviewView.
+        
+        \item Phụ thuộc: Tầng này phụ thuộc vào gói Models. View sẽ truy xuất dữ liệu từ model và xử lý logic nghiệp vụ ở dưới, không phụ thuộc vào gói Templates trực tiếp. Dữ liệu được chuẩn bị trong view sẽ được truyền đến template để hiển thị cho người dùng.
+    \end{itemize}
 
     \item Presentation Layer (Template)
 
-    \textbf{Mục đích:} Ở tầng này, định nghĩa giao diện người dùng.
-    
-    \textbf{Nhiệm vụ:} Hiển thị dữ liệu được truyền từ view dưới dạng HTML, CSS và JavaScript. Template sẽ nhận dữ liệu từ view và hiển thị nó.
-    
-    \textbf{Các thành phần:} Các tệp HTML template cho các trang web khác nhau của ứng dụng, ví dụ như trang đăng nhập, đăng ký, trang chủ, trang chi tiết phim.
-    
-    \textbf{Phụ thuộc:} Tầng này phụ thuộc vào gói Views. Templates nhận dữ liệu từ view và hiển thị nó, không phụ thuộc vào gói Models trực tiếp. Mọi dữ liệu hiển thị trên giao diện đều được truyền từ view.
+    \begin{itemize}
+        \item Mục đích: Ở tầng này, định nghĩa giao diện người dùng.
+        
+        \item Nhiệm vụ: Hiển thị dữ liệu được truyền từ view dưới dạng HTML, CSS và JavaScript. Template sẽ nhận dữ liệu từ view và hiển thị nó.
+        
+        \item Các thành phần: Các tệp HTML template cho các trang web khác nhau của ứng dụng, ví dụ như trang đăng nhập, đăng ký, trang chủ, trang chi tiết phim.
+        
+        \item Phụ thuộc: Tầng này phụ thuộc vào gói Views. Templates nhận dữ liệu từ view và hiển thị nó, không phụ thuộc vào gói Models trực tiếp. Mọi dữ liệu hiển thị trên giao diện đều được truyền từ view.
+    \end{itemize}
 
 \end{enumerate}
 
@@ -123,14 +129,15 @@ Template sẽ nhận dữ liệu từ view và render ra các thành phần giao
 Ở gói này, có các gói nhỏ hợp thành là UserView, MovieView và AdminView.
 
 \begin{itemize}
-    \item \textbf{Gói UserView:} 
+    \item Gói UserView:
+
     Gồm 3 class l là ReviewView, UserView và LikeMovieView. 
 
     Mô tả: Class UserView: Lớp này chịu trách nhiệm hiển thị và xử lý các thông tin liên quan đến người dùng, bao gồm đăng ký, đăng nhập, và thông tin cá nhân. Class ReviewView: Lớp này xử lý và hiển thị các đánh giá phim của người dùng. Nó phụ thuộc vào thông tin người dùng từ UserView. Class LikeMovieView: Lớp này quản lý và hiển thị các bộ phim mà người dùng đã thích. Nó cũng phụ thuộc vào thông tin người dùng từ UserView.
     
     Phụ thuộc: Class ReviewView và class LikeMovieView phụ thuộc vào thông tin của UserView. 
 
-    \item  \textbf{Gói MovieView:} 
+    \item  Gói MovieView: 
     
     Gồm 5 class là MovieinfomationView, DirectorView, AwardView, CastView, WriterView. 
 
@@ -138,7 +145,7 @@ Template sẽ nhận dữ liệu từ view và render ra các thành phần giao
 
     Phụ thuộc: 4 class còn lại có quan hệ phụ thuộc với Movieinfomation, lấy Movieinfomation làm gốc, các thông tin còn lại đều là thông tin bổ sung.
 
-    \item  \textbf{Gói AdminView:} 
+    \item  Gói AdminView: 
     
     Gồm 1 class là AdminView. 
 
@@ -235,14 +242,6 @@ Dưới đây là một số hình ảnh minh họa cho thiết kế giao diện
     \label{fig:web_cast_and_crew}
 \end{figure}
 
-\textbf{Màn hình tổng hợp đạo diễn, diễn viên, ...}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{Hinhve/web_cast_and_crew.png}
-    \caption[Màn hình \textit{tổng hợp đạo diễn, diễn viên, ...}]{Màn hình \textit{tổng hợp đạo diễn, diễn viên, ...}}
-    \label{fig:web_cast_and_crew}
-\end{figure}
-
 \textbf{Màn hình review phim}
 \begin{figure}[H]
     \centering
@@ -263,21 +262,21 @@ Dưới đây là một số hình ảnh minh họa cho thiết kế giao diện
 \centering
 \includegraphics[width=0.3\linewidth]{Hinhve/data1.png}
 \caption{Hình ảnh các table trong database 1}
-\label{fig:Database}
+\label{fig:Database1}
 \end{figure} 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.3\linewidth]{Hinhve/data2.png}
 \caption{Hình ảnh các table trong database 2}
-\label{fig:Database}
+\label{fig:Database2}
 \end{figure} 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.3\linewidth]{Hinhve/data3.png}
 \caption{Hình ảnh các table trong database 3}
-\label{fig:Database}
+\label{fig:Database3}
 \end{figure} 
 
 \subsection{Thiết kế hệ thống crawl dữ liệu}
@@ -311,23 +310,23 @@ Dưới đây là một số hình ảnh minh họa cho thiết kế giao diện
 Khi người dùng nhập câu tìm kiếm, ứng dụng sẽ xử lý theo các bước sau:
 
 \begin{itemize}
-    \item \textbf{Frontend gửi yêu cầu:} Component React sẽ gửi câu tìm kiếm đến API endpoint.
-    \item \textbf{Backend xử lý song song:} Ứng dụng thực hiện đồng thời hai phương pháp tìm kiếm:
+    \item Frontend gửi yêu cầu: Component React sẽ gửi câu tìm kiếm đến API endpoint.
+    \item Backend xử lý song song: Ứng dụng thực hiện đồng thời hai phương pháp tìm kiếm:
     \begin{itemize}
         \item Vector Search: Tìm kiếm theo ngữ nghĩa (semantic) dựa trên embedding
         \item AI Filter: Tìm kiếm có cấu trúc (structured) dựa trên các thuộc tính cụ thể
     \end{itemize}
-    \item \textbf{Kết hợp kết quả:} Ứng dụng hợp nhất và sắp xếp kết quả từ hai phương pháp theo độ ưu tiên
-    \item \textbf{Trả về kết quả:} Gửi danh sách phim kèm thông tin phân trang về frontend
+    \item Kết hợp kết quả: Ứng dụng hợp nhất và sắp xếp kết quả từ hai phương pháp theo độ ưu tiên
+    \item Trả về kết quả: Gửi danh sách phim kèm thông tin phân trang về frontend
 \end{itemize}
 
 \subsubsection{Các thành phần kỹ thuật}
 
-\textbf{Frontend:} Frontend nhận sự kiện click button tìm kiếm và gửi yêu cầu đến API endpoint.
+Frontend: Frontend nhận sự kiện click button tìm kiếm và gửi yêu cầu đến API endpoint.
 
-\textbf{Backend API Endpoint:} Backend kiểm tra tính hợp lệ của query, xử lý yêu cầu tìm kiếm. Xử lý phân trang và điều phối hai phương pháp tìm kiếm song song.
+Backend API Endpoint: Backend kiểm tra tính hợp lệ của query, xử lý yêu cầu tìm kiếm. Xử lý phân trang và điều phối hai phương pháp tìm kiếm song song.
 
-\textbf{Vector Search (Semantic Search):}
+Vector Search (Semantic Search):
 
 Thực hiện tìm kiếm theo ngữ nghĩa:
 
@@ -580,7 +579,7 @@ Dựa vào lịch sử review của người dùng, hệ thống có thể tự 
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/search_phim.png}
 \caption{Tìm kiếm phim}
-\label{fig:search_phim}
+\label{fig:search_phim2}
 \end{figure} 
 
 \begin{figure}[H]

@@ -20,43 +20,50 @@
   \entry{BoxofficeMojo}{misc}{}
     \field{labeltitlesource}{title}
     \field{howpublished}{\url{https://www.boxofficemojo.com/}}
-    \field{note}{Truy cập lần cuối vào ngày 01/06/2024}
+    \field{note}{Truy cập lần cuối vào ngày 20/12/2025}
     \field{title}{BoxofficeMojo}
   \endentry
 
   \entry{TheNumbers}{misc}{}
     \field{labeltitlesource}{title}
     \field{howpublished}{\url{https://www.the-numbers.com/}}
-    \field{note}{Truy cập lần cuối vào ngày 01/06/2024}
+    \field{note}{Truy cập lần cuối vào ngày 20/12/2025}
     \field{title}{TheNumbers}
   \endentry
 
   \entry{IMDb}{misc}{}
     \field{labeltitlesource}{title}
     \field{howpublished}{\url{https://www.imdb.com/}}
-    \field{note}{Truy cập lần cuối vào ngày 01/06/2024}
+    \field{note}{Truy cập lần cuối vào ngày 20/12/2025}
     \field{title}{IMDb}
   \endentry
 
   \entry{Metacritic}{misc}{}
     \field{labeltitlesource}{title}
     \field{howpublished}{\url{https://www.metacritic.com/}}
-    \field{note}{Truy cập lần cuối vào ngày 01/06/2024}
+    \field{note}{Truy cập lần cuối vào ngày 20/12/2025}
     \field{title}{Metacritic}
   \endentry
 
   \entry{Rottentomatoes}{misc}{}
     \field{labeltitlesource}{title}
     \field{howpublished}{\url{https://www.rottentomatoes.com/}}
-    \field{note}{Truy cập lần cuối vào ngày 01/06/2024}
+    \field{note}{Truy cập lần cuối vào ngày 20/12/2025}
     \field{title}{Rottentomatoes}
   \endentry
 
   \entry{Themoviedb}{misc}{}
     \field{labeltitlesource}{title}
     \field{howpublished}{\url{https://www.themoviedb.org/}}
-    \field{note}{Truy cập lần cuối vào ngày 18/01/2026}
+    \field{note}{Truy cập lần cuối vào ngày 20/12/2025}
     \field{title}{Themoviedb}
+  \endentry
+
+  \entry{DjangoMVT}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{\url{https://docs.djangoproject.com/en/6.0/}}
+    \field{note}{Truy cập lần cuối vào ngày 20/12/2025}
+    \field{title}{Django MVT}
   \endentry
 
   \entry{VSCode}{misc}{}
@@ -71,7 +78,7 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{howpublished}{\url{https://code.visualstudio.com/}}
-    \field{note}{Truy cập lần cuối vào ngày 01/02/2024}
+    \field{note}{Truy cập lần cuối vào ngày 20/12/2025}
     \field{title}{Visual Studio Code (VSCode)}
   \endentry
 
@@ -87,28 +94,28 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{howpublished}{\url{https://www.django-rest-framework.org/}}
-    \field{note}{Truy cập lần cuối vào ngày 01/06/2024}
+    \field{note}{Truy cập lần cuối vào ngày 20/12/2025}
     \field{title}{Django Rest Framework}
   \endentry
 
   \entry{HTML}{misc}{}
     \field{labeltitlesource}{title}
   \field{howpublished}{\url{https://developer.mozilla.org/en-US/docs/Web/HTML}}
-    \field{note}{Truy cập lần cuối vào ngày 15/04/2024}
+    \field{note}{Truy cập lần cuối vào ngày 20/12/2025}
     \field{title}{HTML}
   \endentry
 
   \entry{TailwindCSS}{misc}{}
     \field{labeltitlesource}{title}
     \field{howpublished}{\url{https://tailwindcss.com/}}
-    \field{note}{Truy cập lần cuối vào ngày 18/01/2026}
+    \field{note}{Truy cập lần cuối vào ngày 20/12/2025}
     \field{title}{Tailwind CSS}
   \endentry
 
   \entry{React}{misc}{}
     \field{labeltitlesource}{title}
     \field{howpublished}{\url{https://react.dev/}}
-    \field{note}{Truy cập lần cuối vào ngày 18/01/2026}
+    \field{note}{Truy cập lần cuối vào ngày 20/12/2025}
     \field{title}{React}
   \endentry
 
@@ -124,35 +131,35 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{howpublished}{\url{https://www.djangoproject.com/}}
-    \field{note}{Truy cập lần cuối vào ngày 01/06/2024}
+    \field{note}{Truy cập lần cuối vào ngày 20/12/2025}
     \field{title}{Django}
   \endentry
 
   \entry{MySQL}{misc}{}
     \field{labeltitlesource}{title}
     \field{howpublished}{\url{https://www.mysql.com/}}
-    \field{note}{Truy cập lần cuối vào ngày 01/06/2024}
+    \field{note}{Truy cập lần cuối vào ngày 20/12/2025}
     \field{title}{MySQL}
   \endentry
 
   \entry{Selenium}{misc}{}
     \field{labeltitlesource}{title}
     \field{howpublished}{\url{https://www.selenium.dev/}}
-    \field{note}{Truy cập lần cuối vào ngày 01/02/2024}
+    \field{note}{Truy cập lần cuối vào ngày 20/12/2025}
     \field{title}{Selenium}
   \endentry
 
   \entry{Requests}{misc}{}
     \field{labeltitlesource}{title}
     \field{howpublished}{\url{https://requests.readthedocs.io/}}
-    \field{note}{Truy cập lần cuối vào ngày 01/03/2024}
+    \field{note}{Truy cập lần cuối vào ngày 20/12/2025}
     \field{title}{Requests}
   \endentry
 
   \entry{GitHubActions}{misc}{}
     \field{labeltitlesource}{title}
     \field{howpublished}{\url{https://github.com/features/actions}}
-    \field{note}{Truy cập lần cuối vào ngày 30/06/2024}
+    \field{note}{Truy cập lần cuối vào ngày 20/12/2025}
     \field{title}{GitHub Actions}
   \endentry
 \enddatalist

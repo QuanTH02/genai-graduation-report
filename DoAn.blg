@@ -22,44 +22,44 @@ Database file #2: Danh_sach_tai_lieu_tham_khao.bib
 Biblatex version: 3.17
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 17 entries,
+You've used 18 entries,
             6399 wiz_defined-function locations,
-            1264 strings with 10207 characters,
-and the built_in function-call counts, 29837 in all, are:
-= -- 1105
+            1263 strings with 10054 characters,
+and the built_in function-call counts, 31227 in all, are:
+= -- 1139
 > -- 283
-< -- 162
-+ -- 218
+< -- 170
++ -- 219
 - -- 91
-* -- 1201
-:= -- 1512
+* -- 1243
+:= -- 1534
 add.period$ -- 0
-call.type$ -- 17
-change.case$ -- 44
+call.type$ -- 18
+change.case$ -- 46
 chr.to.int$ -- 42
-cite$ -- 32
-duplicate$ -- 3755
-empty$ -- 4324
+cite$ -- 34
+duplicate$ -- 3956
+empty$ -- 4564
 format.name$ -- 129
-if$ -- 6831
+if$ -- 7160
 int.to.chr$ -- 0
-int.to.str$ -- 19
+int.to.str$ -- 20
 missing$ -- 0
-newline$ -- 159
+newline$ -- 166
 num.names$ -- 114
-pop$ -- 5201
+pop$ -- 5522
 preamble$ -- 1
-purify$ -- 53
+purify$ -- 55
 quote$ -- 0
-skip$ -- 1334
+skip$ -- 1397
 stack$ -- 0
-substring$ -- 1099
-swap$ -- 1044
-text.length$ -- 184
+substring$ -- 1105
+swap$ -- 1103
+text.length$ -- 192
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 566
+type$ -- 600
 warning$ -- 0
-while$ -- 173
+while$ -- 174
 width$ -- 0
-write$ -- 143
+write$ -- 149
