@@ -305,7 +305,7 @@ Dưới đây là một số hình ảnh minh họa cho thiết kế giao diện
 \textbf{BoxofficeMojo:} Ở trang web này, tôi sẽ tìm các bộ phim có trong BoxofficeMojo bằng cách lấy khóa chính là movie name có trong IMDb, sau đó sẽ lấy các thông tin về doanh thu và update vào data.
 
 \subsection{Tìm kiếm phim bằng ngôn ngữ tự nhiên}
-ứng dụng hỗ trợ tìm kiếm phim bằng câu tự nhiên (natural language search), cho phép người dùng nhập yêu cầu tìm kiếm bằng ngôn ngữ thông thường thay vì phải sử dụng các từ khóa cụ thể. Tính năng này kết hợp hai phương pháp tìm kiếm: Vector Search (semantic search) và AI Filter (structured search) để đảm bảo độ chính xác và toàn diện trong kết quả tìm kiếm.
+Ứng dụng hỗ trợ tìm kiếm phim bằng câu tự nhiên (natural language search), cho phép người dùng nhập yêu cầu tìm kiếm bằng ngôn ngữ thông thường thay vì phải sử dụng các từ khóa cụ thể. Tính năng này kết hợp hai phương pháp tìm kiếm: Vector Search (semantic search) và AI Filter (structured search) để đảm bảo độ chính xác và toàn diện trong kết quả tìm kiếm.
 
 \subsubsection{Tổng quan luồng xử lý}
 Khi người dùng nhập câu tìm kiếm, ứng dụng sẽ xử lý theo các bước sau:
@@ -406,6 +406,73 @@ Tính năng tìm kiếm bằng ngôn ngữ người dùng có các ưu điểm s
 
 
 \subsection{Gợi ý phim bằng genAI dựa vào lịch sử hoạt động của người dùng}
+Ứng dụng sử dụng GenAI (Gemini hoặc OpenAI) để phân tích lịch sử hoạt động của người dùng và đưa ra gợi ý phim cá nhân hóa theo thời gian thực. Khác với các phương pháp gợi ý truyền thống yêu cầu training model, hệ thống này hoạt động real-time dựa trên dữ liệu lịch sử của từng người dùng, không cần retrain hay cập nhật model.
+
+\subsubsection{Tổng quan luồng xử lý}
+Khi người dùng yêu cầu gợi ý phim, ứng dụng sẽ xử lý theo các bước sau:
+
+\begin{itemize}
+    \item Thu thập lịch sử người dùng: Ứng dụng lấy lịch sử tìm kiếm và lịch sử đánh giá của người dùng
+    \item Xây dựng prompt cho GenAI: Ứng dụng tạo prompt chứa thông tin lịch sử và yêu cầu AI phân tích sở thích
+    \item Gọi GenAI API: Ứng dụng gửi prompt đến GenAI (ưu tiên Gemini, fallback OpenAI) để nhận danh sách phim được gợi ý
+    \item Tìm phim trong database: Ứng dụng tìm các phim được AI gợi ý trong database
+    \item Trả về kết quả: Gửi danh sách phim đã được gợi ý về frontend
+\end{itemize}
+
+\subsubsection{Các thành phần kỹ thuật}
+
+\textbf{Frontend:} Frontend gửi yêu cầu gợi ý phim đến API endpoint và hiển thị kết quả trả về.
+
+\textbf{Backend API Endpoint:} Backend xử lý yêu cầu, thu thập lịch sử người dùng và gọi GenAI để tạo gợi ý.
+
+\textbf{Thu thập lịch sử hoạt động:}
+
+Ứng dụng thu thập ba loại dữ liệu lịch sử:
+
+\begin{itemize}
+    \item Lịch sử tìm kiếm: Tự động lưu lại các câu tìm kiếm của người dùng, bao gồm cả tìm kiếm thường và tìm kiếm ngôn ngữ tự nhiên. Ứng dụng lấy tối đa 20 query gần nhất để phân tích
+    \item Lịch sử đánh giá: Lưu trữ các review phim của người dùng, bao gồm điểm đánh giá (1-5 sao), tiêu đề và nội dung review. Ứng dụng lấy tối đa 20 review gần nhất, ưu tiên các review có rating cao (4-5 sao)
+    \item Theo dõi hoạt động: Ghi nhận các hành động của người dùng như xem chi tiết phim, click vào card phim, xem trailer, hoặc click vào kết quả tìm kiếm. Mỗi loại hoạt động có mức độ quan trọng khác nhau
+\end{itemize}
+
+\textbf{Xây dựng prompt cho GenAI:}
+
+Ứng dụng tạo prompt chứa:
+
+\begin{itemize}
+    \item Lịch sử tìm kiếm: Liệt kê các câu tìm kiếm gần nhất của người dùng
+    \item Lịch sử đánh giá: Liệt kê các phim đã được người dùng đánh giá kèm điểm số và tiêu đề review
+    \item Yêu cầu phân tích: Genres người dùng tìm kiếm, themes và keywords, phim được đánh giá tích cực (4-5 sao), phim tương tự những gì đã review, xu hướng trong pattern tìm kiếm
+    \item Yêu cầu trả về: Danh sách tên các phim được gợi ý dưới dạng JSON array
+\end{itemize}
+
+\textbf{Gọi GenAI API:}
+
+Ứng dụng ưu tiên sử dụng Gemini API để phân tích lịch sử và đưa ra gợi ý. Nếu Gemini không khả dụng, ứng dụng sẽ fallback sang OpenAI API để đảm bảo tính khả dụng của hệ thống.
+
+Xử lý response từ GenAI:
+\begin{itemize}
+    \item Parse JSON từ response (loại bỏ markdown code blocks nếu có)
+    \item Validate format (phải là array chứa tên phim)
+    \item Giới hạn số lượng phim theo yêu cầu
+\end{itemize}
+
+\textbf{Tìm phim trong database:}
+
+Với mỗi tên phim được AI gợi ý, ứng dụng tìm phim tương ứng trong database:
+\begin{itemize}
+    \item Nếu phim không tìm thấy: Bỏ qua phim đó
+    \item Chỉ trả về danh sách phim hợp lệ có trong database
+\end{itemize}
+
+\subsubsection{Kết quả trả về}
+
+API trả về response với cấu trúc:
+\begin{itemize}
+    \item message: Thông báo trạng thái
+    \item data: Danh sách phim đã được gợi ý dưới dạng JSON array
+\end{itemize}
+
 
 \section{Xây dựng ứng dụng}
 \subsection{Thư viện và công cụ sử dụng}
@@ -596,7 +663,102 @@ Người dùng vào chi tiết phim để xem danh sách ảnh có trong bộ ph
 \end{table} 
 \FloatBarrier
 
-Qua những bước kiểm thử trên (\autoref{tab:test1} và \autoref{tab:test2}), có thể thấy ứng dụng đã sẵn sàng đi vào hoạt động khi toàn bộ test case đều được thông qua và hoạt động tốt.
+\begin{table}[H]
+\centering
+\caption{Bảng danh sách kiểm thử hiệu năng}
+\label{tab:performance-test-list}
+\begin{tabular}{|p{0.4\textwidth}|p{0.35\textwidth}|p{0.15\textwidth}|p{0.1\textwidth}|}
+\hline
+\textbf{Tên kiểm thử} & \textbf{Endpoint/Method} & \textbf{Yêu cầu} & \textbf{Mã} \\
+\hline
+GET Danh sách phim & GET /api/v1/movies/ & < 3s & TC01 \\
+\hline
+GET Chi tiết phim & POST /api/v1/movies/1/ & < 3s & TC02 \\
+\hline
+GET Lọc phim & GET /api/v1/movies/filter-options/ & < 3s & TC03 \\
+\hline
+GET Metadata phim & GET /api/v1/movies/1/cast/ & < 3s & TC04 \\
+\hline
+POST Đăng ký & POST /api/v1/users/register/ & < 3s & TC05 \\
+\hline
+POST Đăng nhập & POST /api/v1/users/login/ & < 3s & TC06 \\
+\hline
+Tìm kiếm AI (Mock) & POST /api/v1/movies/search/natural/ & < 10s & TC07 \\
+\hline
+Gợi ý AI (Mock) & GET /api/v1/movies/recommend/realtime/perf\_test\_user/ & < 10s & TC08 \\
+\hline
+Định dạng response nhất quán & GET /api/v1/movies/ & Có & TC09 \\
+\hline
+Thông báo lỗi rõ ràng & POST /api/v1/movies/999999/ & Có & TC10 \\
+\hline
+Validation đầu vào & POST /api/v1/users/login/ & Có & TC11 \\
+\hline
+Documentation trong code & Code structure & Có & TC12 \\
+\hline
+Tổ chức code theo modules & Code organization & Có & TC13 \\
+\hline
+Nhất quán RESTful API & Multiple endpoints & Có & TC14 \\
+\hline
+Kết nối database & Database connection & < 1s & TC15 \\
+\hline
+Hiệu năng query cơ bản & SELECT query & < 1s & TC16 \\
+\hline
+Tính toàn vẹn dữ liệu & Data integrity & Có & TC17 \\
+\hline
+Xử lý transaction & Transaction & Có & TC18 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Bảng kết quả kiểm thử hiệu năng}
+\label{tab:performance-test-results}
+\begin{tabular}{|p{0.12\textwidth}|p{0.12\textwidth}|p{0.18\textwidth}|p{0.12\textwidth}|p{0.12\textwidth}|p{0.24\textwidth}|}
+\hline
+\textbf{Mã} & \textbf{Yêu cầu} & \textbf{Thời gian thực tế (s)} & \textbf{Status Code} & \textbf{Kết quả} \\
+\hline
+TC01 & < 3s & 0.009 & 200 & Đạt \\
+\hline
+TC02 & < 3s & 0.004 & 200 & Đạt \\
+\hline
+TC03 & < 3s & 0.099 & 200 & Đạt \\
+\hline
+TC04 & < 3s & 0.007 & 200 & Đạt \\
+\hline
+TC05 & < 3s & 0.001 & 400 & Đạt \\
+\hline
+TC06 & < 3s & 0.184 & 200 & Đạt \\
+\hline
+TC07 & < 10s & 4.6 & 200 & Đạt \\
+\hline
+TC08 & < 10s & 2.9 & 200 & Đạt \\
+\hline
+TC09 & Có & 0.000 & 200 & Đạt \\
+\hline
+TC10 & Có & 0.000 & 404 & Đạt \\
+\hline
+TC11 & Có & 0.000 & 400 & Đạt \\
+\hline
+TC12 & Có & 0.000 & 200 & Đạt \\
+\hline
+TC13 & Có & 0.000 & 200 & Đạt \\
+\hline
+TC14 & Có & 0.000 & 200 & Đạt \\
+\hline
+TC15 & < 1s & 0.000 & 200 & Đạt \\
+\hline
+TC16 & < 1s & 0.005 & 200 & Đạt \\
+\hline
+TC17 & Có & 0.000 & 200 & Đạt \\
+\hline
+TC18 & Có & 0.000 & 200 & Đạt \\
+\hline
+\end{tabular}
+\end{table}
+    
+
+Qua những bước kiểm thử trên (\autoref{tab:test1}, \autoref{tab:test2}, \autoref{tab:performance-test-list}, \autoref{tab:performance-test-results}), có thể thấy ứng dụng đã được kiểm thử thành công và đã sẵn sàng đi vào hoạt động khi toàn bộ test case đều được thông qua và hoạt động tốt.
 
 \section{Triển khai}
 \textbf{Mô hình triển khai}
