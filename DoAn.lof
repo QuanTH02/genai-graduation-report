@@ -9,47 +9,47 @@
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Phân rã use case Quản lý thông tin phim\relax }}{11}{figure.caption.14}%
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Phân rã use case Quản lý tài khoản\relax }}{11}{figure.caption.15}%
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Phân rã use case Tương tác với phim\relax }}{12}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Phân rã use case Review, comment\relax }}{12}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Phân rã use case bình luận, đánh giá phim\relax }}{12}{figure.caption.17}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Biểu đồ phụ thuộc gói\relax }}{30}{figure.caption.25}%
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Thiết kế chi tiết gói ở tầng Model\relax }}{32}{figure.caption.26}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Thiết kế chi tiết gói ở tầng View\relax }}{33}{figure.caption.27}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Thiết kế chi tiết gói Template\relax }}{35}{figure.caption.28}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Thiết kế màn hình \textit {đăng nhập}}}{36}{figure.caption.29}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Thiết kế màn hình \textit {đăng ký}}}{37}{figure.caption.30}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Thiết kế màn hình \textit {profile}}}{37}{figure.caption.31}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Thiết kế màn hình \textit {chính}}}{38}{figure.caption.32}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Thiết kế màn hình \textit {gợi ý phim ở trang chủ}}}{38}{figure.caption.33}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Thiết kế màn hình \textit {thông tin chi tiết 1}}}{39}{figure.caption.34}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Thiết kế màn hình \textit {thông tin chi tiết 2}}}{39}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Thiết kế màn hình \textit {tổng hợp đạo diễn, diễn viên, ...}}}{40}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Thiết kế màn hình \textit {review phim}}}{40}{figure.caption.37}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Thiết kế sơ đồ ERD\relax }}{41}{figure.caption.38}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Hình ảnh các bảng trong cơ sở dữ liệu 1\relax }}{41}{figure.caption.39}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Hình ảnh các bảng trong cơ sở dữ liệu 2\relax }}{42}{figure.caption.40}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Hình ảnh các bảng trong cơ sở dữ liệu 3\relax }}{42}{figure.caption.41}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Màn hình \textit {tìm kiếm phim}}}{43}{figure.caption.43}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Màn hình \textit {gợi ý phim bằng genAI}}}{46}{figure.caption.44}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Chức năng tìm kiếm phim theo ngôn ngữ người dùng\relax }}{50}{figure.caption.46}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Review phim\relax }}{50}{figure.caption.47}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Gợi ý phim theo lịch sử review\relax }}{51}{figure.caption.48}%
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Tìm kiếm phim\relax }}{51}{figure.caption.49}%
-\contentsline {figure}{\numberline {5.24}{\ignorespaces Gợi ý phim theo lịch sử tìm kiếm\relax }}{52}{figure.caption.50}%
-\contentsline {figure}{\numberline {5.25}{\ignorespaces Chức năng gợi ý phim dựa vào lịch sử thao tác của người dùng\relax }}{52}{figure.caption.51}%
-\contentsline {figure}{\numberline {5.26}{\ignorespaces Chức năng gợi ý phim dựa vào nội dung phim đang xem\relax }}{53}{figure.caption.52}%
-\contentsline {figure}{\numberline {5.27}{\ignorespaces Chức năng thêm phim yêu thích vào danh sách\relax }}{53}{figure.caption.53}%
-\contentsline {figure}{\numberline {5.28}{\ignorespaces Chức năng review phim\relax }}{54}{figure.caption.54}%
-\contentsline {figure}{\numberline {5.29}{\ignorespaces Chức năng xem toàn bộ ảnh của phim\relax }}{54}{figure.caption.55}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Thiết kế chi tiết gói ở tầng View\relax }}{34}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Thiết kế chi tiết gói Template\relax }}{36}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Thiết kế màn hình \textit {login}}}{37}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Thiết kế màn hình \textit {signup}}}{38}{figure.caption.30}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Thiết kế màn hình \textit {user profile}}}{38}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Thiết kế màn hình \textit {home}}}{39}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Thiết kế màn hình \textit {gợi ý phim ở trang home}}}{39}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Thiết kế màn hình \textit {detail 1}}}{40}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Thiết kế màn hình \textit {detail 2}}}{40}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Thiết kế màn hình \textit {cast and crew}}}{41}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Thiết kế màn hình \textit {user review}}}{41}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Thiết kế sơ đồ ERD của hệ thống\relax }}{42}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Hình ảnh các bảng trong cơ sở dữ liệu 1\relax }}{42}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Hình ảnh các bảng trong cơ sở dữ liệu 2\relax }}{43}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Hình ảnh các bảng trong cơ sở dữ liệu 3\relax }}{43}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Màn hình \textit {tìm kiếm phim}}}{44}{figure.caption.43}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Màn hình \textit {gợi ý phim bằng genAI}}}{47}{figure.caption.44}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Chức năng tìm kiếm phim theo ngôn ngữ người dùng\relax }}{51}{figure.caption.46}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Review phim\relax }}{51}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Gợi ý phim theo lịch sử review\relax }}{52}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Tìm kiếm phim\relax }}{52}{figure.caption.49}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Gợi ý phim theo lịch sử tìm kiếm\relax }}{53}{figure.caption.50}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Chức năng gợi ý phim dựa vào lịch sử thao tác của người dùng\relax }}{53}{figure.caption.51}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Chức năng gợi ý phim dựa vào nội dung phim đang xem\relax }}{54}{figure.caption.52}%
+\contentsline {figure}{\numberline {5.27}{\ignorespaces Chức năng thêm phim yêu thích vào danh sách\relax }}{54}{figure.caption.53}%
+\contentsline {figure}{\numberline {5.28}{\ignorespaces Chức năng review phim\relax }}{55}{figure.caption.54}%
+\contentsline {figure}{\numberline {5.29}{\ignorespaces Chức năng xem toàn bộ ảnh của phim\relax }}{55}{figure.caption.55}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Tạo PAT Github\relax }}{61}{figure.caption.60}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Tạo Secrets trên GitHub\relax }}{62}{figure.caption.61}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Hệ thống tự động crawl dữ liệu\relax }}{62}{figure.caption.62}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Cập nhật dữ liệu mới thành công\relax }}{63}{figure.caption.63}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Kiểm tra kết quả 1\relax }}{64}{figure.caption.64}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Kiểm tra kết quả 2\relax }}{65}{figure.caption.65}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Kiểm tra kết quả 3\relax }}{66}{figure.caption.66}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Tạo PAT Github\relax }}{62}{figure.caption.60}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Thiết lập Secrets trên GitHub\relax }}{63}{figure.caption.61}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Hệ thống tự động crawl dữ liệu\relax }}{63}{figure.caption.62}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Cập nhật dữ liệu mới thành công\relax }}{64}{figure.caption.63}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Kiểm tra kết quả 1\relax }}{66}{figure.caption.64}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Kiểm tra kết quả 2\relax }}{67}{figure.caption.65}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Kiểm tra kết quả 3\relax }}{68}{figure.caption.66}%
 \addvspace {10\p@ }
 \contentsfinish 
 \contentsfinish 

@@ -3,16 +3,16 @@
 
 \section{Thiết kế kiến trúc}
 \subsection{Lựa chọn kiến trúc phần mềm}
-Trong sản phẩm này, tôi lựa chọn kiến trúc phần mềm MVT trong Django \cite{DjangoMVT}.
+Trong dự án này, tôi quyết định áp dụng mô hình kiến trúc MVT (Model-View-Template) được cung cấp bởi khung làm việc Django \cite{DjangoMVT}.
 
 \textbf{Giải thích sơ bộ về MVT:}
 
-Kiến trúc MVT của Django tương tự như kiến trúc MVC (Model-View-Controller), nhưng có sự khác biệt về cách hoạt động.
+Mô hình MVT trong Django có những nét tương đồng nhất định với kiến trúc MVC (Model-View-Controller) truyền thống, tuy nhiên quy trình vận hành và sự phân chia trách nhiệm giữa các thành phần lại có những điểm khác biệt đặc trưng.
 
-\begin{itemize}
-    \item \textbf{Model (M):} Định nghĩa cấu trúc dữ liệu của ứng dụng và quản lý truy cập vào cơ sở dữ liệu.
-    \item \textbf{View (V):} Xử lý logic xử lý nghiệp vụ và hiển thị dữ liệu cho người dùng.
-    \item \textbf{Template (T):} Định nghĩa giao diện người dùng bằng cách sử dụng HTML cùng với các biến Python.
+\begin{itemize} 
+    \item \textbf{Model (M):} Thiết lập khung sơ đồ dữ liệu cho ứng dụng và điều phối các thao tác truy xuất vào cơ sở dữ liệu. 
+    \item \textbf{View (V):} Đảm nhận vai trò xử lý các quy trình nghiệp vụ hệ thống và điều hướng dữ liệu đến người dùng cuối. 
+    \item \textbf{Template (T):} Xây dựng lớp giao diện hiển thị thông qua ngôn ngữ HTML kết hợp linh hoạt với các biến dữ liệu Python. 
 \end{itemize}
 
 \textbf{Mô tả kiến trúc cụ thể cho ứng dụng:}
@@ -20,22 +20,21 @@ Kiến trúc MVT của Django tương tự như kiến trúc MVC (Model-View-Con
 \begin{itemize}
     \item \textbf{Model (M):} 
     
-Trong ứng dụng của em, các model như MovieInformation, Awards, Director, Cast, Genres, và các model liên quan khác sẽ đại diện cho các đối tượng dữ liệu chính về phim, đạo diễn, diễn viên, thể loại.
+    Trong hệ thống của tôi, các thực thể như MovieInformation, Awards, Director, Cast và Genres đóng vai trò là những mô hình dữ liệu cốt lõi nhằm định nghĩa thông tin về phim ảnh, đội ngũ sản xuất và các phân loại liên quan.
 
-Mỗi model sẽ có các trường (fields) tương ứng và quan hệ (relationships) với các model khác để lưu trữ và quản lý thông tin một cách logic và cấu trúc hóa.
+    Mỗi mô hình này được thiết lập các thuộc tính cụ thể và những mối liên kết đa chiều, giúp tối ưu hóa việc lưu trữ cũng như quản lý dữ liệu theo một cấu trúc logic và hệ thống.
     
     \item \textbf{View (V):} 
 
-Các view như FilmListView, DirectorListView, GenreListView, ReviewView, và các view khác trong danh sách của tôi sẽ đảm nhiệm xử lý các yêu cầu từ người dùng.
+    Trong ứng dụng của tôi, các thành phần như FilmListView, DirectorListView, GenreListView và ReviewView đóng vai trò tiếp nhận và phản hồi các yêu cầu từ phía người dùng.
 
-View sẽ truy xuất dữ liệu từ model thông qua các queryset, xử lý logic nghiệp vụ và chuẩn bị dữ liệu để truyền cho template.
+    Tại đây, các View thực hiện việc trích xuất dữ liệu từ Model bằng các QuerySet, thực thi các quy trình nghiệp vụ cần thiết và đóng gói dữ liệu để chuyển tiếp đến lớp Template hiển thị.
 
     \item \textbf{Template (T):} 
 
-Sử dụng các template HTML của Django kết hợp với template tags hiển thị dữ liệu cho người dùng.
+Việc hiển thị thông tin tới người dùng được thực hiện thông qua hệ thống template HTML của Django kết hợp cùng các template tags chuyên dụng.
 
-Template sẽ nhận dữ liệu từ view và render ra các thành phần giao diện như danh sách phim, thông tin chi tiết, biểu đồ.
-
+Các tệp giao diện này tiếp nhận dữ liệu từ View để kết xuất thành các thành phần trực quan như danh sách phim, thông tin chi tiết hoặc các sơ đồ minh họa.
 \end{itemize}
 
 \subsection{Thiết kế tổng quan}
@@ -52,38 +51,38 @@ Template sẽ nhận dữ liệu từ view và render ra các thành phần giao
     \item Data Access Layer (Model)
 
     \begin{itemize}
-        \item Mục đích: Tầng này chịu trách nhiệm chứa các định nghĩa về dữ liệu và cấu trúc dữ liệu của hệ thống.
-    
-        \item Nhiệm vụ: Thực hiện mô hình hóa các thực thể trong ứng dụng, bao gồm việc định nghĩa các bảng cơ sở dữ liệu và các mối quan hệ giữa các bảng đó.
+        \item Mục tiêu: Lớp này đóng vai trò lưu trữ các định nghĩa và thiết lập cấu trúc dữ liệu cốt lõi cho toàn bộ hệ thống.
+
+        \item Chức năng: Tiến hành mô phỏng các đối tượng thực tế trong ứng dụng bằng cách thiết lập các bảng dữ liệu cùng những liên kết logic giữa chúng.
         
-        \item Các thành phần: MovieInformation, Awards, Director, Cast, Genres.
+        \item Đối tượng chính: MovieInformation, Awards, Director, Cast, Genres.
         
-        \item Phụ thuộc: Tầng này không có sự phụ thuộc vào bất kỳ gói nào khác. Đây là tầng nằm ở mức thấp nhất trong kiến trúc hệ thống, nơi các dữ liệu được định nghĩa và quản lý thông qua các model.
+        \item Tính liên kết: Hoạt động độc lập và không dựa trên các gói bên ngoài, đây là thành phần nền tảng trong kiến trúc hệ thống, nơi dữ liệu được khởi tạo và điều phối qua các model.
     \end{itemize}
 
     \item Business Logic Layer (View)
 
     \begin{itemize}
-        \item Mục đích: Tầng này đảm nhiệm việc xử lý logic nghiệp vụ và quản lý các yêu cầu đến từ phía người dùng.
+        \item Mục tiêu: Thành phần này tập trung vào việc điều phối các luồng xử lý nghiệp vụ và phản hồi các tác vụ do người dùng gửi đến.
+
+        \item Vai trò: Trực tiếp lấy thông tin từ lớp Model, thực hiện các thao tác tính toán và định dạng lại dữ liệu trước khi chuyển giao cho lớp hiển thị.
+    
+        \item Các thành phần chính: FilmListView, DirectorListView, GenreListView, ReviewView.
         
-        \item Nhiệm vụ: Thực hiện truy xuất dữ liệu từ các model, tiến hành xử lý và chuẩn bị dữ liệu để có thể hiển thị trong template.
-        
-        \item Các thành phần: FilmListView, DirectorListView, GenreListView, ReviewView.
-        
-        \item Phụ thuộc: Tầng này có sự phụ thuộc vào gói Models. View sẽ thực hiện truy xuất dữ liệu từ model và xử lý logic nghiệp vụ, không có sự phụ thuộc trực tiếp vào gói Templates. Dữ liệu sau khi được chuẩn bị trong view sẽ được chuyển đến template để hiển thị cho người dùng.
+        \item Liên kết hệ thống: Lớp này chịu sự phụ thuộc vào gói Models để truy xuất dữ liệu nhưng hoạt động tách biệt với gói Templates. Sau khi hoàn tất xử lý logic, View mới bắt đầu chuyển dữ liệu sang Template để kết xuất giao diện cho người dùng.
     \end{itemize}
 
     \item Presentation Layer (Template)
 
     \begin{itemize}
-        \item Mục đích: Tầng này chịu trách nhiệm định nghĩa và xây dựng giao diện người dùng.
+        \item Mục tiêu: Lớp này đóng vai trò thiết lập và trình bày giao diện đồ họa cho người sử dụng cuối.
         
-        \item Nhiệm vụ: Thực hiện hiển thị dữ liệu được truyền từ view dưới các định dạng HTML, CSS và JavaScript. Template sẽ tiếp nhận dữ liệu từ view và thực hiện việc hiển thị dữ liệu đó.
+        \item Chức năng: Chuyển đổi thông tin nhận được từ View thành các định dạng hiển thị trực quan thông qua HTML, CSS và JavaScript để người dùng có thể tương tác.
+    
+        \item Các thành phần: Hệ thống các tệp HTML được thiết kế riêng cho từng trang trong ứng dụng như giao diện đăng nhập, đăng ký, trang chủ và trang thông tin chi tiết phim.
         
-        \item Các thành phần: Các tệp HTML template được sử dụng cho các trang web khác nhau của ứng dụng, chẳng hạn như trang đăng nhập, đăng ký, trang chủ, trang chi tiết phim.
-        
-        \item Phụ thuộc: Tầng này có sự phụ thuộc vào gói Views. Templates tiếp nhận dữ liệu từ view và thực hiện hiển thị, không có sự phụ thuộc trực tiếp vào gói Models. Tất cả dữ liệu được hiển thị trên giao diện đều được truyền từ view.
-    \end{itemize}
+        \item Liên kết hệ thống: Lớp này hoạt động dựa trên dữ liệu cung cấp từ gói Views mà không cần tương tác trực tiếp với gói Models. Toàn bộ thông tin hiển thị trên màn hình đều được luân chuyển và xử lý thông qua tầng View trước khi đến với Template.
+        \end{itemize}
 
 \end{enumerate}
 
@@ -98,23 +97,23 @@ Template sẽ nhận dữ liệu từ view và render ra các thành phần giao
 
 \textbf{Gói Model:}
 
-Ở gói này, có các gói nhỏ hợp thành là User và Movie. 
+Gói này được cấu thành từ hai nhóm nhỏ hơn là User và Movie.
 
 \begin{itemize}
     \item \textbf{Gói User:} 
-    Gồm 3 class l là Review, User và LikeMovie. 
+    Gói này được cấu thành từ ba lớp bao gồm Review, User và LikeMovie. 
 
-    Mô tả: Class User: Đại diện cho thông tin người dùng. Class Review: Chứa thông tin về đánh giá phim của người dùng. Class LikeMovie: Lưu trữ những bộ phim mà người dùng thích.
+    Về chức năng: Lớp User đóng vai trò mô hình hóa dữ liệu người dùng trong hệ thống. Lớp Review được thiết kế để quản lý các bản đánh giá mà người dùng đã tạo ra cho các bộ phim. Lớp LikeMovie có nhiệm vụ ghi nhận và lưu giữ danh sách các bộ phim được người dùng đánh dấu là yêu thích.
     
-    Phụ thuộc: Class Review và class LikeMovie phụ thuộc vào thông tin của User. 
+    Về mối quan hệ: Lớp Review và lớp LikeMovie đều cần tham chiếu đến dữ liệu từ lớp User để hoạt động. 
     
     \item  \textbf{Gói Movie:} 
     
-    Gồm 5 class là Movieinfomation, Director, Award, Cast, Writer. 
+    Gói này bao gồm năm lớp là Movieinfomation, Director, Award, Cast và Writer. 
 
-    Mô tả: Class MovieInformation: Lớp chính quản lý thông tin tổng quát về phim. Class Director: Lưu trữ thông tin chi tiết về các đạo diễn của phim. Class Award: Lưu trữ thông tin về các giải thưởng phim đã nhận được. Class Cast: Lưu trữ thông tin về các diễn viên tham gia trong phim. Class Writer: Lưu trữ thông tin về các nhà biên kịch của phim.
+    Về chức năng: Lớp MovieInformation đóng vai trò trung tâm trong việc quản lý các thông tin cơ bản về phim. Lớp Director được dùng để lưu trữ các thông tin cụ thể liên quan đến đạo diễn của từng bộ phim. Lớp Award có chức năng ghi nhận các giải thưởng mà phim đã đạt được. Lớp Cast chịu trách nhiệm quản lý thông tin về đội ngũ diễn viên xuất hiện trong phim. Lớp Writer được thiết kế để lưu trữ thông tin về các tác giả kịch bản.
 
-    Phụ thuộc: 4 class còn lại có quan hệ phụ thuộc với Movieinfomation, lấy Movieinfomation làm gốc, các thông tin còn lại đều là thông tin bổ sung.
+    Về mối quan hệ: Bốn lớp còn lại đều có mối liên kết phụ thuộc với lớp Movieinfomation, trong đó Movieinfomation đóng vai trò là lớp cốt lõi, còn các lớp khác đóng vai trò bổ trợ thông tin.
 \end{itemize}
 
 \begin{figure}[H]
@@ -126,32 +125,32 @@ Template sẽ nhận dữ liệu từ view và render ra các thành phần giao
 
 \textbf{Gói View:}
 
-Ở gói này, có các gói nhỏ hợp thành là UserView, MovieView và AdminView.
+Gói này được phân chia thành ba nhóm con bao gồm UserView, MovieView và AdminView.
 
 \begin{itemize}
     \item Gói UserView:
 
-    Gồm 3 class l là ReviewView, UserView và LikeMovieView. 
+    Gói này được tạo thành từ ba lớp là ReviewView, UserView và LikeMovieView. 
 
-    Mô tả: Class UserView: Lớp này chịu trách nhiệm hiển thị và xử lý các thông tin liên quan đến người dùng, bao gồm đăng ký, đăng nhập, và thông tin cá nhân. Class ReviewView: Lớp này xử lý và hiển thị các đánh giá phim của người dùng. Nó phụ thuộc vào thông tin người dùng từ UserView. Class LikeMovieView: Lớp này quản lý và hiển thị các bộ phim mà người dùng đã thích. Nó cũng phụ thuộc vào thông tin người dùng từ UserView.
+    Về chức năng: Lớp UserView có nhiệm vụ trình bày và điều phối các thông tin về người dùng, bao gồm các chức năng đăng ký tài khoản, đăng nhập hệ thống, và quản lý hồ sơ cá nhân. Lớp ReviewView đảm nhận việc xử lý và trình bày các bản đánh giá phim do người dùng tạo ra. Lớp này cần sử dụng dữ liệu từ UserView để hoạt động. Lớp LikeMovieView có chức năng điều hành và hiển thị danh sách các bộ phim được người dùng đánh dấu yêu thích. Lớp này cũng cần tham chiếu đến thông tin từ UserView.
     
-    Phụ thuộc: Class ReviewView và class LikeMovieView phụ thuộc vào thông tin của UserView. 
+    Về mối quan hệ: Lớp ReviewView và lớp LikeMovieView đều cần dữ liệu từ lớp UserView để thực hiện các chức năng của mình. 
 
     \item  Gói MovieView: 
     
-    Gồm 5 class là MovieinfomationView, DirectorView, AwardView, CastView, WriterView. 
+    Gói này chứa năm lớp là MovieinfomationView, DirectorView, AwardView, CastView và WriterView. 
 
-    Mô tả: Class MovieInformationView: Lớp chính quản lý, thao tác chính về phim. Class DirectorView: Xử lý dữ liệu về đạo diễn. Class AwardView: Xử lý dữ liệu, các thao tác về giải thưởng. Class CastView: Xử lý dữ liệu, các thao tác tính về diễn viên. Class Writer: Thao tác dữ liệu với biên kịch.
+    Về chức năng: Lớp MovieInformationView đóng vai trò trung tâm trong việc điều hành và thực hiện các thao tác chính liên quan đến phim. Lớp DirectorView chuyên xử lý các dữ liệu về đạo diễn. Lớp AwardView tập trung vào việc xử lý dữ liệu và thực hiện các thao tác liên quan đến giải thưởng. Lớp CastView chuyên xử lý dữ liệu và thực hiện các thao tác tính toán về diễn viên. Lớp WriterView thực hiện các thao tác dữ liệu liên quan đến biên kịch.
 
-    Phụ thuộc: 4 class còn lại có quan hệ phụ thuộc với Movieinfomation, lấy Movieinfomation làm gốc, các thông tin còn lại đều là thông tin bổ sung.
+    Về mối quan hệ: Bốn lớp còn lại đều có mối liên kết phụ thuộc với lớp Movieinfomation, trong đó Movieinfomation đóng vai trò là lớp nền tảng, còn các lớp khác cung cấp thông tin mở rộng.
 
     \item  Gói AdminView: 
     
-    Gồm 1 class là AdminView. 
+    Gói này chỉ chứa một lớp duy nhất là AdminView. 
 
-    Mô tả: Class AdminView có thể xử lý toàn bộ yêu cầu bao gồm các yêu cầu giống người dùng và có thể khác, admin quản lý toàn bộ trang web. Có thể thêm, sửa, xóa toàn bộ dữ liệu.
+    Về chức năng: Lớp AdminView có khả năng xử lý mọi loại yêu cầu trong hệ thống, bao gồm cả những yêu cầu tương tự như người dùng thông thường và các yêu cầu đặc biệt khác, cho phép quản trị viên điều hành toàn bộ website. Lớp này có đầy đủ quyền hạn để thực hiện các thao tác thêm mới, chỉnh sửa và xóa bỏ dữ liệu trong hệ thống.
 
-    Phụ thuộc: Không phụ thuộc vào class nào.
+    Về mối quan hệ: Lớp này hoạt động độc lập và không cần phụ thuộc vào bất kỳ lớp nào khác.
 \end{itemize}
 
 \begin{figure}[H]
@@ -177,76 +176,76 @@ Trong giai đoạn thiết kế, tôi đã áp dụng các nguyên tắc thiết
 
 Đối với việc chọn lựa màu sắc, tôi đã chọn một bảng màu cơ bản với hai tông màu chủ đạo là đen và tím, mang lại cảm giác thoải mái và thể hiện tính chuyên nghiệp. Những màu bổ sung được dùng để nhấn mạnh các thành phần quan trọng hoặc để báo hiệu các trạng thái khác nhau như thành công, cảnh báo, lỗi và trạng thái khi di chuột qua với các màu đỏ, vàng và xanh lá.
 
-Dưới đây là một số hình ảnh minh họa cho các giao diện người dùng đối với những chức năng cốt lõi của phần mềm:
+Phần tiếp theo trình bày các hình ảnh mô tả giao diện người dùng của những tính năng quan trọng nhất trong hệ thống:
 
-\textbf{Thiết kế màn hình đăng nhập}
+\textbf{Thiết kế màn hình login}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_login.png}
-    \caption[Thiết kế màn hình \textit{đăng nhập}]{Thiết kế màn hình \textit{đăng nhập}}
+    \caption[Thiết kế màn hình \textit{login}]{Thiết kế màn hình \textit{login}}
     \label{fig:web_login}
 \end{figure}
 
-\textbf{Thiết kế màn hình đăng ký}
+\textbf{Thiết kế màn hình signup}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_signup.png}
-    \caption[Thiết kế màn hình \textit{đăng ký}]{Thiết kế màn hình \textit{đăng ký}}
+    \caption[Thiết kế màn hình \textit{signup}]{Thiết kế màn hình \textit{signup}}
     \label{fig:web_signup}
 \end{figure}
 
-\textbf{Thiết kế màn hình profile}
+\textbf{Thiết kế màn hình user profile}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_profile.png}
-    \caption[Thiết kế màn hình \textit{profile}]{Thiết kế màn hình \textit{profile}}
+    \caption[Thiết kế màn hình \textit{user profile}]{Thiết kế màn hình \textit{user profile}}
     \label{fig:web_profile}
 \end{figure}
 
-\textbf{Thiết kế màn hình chính}
+\textbf{Thiết kế màn hình home}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_home.png}
-    \caption[Thiết kế màn hình \textit{chính}]{Thiết kế màn hình \textit{chính}}
+    \caption[Thiết kế màn hình \textit{home}]{Thiết kế màn hình \textit{home}}
     \label{fig:web_home}
 \end{figure}
 
-\textbf{Thiết kế màn hình gợi ý phim ở trang chủ}
+\textbf{Thiết kế màn hình gợi ý phim ở trang home}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_recommend.png}
-    \caption[Thiết kế màn hình \textit{gợi ý phim ở trang chủ}]{Thiết kế màn hình \textit{gợi ý phim ở trang chủ}}
+    \caption[Thiết kế màn hình \textit{gợi ý phim ở trang home}]{Thiết kế màn hình \textit{gợi ý phim ở trang home}}
     \label{fig:web_recommend}
 \end{figure}
 
-\textbf{Thiết kế màn hình thông tin chi tiết}
+\textbf{Thiết kế màn hình detail}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_detail.png}
-    \caption[Thiết kế màn hình \textit{thông tin chi tiết 1}]{Thiết kế màn hình \textit{thông tin chi tiết 1}}
+    \caption[Thiết kế màn hình \textit{detail 1}]{Thiết kế màn hình \textit{detail 1}}
     \label{fig:web_detail}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_detail1.png}
-    \caption[Thiết kế màn hình \textit{thông tin chi tiết 2}]{Thiết kế màn hình \textit{thông tin chi tiết 2}}
+    \caption[Thiết kế màn hình \textit{detail 2}]{Thiết kế màn hình \textit{detail 2}}
     \label{fig:web_detail1}
 \end{figure}
 
-\textbf{Thiết kế màn hình tổng hợp đạo diễn, diễn viên, ...}
+\textbf{Thiết kế màn hình cast and crew}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_cast_and_crew.png}
-    \caption[Thiết kế màn hình \textit{tổng hợp đạo diễn, diễn viên, ...}]{Thiết kế màn hình \textit{tổng hợp đạo diễn, diễn viên, ...}}
+    \caption[Thiết kế màn hình \textit{cast and crew}]{Thiết kế màn hình \textit{cast and crew}}
     \label{fig:web_cast_and_crew}
 \end{figure}
 
-\textbf{Thiết kế màn hình review phim}
+\textbf{Thiết kế màn hình user review}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_user_review.png}
-    \caption[Thiết kế màn hình \textit{review phim}]{Thiết kế màn hình \textit{review phim}}
+    \caption[Thiết kế màn hình \textit{user review}]{Thiết kế màn hình \textit{user review}}
     \label{fig:web_user_review}
 \end{figure}
 
@@ -254,7 +253,7 @@ Dưới đây là một số hình ảnh minh họa cho các giao diện ngườ
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/ERD.jpg}
-\caption{Thiết kế sơ đồ ERD}
+\caption{Thiết kế sơ đồ ERD của hệ thống}
 \label{fig:Ket_qua}
 \end{figure} 
 
@@ -530,7 +529,7 @@ Gói View: Bao gồm các class đảm nhiệm việc hiển thị và xử lý 
 
 Gói Template: Bao gồm các template HTML được sử dụng cho giao diện người dùng và giao diện quản trị.
 
-Các sản phẩm được đóng gói đóng vai trò và có ý nghĩa quan trọng trong việc quản lý và hiển thị thông tin về phim, đạo diễn, diễn viên, và đánh giá phim. Hệ thống này cung cấp một nền tảng cho phép người dùng có thể thực hiện tìm kiếm và xem thông tin về các bộ phim, viết đánh giá, và tương tác với nội dung. Bên cạnh đó, hệ thống còn có khả năng đề xuất những bộ phim phù hợp nhất với từng hành động của người dùng thông qua hệ thống gợi ý.
+Việc đóng gói các sản phẩm có ý nghĩa then chốt trong công tác quản trị và trình diễn các dữ liệu liên quan đến tác phẩm điện ảnh, đội ngũ đạo diễn, dàn diễn viên cùng những phản hồi từ khán giả. Nền tảng này cho phép người dùng chủ động tra cứu, theo dõi dữ liệu điện ảnh, đóng góp ý kiến cá nhân và tương tác trực tiếp với các nội dung trên hệ thống. Song song đó, thông qua công cụ gợi ý thông minh, ứng dụng có khả năng phân tích hành vi để đề xuất những tác phẩm điện ảnh tối ưu và phù hợp nhất với sở thích riêng biệt của từng cá nhân.
 
 \textbf{Thống kê các thông tin của ứng dụng:}
 

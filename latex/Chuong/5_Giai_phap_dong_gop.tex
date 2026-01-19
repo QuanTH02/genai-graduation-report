@@ -37,14 +37,14 @@ Nhằm cho phép hệ thống tự động cập nhật dữ liệu, quy trình 
         \label{fig:gh_at_1}
     \end{figure}
     
-    \item Tạo Secrets Repository
+    \item Thiết lập Secrets Repository
 
     Việc thiết lập GitHub Secrets nhằm mục tiêu bảo mật và quản trị tập trung các dữ liệu nhạy cảm như mã token, mật khẩu, hay khóa API trong suốt vòng đời phát triển dự án. Cơ chế này đảm bảo những thông tin quan trọng không bị công khai trên mã nguồn, đồng thời chỉ cho phép các quy trình tự động hóa như GitHub Actions hoặc các ứng dụng được ủy quyền truy xuất thông qua API an toàn.
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=1\linewidth]{Hinhve/gh_at_2.png}
-        \caption{Tạo Secrets trên GitHub}
+        \caption{Thiết lập Secrets trên GitHub}
         \label{fig:gh_at_2}
     \end{figure}
     
@@ -75,23 +75,23 @@ Ngay sau khi tệp update.sql được khởi tạo thành công, người dùng
 
 \section{Lựa chọn thuật toán gợi ý phù hợp}
 
-Việc lựa chọn thuật toán gợi ý phù hợp là một thách thức quan trọng trong quá trình phát triển ứng dụng gợi ý phim. Tôi đã tham khảo các bài báo và tài liệu trên mạng, thực hiện thử nghiệm và đánh giá các thuật toán khác nhau để tìm ra thuật toán phù hợp nhất với yêu cầu của dự án. Cụ thể chính là thuật toán Content-based.
+Việc xác định một phương pháp gợi ý tối ưu đóng vai trò then chốt và đầy thử thách trong quá trình xây dựng ứng dụng đề xuất điện ảnh. Sau khi nghiên cứu các công trình khoa học và tài liệu chuyên ngành, đồng thời tiến hành thực nghiệm để so sánh hiệu quả giữa các mô hình khác nhau, tôi đã quyết định lựa chọn thuật toán Content-based làm giải pháp chủ đạo cho dự án này.
 
 \textbf{Giới thiệu thuật toán Content-based:}
 
-Trong hệ thống content-based này, dựa trên nội dung của mỗi movie, tôi xây dựng một bộ hộ sơ cho mỗi movie. Hồ sơ này được biểu diễn dưới dạng toán học là một feature vector. Features của một bộ phim trong hệ thống gợi ý tôi xây dựng này là:
+Trong hệ thống lọc dựa trên nội dung này, tôi thiết lập một hồ sơ đặc trưng riêng biệt cho từng tác phẩm điện ảnh dựa trên các thuộc tính nội tại của chúng. Về mặt toán học, hồ sơ này được mô hình hóa thành một vectơ đặc trưng, đóng vai trò là cơ sở dữ liệu đầu vào để tính toán độ tương đồng giữa các bộ phim.
 
 \begin{itemize}
-    \item Movie name: Tên của bộ phim đó
-    \item Genres: Thể loại của bộ phim đó
-    \item Describe: Mô tả sơ lược về nội dung của bộ phim đó
-    \item Cast: Diễn viên của bộ phim đó
-    \item Director: Đạo diễn của bộ phim đó
+    \item Movie name: Tiêu đề của tác phẩm điện ảnh
+    \item Genres: Phân loại thể loại mà tác phẩm thuộc về
+    \item Describe: Nội dung tóm tắt về cốt truyện của tác phẩm
+    \item Cast: Danh sách các nghệ sĩ tham gia diễn xuất trong tác phẩm
+    \item Director: Người đảm nhiệm vai trò chỉ đạo sản xuất tác phẩm
 \end{itemize}
 
 \textbf{Phân tích, giải pháp:}
 
-Content-based là thuật toán mà khi chọn một item, thì sẽ đưa ra các item tương tự có những đặc điểm cụ thể giống với item đã chọn. Vì thế trong bài toán này tôi đã chọn cách tính độ tương đồng giữa các bộ phim dựa trên các feature ở trên.
+Content-based là phương thức gợi ý dựa trên việc đề xuất các đối tượng có những đặc tính tương đồng với đối tượng mà người dùng đã lựa chọn trước đó. Do vậy, trong phạm vi bài toán này, tôi đã thực hiện tính toán mức độ tương quan giữa các tác phẩm điện ảnh dựa trên tập hợp các vectơ đặc trưng đã xác định ở trên.
 
 \[
 \text{similarity}(A, B) = \cos(\theta) = \frac{A \cdot B}{\|A\| \|B\|}
@@ -99,14 +99,14 @@ Content-based là thuật toán mà khi chọn một item, thì sẽ đưa ra c�
 
 Trong đó:
 \begin{itemize}
-  \item \(A\) và \(B\) là hai vector đại diện cho hai phim hoặc hai người dùng.
-  \item \(A \cdot B\) là tích vô hướng của hai vector \(A\) và \(B\).
-  \item \(\|A\|\) và \(\|B\|\) lần lượt là độ lớn của vector \(A\) và vector \(B\).
+  \item \(A\) và \(B\) là hai vector biểu diễn cho hai tác phẩm điện ảnh hoặc hai đối tượng người dùng.
+  \item \(A \cdot B\) là giá trị tích vô hướng được tính từ hai vector \(A\) và \(B\).
+  \item \(\|A\|\) và \(\|B\|\) tương ứng là giá trị chuẩn (norm) của vector \(A\) và vector \(B\).
 \end{itemize}
 
 \textbf{Kiểm tra tính chính xác:}
 
-Sau khi tính toán được độ tương đồng dựa vào công thức similarity trên, tôi kiểm tra tính chính xác của thuật toán bằng cách: Tính toán độ tương đồng riêng lẻ của các đặc trưng như movie name, genres, cast, director, describe. Sau đó kiểm tra kết quả cuối cùng với các kết quả riêng biệt xem có chính xác không.
+Để đánh giá độ tin cậy của mô hình sau khi áp dụng công thức tính toán độ tương đồng, tôi tiến hành quy trình kiểm chứng bằng cách đo lường mức độ tương quan trên từng thuộc tính độc lập như tên phim, thể loại, dàn diễn viên, đạo diễn và phần mô tả. Cuối cùng, tôi thực hiện đối chiếu kết quả tổng hợp với các chỉ số riêng lẻ này để xác nhận tính nhất quán và độ chính xác của thuật toán.
 
 \begin{figure}[H]
     \centering

@@ -79,25 +79,25 @@ Tổng hợp từ các kết quả khảo sát đã thu thập được, các t�
 \textbf{Các tác nhân tham gia:}
 
 \begin{itemize}
-\item Guest (Khách hàng): Người dùng không có tài khoản trong hệ thống, truy cập vào hệ thống để tìm kiếm thông tin về phim.
-\item User (Người dùng): Người dùng đã đăng nhập vào hệ thống, có thể thực hiện các tác vụ như đánh giá phim, lưu phim vào danh sách yêu thích, thay đổi thông tin cá nhân, và tương tác với các tính năng khác của hệ thống.
-\item Admin (Quản trị viên): Người quản lý hệ thống, có quyền truy cập và quản lý tất cả các thông tin trong hệ thống.
+\item Guest (Khách truy cập): Đối tượng chưa đăng ký thành viên, thực hiện truy cập ứng dụng nhằm mục đích tra cứu và tham khảo các dữ liệu liên quan đến phim ảnh.
+\item User (Thành viên): Những cá nhân đã xác thực tài khoản, được phép thực hiện các thao tác như gửi phản hồi về phim, quản lý danh mục phim ưa thích, cập nhật hồ sơ cá nhân và sử dụng đầy đủ các tiện ích mở rộng khác.
+\item Admin (Quản trị viên): Cá nhân nắm quyền điều hành cao nhất, thực hiện giám sát toàn diện và kiểm soát mọi dữ liệu cũng như hoạt động diễn ra trên nền tảng.
 \end{itemize}
 
 \textbf{Vai Trò của Mỗi Tác Nhân:}
 
-\begin{itemize}
-\item Guest: Tác nhân này có vai trò chính là tìm kiếm thông tin về phim và xem các bộ phim mà không cần đăng nhập vào hệ thống.
-\item User: Tác nhân này có vai trò tương tự như Guest, nhưng cũng có thêm quyền đánh giá phim, thêm phim vào danh sách yêu thích, và quản lý thông tin cá nhân.
-\item Admin: Tác nhân này có vai trò quản lý hệ thống, bao gồm quản lý thông tin phim và quản lý thông tin người dùng.
+\begin{itemize} 
+  \item Guest: Vai trò chủ đạo của đối tượng này là tra cứu dữ liệu điện ảnh và thưởng thức các tác phẩm trực tuyến mà không yêu cầu thực hiện thao tác đăng nhập. 
+  \item User: Ngoài việc sở hữu các tính năng như Guest, thành viên này còn được cấp quyền bình luận, lưu trữ phim vào mục quan tâm và điều chỉnh hồ sơ cá nhân. 
+  \item Admin: Đây là chủ thể điều hành toàn bộ hệ thống, chịu trách nhiệm kiểm soát danh mục phim cũng như giám sát các hoạt động của người dùng. 
 \end{itemize}
 
 \textbf{Các use case chính:}
 
-\begin{itemize}
-\item Xem thông tin các phim: Cả Guest và User đều có thể xem thông tin chi tiết về các bộ phim như nội dung, đạo diễn, diễn viên, phần thưởng, doanh thu, review, ...
-\item Tương tác với phim: User có thể đánh giá phim và lưu phim vào danh sách yêu thích.
-\item Gợi ý phim: Hệ thống đưa ra những gợi ý dựa vào thao tác của người dùng như khi người dùng vào xem một bộ phim nào đó hoặc đánh giá một bộ phim nào đó.
+\begin{itemize} 
+  \item Truy xuất dữ liệu điện ảnh: Cả hai đối tượng Guest và User đều được phép tham khảo các thông số chi tiết của tác phẩm như cốt truyện, ê-kíp sản xuất, dàn sao, giải thưởng, chỉ số doanh thu và những nhận xét từ cộng đồng. 
+  \item Phản hồi và lưu trữ: Thành viên hệ thống có khả năng trực tiếp chấm điểm cho tác phẩm cũng như cá nhân hóa kho lưu trữ bằng cách thêm phim vào mục yêu thích. 
+  \item Đề xuất nội dung: Dựa trên lịch sử truy cập và các lượt xếp hạng từ phía người dùng, nền tảng sẽ tự động hiển thị danh sách các bộ phim phù hợp với sở thích cá nhân. 
 \end{itemize}
 
 
@@ -116,12 +116,12 @@ Tổng hợp từ các kết quả khảo sát đã thu thập được, các t�
 \caption{Phân rã use case Quản lý thông tin người dùng}
 \label{fig:Usecase_quanlynguoidung}
 \end{figure} 
-Trong biểu đồ use case phân rã "Quản lý thông tin người dùng", các use case được phân rã và mô tả như sau:
+Trong sơ đồ use case phân rã "Quản lý thông tin người dùng", các thành phần con được chia tách và giải thích cụ thể như sau:
 
 \begin{itemize}
 \item Thêm người dùng: Admin có quyền thêm người dùng mới vào hệ thống bằng cách cung cấp thông tin cần thiết như tên đăng nhập, email và mật khẩu.
-\item Sửa thông tin người dùng: Admin có thể chỉnh sửa thông tin cá nhân của người dùng, bao gồm cả tên đăng nhập, email, và mật khẩu.
-\item Xóa người dùng: Admin có khả năng xóa người dùng khỏi hệ thống.
+\item Chỉnh sửa hồ sơ thành viên: Quản trị viên được quyền thay đổi các chi tiết cá nhân của người dùng, bao gồm tên truy cập, địa chỉ email cũng như mật khẩu hệ thống.
+\item Loại bỏ thành viên: Quản trị viên có quyền hạn gỡ bỏ tài khoản người dùng ra khỏi hệ thống.
 \end{itemize}
 
 \subsection{Biểu đồ use case phân rã Quản lý thông tin phim}
@@ -132,12 +132,12 @@ Trong biểu đồ use case phân rã "Quản lý thông tin người dùng", c�
 \caption{Phân rã use case Quản lý thông tin phim}
 \label{fig:Usecase_quanlyphim}
 \end{figure} 
-Trong biểu đồ use case phân rã "Quản lý thông tin phim", các use case được phân rã và mô tả như sau:
+Trong sơ đồ Use Case chi tiết thuộc phân hệ "Quản lý thông tin phim", các chức năng con được phân tách và diễn giải cụ thể như sau:
 
-\begin{itemize}
-\item Thêm phim: Admin có khả năng thêm phim mới vào hệ thống bằng cách cung cấp thông tin chi tiết về phim như tiêu đề, nội dung, thể loại, đạo diễn, diễn viên, năm sản xuất, hình ảnh, ...
-\item Sửa thông tin phim: Admin có thể chỉnh sửa thông tin chi tiết của một bộ phim đã tồn tại trong hệ thống, bao gồm cả các thông tin như thể loại, đạo diễn, diễn viên và nội dung.
-\item Xóa phim: Admin có khả năng xóa một bộ phim khỏi hệ thống.
+\begin{itemize} 
+  \item Cập nhật phim mới: Quản trị viên có quyền thiết lập các bộ phim mới trên hệ thống thông qua việc cung cấp đầy đủ các dữ liệu như tên phim, tóm tắt, chủng loại, đạo diễn, dàn diễn viên, thời điểm phát hành, ảnh minh họa, ... 
+  \item Chỉnh sửa dữ liệu điện ảnh: Admin được phép thay đổi những thông số chi tiết của tác phẩm đã có sẵn, bao gồm các thành phần về thể loại, người dàn dựng, diễn viên tham gia và mô tả kịch bản. 
+  \item Gỡ bỏ phim: Người quản lý hệ thống có thẩm quyền xóa vĩnh viễn một đầu phim ra khỏi cơ sở dữ liệu. 
 \end{itemize}
 
 
@@ -149,12 +149,12 @@ Trong biểu đồ use case phân rã "Quản lý thông tin phim", các use cas
 \caption{Phân rã use case Quản lý tài khoản}
 \label{fig:Usecase_quanlytaikhoan}
 \end{figure} 
-Trong biểu đồ use case phân rã "Quản lý tài khoản", các use case được phân rã và mô tả như sau:
+Trong biểu đồ Use case phân rã "Quản lý tài khoản", các chức năng con được phân tách và diễn giải cụ thể như sau:
 
-\begin{itemize}
-\item Quên mật khẩu: Người dùng có thể khôi phục mật khẩu bằng cách yêu cầu gửi liên kết đặt lại mật khẩu qua email.
-\item Đổi mật khẩu: Người dùng có thể thay đổi mật khẩu hiện tại bằng cách nhập mật khẩu cũ và mật khẩu mới.
-\item Chỉnh sửa thông tin cá nhân: Người dùng có thể chỉnh sửa thông tin cá nhân của mình như tên, địa chỉ email, ảnh đại diện, ...
+\begin{itemize} 
+  \item Quên mật khẩu: Thành viên có thể thiết lập lại mã bảo mật thông qua việc yêu cầu hệ thống gửi đường dẫn thay đổi mật khẩu tới hòm thư điện tử cá nhân. 
+  \item Đổi mật khẩu: Người dùng được phép thay thế mật khẩu đang sử dụng bằng cách xác nhận lại mật khẩu cũ và thiết lập chuỗi ký tự mới. 
+  \item Thay đổi hồ sơ cá nhân: Người dùng có quyền tự điều chỉnh các chi tiết về bản thân như họ tên, địa chỉ email, hình ảnh đại diện và các thông tin liên quan khác. 
 \end{itemize}
 
 
@@ -166,29 +166,26 @@ Trong biểu đồ use case phân rã "Quản lý tài khoản", các use case �
 \caption{Phân rã use case Tương tác với phim}
 \label{fig:Usecase_tuongtacphim}
 \end{figure} 
-Trong biểu đồ use case phân rã "Tương tác với phim", các use case được phân rã và mô tả như sau:
+Trong biểu đồ use case phân rã "Tương tác với phim", các chức năng con được phân tách và diễn giải cụ thể như sau:
 
-\begin{itemize}
-\item Đánh dấu phim yêu thích: Người dùng có khả năng đánh dấu các bộ phim yêu thích vào danh sách riêng của mình để dễ dàng theo dõi truy cập sau này và hệ thống có thể đưa ra gợi ý những bộ phim có khả năng mà người dùng thích.
-\item Xóa phim yêu thích: Người dùng có khả năng xóa đi những bộ phim đã từng thêm vào danh sách yêu thích.
-\end{itemize}
-Đánh dấu phim yêu thích: Người dùng có khả năng đánh dấu các bộ phim yêu thích vào danh sách riêng của mình để dễ dàng theo dõi truy cập sau này và hệ thống có thể đưa ra gợi ý những bộ phim có khả năng mà người dùng thích.
+\begin{itemize} 
+  \item Lưu phim vào mục yêu thích: Thành viên có thể thêm các tác phẩm điện ảnh vào bộ sưu tập cá nhân nhằm thuận tiện cho việc tìm kiếm lại, đồng thời giúp hệ thống đề xuất các nội dung tương đồng phù hợp với sở thích. 
+  \item Loại bỏ phim khỏi danh sách: Người dùng được phép gỡ bỏ những bộ phim đã lưu trước đó ra khỏi mục yêu thích của mình. 
+\end{itemize} 
 
-Xóa phim yêu thích: Người dùng có khả năng xóa đi những bộ phim đã từng thêm vào danh sách yêu thích.
-
-\subsection{Biểu đồ use case phân rã Review, comment}
+\subsection{Biểu đồ use case phân rã bình luận, đánh giá phim}
 \label{subsection:2.2.6}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\linewidth]{Hinhve/Usecase_phan_ra_user_review.drawio.png}
-\caption{Phân rã use case Review, comment}
+\caption{Phân rã use case bình luận, đánh giá phim}
 \label{fig:Usecase_review}
 \end{figure} 
-Trong biểu đồ use case phân rã "Review, comment", các use case được phân rã và mô tả như sau:
+Trong biểu đồ use case phân rã "bình luận, đánh giá phim", các chức năng con được phân tách và diễn giải cụ thể như sau:
 
-\begin{itemize}
-\item Viết review phim: Người dùng có khả năng viết và đăng review về một bộ phim sau khi xem. Họ có thể nhập nội dung review vào và đăng lên hệ thống để chia sẻ ý kiến của mình với cộng đồng người dùng khác.
-\item Like review: Người dùng có thể thể hiện sự đồng tình hoặc ủng hộ bằng cách like các review mà họ thấy ý nghĩa hoặc hữu ích.
+\begin{itemize} 
+  \item Đánh giá phim: Sau khi thưởng thức, thành viên có thể soạn thảo và chia sẻ nhận xét về phim lên hệ thống để thảo luận cũng như đóng góp quan điểm cá nhân với cộng đồng. 
+  \item Tương tác bình luận: Người dùng có quyền biểu đạt sự tán thành hoặc khích lệ bằng cách nhấn nút "Thích" cho những bài review mà họ cảm thấy tâm đắc hoặc có giá trị tham khảo cao. 
 \end{itemize}
 
 
