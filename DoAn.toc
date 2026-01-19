@@ -25,7 +25,7 @@
 \contentsline {subsection}{\numberline {2.4.2}Đặc tả use case Chỉnh sửa thông tin cá nhân}{14}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}Đặc tả use case Tìm kiếm phim}{15}{subsection.2.4.3}%
 \contentsline {subsection}{\numberline {2.4.4}Đặc tả use case Đánh dấu phim mình thích}{16}{subsection.2.4.4}%
-\contentsline {subsection}{\numberline {2.4.5}Đặc tả use case Đánh giá phim}{16}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.4.5}Đặc tả use case Đánh giá phim}{17}{subsection.2.4.5}%
 \contentsline {subsection}{\numberline {2.4.6}Đặc tả use case CRUD phim}{18}{subsection.2.4.6}%
 \contentsline {subsection}{\numberline {2.4.7}Đặc tả use case Gợi ý phim theo nội dung}{19}{subsection.2.4.7}%
 \contentsline {section}{\numberline {2.5}Yêu cầu phi chức năng}{19}{section.2.5}%
@@ -71,12 +71,12 @@
 \contentsline {subsection}{\numberline {5.3.2}Kết quả đạt được}{47}{subsection.5.3.2}%
 \contentsline {subsection}{\numberline {5.3.3}Minh họa các chức năng chính}{51}{subsection.5.3.3}%
 \contentsline {section}{\numberline {5.4}Kiểm thử}{53}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Triển khai}{56}{section.5.5}%
-\contentsline {chapter}{\numberline {6}CÁC GIẢI PHÁP VÀ ĐÓNG GÓP NỔI BẬT}{58}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Thiếu khá nhiều dữ liệu phim ảnh}{58}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Thiết kế database khá khó khăn với quá nhiều trường}{58}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Trang web có dữ liệu update liên tục theo ngày khiến link ảnh và trailer bị hỏng}{58}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Lựa chọn thuật toán gợi ý phù hợp}{61}{section.6.4}%
-\contentsline {chapter}{\numberline {7}KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}{65}{chapter.7}%
-\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{68}{section*.69}%
+\contentsline {section}{\numberline {5.5}Triển khai}{57}{section.5.5}%
+\contentsline {chapter}{\numberline {6}CÁC GIẢI PHÁP VÀ ĐÓNG GÓP NỔI BẬT}{59}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Thiếu khá nhiều dữ liệu phim ảnh}{59}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Thiết kế database khá khó khăn với quá nhiều trường}{59}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Trang web có dữ liệu update liên tục theo ngày khiến link ảnh và trailer bị hỏng}{59}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Lựa chọn thuật toán gợi ý phù hợp}{62}{section.6.4}%
+\contentsline {chapter}{\numberline {7}KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}{66}{chapter.7}%
+\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{69}{section*.69}%
 \contentsfinish 
