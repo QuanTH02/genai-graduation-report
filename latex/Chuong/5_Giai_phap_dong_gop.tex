@@ -14,7 +14,7 @@ Trong quá trình thiết kế cơ sở dữ liệu, tôi gặp phải thách th
 
 Một trong các trang web được sử dụng để thu thập dữ liệu là IMDb, trang web này chứa rất nhiều trường thông tin, tuy nhiên việc khó khăn nhất trong quá trình thu thập dữ liệu đối với tôi chính là việc lấy các liên kết ảnh và liên kết trailer. Trên trang web này, cứ mỗi ngày các liên kết ảnh và trailer sẽ được làm mới một lần, do đó các liên kết cũ sẽ trở nên không hợp lệ và không thể truy cập được vào ngày hôm sau. Tôi đã đề xuất hai phương án để giải quyết vấn đề này: Tải toàn bộ ảnh và trailer về máy hoặc tìm cách để hệ thống tự động cập nhật dữ liệu.
 
-Đối với phương án tải toàn bộ ảnh và trailer xuống, tôi đã loại bỏ ngay sau khi xác định số lượng bộ phim để demo ứng dụng. Với 5000 bộ phim thì sẽ có tổng cộng hơn 250000 ảnh và 5000 video demo, việc tải về sẽ làm cho máy tính trở nên nặng và không tối ưu. Do đó, tôi đã nghiên cứu và tìm ra giải pháp để hệ thống tự động cập nhật dữ liệu, đó chính là sử dụng GitHub Actions.
+Về phương án tải xuống toàn bộ hình ảnh và video trailer, tôi đã từ bỏ ngay khi quyết định số lượng phim cần thiết cho bản demo. Nếu có 5000 bộ phim thì sẽ có hơn 250000 hình ảnh và 5000 video demo, việc tải xuống sẽ khiến máy tính trở nên cồng kềnh và không hiệu quả. Vì vậy, tôi đã tìm hiểu và phát hiện ra một giải pháp để hệ thống có thể tự động cập nhật dữ liệu, đó là việc sử dụng GitHub Actions.
 
 \textbf{Giới thiệu Github Action:}
 
@@ -22,9 +22,9 @@ GitHub Actions là một dịch vụ được GitHub cung cấp nhằm tự đ�
 
 \textbf{Triển khai:}
 
-Bước đầu tiên, tôi tạo một file crawlJson.py với mục đích crawl toàn bộ dữ liệu mới từ trang IMDb và lưu vào file update.sql, sau khi có file update.sql thì chỉ cần cập nhật vào môi trường local là sẽ có dữ liệu mới ngay lập tức.
+Ở bước đầu tiên, tôi xây dựng một file crawlJson.py nhằm thu thập toàn bộ dữ liệu mới từ website IMDb và ghi vào file update.sql, một khi đã có file update.sql thì chỉ việc import vào môi trường local là có thể có dữ liệu mới ngay.
 
-Để hệ thống có thể tự động cập nhật dữ liệu, các bước thực hiện như sau:
+Nhằm cho phép hệ thống tự động cập nhật dữ liệu, quy trình thực hiện bao gồm các bước sau:
 
 \begin{enumerate}
     \item Tạo PAT (Personal Access Token) Github
@@ -135,7 +135,7 @@ Từ hình ảnh \ref{fig:rcm_ct_kq_2}, có thể quan sát thấy bộ phim đ�
     \label{fig:rcm_ct_kq_3}
 \end{figure}
 
-Từ hình ảnh \ref{fig:rcm_ct_kq_3}, có thể nhận định rằng bộ phim được hệ thống đề xuất có mức độ tương đồng cao nhất với bộ phim Meg 2: The Trench là bộ phim The Meg. Hai bộ phim này thể hiện sự tương đồng đáng kể về tên phim, mô tả, diễn viên và đạo diễn.
+Quan sát hình ảnh \ref{fig:rcm_ct_kq_3}, có thể kết luận rằng bộ phim được hệ thống gợi ý có độ tương đồng lớn nhất với bộ phim Meg 2: The Trench chính là bộ phim The Meg. Hai bộ phim này có nhiều điểm tương đồng về tên gọi, nội dung mô tả, dàn diễn viên và đạo diễn.
 
 Dựa trên các kết quả đã được trình bày ở trên kết hợp với việc kiểm tra bằng phương pháp trực quan, có thể kết luận rằng hệ thống gợi ý phim dựa trên độ tương đồng đã được thực hiện với mức độ chính xác cao.
 

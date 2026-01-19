@@ -163,19 +163,19 @@ Template sẽ nhận dữ liệu từ view và render ra các thành phần giao
 
 \textbf{Gói Template:}
 
-Gói này bao gồm 2 class là UserTemplate và AdminTemplate.
+Gói này chứa hai lớp là UserTemplate và AdminTemplate.
 
-Mô tả: Class UserTemplate: Lớp này đảm nhiệm việc quản lý các mẫu HTML được sử dụng cho giao diện người dùng. Các mẫu này bao gồm các trang như đăng nhập, đăng ký, trang thông tin cá nhân, trang đánh giá phim, và các trang hiển thị danh sách phim, diễn viên, đạo diễn. Class AdminTemplate: Lớp này đảm nhiệm việc quản lý các mẫu HTML được sử dụng cho giao diện quản trị. Các mẫu này bao gồm các trang quản lý người dùng, quản lý phim, duyệt đánh giá và các trang khác được sử dụng bởi admin để quản lý hệ thống.
+Mô tả: Class UserTemplate: Lớp này chịu trách nhiệm quản lý các file template HTML dành cho phần giao diện của người dùng cuối. Những template này gồm có các trang đăng nhập, đăng ký tài khoản, trang profile cá nhân, trang để đánh giá phim, cùng với các trang liệt kê danh sách phim, danh sách diễn viên và danh sách đạo diễn. Class AdminTemplate: Lớp này chịu trách nhiệm quản lý các file template HTML dành cho phần giao diện của quản trị viên. Những template này gồm có các trang để quản lý tài khoản người dùng, quản lý thông tin phim, phê duyệt các đánh giá và những trang khác mà admin sử dụng để điều hành toàn bộ hệ thống.
     
-Phụ thuộc: Hai class này không có mối quan hệ phụ thuộc lẫn nhau. Chúng hoạt động độc lập và phục vụ các mục đích riêng biệt: một bên phục vụ giao diện người dùng, một bên phục vụ giao diện quản trị.
+Phụ thuộc: Hai lớp này không tồn tại mối quan hệ phụ thuộc với nhau. Mỗi lớp hoạt động một cách tự chủ và đáp ứng những nhu cầu khác nhau: một lớp phục vụ cho người dùng thông thường, lớp còn lại phục vụ cho bộ phận quản trị.
 
 \section{Thiết kế chi tiết}
 \subsection{Thiết kế giao diện}
-Trong quá trình thiết kế giao diện cho ứng dụng, tôi đã lựa chọn các thông số kỹ thuật, tiêu chuẩn và các template chuẩn nhằm đảm bảo tính nhất quán và sự tiện lợi trong sử dụng. Các màn hình mục tiêu của ứng dụng được thiết kế với độ phân giải 1920x1080 pixels, phù hợp với các kích thước màn hình từ 13 inch trở lên. Hệ thống hỗ trợ hiển thị đến 16 triệu màu nhằm đảm bảo các yếu tố đồ họa và hình ảnh được hiển thị một cách sắc nét và rõ ràng.
+Khi tiến hành thiết kế giao diện cho hệ thống, tôi đã chọn lựa các tham số kỹ thuật, các tiêu chuẩn thiết kế và các mẫu template chuẩn để đảm bảo sự đồng nhất và tính tiện dụng. Những màn hình chính của hệ thống được xây dựng với độ phân giải 1920x1080 pixels, tương thích với các loại màn hình có kích thước từ 13 inch trở lên. Hệ thống có khả năng hiển thị lên đến 16 triệu màu để đảm bảo các thành phần đồ họa và hình ảnh hiển thị với chất lượng cao và chi tiết.
 
-Trong quá trình thiết kế, tôi đã tuân thủ các quy chuẩn cụ thể để tạo ra một giao diện người dùng có tính nhất quán cao. Các nút bấm được thiết kế với các kích thước theo tiêu chuẩn chung, tạo điều kiện để người dùng dễ dàng nhận biết và thao tác. Các điều khiển như dropdowns, checkboxes, và radio buttons được thiết kế để có giao diện thống nhất, đồng bộ và dễ nhận biết. Các thông điệp phản hồi dành cho người dùng được hiển thị ở vị trí dễ quan sát, cụ thể là ở phía trên bên phải của màn hình.
+Trong giai đoạn thiết kế, tôi đã áp dụng các nguyên tắc thiết kế cụ thể để xây dựng một giao diện có sự thống nhất. Những nút điều khiển được xây dựng với kích thước tuân theo các tiêu chuẩn phổ biến, giúp người dùng có thể dễ dàng nhận diện và thực hiện các thao tác. Các thành phần điều khiển như menu thả xuống, hộp kiểm và nút radio được xây dựng để có diện mạo thống nhất, nhất quán và dễ phân biệt. Những thông báo phản hồi cho người dùng được đặt ở vị trí dễ nhìn thấy, cụ thể là góc trên bên phải màn hình.
 
-Về việc phối màu, tôi đã lựa chọn một bảng màu chính với các tông màu đen và tím, tạo ra cảm giác dễ chịu và mang tính chuyên nghiệp. Các màu phụ được sử dụng để làm nổi bật các yếu tố quan trọng hoặc để thông báo các trạng thái khác nhau như thành công, cảnh báo, lỗi và trạng thái hover với các màu đỏ, vàng và xanh lá cây.
+Đối với việc chọn lựa màu sắc, tôi đã chọn một bảng màu cơ bản với hai tông màu chủ đạo là đen và tím, mang lại cảm giác thoải mái và thể hiện tính chuyên nghiệp. Những màu bổ sung được dùng để nhấn mạnh các thành phần quan trọng hoặc để báo hiệu các trạng thái khác nhau như thành công, cảnh báo, lỗi và trạng thái khi di chuột qua với các màu đỏ, vàng và xanh lá.
 
 Dưới đây là các hình ảnh minh họa cho thiết kế giao diện của các chức năng quan trọng trong ứng dụng:
 
@@ -546,7 +546,7 @@ Số gói: 8 gói
 
 Dung lượng toàn bộ mã nguồn: Khoảng 310MB khi đã có hệ thống gợi ý và dữ liệu, còn nếu mỗi phần code thì dung lượng khoảng 25MB
 
-Hệ thống đã được hoàn thành với cấu trúc được tổ chức một cách rõ ràng, mã nguồn được sắp xếp một cách hợp lý trong các gói và lớp. Các thống kê chi tiết về số dòng code, số lớp và dung lượng mã nguồn góp phần hỗ trợ việc đánh giá và theo dõi quá trình phát triển của dự án. Hệ thống đáp ứng đầy đủ các yêu cầu đã đề ra và sẵn sàng để triển khai và đưa vào sử dụng trong môi trường thực tế.
+Hệ thống đã được hoàn thiện với một kiến trúc có tổ chức rõ ràng, nơi mã nguồn được phân bổ hợp lý giữa các gói và các lớp. Những con số thống kê cụ thể liên quan đến số lượng dòng mã, số lượng lớp và kích thước mã nguồn đóng vai trò hỗ trợ trong công tác đánh giá và giám sát tiến độ phát triển dự án. Hệ thống đã thỏa mãn toàn bộ các yêu cầu đã được đặt ra và đã sẵn sàng cho việc triển khai và vận hành trong môi trường thực tế.
 
 \textbf{Crawl dữ liệu từ trang web:}
 

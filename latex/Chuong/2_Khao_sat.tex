@@ -65,11 +65,11 @@ Theo kết quả của khảo sát về quyền theo dõi, tôi nhận thấy r�
 %  \hline
 % \end{tabular}
 
-Trong khi đó, thông qua khảo sát các hệ thống đã có như IMDb, Metacritic, Rotten Tomatoes, TMDb, Box Office Mojo và The Numbers, tôi đã so sánh và đánh giá các tính năng, hiệu năng và khả năng cung cấp thông tin của từng hệ thống. Từ đó, tôi nhận thấy mỗi hệ thống có điểm mạnh và điểm yếu riêng, và việc kết hợp các tính năng của chúng có thể tạo ra một ứng dụng gợi ý phim toàn diện.
+Mặt khác, việc nghiên cứu và đánh giá các hệ thống hiện có bao gồm IMDb, Metacritic, Rotten Tomatoes, TMDb, Box Office Mojo và The Numbers đã được thực hiện nhằm so sánh và phân tích các tính năng, hiệu suất hoạt động cũng như khả năng cung cấp thông tin của mỗi hệ thống. Kết quả phân tích cho thấy rằng mỗi hệ thống đều sở hữu những ưu điểm và nhược điểm đặc trưng, và việc tích hợp các tính năng ưu việt từ các hệ thống này có tiềm năng tạo ra một giải pháp gợi ý phim mang tính toàn diện và hiệu quả.
 
-Cuối cùng, tôi cũng đã khảo sát một số ứng dụng giới thiệu phim trên nền tảng di động và web, từ đó nhận thấy một số điểm chung về giao diện thân thiện và tính năng gợi ý phim dựa trên hành vi người dùng như trong \autoref{tab:Khao_sat_web}. Tuy nhiên, nhiều ứng dụng vẫn cần cải thiện về mặt hiệu năng và tính năng phong phú.
+Bên cạnh đó, một số ứng dụng giới thiệu phim trên các nền tảng di động và web cũng đã được khảo sát, qua đó phát hiện ra những đặc điểm tương đồng liên quan đến thiết kế giao diện thân thiện với người dùng và các tính năng gợi ý phim được xây dựng dựa trên phân tích hành vi người dùng như được thể hiện trong \autoref{tab:Khao_sat_web}. Tuy vậy, phần lớn các ứng dụng này vẫn còn tồn tại những hạn chế về khả năng xử lý hiệu suất và sự đa dạng trong các tính năng được cung cấp.
 
-Dựa trên kết quả khảo sát từ các nguồn trên, tôi xác định rõ các tính năng cần thiết để phát triển một ứng dụng gợi ý phim toàn diện, đáp ứng tốt nhu cầu của người dùng.
+Tổng hợp từ các kết quả khảo sát đã thu thập được, các tính năng quan trọng cần được tích hợp vào hệ thống đã được xác định một cách rõ ràng, nhằm mục tiêu phát triển một giải pháp gợi ý phim toàn diện có khả năng đáp ứng một cách hiệu quả các nhu cầu đa dạng của người dùng.
 
 \section{Tổng quan chức năng}
 \label{section:2.2}
@@ -217,7 +217,7 @@ Bảng trên (\autoref{tab:Usecase_dangnhap}) là đặc tả use case Đăng nh
 \label{tab:Usecase_chinhsuathongtincanhan}
 \end{table} 
 
-Bảng trên (\autoref{tab:Usecase_chinhsuathongtincanhan}) là đặc tả use case Chỉnh sửa thông tin cá nhân từ người dùng. Trong đó, người dùng có thể chỉnh sửa thông tin cá nhân của mình như tên, địa chỉ email, ảnh đại diện, ... Hệ thống sẽ kiểm tra thông tin cá nhân của người dùng và trả về kết quả chỉnh sửa. Sẽ validate thông tin cá nhân để tránh lỗi input không hợp lệ.
+Bảng \autoref{tab:Usecase_chinhsuathongtincanhan} mô tả chi tiết use case Chỉnh sửa thông tin cá nhân được thực hiện bởi người dùng. Use case này cho phép người dùng thực hiện việc cập nhật các thông tin cá nhân bao gồm tên, địa chỉ email, ảnh đại diện và các thông tin khác. Hệ thống sẽ tiến hành xác thực và kiểm tra tính hợp lệ của các thông tin được cập nhật, sau đó phản hồi lại kết quả của quá trình chỉnh sửa. Việc kiểm tra tính hợp lệ của dữ liệu đầu vào được thực hiện nhằm ngăn chặn các lỗi do dữ liệu không đúng định dạng hoặc không đáp ứng các yêu cầu đã quy định.
 
 \subsection{Đặc tả use case Tìm kiếm phim}
 \begin{table}[H]
@@ -239,7 +239,7 @@ Ngoài ra còn có chức năng Tìm kiếm phim bằng ngôn ngữ người dù
 \label{tab:Usecase_danhdayphimyeuthich}
 \end{table} 
 
-Bảng trên (\autoref{tab:Usecase_danhdayphimyeuthich}) là đặc tả use case Đánh dấu phim mình thích từ người dùng. Trong đó, người dùng có thể đánh dấu phim mình thích vào danh sách riêng của mình để dễ dàng theo dõi truy cập sau này và hệ thống có thể đưa ra gợi ý những bộ phim có khả năng mà người dùng thích.
+Bảng \autoref{tab:Usecase_danhdayphimyeuthich} mô tả chi tiết use case Đánh dấu phim yêu thích được thực hiện bởi người dùng. Thông qua use case này, người dùng có khả năng lưu các bộ phim yêu thích vào một danh sách cá nhân riêng biệt, tạo điều kiện thuận lợi cho việc quản lý và truy cập lại sau này. Đồng thời, hành động này cũng cung cấp dữ liệu quan trọng để hệ thống có thể phân tích và đề xuất các bộ phim phù hợp với sở thích của người dùng.
 
 \subsection{Đặc tả use case Đánh giá phim}
 \FloatBarrier
@@ -263,7 +263,7 @@ Bảng trên (\autoref{tab:Usecase_danhgiaphim}) là đặc tả use case Đánh
 \end{table}
 \FloatBarrier
 
-Bảng trên (\autoref{tab:Usecase_crudphim}) là đặc tả use case CRUD phim cho admin. Trong đó, admin có thể thêm, sửa, xóa phim vào danh sách phim của hệ thống. Hệ thống sẽ kiểm tra phim của admin và trả về kết quả CRUD.
+Bảng \autoref{tab:Usecase_crudphim} trình bày chi tiết use case CRUD phim dành cho quản trị viên. Use case này cho phép quản trị viên thực hiện các thao tác quản lý cơ bản đối với danh sách phim trong hệ thống, bao gồm việc thêm mới, chỉnh sửa và xóa bỏ các bộ phim. Sau khi nhận được yêu cầu từ quản trị viên, hệ thống sẽ tiến hành xác thực và xử lý dữ liệu, sau đó phản hồi lại kết quả của các thao tác CRUD đã được thực hiện.
 
 \subsection{Đặc tả use case Gợi ý phim theo nội dung}
 \begin{table}[H]
