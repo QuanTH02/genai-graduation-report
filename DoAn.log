@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.1.15)  19 JAN 2026 20:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.1.15)  19 JAN 2026 21:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2708,7 +2708,7 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `DoAn.out' has not changed.
-(rerunfilecheck)             Checksum: 37D4577CC5F99F808F14935C07B7CFCD;14666.
+(rerunfilecheck)             Checksum: E4F850D07FCAEF7BA6033E7651F10D0B;14695.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                DoAn
@@ -2721,7 +2721,7 @@ Package logreq Info: Writing requests to 'DoAn.run.xml'.
 Here is how much of TeX's memory you used:
  31090 strings out of 478287
  545171 string characters out of 5849289
- 1311376 words of memory out of 5000000
+ 1311546 words of memory out of 5000000
  48418 multiletter control sequences out of 15000+600000
  517198 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2736,7 +2736,7 @@ sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/vntex/urwvn/utmr8v.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/vntex/urwvn/utmri8v.pfb>
 Output written on /home/quanth02/Code/Quan/KSCS/bao_cao_do_an/Do_an_tot_nghiep/
-DoAn.pdf (82 pages, 11776388 bytes).
+DoAn.pdf (82 pages, 11776617 bytes).
 PDF statistics:
  1181 PDF objects out of 1200 (max. 8388607)
  908 compressed objects within 10 object streams

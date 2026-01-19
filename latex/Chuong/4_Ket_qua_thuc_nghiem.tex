@@ -157,13 +157,13 @@ Template sẽ nhận dữ liệu từ view và render ra các thành phần giao
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/layerTemp.png}
-    \caption{Thiết kế chi tiết gói ở tầng Template}
+    \caption{Thiết kế chi tiết gói Template}
     \label{fig:layerTemp}
 \end{figure}
 
 \textbf{Gói Template:}
 
-Gói này bao gồm hai thành phần chính là UserTemplate và AdminTemplate.
+Hệ thống này được cấu thành từ hai bộ phận chủ chốt bao gồm AdminTemplate cùng với UserTemplate.
 
 Về chức năng, lớp UserTemplate đảm nhận việc quản lý hệ thống các tệp HTML giao diện dành riêng cho người dùng cuối, bao gồm các trang chức năng như đăng nhập, đăng ký, hồ sơ cá nhân, khu vực đánh giá phim, cùng các danh mục hiển thị về phim ảnh, diễn viên và đạo diễn. Trong khi đó, lớp AdminTemplate tập trung vào việc quản lý các giao diện dành cho nhà quản trị, hỗ trợ các nghiệp vụ điều hành hệ thống như kiểm soát tài khoản người dùng, cập nhật dữ liệu phim, kiểm duyệt bình luận và các công cụ quản lý tổng thể khác.
 
@@ -177,105 +177,105 @@ Trong giai đoạn thiết kế, tôi đã áp dụng các nguyên tắc thiết
 
 Đối với việc chọn lựa màu sắc, tôi đã chọn một bảng màu cơ bản với hai tông màu chủ đạo là đen và tím, mang lại cảm giác thoải mái và thể hiện tính chuyên nghiệp. Những màu bổ sung được dùng để nhấn mạnh các thành phần quan trọng hoặc để báo hiệu các trạng thái khác nhau như thành công, cảnh báo, lỗi và trạng thái khi di chuột qua với các màu đỏ, vàng và xanh lá.
 
-Sau đây là các hình ảnh trực quan mô phỏng thiết kế giao diện cho những tính năng trọng tâm của ứng dụng:
+Dưới đây là một số hình ảnh minh họa cho các giao diện người dùng đối với những chức năng cốt lõi của phần mềm:
 
-\textbf{Màn hình đăng nhập}
+\textbf{Thiết kế màn hình đăng nhập}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_login.png}
-    \caption[Màn hình \textit{đăng nhập}]{Màn hình \textit{đăng nhập}}
+    \caption[Thiết kế màn hình \textit{đăng nhập}]{Thiết kế màn hình \textit{đăng nhập}}
     \label{fig:web_login}
 \end{figure}
 
-\textbf{Màn hình đăng ký}
+\textbf{Thiết kế màn hình đăng ký}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_signup.png}
-    \caption[Màn hình \textit{đăng ký}]{Màn hình \textit{đăng ký}}
+    \caption[Thiết kế màn hình \textit{đăng ký}]{Thiết kế màn hình \textit{đăng ký}}
     \label{fig:web_signup}
 \end{figure}
 
-\textbf{Màn hình profile}
+\textbf{Thiết kế màn hình profile}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_profile.png}
-    \caption[Màn hình \textit{profile}]{Màn hình \textit{profile}}
+    \caption[Thiết kế màn hình \textit{profile}]{Thiết kế màn hình \textit{profile}}
     \label{fig:web_profile}
 \end{figure}
 
-\textbf{Màn hình chính}
+\textbf{Thiết kế màn hình chính}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_home.png}
-    \caption[Màn hình \textit{chính}]{Màn hình \textit{chính}}
+    \caption[Thiết kế màn hình \textit{chính}]{Thiết kế màn hình \textit{chính}}
     \label{fig:web_home}
 \end{figure}
 
-\textbf{Màn hình gợi ý phim ở trang chủ}
+\textbf{Thiết kế màn hình gợi ý phim ở trang chủ}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_recommend.png}
-    \caption[Màn hình \textit{gợi ý phim ở trang chủ}]{Màn hình \textit{gợi ý phim ở trang chủ}}
+    \caption[Thiết kế màn hình \textit{gợi ý phim ở trang chủ}]{Thiết kế màn hình \textit{gợi ý phim ở trang chủ}}
     \label{fig:web_recommend}
 \end{figure}
 
-\textbf{Màn hình thông tin chi tiết}
+\textbf{Thiết kế màn hình thông tin chi tiết}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_detail.png}
-    \caption[Màn hình \textit{thông tin chi tiết 1}]{Màn hình \textit{thông tin chi tiết 1}}
+    \caption[Thiết kế màn hình \textit{thông tin chi tiết 1}]{Thiết kế màn hình \textit{thông tin chi tiết 1}}
     \label{fig:web_detail}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_detail1.png}
-    \caption[Màn hình \textit{thông tin chi tiết 2}]{Màn hình \textit{thông tin chi tiết 2}}
+    \caption[Thiết kế màn hình \textit{thông tin chi tiết 2}]{Thiết kế màn hình \textit{thông tin chi tiết 2}}
     \label{fig:web_detail1}
 \end{figure}
 
-\textbf{Màn hình tổng hợp đạo diễn, diễn viên, ...}
+\textbf{Thiết kế màn hình tổng hợp đạo diễn, diễn viên, ...}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_cast_and_crew.png}
-    \caption[Màn hình \textit{tổng hợp đạo diễn, diễn viên, ...}]{Màn hình \textit{tổng hợp đạo diễn, diễn viên, ...}}
+    \caption[Thiết kế màn hình \textit{tổng hợp đạo diễn, diễn viên, ...}]{Thiết kế màn hình \textit{tổng hợp đạo diễn, diễn viên, ...}}
     \label{fig:web_cast_and_crew}
 \end{figure}
 
-\textbf{Màn hình review phim}
+\textbf{Thiết kế màn hình review phim}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Hinhve/web_user_review.png}
-    \caption[Màn hình \textit{review phim}]{Màn hình \textit{review phim}}
+    \caption[Thiết kế màn hình \textit{review phim}]{Thiết kế màn hình \textit{review phim}}
     \label{fig:web_user_review}
 \end{figure}
 
-\subsection{Thiết kế cơ sở dữ liệu}
+\subsection{Thiết kế cơ sở dữ liệu hệ thống}
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/ERD.jpg}
-\caption{Sơ đồ ERD}
+\caption{Thiết kế sơ đồ ERD}
 \label{fig:Ket_qua}
 \end{figure} 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.3\linewidth]{Hinhve/data1.png}
-\caption{Hình ảnh các table trong database 1}
+\caption{Hình ảnh các bảng trong cơ sở dữ liệu 1}
 \label{fig:Database1}
 \end{figure} 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.3\linewidth]{Hinhve/data2.png}
-\caption{Hình ảnh các table trong database 2}
+\caption{Hình ảnh các bảng trong cơ sở dữ liệu 2}
 \label{fig:Database2}
 \end{figure} 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.3\linewidth]{Hinhve/data3.png}
-\caption{Hình ảnh các table trong database 3}
+\caption{Hình ảnh các bảng trong cơ sở dữ liệu 3}
 \label{fig:Database3}
 \end{figure} 
 
@@ -616,7 +616,7 @@ Dựa vào lịch sử tìm kiếm của người dùng, hệ thống lưu lại
 \label{fig:ketqua1}
 \end{figure} 
 
-Bằng cách nghiên cứu lịch sử lưu trữ phim của từng cá nhân, hệ thống có thể tự động cập nhật xu hướng và đưa ra những gợi ý mới nhất sát với gu thưởng thức riêng biệt của mỗi người dùng.
+Dựa trên việc phân tích lịch sử xem phim của mỗi cá nhân, hệ thống sẽ tự động cập nhật các xu hướng thị trường và đề xuất những nội dung mới nhất phù hợp tối đa với sở thích riêng biệt của từng người dùng.
 
 \textbf{Chức năng gợi ý phim dựa vào nội dung phim đang xem}
 \begin{figure}[H]
@@ -628,15 +628,15 @@ Bằng cách nghiên cứu lịch sử lưu trữ phim của từng cá nhân, h
 
 Hệ thống cho phép hiển thị các tác phẩm điện ảnh có đặc điểm tương đồng với bộ phim mà người dùng đang theo dõi hoặc tìm kiếm.
 
-\textbf{Chức năng thêm phim vào danh sách yêu thích}
+\textbf{Chức năng thêm phim yêu thích vào danh sách}
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{Hinhve/ketqua3.png}
-\caption{Chức năng thêm phim vào danh sách yêu thích}
+\caption{Chức năng thêm phim yêu thích vào danh sách}
 \label{fig:ketqua3}
 \end{figure} 
 
-Người dùng có thể chủ động lưu lại những bộ phim yêu thích vào bộ sưu tập cá nhân thông qua tính năng thêm vào danh sách yêu thích khi tìm thấy nội dung phù hợp.
+Thông qua công cụ thêm vào danh mục ưu tiên, người xem dễ dàng lưu trữ các tác phẩm điện ảnh tâm đắc vào kho lưu trữ riêng ngay khi tìm thấy nội dung ưng ý.
 
 \textbf{Chức năng review phim}
 \begin{figure}[H]
@@ -663,7 +663,7 @@ Người dùng có thể truy cập vào trang chi tiết phim để xem toàn b
 \FloatBarrier
 \begin{table}[ht!]
 \centering
-\caption{Kiểm thử chức năng}
+\caption{Kiểm thử, đánh giá chức năng 1}
 \includegraphics[width=1\linewidth]{Hinhve/test1.png}
 \label{tab:test1}
 \end{table} 
@@ -672,7 +672,7 @@ Người dùng có thể truy cập vào trang chi tiết phim để xem toàn b
 \FloatBarrier
 \begin{table}[ht!]
 \centering
-\caption{Kiểm thử chức năng}
+\caption{Kiểm thử, đánh giá chức năng 2}
 \includegraphics[width=1\linewidth]{Hinhve/test2.png}
 \label{tab:test2}
 \end{table} 
