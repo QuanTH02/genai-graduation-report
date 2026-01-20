@@ -1,17 +1,141 @@
 \documentclass[../DoAn.tex]{subfiles}
 \begin{document}
 Chương này được dành để giới thiệu về các nền tảng lý thuyết cũng như các thuật toán chính được sử dụng trong việc phát triển hệ thống gợi ý phim, với trọng tâm là phương pháp Content-Based Filtering. Đây được xem là một trong các kỹ thuật được sử dụng rộng rãi và đạt được hiệu quả đáng kể trong lĩnh vực đề xuất nội dung cá nhân hóa cho người dùng, dựa trên nguồn dữ liệu hiện có. Chương sẽ đi sâu vào việc giải thích các khái niệm nền tảng, các nguyên lý lý thuyết, các thuật toán cụ thể được triển khai, cùng với các phương pháp nghiên cứu có liên quan đến kỹ thuật gợi ý này. Mỗi nội dung sẽ giải thích rõ ràng về cách thức ứng dụng các thuật toán nhằm thỏa mãn các yêu cầu và khắc phục các vấn đề đã được nêu ra ở Chương 2. Nhờ vậy, người đọc có thể hiểu rõ về cơ chế hoạt động cũng như các lợi ích mà phương pháp gợi ý này đem lại cho hệ thống.
-\section{Content-Based Filtering}
-\label{section:3.1}
-\subsection{Khái niệm}
+
+\textbf{Khái niệm Content-Based Filtering:}
+
 Content-Based Filtering là một phương pháp gợi ý được triển khai trong các hệ thống đề xuất, hoạt động bằng cách khai thác và phân tích các đặc điểm cũng như các thuộc tính của các đối tượng cần được đề xuất. Điểm khác biệt so với các phương pháp gợi ý dựa trên sở thích và hành vi của cộng đồng người dùng, CBF chủ yếu dựa vào các thuộc tính bên trong và các đặc trưng độc đáo của mỗi sản phẩm để hình thành các gợi ý có tính phù hợp cao. Với phương pháp tiếp cận này, hệ thống có thể xác định và đề xuất các sản phẩm mang tính tương đồng cao dựa trên các sản phẩm mà người dùng đã bày tỏ sự quan tâm hoặc đưa ra đánh giá tốt. Ví dụ, khi một người dùng yêu thích một tác phẩm thuộc thể loại hành động với sự góp mặt của một diễn viên nhất định, hệ thống sẽ tự động truy vấn và đề xuất các bộ phim khác có cùng thể loại cũng như có sự tham gia của diễn viên đó.
 
-\subsection{Các thuật toán}
+\section{Lý do lựa chọn Content-Based Filtering cho ứng dụng gợi ý phim}
+
+Việc lựa chọn Content-Based Filtering làm phương pháp chính cho hệ thống gợi ý phim được quyết định dựa trên nhiều yếu tố quan trọng. Đầu tiên, phương pháp này không yêu cầu dữ liệu lịch sử tương tác từ nhiều người dùng như Collaborative Filtering, giúp hệ thống có thể hoạt động ngay cả khi số lượng người dùng mới hoặc dữ liệu đánh giá còn hạn chế. Điều này đặc biệt quan trọng trong giai đoạn khởi động của ứng dụng, khi chưa có đủ dữ liệu về hành vi người dùng để áp dụng các phương pháp gợi ý khác.
+
+Thứ hai, Content-Based Filtering cung cấp khả năng giải thích rõ ràng cho các gợi ý. Hệ thống có thể chỉ ra chính xác lý do tại sao một bộ phim được gợi ý, ví dụ như "phim này có cùng thể loại và diễn viên với phim đã xem", giúp tăng độ tin cậy và trải nghiệm người dùng. Điều này khác với các phương pháp dựa trên Collaborative Filtering, thường khó giải thích vì dựa trên mối tương quan ẩn giữa các người dùng. \autoref{fig:so_sanh_cf_vs_cf} minh họa sự khác biệt cơ bản giữa hai phương pháp này.
+
+Thứ ba, phương pháp này phù hợp với đặc thù của dữ liệu phim ảnh, nơi mà các thuộc tính như thể loại, diễn viên, đạo diễn, năm sản xuất là những yếu tố quan trọng và dễ dàng trích xuất từ metadata của phim. Những thông tin này có sẵn và đáng tin cậy, giúp xây dựng profile phim một cách chính xác mà không cần phụ thuộc vào dữ liệu người dùng.
+
+Cuối cùng, Content-Based Filtering tránh được vấn đề "cold start" đối với sản phẩm mới. Khi một bộ phim mới được thêm vào hệ thống, ngay lập tức có thể được gợi ý dựa trên các thuộc tính của nó, không cần chờ đợi người dùng đánh giá trước. Điều này đảm bảo hệ thống luôn cập nhật với các nội dung mới nhất và đáp ứng được nhu cầu khám phá của người dùng.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.7\linewidth]{Hinhve/cf_1.png}
+  \caption{So sánh Content-Based Filtering với Collaborative Filtering}
+  \label{fig:so_sanh_cf_vs_cf}
+  \end{figure} 
+
+\section{Ứng dụng Content-Based Filtering trong hệ thống gợi ý phim}
+
+\subsection{Vai trò và mục đích sử dụng}
+
+Trong hệ thống gợi ý phim, Content-Based Filtering đóng vai trò là công cụ chính để cung cấp các gợi ý phim cá nhân hóa dựa trên nội dung. Khi người dùng xem chi tiết một bộ phim, hệ thống sẽ tự động hiển thị danh sách các phim tương tự ở phần "Phim liên quan" hoặc "Có thể bạn sẽ thích". Điều này giúp người dùng dễ dàng khám phá các nội dung mới mà không cần phải tìm kiếm thủ công.
+
+Hệ thống sử dụng Content-Based Filtering để phân tích các đặc trưng của phim bao gồm: thể loại (genres), dàn diễn viên (cast), đạo diễn (director), mô tả nội dung (description), năm sản xuất, và quốc gia sản xuất. Mỗi phim được biểu diễn dưới dạng một vector đặc trưng, trong đó mỗi thành phần của vector đại diện cho một thuộc tính cụ thể. Hệ thống sau đó tính toán độ tương đồng giữa các phim dựa trên các vector này để xác định các phim có nội dung tương tự nhất.
+
+\subsection{Cách thức hoạt động trong hệ thống}
+
+Quy trình hoạt động của Content-Based Filtering trong hệ thống được thực hiện qua các bước như được minh họa trong \autoref{fig:quy_trinh_cf}:
+
+\begin{enumerate}
+    \item Trích xuất đặc trưng: Hệ thống thu thập và xử lý metadata của phim từ cơ sở dữ liệu, bao gồm tên phim, thể loại, dàn diễn viên, đạo diễn, mô tả, và các thông tin khác. Mỗi thuộc tính được mã hóa thành các giá trị số hoặc vector.
+    
+    \item Xây dựng profile phim: Các thuộc tính được kết hợp để tạo thành profile hoàn chỉnh cho mỗi phim. Với dữ liệu văn bản như mô tả, hệ thống sử dụng TF-IDF để trích xuất các từ khóa quan trọng. Với các thuộc tính phân loại như thể loại và diễn viên, hệ thống sử dụng one-hot encoding hoặc embedding.
+    
+    \item Tính toán độ tương đồng: Khi người dùng xem một phim, hệ thống tính toán độ tương đồng giữa phim đó với tất cả các phim khác trong cơ sở dữ liệu sử dụng Cosine Similarity. Các phim có độ tương đồng cao nhất sẽ được lựa chọn để gợi ý.
+    
+    \item Lọc và sắp xếp kết quả: Hệ thống lọc ra các phim có độ tương đồng vượt qua ngưỡng nhất định, sau đó sắp xếp chúng theo thứ tự giảm dần của độ tương đồng. Top N phim (ví dụ: top 10 hoặc top 20) sẽ được hiển thị cho người dùng.
+\end{enumerate}
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.7\linewidth]{Hinhve/cf_2.png}
+  \caption{Quy trình Content-Based Filtering}
+  \label{fig:quy_trinh_cf}
+  \end{figure} 
+
+\subsection{Vị trí sử dụng trong ứng dụng}
+
+Content-Based Filtering được tích hợp vào hệ thống ở các điểm quan trọng sau:
+
+\begin{itemize}
+    \item Trang chi tiết phim: Khi người dùng xem thông tin chi tiết của một bộ phim, hệ thống sẽ hiển thị phần "Phim tương tự" hoặc "Có thể bạn sẽ thích" ở cuối trang. Đây là vị trí chính mà Content-Based Filtering được áp dụng, giúp người dùng khám phá các phim liên quan ngay sau khi quan tâm đến một phim cụ thể.
+    
+    \item Trang gợi ý: Trong trang gợi ý chuyên dụng, Content-Based Filtering có thể được kết hợp với các phương pháp khác để tạo ra danh sách gợi ý đa dạng và phong phú. Hệ thống có thể sử dụng lịch sử xem phim của người dùng để xây dựng profile người dùng, sau đó tìm các phim tương tự với các phim mà người dùng đã quan tâm.
+    
+    \item Chức năng tìm kiếm nâng cao: Content-Based Filtering cũng hỗ trợ chức năng tìm kiếm bằng cách cho phép người dùng tìm các phim tương tự với một phim mẫu. Người dùng có thể nhập tên phim hoặc chọn một phim, và hệ thống sẽ trả về danh sách các phim có nội dung tương tự.
+\end{itemize}
+
+\textbf{Các thuật toán:}
 Các thuật toán chính được sử dụng trong Content-Based Filtering bao gồm:
 
 \textbf{TF-IDF (Term Frequency-Inverse Document Frequency):} Thuật toán này được áp dụng nhằm xác định mức độ quan trọng của các từ khóa trong một văn bản. Việc tính toán dựa trên sự kết hợp giữa tần suất xuất hiện của từ trong văn bản (Term Frequency) và nghịch đảo của tần suất xuất hiện của từ đó trong toàn bộ tập văn bản (Inverse Document Frequency), từ đó xác định được trọng số phù hợp cho mỗi từ khóa.
 
 \textbf{Cosine Similarity:} Đây là một phương pháp được sử dụng để đo lường mức độ tương đồng giữa hai vector trong không gian vector. Việc tính toán độ tương tự cosine được thực hiện thông qua việc xác định giá trị cosin của góc được tạo bởi hai vector đó. Kỹ thuật này thường được vận dụng để đánh giá mức độ tương đồng giữa hồ sơ người dùng và hồ sơ của các sản phẩm trong hệ thống.
+
+Công thức tính Cosine Similarity giữa hai vector $A$ và $B$ được biểu diễn như sau:
+
+\[
+\text{similarity}(A, B) = \cos(\theta) = \frac{A \cdot B}{\|A\| \|B\|} = \frac{\sum_{i=1}^{n} A_i B_i}{\sqrt{\sum_{i=1}^{n} A_i^2} \sqrt{\sum_{i=1}^{n} B_i^2}}
+\]
+
+Trong đó:
+\begin{itemize}
+    \item $A \cdot B$ là tích vô hướng của hai vector
+    \item $\|A\|$ và $\|B\|$ là độ dài (norm) của các vector
+    \item Giá trị cosine similarity nằm trong khoảng [-1, 1], với 1 biểu thị độ tương đồng hoàn toàn và -1 biểu thị độ khác biệt hoàn toàn
+\end{itemize}
+
+Cosine Similarity đặc biệt phù hợp cho việc so sánh các vector có chiều dài khác nhau, vì nó chỉ xem xét hướng của vector chứ không phụ thuộc vào độ lớn. Điều này rất hữu ích khi so sánh các phim có số lượng thể loại hoặc diễn viên khác nhau.
+
+\section{So sánh các thuật toán trong Content-Based Filtering}
+
+Trong Content-Based Filtering, có nhiều thuật toán khác nhau có thể được sử dụng để tính toán độ tương đồng giữa các phim. Mỗi thuật toán có những ưu điểm và nhược điểm riêng, phù hợp với các trường hợp sử dụng cụ thể. Dưới đây là so sánh chi tiết giữa các thuật toán phổ biến.
+
+\subsection{So sánh TF-IDF và các phương pháp trích xuất đặc trưng khác}
+
+TF-IDF là một trong những phương pháp phổ biến nhất để trích xuất đặc trưng từ dữ liệu văn bản. Tuy nhiên, trong bối cảnh của hệ thống gợi ý phim, việc so sánh TF-IDF với các phương pháp khác như Bag of Words (BoW) và Word Embeddings là cần thiết:
+
+\begin{itemize}
+    \item Bag of Words (BoW): Đây là phương pháp đơn giản nhất, chỉ đếm tần suất xuất hiện của từ trong văn bản mà không xem xét tầm quan trọng của từ. BoW dễ triển khai nhưng có nhược điểm là không phân biệt được các từ quan trọng và không quan trọng, dẫn đến kết quả kém chính xác hơn TF-IDF.
+    
+    \item TF-IDF: Phương pháp này cải thiện BoW bằng cách nhân tần suất từ (TF) với nghịch đảo tần suất tài liệu (IDF), giúp giảm trọng số của các từ xuất hiện phổ biến và tăng trọng số của các từ đặc trưng. TF-IDF phù hợp cho việc trích xuất từ khóa quan trọng từ mô tả phim, giúp phân biệt được các phim có nội dung tương tự dựa trên các từ khóa đặc trưng.
+    
+    \item Word Embeddings (Word2Vec, GloVe, FastText): Các phương pháp này biểu diễn từ dưới dạng vector trong không gian đa chiều, giúp nắm bắt được ngữ nghĩa và mối quan hệ giữa các từ. Word Embeddings vượt trội hơn TF-IDF trong việc hiểu ngữ cảnh và ý nghĩa của văn bản, nhưng đòi hỏi dữ liệu huấn luyện lớn và chi phí tính toán cao hơn.
+\end{itemize}
+
+\subsection{So sánh Cosine Similarity với các phương pháp đo độ tương đồng khác}
+
+Cosine Similarity là phương pháp phổ biến để đo độ tương đồng, nhưng cũng có nhiều phương pháp khác có thể được sử dụng:
+
+\begin{itemize}
+    \item Euclidean Distance: Phương pháp này đo khoảng cách trực tiếp giữa hai điểm trong không gian vector. Euclidean Distance phù hợp khi các vector có cùng quy mô và ý nghĩa, nhưng nhạy cảm với sự khác biệt về độ lớn của vector. Trong trường hợp so sánh các phim có số lượng thuộc tính khác nhau, Euclidean Distance có thể không phản ánh chính xác độ tương đồng.
+    
+    \item Cosine Similarity: Phương pháp này đo góc giữa hai vector, không phụ thuộc vào độ lớn của vector. Cosine Similarity đặc biệt phù hợp cho các vector sparse (thưa) như trong trường hợp của metadata phim, nơi mỗi phim chỉ có một số thuộc tính cụ thể. Phương pháp này cũng hiệu quả về mặt tính toán và dễ dàng chuẩn hóa về khoảng [0, 1]. \autoref{fig:cosine_vs_euclidean} minh họa sự khác biệt giữa Cosine Similarity và Euclidean Distance trong việc đo độ tương đồng giữa các vector.
+    
+    \item Jaccard Similarity: Phương pháp này đo độ tương đồng giữa hai tập hợp dựa trên giao và hợp của chúng. Jaccard Similarity rất phù hợp cho dữ liệu phân loại nhị phân (binary), ví dụ như danh sách thể loại hoặc diễn viên mà một phim có hoặc không có. Tuy nhiên, Jaccard không phù hợp cho dữ liệu có trọng số như TF-IDF vectors.
+    
+    \item Manhattan Distance (L1 Distance): Phương pháp này tính tổng giá trị tuyệt đối của sự khác biệt giữa các thành phần tương ứng của hai vector. Manhattan Distance ít nhạy cảm với outliers hơn Euclidean Distance, nhưng thường kém hiệu quả hơn Cosine Similarity trong các bài toán gợi ý.
+\end{itemize}
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.7\linewidth]{Hinhve/cf_3.png}
+  \caption{So sánh Cosine Similarity và Euclidean Distance}
+  \label{fig:cosine_vs_euclidean}
+  \end{figure} 
+
+\subsection{Lựa chọn thuật toán cho hệ thống}
+
+Dựa trên đặc thù của hệ thống gợi ý phim, tôi đã lựa chọn sử dụng TF-IDF kết hợp với Cosine Similarity. Lý do cho sự lựa chọn này bao gồm:
+
+\begin{enumerate}
+    \item Phù hợp với dữ liệu có sẵn: Metadata của phim chứa nhiều thông tin văn bản (mô tả, tóm tắt) và thông tin phân loại (thể loại, diễn viên). TF-IDF có thể xử lý hiệu quả cả hai loại dữ liệu này.
+    
+    \item Hiệu suất tính toán: TF-IDF và Cosine Similarity có độ phức tạp tính toán thấp, cho phép hệ thống xử lý hàng ngàn phim trong thời gian ngắn. Điều này quan trọng để đảm bảo trải nghiệm người dùng mượt mà.
+    
+    \item Dễ triển khai và bảo trì: Các thuật toán này đã được chuẩn hóa và có sẵn trong nhiều thư viện, giúp việc triển khai và bảo trì hệ thống trở nên dễ dàng.
+    
+    \item Kết quả dễ giải thích: Với TF-IDF, hệ thống có thể giải thích rõ ràng các từ khóa nào đóng vai trò quan trọng trong việc xác định độ tương đồng, giúp người dùng hiểu tại sao một phim được gợi ý.
+\end{enumerate}
 
 Việc tích hợp thuật toán Content-Based Filtering vào hệ thống giúp tối ưu hóa hiệu suất vận hành, đồng thời đảm bảo mỗi người dùng đều nhận được những đề xuất điện ảnh bám sát sở thích và nhu cầu cá biệt của từng cá nhân.
 

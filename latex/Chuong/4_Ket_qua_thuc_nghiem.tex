@@ -7,13 +7,7 @@ Trong dự án này, tôi quyết định áp dụng mô hình kiến trúc MVT 
 
 \textbf{Giải thích sơ bộ về MVT:}
 
-Mô hình MVT trong Django có những nét tương đồng nhất định với kiến trúc MVC (Model-View-Controller) truyền thống, tuy nhiên quy trình vận hành và sự phân chia trách nhiệm giữa các thành phần lại có những điểm khác biệt đặc trưng.
-
-\begin{itemize} 
-    \item \textbf{Model (M):} Thiết lập khung sơ đồ dữ liệu cho ứng dụng và điều phối các thao tác truy xuất vào cơ sở dữ liệu. 
-    \item \textbf{View (V):} Đảm nhận vai trò xử lý các quy trình nghiệp vụ hệ thống và điều hướng dữ liệu đến người dùng cuối. 
-    \item \textbf{Template (T):} Xây dựng lớp giao diện hiển thị thông qua ngôn ngữ HTML kết hợp linh hoạt với các biến dữ liệu Python. 
-\end{itemize}
+Mô hình MVT trong Django có những nét tương đồng nhất định với kiến trúc MVC (Model-View-Controller) truyền thống, tuy nhiên quy trình vận hành và sự phân chia trách nhiệm giữa các thành phần lại có những điểm khác biệt đặc trưng. Trong kiến trúc MVT, Model (M) thiết lập khung sơ đồ dữ liệu cho ứng dụng và điều phối các thao tác truy xuất vào cơ sở dữ liệu. Các dữ liệu từ Model được xử lý bởi View (V), đảm nhận vai trò xử lý các quy trình nghiệp vụ hệ thống và điều hướng dữ liệu đến người dùng cuối. Cuối cùng, Template (T) xây dựng lớp giao diện hiển thị thông qua ngôn ngữ HTML kết hợp linh hoạt với các biến dữ liệu Python được truyền từ View, tạo ra một luồng xử lý dữ liệu từ Model qua View đến Template để hiển thị cho người dùng.
 
 \textbf{Mô tả kiến trúc cụ thể cho ứng dụng:}
 
@@ -42,7 +36,7 @@ Các tệp giao diện này tiếp nhận dữ liệu từ View để kết xu�
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Hinhve/imgUML.png}
+    \includegraphics[width=0.9\linewidth]{Hinhve/imgUML.png}
     \caption{Biểu đồ phụ thuộc gói}
     \label{fig:imgUML}
 \end{figure}
@@ -155,7 +149,7 @@ Gói này được phân chia thành ba nhóm con bao gồm UserView, MovieView 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Hinhve/layerTemp.png}
+    \includegraphics[width=0.9\linewidth]{Hinhve/layerTemp.png}
     \caption{Thiết kế chi tiết gói Template}
     \label{fig:layerTemp}
 \end{figure}
@@ -170,7 +164,7 @@ Về tính liên kết, hai lớp này được thiết kế hoàn toàn độc 
 
 \section{Thiết kế chi tiết}
 \subsection{Thiết kế giao diện}
-Khi tiến hành thiết kế giao diện cho hệ thống, tôi đã chọn lựa các tham số kỹ thuật, các tiêu chuẩn thiết kế và các mẫu template chuẩn để đảm bảo sự đồng nhất và tính tiện dụng. Những màn hình chính của hệ thống được xây dựng với độ phân giải 1920x1080 pixels, tương thích với các loại màn hình có kích thước từ 13 inch trở lên. Hệ thống có khả năng hiển thị lên đến 16 triệu màu để đảm bảo các thành phần đồ họa và hình ảnh hiển thị với chất lượng cao và chi tiết.
+Khi tiến hành thiết kế giao diện cho hệ thống, tôi đã chọn lựa các tham số kỹ thuật, các tiêu chuẩn thiết kế và các mẫu template chuẩn để đảm bảo sự đồng nhất và tính tiện dụng. Những màn hình chính của hệ thống được xây dựng với độ phân giải 1920$\times$1080 pixels, tương thích với các loại màn hình có kích thước từ 13 inch trở lên. Hệ thống có khả năng hiển thị lên đến 16 triệu màu để đảm bảo các thành phần đồ họa và hình ảnh hiển thị với chất lượng cao và chi tiết.
 
 Trong giai đoạn thiết kế, tôi đã áp dụng các nguyên tắc thiết kế cụ thể để xây dựng một giao diện có sự thống nhất. Những nút điều khiển được xây dựng với kích thước tuân theo các tiêu chuẩn phổ biến, giúp người dùng có thể dễ dàng nhận diện và thực hiện các thao tác. Các thành phần điều khiển như menu thả xuống, hộp kiểm và nút radio được xây dựng để có diện mạo thống nhất, nhất quán và dễ phân biệt. Những thông báo phản hồi cho người dùng được đặt ở vị trí dễ nhìn thấy, cụ thể là góc trên bên phải màn hình.
 
@@ -181,7 +175,7 @@ Phần tiếp theo trình bày các hình ảnh mô tả giao diện người d�
 \textbf{Thiết kế màn hình login}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Hinhve/web_login.png}
+    \includegraphics[width=0.9\linewidth]{Hinhve/web_login.png}
     \caption[Thiết kế màn hình \textit{login}]{Thiết kế màn hình \textit{login}}
     \label{fig:web_login}
 \end{figure}
@@ -189,7 +183,7 @@ Phần tiếp theo trình bày các hình ảnh mô tả giao diện người d�
 \textbf{Thiết kế màn hình signup}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Hinhve/web_signup.png}
+    \includegraphics[width=0.9\linewidth]{Hinhve/web_signup.png}
     \caption[Thiết kế màn hình \textit{signup}]{Thiết kế màn hình \textit{signup}}
     \label{fig:web_signup}
 \end{figure}
@@ -197,7 +191,7 @@ Phần tiếp theo trình bày các hình ảnh mô tả giao diện người d�
 \textbf{Thiết kế màn hình user profile}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Hinhve/web_profile.png}
+    \includegraphics[width=0.9\linewidth]{Hinhve/web_profile.png}
     \caption[Thiết kế màn hình \textit{user profile}]{Thiết kế màn hình \textit{user profile}}
     \label{fig:web_profile}
 \end{figure}
@@ -205,7 +199,7 @@ Phần tiếp theo trình bày các hình ảnh mô tả giao diện người d�
 \textbf{Thiết kế màn hình home}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Hinhve/web_home.png}
+    \includegraphics[width=0.9\linewidth]{Hinhve/web_home.png}
     \caption[Thiết kế màn hình \textit{home}]{Thiết kế màn hình \textit{home}}
     \label{fig:web_home}
 \end{figure}
@@ -213,7 +207,7 @@ Phần tiếp theo trình bày các hình ảnh mô tả giao diện người d�
 \textbf{Thiết kế màn hình gợi ý phim ở trang home}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Hinhve/web_recommend.png}
+    \includegraphics[width=0.9\linewidth]{Hinhve/web_recommend.png}
     \caption[Thiết kế màn hình \textit{gợi ý phim ở trang home}]{Thiết kế màn hình \textit{gợi ý phim ở trang home}}
     \label{fig:web_recommend}
 \end{figure}
@@ -221,14 +215,14 @@ Phần tiếp theo trình bày các hình ảnh mô tả giao diện người d�
 \textbf{Thiết kế màn hình detail}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Hinhve/web_detail.png}
+    \includegraphics[width=0.9\linewidth]{Hinhve/web_detail.png}
     \caption[Thiết kế màn hình \textit{detail 1}]{Thiết kế màn hình \textit{detail 1}}
     \label{fig:web_detail}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Hinhve/web_detail1.png}
+    \includegraphics[width=0.9\linewidth]{Hinhve/web_detail1.png}
     \caption[Thiết kế màn hình \textit{detail 2}]{Thiết kế màn hình \textit{detail 2}}
     \label{fig:web_detail1}
 \end{figure}
@@ -236,7 +230,7 @@ Phần tiếp theo trình bày các hình ảnh mô tả giao diện người d�
 \textbf{Thiết kế màn hình cast and crew}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Hinhve/web_cast_and_crew.png}
+    \includegraphics[width=0.9\linewidth]{Hinhve/web_cast_and_crew.png}
     \caption[Thiết kế màn hình \textit{cast and crew}]{Thiết kế màn hình \textit{cast and crew}}
     \label{fig:web_cast_and_crew}
 \end{figure}
@@ -244,7 +238,7 @@ Phần tiếp theo trình bày các hình ảnh mô tả giao diện người d�
 \textbf{Thiết kế màn hình user review}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Hinhve/web_user_review.png}
+    \includegraphics[width=0.9\linewidth]{Hinhve/web_user_review.png}
     \caption[Thiết kế màn hình \textit{user review}]{Thiết kế màn hình \textit{user review}}
     \label{fig:web_user_review}
 \end{figure}
@@ -252,7 +246,7 @@ Phần tiếp theo trình bày các hình ảnh mô tả giao diện người d�
 \subsection{Thiết kế cơ sở dữ liệu hệ thống}
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{Hinhve/ERD.jpg}
+\includegraphics[width=0.9\linewidth]{Hinhve/ERD.jpg}
 \caption{Thiết kế sơ đồ ERD của hệ thống}
 \label{fig:Ket_qua}
 \end{figure} 
@@ -296,7 +290,7 @@ Phần tiếp theo trình bày các hình ảnh mô tả giao diện người d�
 \begin{table}[H]
 \centering
 \caption{Tổng hợp các thông tin cần lấy}
-\includegraphics[width=1\linewidth]{Hinhve/tb_crawl.png}
+\includegraphics[width=0.9\linewidth]{Hinhve/tb_crawl.png}
 \label{tab:tb_crawl}
 \end{table} 
 
@@ -309,7 +303,7 @@ Phần tiếp theo trình bày các hình ảnh mô tả giao diện người d�
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Hinhve/web_search.png}
+    \includegraphics[width=0.9\linewidth]{Hinhve/web_search.png}
     \caption[Màn hình \textit{tìm kiếm phim}]{Màn hình \textit{tìm kiếm phim}}
     \label{fig:web_search}
 \end{figure}
@@ -418,7 +412,7 @@ Tính năng tìm kiếm bằng ngôn ngữ người dùng có các ưu điểm s
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Hinhve/web_recommend.png}
+    \includegraphics[width=0.9\linewidth]{Hinhve/web_recommend.png}
     \caption[Màn hình \textit{gợi ý phim bằng genAI}]{Màn hình \textit{gợi ý phim bằng genAI}}
     \label{fig:web_recommend}
 \end{figure}
@@ -533,29 +527,25 @@ Việc đóng gói các sản phẩm có ý nghĩa then chốt trong công tác 
 
 \textbf{Thống kê các thông tin của ứng dụng:}
 
-Quy mô mã nguồn thu thập dữ liệu: 2000 dòng
-
-Quy mô mã nguồn phía backend: 4000 dòng
-
-Quy mô mã nguồn phía frontend: 8000 dòng
-
-Số lượng lớp: 180 lớp
-
-Số lượng gói: 8 gói
-
-Kích thước toàn bộ mã nguồn: Đạt mức 310MB khi tích hợp đầy đủ dữ liệu và thuật toán gợi ý, trong khi phần mã nguồn thuần túy chiếm khoảng 25MB
+\begin{itemize}
+    \item Quy mô mã nguồn thu thập dữ liệu: 2000 dòng
+    \item Quy mô mã nguồn phía backend: 4000 dòng
+    \item Quy mô mã nguồn phía frontend: 8000 dòng
+    \item Số lượng lớp: 180 lớp
+    \item Số lượng gói: 8 gói
+    \item Kích thước toàn bộ mã nguồn: Đạt mức 310MB khi tích hợp đầy đủ dữ liệu và thuật toán gợi ý, trong khi phần mã nguồn thuần túy chiếm khoảng 25MB
+\end{itemize}
 
 Nền tảng đã được kiện toàn với cấu trúc phân tầng rành mạch, đảm bảo sự khoa học trong việc phân chia giữa các gói và các lớp mã nguồn. Những số liệu thống kê về khối lượng mã và cấu trúc hệ thống là cơ sở quan trọng để đánh giá cũng như kiểm soát quá trình phát triển dự án. Hiện tại, hệ thống đã đáp ứng đầy đủ các tiêu chuẩn đề ra và hoàn toàn sẵn sàng cho việc vận hành trong môi trường thực tế.
 
 \textbf{Crawl dữ liệu từ trang web:}
 
-Nguồn dữ liệu: IMDb, BoxOfficeMojo
-
-Số bộ phim đã crawl: 5000 bộ phim
-
-Số ảnh đã crawl: 250000 ảnh
-
-Số video đã crawl: 5000 video
+\begin{itemize}
+    \item Nguồn dữ liệu: IMDb, BoxOfficeMojo
+    \item Số bộ phim đã crawl: 5000 bộ phim
+    \item Số ảnh đã crawl: 250000 ảnh
+    \item Số video đã crawl: 5000 video
+\end{itemize}
 
 \textbf{Tìm kiếm phim theo ngôn ngữ người dùng:}
 
@@ -563,7 +553,7 @@ Số video đã crawl: 5000 video
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{Hinhve/search_phim.png}
+\includegraphics[width=0.9\linewidth]{Hinhve/search_phim.png}
 \caption{Chức năng tìm kiếm phim theo ngôn ngữ người dùng}
 \label{fig:search_phim}
 \end{figure} 
@@ -576,14 +566,14 @@ Dựa vào hình ảnh kết quả trên, có thể thấy hệ thống đã đ�
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{Hinhve/review_phim.png}
+\includegraphics[width=0.9\linewidth]{Hinhve/review_phim.png}
 \caption{Review phim}
 \label{fig:review_phim}
 \end{figure} 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{Hinhve/goi_y_theo_review.png}
+\includegraphics[width=0.9\linewidth]{Hinhve/goi_y_theo_review.png}
 \caption{Gợi ý phim theo lịch sử review}
 \label{fig:goi_y_theo_review}
 \end{figure} 
@@ -592,14 +582,14 @@ Dựa vào lịch sử review của người dùng, hệ thống có thể tự 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{Hinhve/search_phim.png}
+\includegraphics[width=0.9\linewidth]{Hinhve/search_phim.png}
 \caption{Tìm kiếm phim}
 \label{fig:search_phim2}
 \end{figure} 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{Hinhve/goi_y_theo_search.png}
+\includegraphics[width=0.9\linewidth]{Hinhve/goi_y_theo_search.png}
 \caption{Gợi ý phim theo lịch sử tìm kiếm}
 \label{fig:goi_y_theo_search}
 \end{figure} 
@@ -610,7 +600,7 @@ Dựa vào lịch sử tìm kiếm của người dùng, hệ thống lưu lại
 \textbf{Chức năng gợi ý phim dựa vào lịch sử thao tác của người dùng}
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{Hinhve/ketqua1.png}
+\includegraphics[width=0.9\linewidth]{Hinhve/ketqua1.png}
 \caption{Chức năng gợi ý phim dựa vào lịch sử thao tác của người dùng}
 \label{fig:ketqua1}
 \end{figure} 
@@ -620,7 +610,7 @@ Dựa trên việc phân tích lịch sử xem phim của mỗi cá nhân, hệ 
 \textbf{Chức năng gợi ý phim dựa vào nội dung phim đang xem}
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{Hinhve/ketqua2.png}
+\includegraphics[width=0.9\linewidth]{Hinhve/ketqua2.png}
 \caption{Chức năng gợi ý phim dựa vào nội dung phim đang xem}
 \label{fig:ketqua2}
 \end{figure} 
@@ -630,7 +620,7 @@ Hệ thống cho phép hiển thị các tác phẩm điện ảnh có đặc đ
 \textbf{Chức năng thêm phim yêu thích vào danh sách}
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{Hinhve/ketqua3.png}
+\includegraphics[width=0.9\linewidth]{Hinhve/ketqua3.png}
 \caption{Chức năng thêm phim yêu thích vào danh sách}
 \label{fig:ketqua3}
 \end{figure} 
@@ -640,7 +630,7 @@ Thông qua công cụ thêm vào danh mục ưu tiên, người xem dễ dàng l
 \textbf{Chức năng review phim}
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{Hinhve/ketqua4.png}
+\includegraphics[width=0.9\linewidth]{Hinhve/ketqua4.png}
 \caption{Chức năng review phim}
 \label{fig:ketqua4}
 \end{figure} 
@@ -650,7 +640,7 @@ Người dùng có thể truy cập vào trang chi tiết phim để xem các b�
 \textbf{Chức năng xem toàn bộ ảnh của phim}
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{Hinhve/ketqua5.png}
+\includegraphics[width=0.9\linewidth]{Hinhve/ketqua5.png}
 \caption{Chức năng xem toàn bộ ảnh của phim}
 \label{fig:ketqua5}
 \end{figure} 
@@ -780,23 +770,21 @@ Hệ thống được vận hành theo kiến trúc client-server, với giao di
 
 \textbf{Thông số thiết lập}: Máy tính cá nhân đáp ứng các tiêu chuẩn sau:
 
-Hệ điều hành: Tương thích Windows, Linux hoặc MacOS
-
-Bộ vi xử lý: Tối thiểu Intel i3 hoặc các dòng CPU có hiệu năng tương đương
-
-Bộ nhớ trong (RAM): 4GB
-
-Lưu trữ: Ổ cứng SSD dung lượng 128GB
-
-Yêu cầu đường truyền: Kết nối Internet ổn định ở mức băng thông trung bình
+\begin{itemize}
+    \item Hệ điều hành: Tương thích Windows, Linux hoặc MacOS
+    \item Bộ vi xử lý: Tối thiểu Intel i3 hoặc các dòng CPU có hiệu năng tương đương
+    \item Bộ nhớ trong (RAM): 4GB
+    \item Lưu trữ: Ổ cứng SSD dung lượng 128GB
+    \item Yêu cầu đường truyền: Kết nối Internet ổn định ở mức băng thông trung bình
+\end{itemize}
 
 \textbf{Triển khai}
 
-Thực hiện clone repository từ GitHub về máy tính cá nhân.
-
-Tiến hành cài đặt Docker vào máy tính.
-
-Di chuyển vào thư mục dự án và thực thi lệnh docker-compose up -d để khởi chạy hệ thống. Sau khi hoàn thành, toàn bộ hệ thống đã được vận hành trên máy tính cá nhân. Truy cập vào cổng localhost:3000 để kiểm thử hệ thống.
+\begin{enumerate}
+    \item Thực hiện clone repository từ GitHub về máy tính cá nhân.
+    \item Tiến hành cài đặt Docker vào máy tính.
+    \item Di chuyển vào thư mục dự án và thực thi lệnh docker-compose up -d để khởi chạy hệ thống. Sau khi hoàn thành, toàn bộ hệ thống đã được vận hành trên máy tính cá nhân. Truy cập vào cổng localhost:3000 để kiểm thử hệ thống.
+\end{enumerate}
 
 \textbf{Đánh giá kết quả vận hành thực nghiệm}
 

@@ -8,75 +8,81 @@
 \contentsline {chapter}{\numberline {1}GIỚI THIỆU ĐỀ TÀI}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Đặt vấn đề}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Mục tiêu và phạm vi đề tài}{2}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Định hướng giải pháp}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.3}Định hướng giải pháp}{3}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Bố cục đồ án}{3}{section.1.4}%
 \contentsline {chapter}{\numberline {2}KHẢO SÁT VÀ PHÂN TÍCH YÊU CẦU}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Khảo sát hiện trạng}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Khảo sát về quyền theo dõi}{7}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Tổng quan chức năng}{9}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Biểu đồ use case tổng quát}{9}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.2}Khảo sát về quyền theo dõi}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Tổng quan chức năng}{8}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Biểu đồ use case tổng quát}{8}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Biểu đồ use case phân rã Quản lý thông tin người dùng}{10}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Biểu đồ use case phân rã Quản lý thông tin phim}{11}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Biểu đồ use case phân rã Quản lý tài khoản}{11}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.4}Biểu đồ use case phân rã Quản lý tài khoản}{12}{subsection.2.3.4}%
 \contentsline {subsection}{\numberline {2.3.5}Biểu đồ use case phân rã Tương tác với phim}{12}{subsection.2.3.5}%
-\contentsline {subsection}{\numberline {2.3.6}Biểu đồ use case phân rã bình luận, đánh giá phim}{12}{subsection.2.3.6}%
-\contentsline {section}{\numberline {2.4}Đặc tả chức năng}{13}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Đặc tả use case Đăng nhập}{13}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Đặc tả use case Chỉnh sửa thông tin cá nhân}{14}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Đặc tả use case Tìm kiếm phim}{15}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Đặc tả use case Đánh dấu phim mình thích}{16}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.3.6}Biểu đồ use case phân rã bình luận, đánh giá phim}{13}{subsection.2.3.6}%
+\contentsline {section}{\numberline {2.4}Đặc tả chức năng}{14}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Đặc tả use case Đăng nhập}{14}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Đặc tả use case Chỉnh sửa thông tin cá nhân}{15}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Đặc tả use case Tìm kiếm phim}{16}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Đặc tả use case Đánh dấu phim mình thích}{17}{subsection.2.4.4}%
 \contentsline {subsection}{\numberline {2.4.5}Đặc tả use case Đánh giá phim}{17}{subsection.2.4.5}%
 \contentsline {subsection}{\numberline {2.4.6}Đặc tả use case quản lý phim}{18}{subsection.2.4.6}%
 \contentsline {subsection}{\numberline {2.4.7}Đặc tả use case Gợi ý phim theo nội dung}{19}{subsection.2.4.7}%
 \contentsline {section}{\numberline {2.5}Yêu cầu phi chức năng}{19}{section.2.5}%
 \contentsline {chapter}{\numberline {3}CƠ SỞ LÝ THUYẾT CHO GỢI Ý PHIM}{21}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Content-Based Filtering}{21}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Khái niệm}{21}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Các thuật toán}{21}{subsection.3.1.2}%
-\contentsline {chapter}{\numberline {4}CÔNG NGHỆ SỬ DỤNG}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Công nghệ sử dụng phía frontend}{23}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}React}{23}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Tailwind CSS}{23}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Công nghệ sử dụng phía backend}{24}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Django}{24}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}MySQL}{24}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Công nghệ sử dụng trong việc lưu trữ code}{25}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Git}{25}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}GitHub}{26}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Công nghệ sử dụng trong việc crawl và update dữ liệu}{26}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Selenium và Requests}{26}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Công nghệ sử dụng để cập nhật dữ liệu}{27}{subsection.4.4.2}%
-\contentsline {chapter}{\numberline {5}THIẾT KẾ, TRIỂN KHAI VÀ ĐÁNH GIÁ HỆ THỐNG}{29}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Thiết kế kiến trúc}{29}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Lựa chọn kiến trúc phần mềm}{29}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Thiết kế tổng quan}{30}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Thiết kế chi tiết gói}{32}{subsection.5.1.3}%
-\contentsline {section}{\numberline {5.2}Thiết kế chi tiết}{36}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Thiết kế giao diện}{36}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Thiết kế cơ sở dữ liệu hệ thống}{42}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Thiết kế hệ thống crawl dữ liệu}{43}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Tìm kiếm phim bằng ngôn ngữ tự nhiên}{44}{subsection.5.2.4}%
-\contentsline {subsubsection}{\numberline {1}Tổng quan luồng xử lý}{44}{subsubsection.5.2.4.1}%
-\contentsline {subsubsection}{\numberline {2}Các thành phần kỹ thuật}{44}{subsubsection.5.2.4.2}%
-\contentsline {subsubsection}{\numberline {3}Chiến lược kết hợp kết quả}{45}{subsubsection.5.2.4.3}%
-\contentsline {subsubsection}{\numberline {4}Xử lý sau tìm kiếm}{46}{subsubsection.5.2.4.4}%
-\contentsline {subsubsection}{\numberline {5}Kết quả trả về}{46}{subsubsection.5.2.4.5}%
-\contentsline {subsubsection}{\numberline {6}Điểm mạnh của ứng dụng}{46}{subsubsection.5.2.4.6}%
-\contentsline {subsection}{\numberline {5.2.5}Gợi ý phim bằng genAI dựa vào lịch sử hoạt động của người dùng}{46}{subsection.5.2.5}%
-\contentsline {subsubsection}{\numberline {1}Tổng quan luồng xử lý}{47}{subsubsection.5.2.5.1}%
-\contentsline {subsubsection}{\numberline {2}Các thành phần kỹ thuật}{47}{subsubsection.5.2.5.2}%
-\contentsline {subsubsection}{\numberline {3}Kết quả trả về}{49}{subsubsection.5.2.5.3}%
-\contentsline {section}{\numberline {5.3}Xây dựng ứng dụng}{49}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Thư viện và công cụ sử dụng}{49}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Kết quả đạt được}{49}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Minh họa các chức năng chính}{53}{subsection.5.3.3}%
-\contentsline {section}{\numberline {5.4}Kiểm thử}{55}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Triển khai}{59}{section.5.5}%
-\contentsline {chapter}{\numberline {6}CÁC GIẢI PHÁP VÀ ĐÓNG GÓP NỔI BẬT}{61}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Sự thiếu hụt trầm trọng về dữ liệu điện ảnh}{61}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Thách thức trong việc thiết kế cơ sở dữ liệu với hệ thống thuộc tính phức tạp}{61}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Trang web có dữ liệu update liên tục theo ngày khiến link ảnh và trailer bị hỏng}{61}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Lựa chọn thuật toán gợi ý phù hợp}{64}{section.6.4}%
-\contentsline {chapter}{\numberline {7}KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}{69}{chapter.7}%
-\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{72}{section*.69}%
+\contentsline {section}{\numberline {3.1}Lý do lựa chọn Content-Based Filtering cho ứng dụng gợi ý phim}{21}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Ứng dụng Content-Based Filtering trong hệ thống gợi ý phim}{22}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Vai trò và mục đích sử dụng}{22}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Cách thức hoạt động trong hệ thống}{23}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Vị trí sử dụng trong ứng dụng}{23}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}So sánh các thuật toán trong Content-Based Filtering}{25}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}So sánh TF-IDF và các phương pháp trích xuất đặc trưng khác}{25}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}So sánh Cosine Similarity với các phương pháp đo độ tương đồng khác}{25}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Lựa chọn thuật toán cho hệ thống}{26}{subsection.3.3.3}%
+\contentsline {chapter}{\numberline {4}CÔNG NGHỆ SỬ DỤNG}{28}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Công nghệ sử dụng phía frontend}{28}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}React}{28}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Tailwind CSS}{28}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Công nghệ sử dụng phía backend}{29}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Django}{29}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}MySQL}{29}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Công nghệ sử dụng trong việc lưu trữ code}{30}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Git}{30}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}GitHub}{31}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Công nghệ sử dụng trong việc crawl và update dữ liệu}{31}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Selenium và Requests}{31}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Công nghệ sử dụng để cập nhật dữ liệu}{32}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {5}THIẾT KẾ, TRIỂN KHAI VÀ ĐÁNH GIÁ HỆ THỐNG}{34}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Thiết kế kiến trúc}{34}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Lựa chọn kiến trúc phần mềm}{34}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Thiết kế tổng quan}{35}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Thiết kế chi tiết gói}{37}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Thiết kế chi tiết}{41}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Thiết kế giao diện}{41}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Thiết kế cơ sở dữ liệu hệ thống}{47}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Thiết kế hệ thống crawl dữ liệu}{48}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Tìm kiếm phim bằng ngôn ngữ tự nhiên}{49}{subsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {1}Tổng quan luồng xử lý}{49}{subsubsection.5.2.4.1}%
+\contentsline {subsubsection}{\numberline {2}Các thành phần kỹ thuật}{49}{subsubsection.5.2.4.2}%
+\contentsline {subsubsection}{\numberline {3}Chiến lược kết hợp kết quả}{50}{subsubsection.5.2.4.3}%
+\contentsline {subsubsection}{\numberline {4}Xử lý sau tìm kiếm}{51}{subsubsection.5.2.4.4}%
+\contentsline {subsubsection}{\numberline {5}Kết quả trả về}{51}{subsubsection.5.2.4.5}%
+\contentsline {subsubsection}{\numberline {6}Điểm mạnh của ứng dụng}{51}{subsubsection.5.2.4.6}%
+\contentsline {subsection}{\numberline {5.2.5}Gợi ý phim bằng genAI dựa vào lịch sử hoạt động của người dùng}{51}{subsection.5.2.5}%
+\contentsline {subsubsection}{\numberline {1}Tổng quan luồng xử lý}{52}{subsubsection.5.2.5.1}%
+\contentsline {subsubsection}{\numberline {2}Các thành phần kỹ thuật}{52}{subsubsection.5.2.5.2}%
+\contentsline {subsubsection}{\numberline {3}Kết quả trả về}{53}{subsubsection.5.2.5.3}%
+\contentsline {section}{\numberline {5.3}Xây dựng ứng dụng}{54}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Thư viện và công cụ sử dụng}{54}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Kết quả đạt được}{54}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Minh họa các chức năng chính}{57}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}Kiểm thử}{60}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Triển khai}{64}{section.5.5}%
+\contentsline {chapter}{\numberline {6}CÁC GIẢI PHÁP VÀ ĐÓNG GÓP NỔI BẬT}{66}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Sự thiếu hụt trầm trọng về dữ liệu điện ảnh}{66}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Thách thức trong việc thiết kế cơ sở dữ liệu với hệ thống thuộc tính phức tạp}{66}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Trang web có dữ liệu update liên tục theo ngày khiến link ảnh và trailer bị hỏng}{66}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Lựa chọn thuật toán gợi ý phù hợp}{69}{section.6.4}%
+\contentsline {chapter}{\numberline {7}KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}{73}{chapter.7}%
+\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{76}{section*.72}%
 \contentsfinish 
